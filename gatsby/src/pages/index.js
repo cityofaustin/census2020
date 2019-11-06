@@ -5,6 +5,8 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
+import "../../node_modules/uswds/dist/css/uswds.min.css"
+import "../../node_modules/uswds/dist/js/uswds.min.js"
 
 class BlogIndex extends React.Component {
   render() {
