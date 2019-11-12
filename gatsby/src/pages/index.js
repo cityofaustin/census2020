@@ -1,24 +1,30 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 
-import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { rhythm } from "../utils/typography"
-import "../../node_modules/uswds/dist/css/uswds.min.css"
-import "../../node_modules/uswds/dist/js/uswds.min.js"
+import USAHero from "../components/uswds/usa-hero"
+import USASection from "../components/uswds/usa-section"
+import USASectionDark from "../components/uswds/usa-section-dark"
+import USASectionThree from "../components/uswds/usa-section-three"
+// import Bio from "../components/bio"
+// import { rhythm } from "../utils/typography"
 
 class BlogIndex extends React.Component {
   render() {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
-    const posts = data.allMarkdownRemark.edges
+    // const posts = data.allMarkdownRemark.edges
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title="All posts" />
-        <Bio />
-        {posts.map(({ node }) => {
+        <USAHero />
+        <USASection />
+        <USASectionDark />
+        <USASectionThree />
+        {/* <Bio /> */}
+        {/* {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
           return (
             <article key={node.fields.slug}>
@@ -43,7 +49,7 @@ class BlogIndex extends React.Component {
               </section>
             </article>
           )
-        })}
+        })} */}
       </Layout>
     )
   }
