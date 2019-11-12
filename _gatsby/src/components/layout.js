@@ -1,10 +1,10 @@
-import React from 'react';
-import { StaticQuery, graphql } from 'gatsby';
-import { Banner, SkipNav } from 'uswds-react';
-import './layout.css';
-import Header from './header';
+import React from "react"
+import { StaticQuery, graphql } from "gatsby"
+import { Banner, SkipNav } from "uswds-react"
+import "./layout.css"
+import Header from "./header"
 
-const mainContent = 'main-content';
+const mainContent = "main-content"
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -40,6 +40,6 @@ const Layout = ({ children }) => (
       </div>
     )}
   />
-);
+)
 
-export default Layout;
+export default Layout
