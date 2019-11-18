@@ -1,3 +1,9 @@
-// custom typefaces
-import "typeface-montserrat"
-import "typeface-merriweather"
+module.exports = {
+	onClientEntry: () => {
+		try {
+		  require('uswds_polyfills');
+		} catch (e) {
+		  // do nothing
+		}
+	}
+};

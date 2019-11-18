@@ -1,97 +1,79 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-<p align="center">
-  <a href="https://www.gatsbyjs.org">
-    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby's blog starter
-</h1>
+# Federalist template using Gatsby and USWDS 2.0
 
-Kick off your project with this blog boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
+This is a working example of deploying a [Gatsby](https://www.gatsbyjs.org/) and [US Web Design System v2.0](https://v2.designsystem.digital.gov/) static site with [Federalist](https://federalist.18f.gov/). It should be considered **experimental and a work in progress**.
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.org/docs/gatsby-starters/)._
+## See It Live
 
-## 🚀 Quick start
+[Click Me](https://federalist-proxy.app.cloud.gov/site/18f/federalist-gatsby-uswds-gatsby/)
 
-1.  **Create a Gatsby site.**
+## Local Development
 
-    Use the Gatsby CLI to create a new site, specifying the blog starter.
+Local development is no different than any other Gatsby application. Node v8.x or 10.x is recommended.
 
-    ```shell
-    # create a new Gatsby site using the blog starter
-    gatsby new my-blog-starter https://github.com/gatsbyjs/gatsby-starter-blog
-    ```
+- `git clone git@github.com:18F/federalist-gatsby-uswds-template.git`
+- `npm install`
+- `npm run develop` and the site will be viewable at localhost:8000
+- `npm run build` builds the static site and assets in the `public/` directory
+- `npm run serve` serves the built static files at `http://localhost:9000`
+- `npm run clean` removes the built static file directories `.cache/` and `public/`
 
-1.  **Start developing.**
+## Why
 
-    Navigate into your new site’s directory and start it up.
+Federalist supports sites generated using `node` but the documentation, examples, and experience of most users involve using [Jekyll](https://jekyllrb.com/). Meanwhile, Gatsby is a great fit for many government static sites as it allows for disparate data sources and uses React while the USWDS provides a wonderful foundation for building beautiful, 508-compliant sites. Currently, using USWDS with React takes a little bit of effort, so using them together here them demonstrates the possibility of doing so while acting as a testbed for future changes in USWDS to make this pairing easier in the future.
 
-    ```shell
-    cd my-blog-starter/
-    gatsby develop
-    ```
+## Details
 
-1.  **Open the source code and start editing!**
+### Gatsby on Federalist
 
-    Your site is now running at `http://localhost:8000`!
+Federalist _can_ build any javascript application that generates a site, but there are a couple items to configure:
 
-    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
+1. Federalist expects the output to be in a folder named `_site` but Gatsby's output is placed in `public` and probably won't ever be configurable ([Gatsby Issue](https://github.com/gatsbyjs/gatsby/issues/1878)). We address this in this repo by creating a symlink named `_site` that points to `public`.
+2. Federalist's preview builds and builds without a custom domain will be served at a nested path instead of at the root of a domain (ex. `/site/18f/<repo_name>`), causing internal, relative links to be incorrect. Gatsby provides the `Link` component to manage internal links but needs to know the actual root of the website to generate correct URLs. We address this by configuring the `prefixPath` in Gatsby by adding `pathPrefix: process.env.BASEURL || '/'` to [gatsby-config.js](https://github.com/18F/federalist-gatsby-uswds-template/blob/master/gatsby-config.js#L33) file in the root of the project and running the build in Federalist with the `--prefix-paths` option.
+3. Like any `node` project on Federalist, this project must have a `federalist` key in the 'scripts' section of `package.json`, here we have `"federalist": "npm run build -- --prefix-paths"`.
 
-    Open the `my-blog-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
+### Gatsby Features Utilized
 
-## 🧐 What's inside?
+#### Display content from different data sources:
 
-A quick look at the top-level files and directories you'll see in a Gatsby project.
+- [x] local yaml file [index.yml](https://github.com/18F/federalist-gatsby-uswds-template/blob/master/src/data/index.yml)
+- [x] local Gatsby configuration [gatsby-config.js](https://github.com/18F/federalist-gatsby-uswds-template/blob/master/gatsby-config.js#L3)
+- [ ] local markdown file
+- [x] remote api (USASpending.gov)
 
-    .
-    ├── node_modules
-    ├── src
-    ├── .gitignore
-    ├── .prettierrc
-    ├── gatsby-browser.js
-    ├── gatsby-config.js
-    ├── gatsby-node.js
-    ├── gatsby-ssr.js
-    ├── LICENSE
-    ├── package-lock.json
-    ├── package.json
-    └── README.md
+#### Other
 
-1.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.
+- [x] Use [Gatsby Image](https://www.gatsbyjs.org/packages/gatsby-image/) to display optimized images
 
-2.  **`/src`**: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser) such as your site header or a page template. `src` is a convention for “source code”.
+### USWDS and Gatsby/React
 
-3.  **`.gitignore`**: This file tells git which files it should not track / not maintain a version history for.
+The USWDS is geared toward being used in a drop-in/copy-paste fashion and the CSS works just fine in any scenario, but the JS that handles user interaction is not meant to be used alongside a library like React or in non-browser environments (Gatsby is server rendered). In time, some of these issues may become more tractable or disappear completely, but for now, to use the USWDS as-is in this application we:
 
-4.  **`.prettierrc`**: This is a configuration file for [Prettier](https://prettier.io/). Prettier is a tool to help keep the formatting of your code consistent.
+1. Import the USWDS CSS in our [layout css](https://github.com/18F/federalist-gatsby-uswds-template/blob/master/src/components/layout.css#L1)
+2. Only load the USWDS polyfills in the browser
 
-5.  **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](https://www.gatsbyjs.org/docs/browser-apis/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
+   - [Webpack alias](https://github.com/18F/federalist-gatsby-uswds-template/blob/master/gatsby-node.js#L21)
+   - [Only load in browser](https://github.com/18F/federalist-gatsby-uswds-template/blob/master/gatsby-node.js#L45)
 
-6.  **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the [config docs](https://www.gatsbyjs.org/docs/gatsby-config/) for more detail).
+3. Shim transient dependencies so they only load in the browser
 
-7.  **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby Node APIs](https://www.gatsbyjs.org/docs/node-apis/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
+   - [Shims](https://github.com/18F/federalist-gatsby-uswds-template/tree/master/shims)
+   - [Webpack aliases](https://github.com/18F/federalist-gatsby-uswds-template/blob/master/gatsby-node.js#L31)
 
-8.  **`gatsby-ssr.js`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](https://www.gatsbyjs.org/docs/ssr-apis/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
+4. Create some helpful aliases
 
-9.  **`LICENSE`**: Gatsby is licensed under the MIT license.
+   - [Webpack alias for images](https://github.com/18F/federalist-gatsby-uswds-template/blob/master/gatsby-node.js#L18)
+   - [Webpack alias for js components](https://github.com/18F/federalist-gatsby-uswds-template/blob/master/gatsby-node.js#L13)
 
-10. **`package-lock.json`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. **(You won’t change this file directly).**
+5. Create a generic React component to manage lifecycle for USWDS javascript
 
-11. **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
+   - [UswdsComponent](https://github.com/18F/federalist-gatsby-uswds-template/blob/master/src/lib/uswds_component.js)
 
-12. **`README.md`**: A text file containing useful reference information about your project.
+## License
 
-## 🎓 Learning Gatsby
+### Public domain
 
-Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.org/). Here are some places to start:
+This project is in the worldwide [public domain](LICENSE). As stated in [CONTRIBUTING](CONTRIBUTING.md):
 
-- **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.org/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
-
-- **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.org/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
-
-## 💫 Deploy
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-blog)
-
-<!-- AUTO-GENERATED-CONTENT:END -->
+> This project is in the public domain within the United States, and copyright and related rights in the work worldwide are waived through the [CC0 1.0 Universal public domain dedication](https://creativecommons.org/publicdomain/zero/1.0/).
+>
+> All contributions to this project will be released under the CC0 dedication. By submitting a pull request, you are agreeing to comply with this waiver of copyright interest.
