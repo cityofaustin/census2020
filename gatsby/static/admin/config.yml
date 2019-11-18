@@ -6,15 +6,15 @@ media_folder: static/img
 public_folder: /img
 
 collections:
-  - name: "blog"
-    label: "Blog"
-    folder: "gatsby/content/blog"
+  - name: 'news'
+    label: 'News'
+    folder: 'gatsby/content/news'
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     editor:
       preview: false
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Description", name: "description", widget: "string" }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Description', name: 'description', widget: 'string' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
