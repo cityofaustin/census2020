@@ -7,6 +7,8 @@ import Layout from '../components/layout';
 
 const Index = ({ data }) => {
   const { callout, media, section, tagline } = data.dataYaml;
+  console.log(data);
+  const { nodes } = data.allMarkdownRemark;
   return (
     <Layout>
       <section className="usa-hero">
@@ -38,6 +40,13 @@ const Index = ({ data }) => {
               <p key={idx}>{p}</p>
             ))}
           </div>
+        </div>
+        <div className="grid-row grid-gap">
+          <ul>
+            {nodes.map(newsPost => (
+              <li>{newsPost.frontmatter.title}</li>
+            ))}
+          </ul>
         </div>
       </section>
 
@@ -109,6 +118,19 @@ export const query = graphql`
       tagline {
         title
         content
+      }
+    }
+    allMarkdownRemark {
+      totalCount
+      nodes {
+        id
+        html
+        excerpt
+        frontmatter {
+          date
+          description
+          title
+        }
       }
     }
   }
