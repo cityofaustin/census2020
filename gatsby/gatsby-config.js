@@ -62,5 +62,6 @@ module.exports = {
     },
     `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-sass`,
+    `gatsby-plugin-netlify`,
   ],
 };
