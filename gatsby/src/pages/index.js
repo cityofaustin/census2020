@@ -29,9 +29,7 @@ const Index = ({ data }) => {
       <section className="grid-container usa-section">
         <div className="grid-row grid-gap">
           <div className="tablet:grid-col-4">
-            <h2 className="font-heading-xl margin-top-0 tablet:margin-bottom-0">
-              {tagline.title}
-            </h2>
+            <h2 className="font-heading-xl margin-top-0 tablet:margin-bottom-0">{tagline.title}</h2>
           </div>
           <div className="tablet:grid-col-8 usa-prose">
             {tagline.content.map((p, idx) => (
@@ -76,17 +74,6 @@ const Index = ({ data }) => {
   );
 };
 
-// markdownRemark(fields: { slug: { eq: $slug } }) {
-//   id
-//   excerpt(pruneLength: 160)
-//   html
-//   frontmatter {
-//     title
-//     date(formatString: "MMMM DD, YYYY")
-//     description
-//   }
-// }
-
 export const query = graphql`
   query IndexQuery {
     file(base: { eq: "hero.png" }) {
@@ -96,7 +83,6 @@ export const query = graphql`
         }
       }
     }
-
     dataYaml(page: { eq: "index" }) {
       callout {
         title

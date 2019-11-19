@@ -38,7 +38,6 @@
     "uswds": "^2.0.3"
   },
   "devDependencies": {
-    "gatsby-plugin-netlify": "^2.1.25",
     "gatsby-plugin-netlify-cms": "^4.1.28",
     "gatsby-plugin-sass": "^2.1.23",
     "prettier": "^1.15.3",
