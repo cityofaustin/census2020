@@ -1,6 +1,6 @@
 page: index_es
 callout:
-  title: Ejemplo de una pagina primera en Español
+  title: El Censo para todos
   text: Support the callout with some short explanatory text. You don’t need more than a couple of sentences.
   cta:
     text: Call to action
@@ -21,7 +21,9 @@ section:
     text: Call to action
     link: '/'
 tagline:
-  title: A tagline highlights your approach
+  title: ¿En qué consiste el censo?
   content:
-    - The tagline should inspire confidence and interest, focusing on the value that your overall approach offers to your audience. Use a heading typeface and keep your tagline to just a few words, and don’t confuse or mystify.
-    - Use the right side of the grid to explain the tagline a bit more. What are your goals? How do you do your work? Write in the present tense, and stay brief here. People who are interested can find details on internal pages.
+    - Cada 10 años, los habitantes de California completan el Censo para tener un conteo preciso de cada persona. Con el Censo se deciden cuáles serán nuestros fondos federales para importantes servicios comunitarios que apoyan a nuestras familias y nuestra participación en el poder político, en California y en Washington, D.C.
+    - El siguiente Censo se realizará en la primavera de 2020. Asegurémonos de que se cuenten todos los habitantes de California para conservar esos recursos.
+layout:
+  latestNews: Últimas Noticias

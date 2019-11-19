@@ -1,6 +1,6 @@
 page: index
 callout:
-  title: Example English landing page
+  title: Census for All
   text: Support the callout with some short explanatory text. You don’t need more than a couple of sentences.
   cta:
     text: Call to action
@@ -21,7 +21,9 @@ section:
     text: Call to action
     link: '/'
 tagline:
-  title: A tagline highlights your approach
+  title: What is the Census
   content:
-    - The tagline should inspire confidence and interest, focusing on the value that your overall approach offers to your audience. Use a heading typeface and keep your tagline to just a few words, and don’t confuse or mystify.
-    - Use the right side of the grid to explain the tagline a bit more. What are your goals? How do you do your work? Write in the present tense, and stay brief here. People who are interested can find details on internal pages.
+    - Every 10 years, people across the country and in California fill out the Census in order to have an accurate count of all people in the United States. The Census determines California’s federal funding for important community services that help support our families and fair share of representation in California and Washington D.C.
+    - The next Census is in Spring 2020. Let’s ensure all Californians are counted so we can put those resources to good use here at home!
+layout:
+  latestNews: Recent News
