@@ -76,19 +76,8 @@ const Index = ({ data }) => {
   );
 };
 
-// markdownRemark(fields: { slug: { eq: $slug } }) {
-//   id
-//   excerpt(pruneLength: 160)
-//   html
-//   frontmatter {
-//     title
-//     date(formatString: "MMMM DD, YYYY")
-//     description
-//   }
-// }
-
 export const query = graphql`
-  query IndexQuery {
+  query TestESQuery {
     file(base: { eq: "hero.png" }) {
       childImageSharp {
         fluid(maxHeight: 400) {
@@ -96,8 +85,7 @@ export const query = graphql`
         }
       }
     }
-
-    dataYaml(page: { eq: "index" }) {
+    dataYaml(page: { eq: "index-es" }) {
       callout {
         title
         text
