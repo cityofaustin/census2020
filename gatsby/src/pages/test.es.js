@@ -77,7 +77,7 @@ const Index = ({ data }) => {
 };
 
 export const query = graphql`
-  query IndexQuery {
+  query TestESQuery {
     file(base: { eq: "hero.png" }) {
       childImageSharp {
         fluid(maxHeight: 400) {
@@ -85,7 +85,7 @@ export const query = graphql`
         }
       }
     }
-    dataYaml(page: { eq: "index" }) {
+    dataYaml(page: { eq: "index-es" }) {
       callout {
         title
         text
