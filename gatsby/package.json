@@ -27,6 +27,7 @@
     "gatsby-plugin-react-axe": "^0.2.2",
     "gatsby-plugin-sharp": "^2.2.9",
     "gatsby-source-filesystem": "^2.1.6",
+    "gatsby-transformer-remark": "^2.6.37",
     "gatsby-transformer-sharp": "^2.2.5",
     "gatsby-transformer-yaml": "^2.2.4",
     "lodash": "^4.17.15",

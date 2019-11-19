@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
   siteMetadata: {
-    title: `Federalist | Gatsby | USWDS`,
+    title: `Census 2020`,
     header: {
       secondaryLinks: [
         { text: 'Secondary link', link: '/' },
@@ -26,7 +26,7 @@ module.exports = {
           ],
         },
         {
-          items: [{ text: 'Agency Spending', link: '/spending' }],
+          items: [{ text: 'Español', link: '/es/' }],
         },
       ],
     },
@@ -48,6 +48,13 @@ module.exports = {
         path: path.join(__dirname, `src`, `images`),
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `news`,
+        path: path.join(__dirname, `content`, `news`),
+      },
+    },
     `gatsby-source-usa-spending-toptier-agencies`,
     `gatsby-transformer-yaml`,
     `gatsby-transformer-sharp`,
@@ -62,5 +69,20 @@ module.exports = {
     },
     `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        // CommonMark mode (default: true)
+        commonmark: true,
+        // Footnotes mode (default: true)
+        footnotes: true,
+        // Pedantic mode (default: true)
+        pedantic: true,
+        // GitHub Flavored Markdown mode (default: true)
+        gfm: true,
+        // Plugins configs
+        plugins: [],
+      },
+    },
   ],
 };
