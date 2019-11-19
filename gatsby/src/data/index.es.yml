@@ -1,6 +1,6 @@
-page: index
+page: index_es
 callout:
-  title: Example English landing page
+  title: Ejemplo de una pagina primera en Español
   text: Support the callout with some short explanatory text. You don’t need more than a couple of sentences.
   cta:
     text: Call to action
