@@ -10,6 +10,8 @@ The primary technologies for this website are:
 
 - [Gatsby](https://www.gatsbyjs.org/), an open source React.js framework for static sites)
 - [Netlify CMS](https://www.netlifycms.org/), an open source content management system that uses a Git workflow for content publishing with.
+- [United States Web Design System](https://designsystem.digital.gov/), design framework to make accessible, mobile-friendly government websites for the American public.
+- [react-axe](https://github.com/dequelabs/react-axe), provides automatic accessibility testing for React.js with the axe-core library. Test results show in the DevTools console for immediate feedback.
 
 ### 📦 Install
 
@@ -17,7 +19,7 @@ The primary technologies for this website are:
 1. Install dependencies: `yarn`
 1. Run a development server: `yarn start`
 
-### 🚢 Deployment 
+### 🚢 Deployment
 
 The site is currently deployed using Netlify as the static site host.
 
