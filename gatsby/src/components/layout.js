@@ -3,6 +3,7 @@ import { StaticQuery, graphql } from 'gatsby';
 import { Banner, SkipNav } from 'uswds-react';
 import './layout.css';
 import Header from './header';
+import Footer from './footer';
 
 const mainContent = 'main-content';
 
@@ -28,6 +29,13 @@ const Layout = ({ children }) => (
             }
           }
         }
+        openAustinLogo: file(base: { eq: "open-austin-logo.png" }) {
+          childImageSharp {
+            fluid(maxHeight: 400) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     `}
     render={data => (
@@ -37,6 +45,7 @@ const Layout = ({ children }) => (
         <div className="usa-overlay" />
         <Header {...data.site.siteMetadata} />
         <main id={mainContent}>{children}</main>
+        <Footer logoImg={data.openAustinLogo.childImageSharp.fluid} />
       </div>
     )}
   />
