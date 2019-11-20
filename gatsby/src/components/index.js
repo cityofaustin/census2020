@@ -6,19 +6,31 @@ import chunk from 'lodash/fp/chunk';
 import circle from 'uswds_images/circle-124.png';
 import Layout from '../components/layout';
 
-const Index = ({ news, yml, heroImg }) => {
-  const { callout, media, section, tagline, layout, title } = yml;
+
+// useHelmetTags hook uses the uri and callout.title and uses them to
+// provide accurate information to the <Helmet>'s <title> and <html> tags
+export const useHelmetTags = (uri, callout) => {
+  const [title, setTitle] = React.useState('Census for All');
+  const [language, setLanguage] = React.useState('en');
+  React.useEffect(
+    () => {
+      if (callout) setTitle(callout.title);
+      if (uri !== '/') setLanguage(uri.substring(1));
+    },
+    [callout, uri]
+  );
+
+  return { title, language };
+}
+
+const Index = ({ news, yml, heroImg, uri }) => {
+  const { callout, media, section, tagline, layout } = yml;
+  const { title, language } = useHelmetTags(uri, callout);
   return (
     <>
       <Helmet>
-        <html
-          lang={
-            window.location.pathname.substring(1) === '/'
-              ? 'en'
-              : window.location.pathname.substring(1)
-          }
-        />
-        <title>{callout.title}</title>
+        <html lang={language} />
+        <title>{title}</title>
       </Helmet>
       <Layout>
         <section className="usa-hero">
