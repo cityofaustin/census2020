@@ -60,6 +60,7 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     'gatsby-plugin-react-axe',
+    `gatsby-plugin-react-helmet`,
     {
       resolve: 'gatsby-plugin-i18n',
       options: {

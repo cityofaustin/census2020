@@ -3,11 +3,12 @@ import { graphql } from 'gatsby';
 
 import Index from '../components/index';
 
-const IndexEN = ({ data }) => {
+const IndexEN = ({ data, uri }) => {
   const { nodes: news } = data.allMarkdownRemark;
 
   return (
     <Index
+      uri={uri}
       news={news}
       yml={data.dataYaml}
       heroImg={data.file.childImageSharp.fluid}
