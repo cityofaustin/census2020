@@ -3,7 +3,7 @@ import { graphql } from 'gatsby';
 
 import Index from '../components/index';
 
-const IndexEN = props => {
+const WhyEN = props => {
   const { nodes: news } = props.data.allMarkdownRemark;
 
   return (
@@ -18,7 +18,7 @@ const IndexEN = props => {
 };
 
 export const query = graphql`
-  query IndexENQuery {
+  query WhyENQuery {
     file(base: { eq: "hero.png" }) {
       childImageSharp {
         fluid(maxHeight: 400) {
@@ -72,4 +72,4 @@ export const query = graphql`
   }
 `;
 
-export default IndexEN;
+export default WhyEN;

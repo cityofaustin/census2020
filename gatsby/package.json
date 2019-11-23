@@ -43,6 +43,8 @@
     "gatsby-plugin-netlify-cms": "^4.1.28",
     "gatsby-plugin-sass": "^2.1.23",
     "prettier": "^1.15.3",
+    "ptz-i18n": "^1.0.0",
+    "react-intl": "^3.6.2",
     "rimraf": "^2.6.3"
   }
 }
