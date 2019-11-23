@@ -15,7 +15,7 @@ const propTypes = {
   title: PropTypes.string.isRequired,
 };
 
-const Header = ({ title, header }) => (
+const Header = ({ title, header, language }) => (
   <UswdsHeader title={title} extended>
     <Navigation>
       <div className="usa-nav__inner">
@@ -23,12 +23,14 @@ const Header = ({ title, header }) => (
           <img src={close} alt="close" />
         </button>
         <Accordion className="usa-nav__primary" tag="ul">
-          {header.navigation.map((navGroup, idx) => (
+          {header.navigation[language].map((navGroup, idx) => (
             <li key={idx} className="usa-nav__primary-item">
-              {navGroup.items.length > 1 ? (
+              {navGroup.length > 1 ? (
                 <React.Fragment>
                   <AccordionButton
-                    className={`usa-nav__link ${idx === 0 ? 'usa-current' : ''}`}
+                    className={`usa-nav__link ${
+                      idx === 0 ? 'usa-current' : ''
+                    }`}
                     controls={`extended-nav-section-${idx}`}
                   >
                     <span>{navGroup.title}</span>
@@ -38,7 +40,7 @@ const Header = ({ title, header }) => (
                     tag="ul"
                     className="usa-nav__submenu"
                   >
-                    {navGroup.items.map((navItem, idx) => (
+                    {navGroup.map((navItem, idx) => (
                       <li key={idx} className="usa-nav__submenu-item">
                         <Link to={navItem.link}>{navItem.text}</Link>
                       </li>
@@ -46,8 +48,8 @@ const Header = ({ title, header }) => (
                   </AccordionContent>
                 </React.Fragment>
               ) : (
-                <Link className="usa-nav__link" to={navGroup.items[0].link}>
-                  <span>{navGroup.items[0].text}</span>
+                <Link className="usa-nav__link" to={navGroup.link}>
+                  <span>{navGroup.text}</span>
                 </Link>
               )}
             </li>
