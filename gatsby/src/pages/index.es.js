@@ -2,15 +2,16 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import Index from '../components/index';
 
-const IndexES = ({ data, uri }) => {
-  const { nodes: news } = data.allMarkdownRemark;
+const IndexES = props => {
+  const { nodes: news } = props.data.allMarkdownRemark;
 
   return (
     <Index
-      uri={uri}
+      uri={props.uri}
       news={news}
-      yml={data.dataYaml}
-      heroImg={data.file.childImageSharp.fluid}
+      yml={props.data.dataYaml}
+      heroImg={props.data.file.childImageSharp.fluid}
+      {...props}
     />
   );
 };

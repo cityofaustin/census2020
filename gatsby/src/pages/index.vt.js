@@ -1,9 +1,8 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-
 import Index from '../components/index';
 
-const IndexEN = props => {
+const IndexVT = props => {
   const { nodes: news } = props.data.allMarkdownRemark;
 
   return (
@@ -18,7 +17,7 @@ const IndexEN = props => {
 };
 
 export const query = graphql`
-  query IndexENQuery {
+  query IndexEVQuery {
     file(base: { eq: "hero.png" }) {
       childImageSharp {
         fluid(maxHeight: 400) {
@@ -26,7 +25,7 @@ export const query = graphql`
         }
       }
     }
-    dataYaml(page: { eq: "index" }) {
+    dataYaml(page: { eq: "index_es" }) {
       callout {
         title
         text
@@ -55,7 +54,7 @@ export const query = graphql`
         latestNews
       }
     }
-    allMarkdownRemark(filter: { frontmatter: { language: { eq: "en" } } }) {
+    allMarkdownRemark(filter: { frontmatter: { language: { eq: "es" } } }) {
       totalCount
       nodes {
         id
@@ -72,4 +71,4 @@ export const query = graphql`
   }
 `;
 
-export default IndexEN;
+export default IndexVT;

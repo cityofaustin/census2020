@@ -6,7 +6,6 @@ import chunk from 'lodash/fp/chunk';
 import circle from 'uswds_images/circle-124.png';
 import Layout from '../components/layout';
 
-
 // useHelmetTags hook uses the uri and callout.title and uses them to
 // provide accurate information to the <Helmet>'s <title> and <html> tags
 export const useHelmetTags = (uri, callout) => {
@@ -15,15 +14,15 @@ export const useHelmetTags = (uri, callout) => {
   React.useEffect(
     () => {
       if (callout) setTitle(callout.title);
-      if (uri !== '/') setLanguage(uri.substring(1));
+      if (uri !== '/') setLanguage(uri.substring(1).split('/')[0]);
     },
     [callout, uri]
   );
 
   return { title, language };
-}
+};
 
-const Index = ({ news, yml, heroImg, uri }) => {
+const Index = ({ news, yml, heroImg, uri, location }) => {
   const { callout, media, section, tagline, layout } = yml;
   const { title, language } = useHelmetTags(uri, callout);
   return (
@@ -32,7 +31,7 @@ const Index = ({ news, yml, heroImg, uri }) => {
         <html lang={language} />
         <title>{title}</title>
       </Helmet>
-      <Layout>
+      <Layout language={language} location={location}>
         <section className="usa-hero">
           <Img fluid={heroImg} className="usa-hero__image" fadeIn={false} />
           <div className="grid-container">
@@ -72,9 +71,8 @@ const Index = ({ news, yml, heroImg, uri }) => {
               <ul>
                 {news.map((
                   newsPost,
-                  i //   TODO               //
+                  i // Make this actaully link //   TODO               //
                 ) => (
-                  // Make this actaully link
                   <li
                     key={`news-${i}`}
                     style={{ color: 'blue', textDecoration: 'underline' }}
@@ -92,7 +90,10 @@ const Index = ({ news, yml, heroImg, uri }) => {
         <section className="usa-graphic-list usa-section usa-section--dark">
           <div className="grid-container">
             {chunk(2, media).map((pairs, idx) => (
-              <div key={idx} className="usa-graphic-list__row grid-row grid-gap">
+              <div
+                key={idx}
+                className="usa-graphic-list__row grid-row grid-gap"
+              >
                 {pairs.map(({ title, text }, idx) => (
                   <div key={idx} className="usa-media-block tablet:grid-col">
                     <img
