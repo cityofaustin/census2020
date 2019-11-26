@@ -3,16 +3,21 @@ import { graphql } from 'gatsby';
 
 import Index from '../components/index';
 
-const CommunityEN = props => {
-  const { nodes: news } = props.data.allMarkdownRemark;
+const CommunityEN = ({ location, uri, data, ...rest }) => {
+  const {
+    childImageSharp: { fluid: heroImg },
+  } = data.file;
+  const { nodes: news } = data.allMarkdownRemark;
+  const content = data.indexYaml;
 
   return (
     <Index
-      uri={props.uri}
+      uri={uri}
+      location={location}
       news={news}
-      yml={props.data.dataYaml}
-      heroImg={props.data.file.childImageSharp.fluid}
-      {...props}
+      content={content}
+      heroImg={heroImg}
+      {...rest}
     />
   );
 };

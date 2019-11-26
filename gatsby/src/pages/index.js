@@ -12,7 +12,7 @@ export default ({
   },
 }) => {
   let lang = defaultLangKey || 'en';
-  if (window && window.navigator && window.navigator.language) {
+  if (typeof window !== `undefined`) {
     let userLang = window.navigator.language.slice(0, 2);
     lang = supportedLangs.includes(userLang) ? userLang : lang;
   }
