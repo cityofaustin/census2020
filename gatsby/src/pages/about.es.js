@@ -3,21 +3,28 @@ import { graphql } from 'gatsby';
 
 import Index from '../components/index';
 
-const AboutES = ({ data, uri }) => {
+const AboutES = ({ location, uri, data, ...rest }) => {
+  const {
+    childImageSharp: { fluid: heroImg },
+  } = data.file;
   const { nodes: news } = data.allMarkdownRemark;
+  const content = data.indexYaml;
 
   return (
     <Index
       uri={uri}
+      location={location}
       news={news}
-      yml={data.dataYaml}
-      heroImg={data.file.childImageSharp.fluid}
+      content={content}
+      heroImg={heroImg}
+      {...rest}
     />
   );
 };
 
+// @TODO: Replace
 export const query = graphql`
-  query AboutESQuery {
+  query AboutEsQuery {
     file(base: { eq: "hero.png" }) {
       childImageSharp {
         fluid(maxHeight: 400) {
@@ -25,7 +32,7 @@ export const query = graphql`
         }
       }
     }
-    dataYaml(page: { eq: "index" }) {
+    indexYaml(language: { eq: "en" }) {
       callout {
         title
         text
