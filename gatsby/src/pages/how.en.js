@@ -17,8 +17,9 @@ const HowEN = props => {
   );
 };
 
+// @TODO: Replace
 export const query = graphql`
-  query HowENQuery {
+  query HowEnQuery {
     file(base: { eq: "hero.png" }) {
       childImageSharp {
         fluid(maxHeight: 400) {
@@ -26,7 +27,7 @@ export const query = graphql`
         }
       }
     }
-    dataYaml(page: { eq: "index" }) {
+    indexYaml(language: { eq: "en" }) {
       callout {
         title
         text

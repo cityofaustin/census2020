@@ -17,6 +17,7 @@ const CommunityEN = props => {
   );
 };
 
+// @TODO: Replace
 export const query = graphql`
   query CommunityENQuery {
     file(base: { eq: "hero.png" }) {
@@ -26,7 +27,7 @@ export const query = graphql`
         }
       }
     }
-    dataYaml(page: { eq: "index" }) {
+    indexYaml(language: { eq: "en" }) {
       callout {
         title
         text

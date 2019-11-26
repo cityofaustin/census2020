@@ -1,6 +1,7 @@
-page: index_es
+page: index
+language: en
 callout:
-  title: El Censo para todos
+  title: Census for All
   text: Support the callout with some short explanatory text. You don’t need more than a couple of sentences.
   cta:
     text: Call to action
@@ -21,9 +22,9 @@ section:
     text: Call to action
     link: '/'
 tagline:
-  title: ¿En qué consiste el censo?
+  title: What is the Census
   content:
-    - Cada 10 años, los habitantes de California completan el Censo para tener un conteo preciso de cada persona. Con el Censo se deciden cuáles serán nuestros fondos federales para importantes servicios comunitarios que apoyan a nuestras familias y nuestra participación en el poder político, en California y en Washington, D.C.
-    - El siguiente Censo se realizará en la primavera de 2020. Asegurémonos de que se cuenten todos los habitantes de California para conservar esos recursos.
+    - Every 10 years, people across the country and in California fill out the Census in order to have an accurate count of all people in the United States. The Census determines California’s federal funding for important community services that help support our families and fair share of representation in California and Washington D.C.
+    - The next Census is in Spring 2020. Let’s ensure all Californians are counted so we can put those resources to good use here at home!
 layout:
-  latestNews: Últimas Noticias
+  latestNews: Recent News

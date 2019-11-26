@@ -1,6 +1,7 @@
 page: index
+language: vt
 callout:
-  title: Census for All
+  title: điều tra dân số
   text: Support the callout with some short explanatory text. You don’t need more than a couple of sentences.
   cta:
     text: Call to action

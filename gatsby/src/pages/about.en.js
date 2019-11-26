@@ -17,8 +17,9 @@ const AboutEN = props => {
   );
 };
 
+// @TODO: Replace
 export const query = graphql`
-  query AboutENQuery {
+  query AboutEnQuery {
     file(base: { eq: "hero.png" }) {
       childImageSharp {
         fluid(maxHeight: 400) {
@@ -26,7 +27,7 @@ export const query = graphql`
         }
       }
     }
-    dataYaml(page: { eq: "index" }) {
+    indexYaml(language: { eq: "en" }) {
       callout {
         title
         text

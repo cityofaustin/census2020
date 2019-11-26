@@ -16,8 +16,9 @@ const AboutES = ({ data, uri }) => {
   );
 };
 
+// @TODO: Replace
 export const query = graphql`
-  query AboutESQuery {
+  query AboutEsQuery {
     file(base: { eq: "hero.png" }) {
       childImageSharp {
         fluid(maxHeight: 400) {
@@ -25,7 +26,7 @@ export const query = graphql`
         }
       }
     }
-    dataYaml(page: { eq: "index" }) {
+    indexYaml(language: { eq: "en" }) {
       callout {
         title
         text
