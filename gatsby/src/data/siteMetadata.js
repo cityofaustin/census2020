@@ -8,7 +8,7 @@ const languageListing = () => {
     headerPages.map(page => {
       let item = {
         text: page.text[lang.abbr],
-        link: `${lang.abbr}${page.link}`,
+        link: `/${lang.abbr}${page.link}`,
       };
       navigation[lang.abbr].push(item);
     });
