@@ -3,22 +3,28 @@ import { graphql } from 'gatsby';
 
 import Index from '../components/index';
 
-const AboutEN = props => {
-  const { nodes: news } = props.data.allMarkdownRemark;
+const AboutEN = ({ location, uri, data, ...rest }) => {
+  const {
+    childImageSharp: { fluid: heroImg },
+  } = data.file;
+  const { nodes: news } = data.allMarkdownRemark;
+  const content = data.indexYaml;
 
   return (
     <Index
-      uri={props.uri}
+      uri={uri}
+      location={location}
       news={news}
-      yml={props.data.dataYaml}
-      heroImg={props.data.file.childImageSharp.fluid}
-      {...props}
+      content={content}
+      heroImg={heroImg}
+      {...rest}
     />
   );
 };
 
+// @TODO: Replace
 export const query = graphql`
-  query AboutENQuery {
+  query AboutEnQuery {
     file(base: { eq: "hero.png" }) {
       childImageSharp {
         fluid(maxHeight: 400) {
@@ -26,7 +32,7 @@ export const query = graphql`
         }
       }
     }
-    dataYaml(page: { eq: "index" }) {
+    indexYaml(language: { eq: "en" }) {
       callout {
         title
         text

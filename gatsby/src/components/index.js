@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import { Helmet } from 'react-helmet';
 import Img from 'gatsby-image';
@@ -11,20 +12,26 @@ import Layout from '../components/layout';
 export const useHelmetTags = (uri, callout) => {
   const [title, setTitle] = React.useState('Census for All');
   const [language, setLanguage] = React.useState('en');
-  React.useEffect(
-    () => {
-      if (callout) setTitle(callout.title);
-      if (uri !== '/') setLanguage(uri.substring(1).split('/')[0]);
-    },
-    [callout, uri]
-  );
+  React.useEffect(() => {
+    if (callout) setTitle(callout.title);
+    if (uri !== '/') setLanguage(uri.substring(1).split('/')[0]);
+  }, [callout, uri]);
 
   return { title, language };
 };
 
-const Index = ({ news, yml, heroImg, uri, location }) => {
-  const { callout, media, section, tagline, layout } = yml;
+const propTypes = {
+  uri: PropTypes.string,
+  location: PropTypes.object,
+  news: PropTypes.array,
+  content: PropTypes.object,
+  heroImg: PropTypes.object,
+};
+
+const Index = ({ uri, location, news, content, heroImg, ...rest }) => {
+  const { callout, media, section, tagline, layout } = content;
   const { title, language } = useHelmetTags(uri, callout);
+
   return (
     <>
       <Helmet>
@@ -67,23 +74,25 @@ const Index = ({ news, yml, heroImg, uri, location }) => {
                 {layout.latestNews}
               </h2>
             </div>
-            <div className="tablet:grid-col-8 usa-prose">
-              <ul>
-                {news.map((
-                  newsPost,
-                  i // Make this actaully link //   TODO               //
-                ) => (
-                  <li
-                    key={`news-${i}`}
-                    style={{ color: 'blue', textDecoration: 'underline' }}
-                  >
-                    <h2 className="font-heading-l margin-top-0">
-                      {newsPost.frontmatter.title}
-                    </h2>
-                  </li>
-                ))}
-              </ul>
-            </div>
+            {news && (
+              <div className="tablet:grid-col-8 usa-prose">
+                <ul>
+                  {news.map((
+                    newsPost,
+                    i // @TODO Make this actaully link
+                  ) => (
+                    <li
+                      key={`news-${i}`}
+                      style={{ color: 'blue', textDecoration: 'underline' }}
+                    >
+                      <h2 className="font-heading-l margin-top-0">
+                        {newsPost.frontmatter.title}
+                      </h2>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
           </div>
         </section>
 
@@ -125,5 +134,7 @@ const Index = ({ news, yml, heroImg, uri, location }) => {
     </>
   );
 };
+
+Index.propTypes = propTypes;
 
 export default Index;

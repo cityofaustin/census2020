@@ -1,13 +1,33 @@
-import React, { Component } from 'react';
-// import { Redirect } from '@reach/router'; // highlight-line
-import { navigate } from '@reach/router';
+import React from 'react';
+import { graphql } from 'gatsby';
+import { Redirect } from '@reach/router';
 
-export default class IndexPage extends Component {
-  componentDidMount() {
-    // TODO: Check browser default language and redirect
-    navigate('/en/');
+export default ({
+  data: {
+    site: {
+      siteMetadata: {
+        languages: { defaultLangKey, supportedLangs },
+      },
+    },
+  },
+}) => {
+  let lang = defaultLangKey || 'en';
+  if (typeof window !== `undefined`) {
+    let userLang = window.navigator.language.slice(0, 2);
+    lang = supportedLangs.includes(userLang) ? userLang : lang;
   }
-  render() {
-    return <></>;
+  return <Redirect from="/" to={`/${lang}`} noThrow />;
+};
+
+export const query = graphql`
+  query languageSettings {
+    site {
+      siteMetadata {
+        languages {
+          defaultLangKey
+          supportedLangs: langs
+        }
+      }
+    }
   }
-}
+`;
