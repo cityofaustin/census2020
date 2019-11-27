@@ -1,24 +1,23 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 
-import Index from '../components/index';
+import Layout from '../components/layout';
 
 const HowEN = ({ location, uri, data, ...rest }) => {
-  const {
-    childImageSharp: { fluid: heroImg },
-  } = data.file;
-  const { nodes: news } = data.allMarkdownRemark;
-  const content = data.indexYaml;
+  // const {
+  //   childImageSharp: { fluid: heroImg },
+  // } = data.file;
+  // const { nodes: news } = data.allMarkdownRemark;
+  // const content = data.indexYaml;
 
   return (
-    <Index
-      uri={uri}
-      location={location}
-      news={news}
-      content={content}
-      heroImg={heroImg}
-      {...rest}
-    />
+    <>
+      <Layout language={'en'} location={location}>
+        <section className="grid-container usa-section">
+          <h2>How (English)</h2>
+        </section>
+      </Layout>
+    </>
   );
 };
 
