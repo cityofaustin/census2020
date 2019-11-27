@@ -17,6 +17,15 @@ Local development is no different than any other Gatsby application. Node v8.x o
 - `npm run serve` serves the built static files at `http://localhost:9000`
 - `npm run clean` removes the built static file directories `.cache/` and `public/`
 
+## Testing on Local Development
+Census2020 uses [Cypress.io](https://cypress.io) for testing. Cypress.io is a well supported testing framework that is friendly and readable for developers and engineers alike. If this is your first time working with Cypress, you can read about writing tests (here)[https://docs.cypress.io/guides/getting-started/writing-your-first-test.html#Add-a-test-file]
+
+To run your tests, there are currently two following commands:
+- `npm run test:e2e` This command starts up the server, and then opens up cypress to run your tests.
+- `npm run cy:open` This command opens up cypress and allows you to execute tests. Use this command if you already have the server running in a different terminal session.
+
+To add a new test to Census2020, you can create a new file in the `./cypress/e2e` folder. Cypress uses a `*_spec.js` naming convention, i.e. `examples_spec.js` or `home_spec.js`. Cypress uses Mocha/Chai for its assertion library, and JQuery syntax for searching the DOM. You can read more [here.](https://docs.cypress.io)
+
 ## Why
 
 Federalist supports sites generated using `node` but the documentation, examples, and experience of most users involve using [Jekyll](https://jekyllrb.com/). Meanwhile, Gatsby is a great fit for many government static sites as it allows for disparate data sources and uses React while the USWDS provides a wonderful foundation for building beautiful, 508-compliant sites. Currently, using USWDS with React takes a little bit of effort, so using them together here them demonstrates the possibility of doing so while acting as a testbed for future changes in USWDS to make this pairing easier in the future.
