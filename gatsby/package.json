@@ -17,7 +17,9 @@
     "start": "npm run develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "federalist": "npm run build -- --prefix-paths"
+    "federalist": "npm run build -- --prefix-paths",
+    "cy:open": "cypress open",
+    "test:e2e": "start-server-and-test develop http://localhost:8000 cy:open"
   },
   "dependencies": {
     "classnames": "^2.2.6",
@@ -40,11 +42,16 @@
     "uswds": "^2.0.3"
   },
   "devDependencies": {
+    "@testing-library/cypress": "^5.0.2",
+    "axe-core": "^3.4.0",
+    "cypress": "^3.6.1",
+    "cypress-axe": "^0.5.1",
     "gatsby-plugin-netlify-cms": "^4.1.28",
     "gatsby-plugin-sass": "^2.1.23",
     "prettier": "^1.15.3",
     "ptz-i18n": "^1.0.0",
     "react-intl": "^3.6.2",
-    "rimraf": "^2.6.3"
+    "rimraf": "^2.6.3",
+    "start-server-and-test": "^1.10.6"
   }
 }
