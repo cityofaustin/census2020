@@ -6,8 +6,56 @@ import Header from './header';
 import Footer from './footer';
 import { IntlProvider } from 'react-intl';
 import { getCurrentLangKey, getLangs, getUrlForLang } from 'ptz-i18n';
+const languages = require('../data/languages.js');
 
 const mainContent = 'main-content';
+
+const languageListing = () => {
+  let navigation = {};
+
+  languages.languagesMap.map(lang => {
+    navigation[lang.abbr] = [];
+    headerPages.map(page => {
+      let item = {
+        text: page.text[lang.abbr],
+        link: `/${lang.abbr}${page.link}`,
+      };
+      navigation[lang.abbr].push(item);
+    });
+  });
+
+  return navigation;
+};
+
+const headerPages = [
+  {
+    text: {
+      en: 'About the 2020 Census',
+      es: 'SOBRE EL CENSO',
+      vt: 'GIỚI THIỆU VỀ ĐIỀU TRA DÂN SỐ',
+    },
+    link: '/about',
+  },
+  {
+    text: {
+      en: 'Why the Census Matters',
+      es: 'POR QUÉ ES IMPORTANTE EL CENSO',
+      vt: 'TẠI SAO ĐIỀU TRA DÂN SỐ LẠI QUAN TRỌNG',
+    },
+    link: '/why',
+  },
+  {
+    text: {
+      en: 'Stay Connected',
+      es: 'PERMANEZCA CONECTADO',
+      vt: 'GIỮ KẾT NỐI',
+    },
+    link: '/connect',
+  },
+  { text: { en: 'How', es: 'Como', vt: 'Tiếng Việt' }, link: '/how' },
+];
+
+const langListing = languageListing();
 
 const Layout = ({ children, language, location }) => {
   return (
@@ -25,20 +73,6 @@ const Layout = ({ children, language, location }) => {
                 secondaryLinks {
                   text
                   link
-                }
-                navigation {
-                  en {
-                    link
-                    text
-                  }
-                  es {
-                    text
-                    link
-                  }
-                  vt {
-                    text
-                    link
-                  }
                 }
               }
             }
@@ -68,7 +102,11 @@ const Layout = ({ children, language, location }) => {
             <SkipNav skipsTo={mainContent} />
             <Banner />
             <div className="usa-overlay" />
-            <Header {...data.site.siteMetadata} language={langKey} />
+            <Header
+              navigation={langListing}
+              language={langKey}
+              {...data.site.siteMetadata}
+            />
             <main id={mainContent}>{children}</main>
             <Footer logoImg={data.openAustinLogo.childImageSharp.fluid} />
           </IntlProvider>

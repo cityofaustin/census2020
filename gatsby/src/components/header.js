@@ -15,7 +15,7 @@ const propTypes = {
   title: PropTypes.string.isRequired,
 };
 
-const Header = ({ title, header, language }) => (
+const Header = ({ title, navigation, header, language }) => (
   <UswdsHeader title={title} extended>
     <Navigation>
       <div className="usa-nav__inner">
@@ -23,7 +23,7 @@ const Header = ({ title, header, language }) => (
           <img src={close} alt="close" />
         </button>
         <Accordion className="usa-nav__primary" tag="ul">
-          {header.navigation[language].map((navGroup, idx) => (
+          {navigation[language].map((navGroup, idx) => (
             <li key={idx} className="usa-nav__primary-item">
               {navGroup.length > 1 ? (
                 <React.Fragment>
