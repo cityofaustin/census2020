@@ -2,20 +2,23 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import { Helmet } from 'react-helmet';
-import Img from 'gatsby-image';
 import chunk from 'lodash/fp/chunk';
 import circle from 'uswds_images/circle-124.png';
 import Layout from '../components/layout';
+import Hero from './index/Hero';
 
 // useHelmetTags hook uses the uri and callout.title and uses them to
 // provide accurate information to the <Helmet>'s <title> and <html> tags
 export const useHelmetTags = (uri, callout) => {
   const [title, setTitle] = React.useState('Census for All');
   const [language, setLanguage] = React.useState('en');
-  React.useEffect(() => {
-    if (callout) setTitle(callout.title);
-    if (uri !== '/') setLanguage(uri.substring(1).split('/')[0]);
-  }, [callout, uri]);
+  React.useEffect(
+    () => {
+      if (callout) setTitle(callout.title);
+      if (uri !== '/') setLanguage(uri.substring(1).split('/')[0]);
+    },
+    [callout, uri]
+  );
 
   return { title, language };
 };
@@ -28,9 +31,10 @@ const propTypes = {
   heroImg: PropTypes.object,
 };
 
-const Index = ({ uri, location, news, content, heroImg, ...rest }) => {
+const Index = ({ uri, location, news, content, images, ...rest }) => {
   const { callout, media, section, tagline, layout } = content;
   const { title, language } = useHelmetTags(uri, callout);
+  const heroImg = language === 'en' ? images[0] : images[1];
 
   return (
     <>
@@ -39,18 +43,7 @@ const Index = ({ uri, location, news, content, heroImg, ...rest }) => {
         <title>{title}</title>
       </Helmet>
       <Layout language={language} location={location}>
-        <section className="usa-hero">
-          <Img fluid={heroImg} className="usa-hero__image" fadeIn={false} />
-          <div className="grid-container">
-            <div className="usa-hero__callout">
-              <h2 className="usa-hero__heading">{callout.title}</h2>
-              <p>{callout.text}</p>
-              <Link className="usa-button" to={callout.cta.link}>
-                {callout.cta.text}
-              </Link>
-            </div>
-          </div>
-        </section>
+        <Hero img={heroImg} callout={callout} />
 
         <section className="grid-container usa-section">
           <div className="grid-row grid-gap">

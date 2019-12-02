@@ -3,9 +3,13 @@ import { graphql } from 'gatsby';
 import Index from '../components/index';
 
 const IndexTemplate = ({ location, uri, data, ...rest }) => {
+  console.log(data);
   const {
-    childImageSharp: { fluid: heroImg },
-  } = data.file;
+    childImageSharp: { fluid: heroImg1 },
+  } = data.image1;
+  const {
+    childImageSharp: { fluid: heroImg2 },
+  } = data.image2;
   const { nodes: news } = data.allMarkdownRemark;
   const content = data.indexYaml;
 
@@ -15,7 +19,7 @@ const IndexTemplate = ({ location, uri, data, ...rest }) => {
       location={location}
       news={news}
       content={content}
-      heroImg={heroImg}
+      images={[heroImg1, heroImg2]}
       {...rest}
     />
   );
@@ -23,9 +27,16 @@ const IndexTemplate = ({ location, uri, data, ...rest }) => {
 
 export const query = graphql`
   query IndexByLang($lang: String) {
-    file(base: { eq: "hero.png" }) {
+    image1: file(base: { eq: "census2.jpeg" }) {
       childImageSharp {
-        fluid(maxHeight: 400) {
+        fluid(maxHeight: 600) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    image2: file(base: { eq: "hero.jpeg" }) {
+      childImageSharp {
+        fluid(maxHeight: 600) {
           ...GatsbyImageSharpFluid
         }
       }

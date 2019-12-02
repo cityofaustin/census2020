@@ -44,3 +44,118 @@ collections:
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
       - { label: 'Description', name: 'description', widget: 'string' }
       - { label: 'Contenido', name: 'body', widget: 'markdown' }
+  - label: 'Pages'
+    name: 'pages'
+    files:
+      - label: 'About Page (English)'
+        name: 'about'
+        file: 'gatsby/content/pages/en/about.yml'
+        filter: { field: 'language', value: 'en' }
+        fields:
+          - {
+              label: 'Language',
+              name: 'language',
+              widget: 'select',
+              options: ['en'],
+            }
+          - { label: Title, name: title, widget: string }
+          - { label: Intro, name: intro, widget: markdown }
+
+      - label: 'About Page (Spanish)'
+        name: 'about'
+        file: 'gatsby/content/pages/es/about.yml'
+        filter: { field: 'language', value: 'es' }
+        fields:
+          - {
+              label: 'Lenguaje',
+              name: 'language',
+              widget: 'select',
+              options: ['es'],
+            }
+          - { label: Title, name: title, widget: string }
+          - { label: Intro, name: intro, widget: markdown }
+      # - file: 'src/pages/landing.md'
+      #   label: 'Landing Page'
+      #   name: 'landing'
+      #   fields:
+      #     - {
+      #         label: 'Template Key',
+      #         name: 'templateKey',
+      #         widget: 'hidden',
+      #         default: 'index-page',
+      #       }
+      #     - { label: Title, name: title, widget: string }
+      #     - { label: Image, name: image, widget: image }
+      #     - { label: Heading, name: heading, widget: string }
+      #     - { label: Subheading, name: subheading, widget: string }
+      #     - {
+      #         label: Mainpitch,
+      #         name: mainpitch,
+      #         widget: object,
+      #         fields:
+      #           [
+      #             { label: Title, name: title, widget: string },
+      #             { label: Description, name: description, widget: text },
+      #           ],
+      #       }
+      #     - { label: Description, name: description, widget: string }
+      #     - {
+      #         label: Intro,
+      #         name: intro,
+      #         widget: object,
+      #         fields:
+      #           [
+      #             { label: Heading, name: heading, widget: string },
+      #             { label: Description, name: description, widget: text },
+      #             {
+      #               label: Blurbs,
+      #               name: blurbs,
+      #               widget: list,
+      #               fields:
+      #                 [
+      #                   { label: Image, name: image, widget: image },
+      #                   { label: Text, name: text, widget: text },
+      #                 ],
+      #             },
+      #           ],
+      #       }
+      #     - {
+      #         label: Main,
+      #         name: main,
+      #         widget: object,
+      #         fields:
+      #           [
+      #             { label: Heading, name: heading, widget: string },
+      #             { label: Description, name: description, widget: text },
+      #             {
+      #               label: Image1,
+      #               name: image1,
+      #               widget: object,
+      #               fields:
+      #                 [
+      #                   { label: Image, name: image, widget: image },
+      #                   { label: Alt, name: alt, widget: string },
+      #                 ],
+      #             },
+      #             {
+      #               label: Image2,
+      #               name: image2,
+      #               widget: object,
+      #               fields:
+      #                 [
+      #                   { label: Image, name: image, widget: image },
+      #                   { label: Alt, name: alt, widget: string },
+      #                 ],
+      #             },
+      #             {
+      #               label: Image3,
+      #               name: image3,
+      #               widget: object,
+      #               fields:
+      #                 [
+      #                   { label: Image, name: image, widget: image },
+      #                   { label: Alt, name: alt, widget: string },
+      #                 ],
+      #             },
+      #           ],
+      #       }

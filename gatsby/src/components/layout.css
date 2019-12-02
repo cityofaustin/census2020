@@ -3,6 +3,8 @@
 .usa-hero {
   background-image: none;
   position: relative;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
 }
 
 .usa-hero__image {
@@ -28,4 +30,8 @@
 .spending-agency__amount {
   font-size: 10rem;
   width: 100%;
+}
+
+.usa-hero__callout {
+  background-color: '#162e51e0';
 }
