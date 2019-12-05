@@ -12,11 +12,13 @@ export default ({
   },
 }) => {
   let lang = defaultLangKey || 'en';
+  let isLoginTokenRedirect = false;
   if (typeof window !== `undefined`) {
     let userLang = window.navigator.language.slice(0, 2);
     lang = supportedLangs.includes(userLang) ? userLang : lang;
+    isLoginTokenRedirect = window.location.hash.includes('#invite_token');
   }
-  return <Redirect from="/" to={`/${lang}`} noThrow />;
+  return !isLoginTokenRedirect && <Redirect from="/" to={`/${lang}`} noThrow />;
 };
 
 export const query = graphql`
