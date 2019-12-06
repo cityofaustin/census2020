@@ -6,6 +6,7 @@ import chunk from 'lodash/fp/chunk';
 import circle from 'uswds_images/circle-124.png';
 import Layout from '../components/layout';
 import Hero from './index/Hero';
+import Communities from './index/Communities';
 
 // useHelmetTags hook uses the uri and callout.title and uses them to
 // provide accurate information to the <Helmet>'s <title> and <html> tags
@@ -31,7 +32,15 @@ const propTypes = {
   heroImg: PropTypes.object,
 };
 
-const Index = ({ uri, location, news, content, images, ...rest }) => {
+const Index = ({
+  uri,
+  location,
+  news,
+  content,
+  images,
+  communityImgs,
+  ...rest
+}) => {
   const { callout, media, section, tagline, layout } = content;
   const { title, language } = useHelmetTags(uri, callout);
   const heroImg = language === 'en' ? images[0] : images[1];
@@ -44,7 +53,6 @@ const Index = ({ uri, location, news, content, images, ...rest }) => {
       </Helmet>
       <Layout language={language} location={location}>
         <Hero img={heroImg} callout={callout} />
-
         <section className="grid-container usa-section">
           <div className="grid-row grid-gap">
             <div className="tablet:grid-col-4">
@@ -59,6 +67,8 @@ const Index = ({ uri, location, news, content, images, ...rest }) => {
             </div>
           </div>
         </section>
+
+        <Communities imgs={communityImgs} />
 
         <section className="grid-container usa-section">
           <div className="grid-row grid-gap">
@@ -88,7 +98,6 @@ const Index = ({ uri, location, news, content, images, ...rest }) => {
             )}
           </div>
         </section>
-
         <section className="usa-graphic-list usa-section usa-section--dark">
           <div className="grid-container">
             {chunk(2, media).map((pairs, idx) => (
@@ -113,7 +122,6 @@ const Index = ({ uri, location, news, content, images, ...rest }) => {
             ))}
           </div>
         </section>
-
         <section className="usa-section">
           <div className="grid-container">
             <h2 className="font-heading-xl margin-y-0">{section.title}</h2>
