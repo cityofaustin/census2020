@@ -30,7 +30,7 @@ const languageListing = () => {
 const headerPages = [
   {
     text: {
-      en: 'About the 2020 Census',
+      en: 'ABOUT THE 2020 CENSUS',
       es: 'SOBRE EL CENSO',
       vt: 'GIỚI THIỆU VỀ ĐIỀU TRA DÂN SỐ',
     },
@@ -38,7 +38,7 @@ const headerPages = [
   },
   {
     text: {
-      en: 'Why the Census Matters',
+      en: 'WHY THE CENSUS MATTERS',
       es: 'POR QUÉ ES IMPORTANTE EL CENSO',
       vt: 'TẠI SAO ĐIỀU TRA DÂN SỐ LẠI QUAN TRỌNG',
     },
@@ -46,7 +46,7 @@ const headerPages = [
   },
   {
     text: {
-      en: 'Stay Connected',
+      en: 'STAY CONNECTED',
       es: 'PERMANEZCA CONECTADO',
       vt: 'GIỮ KẾT NỐI',
     },
