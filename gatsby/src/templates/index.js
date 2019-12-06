@@ -3,7 +3,6 @@ import { graphql } from 'gatsby';
 import Index from '../components/index';
 
 const IndexTemplate = ({ location, uri, data, ...rest }) => {
-  console.log(data);
   const {
     childImageSharp: { fluid: heroImg1 },
   } = data.image1;
