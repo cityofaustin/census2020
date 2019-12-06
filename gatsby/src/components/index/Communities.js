@@ -26,11 +26,11 @@ export default function Communities(props) {
 
   return (
     <section className="bg-primary-dark">
-      <div class="grid-row padding-y-3 padding-x-105">
+      <div class="grid-row padding-y-2 padding-x-105">
         {columns.map(col => (
-          <div class="grid-col">
+          <div class="grid-col-12 tablet:grid-col">
             <Link className="" to={col.link}>
-              <div className="bg-base-darkest margin-x-1">
+              <div className="bg-base-darkest margin-1">
                 <Img
                   fluid={col.img}
                   fadeIn={false}
@@ -39,7 +39,7 @@ export default function Communities(props) {
               </div>
               <h3
                 style={textStyles}
-                className="text-base-lightest margin-x-3 Communities--textStyles"
+                className="text-base-lightest margin-x-3 font-body-lg Communities--textStyles"
               >
                 {col.title}
               </h3>
