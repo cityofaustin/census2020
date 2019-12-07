@@ -5,8 +5,9 @@ import { Link } from 'gatsby';
 import './communities.css';
 
 export default function Communities(props) {
-  const { img, imgs } = props;
+  const { imgs } = props;
 
+  //   i18n TODO: these titles need to be translated
   const columns = [
     { title: 'Latinx Complete Count Committee', link: '/', img: imgs.latinx },
     {
