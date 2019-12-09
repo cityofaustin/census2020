@@ -6,6 +6,7 @@ import chunk from 'lodash/fp/chunk';
 import circle from 'uswds_images/circle-124.png';
 import Layout from '../components/layout';
 import Hero from './index/Hero';
+import Communities from './index/Communities';
 
 // useHelmetTags hook uses the uri and callout.title and uses them to
 // provide accurate information to the <Helmet>'s <title> and <html> tags
@@ -31,7 +32,15 @@ const propTypes = {
   heroImg: PropTypes.object,
 };
 
-const Index = ({ uri, location, news, content, images, ...rest }) => {
+const Index = ({
+  uri,
+  location,
+  news,
+  content,
+  images,
+  communityImgs,
+  ...rest
+}) => {
   const { callout, media, section, tagline, layout } = content;
   const { title, language } = useHelmetTags(uri, callout);
   const heroImg = language === 'en' ? images[0] : images[1];
@@ -44,7 +53,6 @@ const Index = ({ uri, location, news, content, images, ...rest }) => {
       </Helmet>
       <Layout language={language} location={location}>
         <Hero img={heroImg} callout={callout} />
-
         <section className="grid-container usa-section">
           <div className="grid-row grid-gap">
             <div className="tablet:grid-col-4">
@@ -59,13 +67,16 @@ const Index = ({ uri, location, news, content, images, ...rest }) => {
             </div>
           </div>
         </section>
+        <Communities imgs={communityImgs} />
         <section className="grid-container usa-section">
           <div className="grid-row grid-gap">
             <div className="tablet:grid-col-12">
-              <h2 className="font-heading-xl margin-top-0 tablet:margin-bottom-0">
-
-              </h2>
-              <iframe src="https://www.censushardtocountmaps2020.us/?latlng=30.32684%2C-97.64011&z=10&query=counties%3A%3A48453&promotedfeaturetype=counties&arp=arpRaceEthnicity&layers=major%20roads%2Ccounties&infotab=info-mrrlrs&filterQuery=false" height="900" width="100%"></iframe>
+              <h2 className="font-heading-xl margin-top-0 tablet:margin-bottom-0" />
+              <iframe
+                src="https://www.censushardtocountmaps2020.us/?latlng=30.32684%2C-97.64011&z=10&query=counties%3A%3A48453&promotedfeaturetype=counties&arp=arpRaceEthnicity&layers=major%20roads%2Ccounties&infotab=info-mrrlrs&filterQuery=false"
+                height="900"
+                width="100%"
+              />
             </div>
           </div>
         </section>
@@ -97,7 +108,6 @@ const Index = ({ uri, location, news, content, images, ...rest }) => {
             )}
           </div>
         </section>
-
         <section className="usa-graphic-list usa-section usa-section--dark">
           <div className="grid-container">
             {chunk(2, media).map((pairs, idx) => (
@@ -122,7 +132,6 @@ const Index = ({ uri, location, news, content, images, ...rest }) => {
             ))}
           </div>
         </section>
-
         <section className="usa-section">
           <div className="grid-container">
             <h2 className="font-heading-xl margin-y-0">{section.title}</h2>
