@@ -5990,10 +5990,10 @@ gatsby-plugin-page-creator@^2.1.31:
     lodash "^4.17.15"
     micromatch "^3.1.10"
 
-gatsby-plugin-react-axe@^0.2.2:
-  version "0.2.2"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-react-axe/-/gatsby-plugin-react-axe-0.2.2.tgz#c3076b2f1faf4947c7e8a0d9c5cfd3869c8a26e2"
-  integrity sha512-eV8XuWnhUnSoT7bPq1iXzUipBdwnVjN1GWWIUNYtKnDX/Z90EmU8wp+zbSa9XIV9/EODcm+xH600SunYXVuzBw==
+gatsby-plugin-react-axe@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-react-axe/-/gatsby-plugin-react-axe-0.3.0.tgz#5ee31a4b70ebd757025268e53dcb6c8514b53aad"
+  integrity sha512-ZKygR3YHfdea6Muo/44tZx8lCzMEMVWU4TF6ahhxmQoS1qB9TWw8z2+WB5C/UPOWqy/cNwBcoDzad6ETKWvdpQ==
   dependencies:
     react-axe "^3.0.2"
 
