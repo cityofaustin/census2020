@@ -27,9 +27,9 @@ export default function Communities(props) {
 
   return (
     <section className="bg-primary-dark">
-      <div class="grid-row padding-y-2 padding-x-105">
-        {columns.map(col => (
-          <div class="grid-col-12 tablet:grid-col">
+      <div className="grid-row padding-y-2 padding-x-105">
+        {columns.map((col, i) => (
+          <div className="grid-col-12 tablet:grid-col" key={`ccc-${i}`}>
             <Link className="" to={col.link}>
               <div className="bg-base-darkest margin-1">
                 <Img
