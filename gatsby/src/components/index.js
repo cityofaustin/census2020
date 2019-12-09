@@ -67,9 +67,19 @@ const Index = ({
             </div>
           </div>
         </section>
-
         <Communities imgs={communityImgs} />
-
+        <section className="grid-container usa-section">
+          <div className="grid-row grid-gap">
+            <div className="tablet:grid-col-12">
+              <h2 className="font-heading-xl margin-top-0 tablet:margin-bottom-0" />
+              <iframe
+                src="https://www.censushardtocountmaps2020.us/?latlng=30.32684%2C-97.64011&z=10&query=counties%3A%3A48453&promotedfeaturetype=counties&arp=arpRaceEthnicity&layers=major%20roads%2Ccounties&infotab=info-mrrlrs&filterQuery=false"
+                height="900"
+                width="100%"
+              />
+            </div>
+          </div>
+        </section>
         <section className="grid-container usa-section">
           <div className="grid-row grid-gap">
             <div className="tablet:grid-col-4">

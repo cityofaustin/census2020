@@ -1,9 +1,7 @@
-module.exports = {
-	onClientEntry: () => {
-		try {
-		  require('uswds_polyfills');
-		} catch (e) {
-		  // do nothing
-		}
-	}
+export const onClientEntry = () => {
+  try {
+    require('uswds_polyfills');
+  } catch (e) {
+    // do nothing
+  }
 };
