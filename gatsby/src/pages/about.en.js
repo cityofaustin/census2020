@@ -1,5 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
+import FaqAccordion from '../components/faq.js';
 
 import Layout from '../components/layout';
 
@@ -15,6 +16,8 @@ const AboutEN = ({ location, uri, data, ...rest }) => {
       <Layout language={'en'} location={location}>
         <section className="grid-container usa-section">
           <h2>About (English)</h2>
+          <h2>Frequently Asked Questions</h2>
+          <FaqAccordion/>
         </section>
       </Layout>
     </>
