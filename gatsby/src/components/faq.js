@@ -5,26 +5,26 @@ import Chevron from '../components/Chevron.js';
 const FAQ = (props) => {
     const [ active, setActive ] = useState("");
     const [ height, setHeight ] = useState("0px");
-    const [ rotate, setRotate ] =useState("accordion__icon")
+    const [ rotate, setRotate ] =useState("usa-accordion__icon")
 
     const content = useRef(null);
 
     let toggleAccordion = e => {
-        setActive(active === "" ? "active" : "");
-        setHeight(active === "active" ? "0px" : `${content.current.scrollHeight}px`)
-        setRotate(active === "active" ? "accordion__icon" : "accordion__icon rotate")
+        setActive(active === "" ? "usa-active" : "");
+        setHeight(active === "usa-active" ? "0px" : `${content.current.scrollHeight}px`)
+        setRotate(active === "usa-active" ? "usa-accordion__icon" : "usa-accordion__icon usa-rotate")
     }
 
     return (
-        <div className='accordion__section'>
+        <div className='usa-accordion__section'>
 
-            <button className={`accordion ${active}`} onClick={toggleAccordion}>
-                <p className="accordion__title">{props.question}</p>
-                <Chevron className={`${rotate}`} width={10} fill={"#777"} />
+            <button className={`usa-accordion ${active}`} onClick={toggleAccordion}>
+                <p className="usa-accordion__title">{props.question}</p>
+                <Chevron className={`${rotate}`} width={8} fill={"#777"} />
             </button>
             <div ref={content} style={{maxHeight:`${height}`}} className="accordion__content">
                 <div 
-                className="accordion__text"
+                className="usa-accordion__text"
                 dangerouslySetInnerHTML = {{ __html: props.response }}
                 />
             </div>
@@ -34,7 +34,7 @@ const FAQ = (props) => {
 
 function FaqAccordion (props) {
     return (
-        <>  <h2 className="faq-header">Frequently Asked Questions</h2>
+        <>  <h2 className="usa-faq-header">Frequently Asked Questions</h2>
             <FAQ question="Why is it important for everyone to be counted in the Census?"
             response="
             <ul>
@@ -52,7 +52,7 @@ function FaqAccordion (props) {
             
             <p><span>March 12-20</span>: Households will receive an invitation to respond online to the 2020 Census. Some households will also receive paper questionnaires.</p>
             <p><span>March 16-24</span>: A reminder letter will be sent.</p>
-            <p class='underline'>If you still have not responded:</p>
+            <p class='usa-underline'>If you still have not responded:</p>
             <p><span>March 26-April 3</span>: A reminder postcard will be sent to households that have not responded.</p>
             <p><span>April 8-16</span>: A reminder letter and paper questionnaire will be sent.</p>
             <p><span>April 20-27</span>: A final reminder postcard before the U.S. Census Bureau follows up in person.</p>
