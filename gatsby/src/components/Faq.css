@@ -1,11 +1,17 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap");
+.faq-header {
+    text-transform: uppercase;
+    font-size: 3rem;
+    background-color: #eeefef;
+    margin: 0;
+    padding: 3rem 3rem 0rem 3rem;
+}
 
 /* Style the accordion section */
 .accordion__section {
   display: flex;
   flex-direction: column;
   background-color: #eeefef;
-  color: #212529;
+  color: #030303;
 }
 
 /* Style the buttons that are used to open and close the accordion panel */
@@ -20,19 +26,26 @@
   outline: none;
   transition: background-color 0.6s ease;
   width: 100%;
+  padding: 1rem 3rem;
 }
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 .accordion:hover,
 .active {
   background-color: #ccc;
+  color: #030303;
 }
 
 /* Style the accordion content title */
 .accordion__title {
   font-family: "Open Sans", sans-serif;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 1.5rem;
+  text-align: left;
+}
+
+button:not([disabled]):focus {
+    z-index: 1;
 }
 
 /* Style the accordion chevron icon */
@@ -41,12 +54,12 @@
   transition: transform 0.6s ease;
 }
 
-/* Style to rotate icon when state is active */
+/* Rotate chevron icon when state is active */
 .rotate {
   transform: rotate(90deg);
 }
 
-/* Style the accordion content panel. Note: hidden by default */
+/* Style the accordion content panel. Hidden by default*/
 .accordion__content {
   background-color: white;
   overflow: hidden;
@@ -57,6 +70,22 @@
 .accordion__text {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 1rem;
+  line-height: 1.6rem;
   padding: 18px;
 }
+
+/* Style some accordion content for emphasis with underline*/
+.underline {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+/* bold important data in accordion content */
+
+span {
+    font-weight: bold;
+}
+
+
+
