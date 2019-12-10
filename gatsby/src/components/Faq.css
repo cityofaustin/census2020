@@ -88,4 +88,15 @@ span {
 }
 
 
+/* Style mobile responsive accordion text */
 
+@media (max-width: 411px ) {
+
+    .accordion {
+        padding: 1rem 2rem;
+    }
+
+    .accordion__title {
+        font-size: 1.3rem;
+    }
+}
