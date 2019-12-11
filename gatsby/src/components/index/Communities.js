@@ -48,7 +48,7 @@ export default function Communities(props) {
               </div>
               <h3
                 style={textStyles}
-                className="text-base-lightest margin-x-3 font-body-lg"
+                className="text-base-lightest margin-x-3 font-body-lg Communities--textStyles"
               >
                 {col.title}
               </h3>

@@ -5,8 +5,8 @@
 }
 
 .Communities--imageStyles {
-  opacity: 30%;
+  opacity: 0.3;
 }
 .Communities--imageStyles:hover {
-  opacity: 80%;
+  opacity: 0.8;
 }
