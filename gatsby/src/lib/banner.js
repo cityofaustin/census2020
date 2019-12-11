@@ -1,14 +1,10 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import cx from 'classnames';
-import { banner } from 'uswds_components';
-import flag from 'uswds_images/favicons/favicon-57.png';
-import dotGov from 'uswds_images/icon-dot-gov.svg';
-import https from 'uswds_images/icon-https.svg';
-import UswdsComponent from './uswds_component';
-import Accordion from './accordion';
-import AccordionButton from './accordion-button';
-import AccordionContent from './accordion-content';
+import React from "react";
+import PropTypes from "prop-types";
+import cx from "classnames";
+import { banner } from "uswds_components";
+import flag from "uswds_images/favicons/favicon-57.png";
+import UswdsComponent from "./uswds_component";
+import Accordion from "./accordion";
 
 const propTypes = {
   className: PropTypes.string,
@@ -16,7 +12,7 @@ const propTypes = {
 
 const Banner = ({ className }) => {
   const render = ref => (
-    <div className={cx('usa-banner', className)} ref={ref}>
+    <div className={cx("usa-banner", className)} ref={ref}>
       <Accordion>
         <header className="usa-banner__header">
           <div className="usa-banner__inner">

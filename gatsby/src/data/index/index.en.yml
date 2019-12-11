@@ -1,13 +1,13 @@
 page: index
 language: en
 callout:
-  title: Census for All
-  text: Support the callout with some short explanatory text. You don’t need more than a couple of sentences.
+  title: Everybody Counts
+  text: Austin and Travis County are committed to making sure all residents in every neighborhood and of every background have the assistance and encouragement they need to stand up and be counted.
   cta:
-    text: Call to action
-    link: '/'
+    text: Why the Census matters
+    link: '/en/why'
 media:
-  - title: Graphic headings can vary.
+  - title: 'Quick link #1 goes here.'
     text: Graphic headings can be used a few different ways, depending on what your landing page is for. Highlight your values, specific program areas, or results.
   - title: Stick to 6 or fewer words.
     text: Keep body text to about 30 words. They can be shorter, but try to be somewhat balanced across all four. It creates a clean appearance with good spacing.
@@ -22,7 +22,7 @@ section:
     text: Call to action
     link: '/'
 tagline:
-  title: What is the Census
+  title: What is the Census?
   content:
     - Every 10 years, people across the country and in Texas fill out the Census in order to have an accurate count of all people in the United States. The Census determines Texas’s federal funding for important community services that help support our families and fair share of representation in Texas and Washington D.C.
     - The next Census is in Spring 2020. Let’s ensure all Texans are counted so we can put those resources to good use here at home!

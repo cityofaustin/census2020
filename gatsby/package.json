@@ -1,12 +1,12 @@
 {
-  "name": "federalist-gatsby-uswds-template",
+  "name": "cityofaustin_census2020",
   "description": "Description A template for Federalist that uses Gatsby and USWDS 2.0",
   "license": "CC0-1.0",
   "version": "0.1.0",
-  "author": "davemcorwin",
+  "author": "cityofaustin",
   "repository": {
     "type": "git",
-    "url": "git://github.com/18f/federalist-gatsby-uswds-template.git"
+    "url": "git://https://github.com/cityofaustin/census2020.git"
   },
   "engines": {
     "node": ">=8.0.0 <11.0.0"
@@ -22,14 +22,16 @@
     "test:e2e": "start-server-and-test develop http://localhost:8000 cy:open"
   },
   "dependencies": {
+    "@material-ui/core": "^4.7.2",
+    "@material-ui/icons": "^4.5.1",
     "classnames": "^2.2.6",
-    "gatsby": "^2.18.8",
+    "gatsby": "^2.13.35",
     "gatsby-image": "^2.2.7",
     "gatsby-plugin-i18n": "^1.0.1",
-    "gatsby-plugin-react-axe": "^0.3.0",
+    "gatsby-plugin-react-axe": "^0.2.2",
     "gatsby-plugin-react-helmet": "^3.1.15",
     "gatsby-plugin-sharp": "^2.2.9",
-    "gatsby-remark-responsive-iframe": "^2.2.28",
+    "gatsby-remark-responsive-iframe": "^2.2.30",
     "gatsby-source-filesystem": "^2.1.6",
     "gatsby-transformer-remark": "^2.6.37",
     "gatsby-transformer-sharp": "^2.2.5",
@@ -40,6 +42,7 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-helmet": "^6.0.0-beta",
+    "react-vertical-timeline-component": "^2.5.0",
     "uswds": "^2.0.3"
   },
   "devDependencies": {
@@ -49,7 +52,7 @@
     "cypress-axe": "^0.5.1",
     "gatsby-plugin-netlify-cms": "^4.1.28",
     "gatsby-plugin-sass": "^2.1.23",
-    "prettier": "^1.15.3",
+    "prettier": "^1.19.1",
     "ptz-i18n": "^1.0.0",
     "react-intl": "^3.6.2",
     "start-server-and-test": "^1.10.6"

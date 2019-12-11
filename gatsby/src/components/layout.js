@@ -1,26 +1,26 @@
-import React from 'react';
-import { StaticQuery, graphql } from 'gatsby';
-import { Banner, SkipNav } from 'uswds-react';
-import './layout.css';
-import Header from './header';
-import Footer from './footer';
-import { IntlProvider } from 'react-intl';
-import { getCurrentLangKey, getLangs, getUrlForLang } from 'ptz-i18n';
-const languages = require('../data/languages.js');
+import React from "react";
+import { StaticQuery, graphql } from "gatsby";
+import { Banner, SkipNav } from "uswds-react";
+import "./layout.css";
+import Header from "./header";
+import Footer from "./footer";
+import { IntlProvider } from "react-intl";
+import { getCurrentLangKey } from "ptz-i18n";
+const languages = require("../data/languages.js");
 
-const mainContent = 'main-content';
+const mainContent = "main-content";
 
 const languageListing = () => {
   let navigation = {};
 
   languages.languagesMap.map(lang => {
     navigation[lang.abbr] = [];
-    headerPages.map(page => {
+    return headerPages.map(page => {
       let item = {
         text: page.text[lang.abbr],
         link: `/${lang.abbr}${page.link}`,
       };
-      navigation[lang.abbr].push(item);
+      return navigation[lang.abbr].push(item);
     });
   });
 
@@ -30,29 +30,29 @@ const languageListing = () => {
 const headerPages = [
   {
     text: {
-      en: 'ABOUT THE 2020 CENSUS',
-      es: 'SOBRE EL CENSO',
-      vt: 'GIỚI THIỆU VỀ ĐIỀU TRA DÂN SỐ',
+      en: "ABOUT THE 2020 CENSUS",
+      es: "SOBRE EL CENSO",
+      vt: "GIỚI THIỆU VỀ ĐIỀU TRA DÂN SỐ",
     },
-    link: '/about',
+    link: "/about",
   },
   {
     text: {
-      en: 'WHY THE CENSUS MATTERS',
-      es: 'POR QUÉ ES IMPORTANTE EL CENSO',
-      vt: 'TẠI SAO ĐIỀU TRA DÂN SỐ LẠI QUAN TRỌNG',
+      en: "WHY THE CENSUS MATTERS",
+      es: "POR QUÉ ES IMPORTANTE EL CENSO",
+      vt: "TẠI SAO ĐIỀU TRA DÂN SỐ LẠI QUAN TRỌNG",
     },
-    link: '/why',
+    link: "/why",
   },
   {
     text: {
-      en: 'STAY CONNECTED',
-      es: 'PERMANEZCA CONECTADO',
-      vt: 'GIỮ KẾT NỐI',
+      en: "STAY CONNECTED",
+      es: "PERMANEZCA CONECTADO",
+      vt: "GIỮ KẾT NỐI",
     },
-    link: '/connect',
+    link: "/connect",
   },
-  { text: { en: 'How', es: 'Como', vt: 'Tiếng Việt' }, link: '/how' },
+  { text: { en: "HOW", es: "COMO", vt: "Tiếng Việt" }, link: "/how" },
 ];
 
 const langListing = languageListing();
@@ -87,14 +87,17 @@ const Layout = ({ children, language, location }) => {
         }
       `}
       render={data => {
-        let langKey = 'en';
+        let langKey = "en";
 
         if (typeof window !== `undefined`) {
           const url = location.pathname;
           const { langs, defaultLangKey } = data.site.siteMetadata.languages;
           langKey = getCurrentLangKey(langs, defaultLangKey, url);
           // TODO: implement home link by language
-          const homeLink = `/${langKey}`.replace(`/${defaultLangKey}/`, '/');
+          // const homeLink = `/${langKey}`.replace(
+          //     `/${defaultLangKey}/`,
+          //     '/'
+          // )
         }
 
         return (
