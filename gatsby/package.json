@@ -1,12 +1,12 @@
 {
-    "name": "federalist-gatsby-uswds-template",
+    "name": "cityofaustin/census2020",
     "description": "Description A template for Federalist that uses Gatsby and USWDS 2.0",
     "license": "CC0-1.0",
     "version": "0.1.0",
-    "author": "davemcorwin",
+    "author": "cityofaustin",
     "repository": {
         "type": "git",
-        "url": "git://github.com/18f/federalist-gatsby-uswds-template.git"
+        "url": "git://https://github.com/cityofaustin/census2020.git"
     },
     "engines": {
         "node": ">=8.0.0 <11.0.0"
