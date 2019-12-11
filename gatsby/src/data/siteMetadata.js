@@ -2,7 +2,7 @@ const languages = require('./languages.js');
 
 module.exports = {
   languages,
-  title: `Census 2020`,
+  title: `Austin-Travis County Census 2020`,
   header: {
     secondaryLinks: [
       { text: 'English', link: '/en' },

@@ -52,7 +52,7 @@ const headerPages = [
     },
     link: '/connect',
   },
-  { text: { en: 'How', es: 'Como', vt: 'Tiếng Việt' }, link: '/how' },
+  { text: { en: 'HOW', es: 'COMO', vt: 'Tiếng Việt' }, link: '/how' },
 ];
 
 const langListing = languageListing();

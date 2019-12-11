@@ -9,27 +9,29 @@ export default function Communities(props) {
 
   //   i18n TODO: these titles need to be translated
   const columns = [
-    { title: 'Latinx Complete Count Committee', link: '/', img: imgs.latinx },
+    { title: 'Hispanic / Latino Community', link: '/', img: imgs.latinx },
     {
-      title: 'Asian American Complete Count Committee',
+      title: 'Asian-American Community',
       link: '/',
       img: imgs.asianAmerican,
     },
     {
-      title: 'African American Complete Count Committee',
+      title: 'Black / African-American Community',
       link: '/',
       img: imgs.africanAmerican,
     },
-    { title: 'Student Complete Count Committee', link: '/', img: imgs.student },
+    { title: 'Youth & Student Community', link: '/', img: imgs.student },
+    { title: 'Community Experiencing Homelessness', link: '/', img: imgs.student },
   ];
 
   const textStyles = {};
 
   return (
-    <section className="bg-primary-dark">
-      <div class="grid-row padding-y-2 padding-x-105">
-        {columns.map(col => (
-          <div class="grid-col-12 tablet:grid-col">
+    <section className="bg-primary-dark padding-top-3 padding-bottom-3">
+      <h2 className="text-white text-center font-ui-3xl">Stand up and be counted with your community.</h2>
+      <div className="grid-row padding-y-2 padding-x-105">
+        {columns.map((col, i) => (
+          <div class="grid-col-12 tablet:grid-col" key={`ccc-${i}`}>
             <Link className="" to={col.link}>
               <div className="bg-base-darkest margin-1">
                 <Img
