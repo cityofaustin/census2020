@@ -24,6 +24,8 @@
   "dependencies": {
     "@material-ui/core": "^4.7.2",
     "@material-ui/icons": "^4.5.1",
+    "@mdi/js": "^4.7.95",
+    "@mdi/react": "^1.2.1",
     "classnames": "^2.2.6",
     "gatsby": "^2.13.35",
     "gatsby-image": "^2.2.7",
@@ -37,6 +39,7 @@
     "gatsby-transformer-sharp": "^2.2.5",
     "gatsby-transformer-yaml": "^2.2.4",
     "lodash": "^4.17.15",
+    "moment": "^2.24.0",
     "netlify-cms-app": "^2.9.7",
     "prop-types": "^15.6.2",
     "react": "^16.8.6",
