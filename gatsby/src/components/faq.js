@@ -1,41 +1,44 @@
 import React, { useState, useRef } from 'react';
 import './Faq.css';
-import Chevron from '../components/Chevron.js';
 
 const FAQ = (props) => {
-    const [ active, setActive ] = useState("");
+    const [ active, setActive ] = useState("false");
     const [ height, setHeight ] = useState("0px");
-    const [ rotate, setRotate ] =useState("usa-accordion__icon")
 
     const content = useRef(null);
 
     let toggleAccordion = e => {
-        setActive(active === "" ? "usa-active" : "");
-        setHeight(active === "usa-active" ? "0px" : `${content.current.scrollHeight}px`)
-        setRotate(active === "usa-active" ? "usa-accordion__icon" : "usa-accordion__icon usa-rotate")
+        setActive(active === "false" ? "true" : "false");
+        setHeight(active === "true" ? "0px" : `${content.current.scrollHeight}px`)
     }
 
     return (
-        <div className='usa-accordion__section'>
-
-            <button className={`usa-accordion ${active}`} onClick={toggleAccordion}>
-                <p className="usa-accordion__title">{props.question}</p>
-                <Chevron className={`${rotate}`} width={8} fill={"#777"} />
+        <>
+            <button className="usa-accordion__button"
+                aria-expanded={`${active}`}
+                aria-controls={props.id}
+                onClick={toggleAccordion}>
+                <p className="accordion__title">{props.question}</p>
             </button>
-            <div ref={content} style={{maxHeight:`${height}`}} className="accordion__content">
-                <div 
-                className="usa-accordion__text"
+            <div ref={content} style={{maxHeight:`${height}`}} className="usa-accordion__content">
+                <p 
+                className="accordion__text"
                 dangerouslySetInnerHTML = {{ __html: props.response }}
                 />
             </div>
-        </div>
+        </>
     )
 }
 
 function FaqAccordion (props) {
     return (
-        <>  <h2 className="usa-faq-header">Frequently Asked Questions</h2>
-            <FAQ question="Why is it important for everyone to be counted in the Census?"
+        <div className="usa-accordion">
+            
+            <h2 className="faq-heading">
+                Frequently Asked Questions
+            </h2>
+
+            <FAQ id="a1" question="Why is it important for everyone to be counted in the Census?"
             response="
             <ul>
             <li>Some federal funds, grants, and support to states, counties and communities are based on population.</li>
@@ -44,21 +47,22 @@ function FaqAccordion (props) {
             <li>Developers use Census data to build new homes and revitalize neighborhoods.</li>
             <li>Local governments use Census data for public safety and emergency preparedness.</li>            
             </ul>" />
-            <FAQ question="How do you get counted?"
+
+            <FAQ id="a2" question="How do you get counted?"
             response="
             <ul>
             <li>Starting mid-March 2020, each household will receive a postcard in the mail informing them of the options for filling out the Census questionnaire. That includes online, by phone, or with a paper form.</li>
-            <li>Households that do not fill out the questionnaire during the self-response period will be contacted by the U.S. Census Bureau during Non-Response Follow-Up.
-            
+            <li>Households that do not fill out the questionnaire during the self-response period will be contacted by the U.S. Census Bureau during Non-Response Follow-Up.            
             <p><span>March 12-20</span>: Households will receive an invitation to respond online to the 2020 Census. Some households will also receive paper questionnaires.</p>
             <p><span>March 16-24</span>: A reminder letter will be sent.</p>
-            <p class='usa-underline'>If you still have not responded:</p>
+            <p class='text-underline bold'>If you still have not responded:</p>
             <p><span>March 26-April 3</span>: A reminder postcard will be sent to households that have not responded.</p>
             <p><span>April 8-16</span>: A reminder letter and paper questionnaire will be sent.</p>
             <p><span>April 20-27</span>: A final reminder postcard before the U.S. Census Bureau follows up in person.</p>
             <p>U.S. Census Bureau enumerators may contact households that submit partially filled-out questionnaires in an effort to obtain complete answers.</p>
             </ul>" />
-            <FAQ question="What should a Texan be aware of when filling out the Census?"
+
+            <FAQ id="a3" question="What should a Texan be aware of when filling out the Census?"
             response="
             <ul>
             <p>It is critical to be cautious of any requests that seem suspicious.</p>
@@ -69,7 +73,8 @@ function FaqAccordion (props) {
             <p>U.S. Census Bureau field staff will always show a valid Census Bureau ID. You can confirm that they are a U.S. Census Bureau employee by entering their name into the Census Bureau Staff Search or by contacting the Texas Regional Office at 1-800-852-6159.</p>
             <p>It is a federal crime to impersonate a federal official, and anyone who violates this law is subject to imprisonment.</p>
             </ul>" />
-            <FAQ question="Is private information protected?"
+
+            <FAQ id="a4" question="Is private information protected?"
             response="
             <ul>
             <li>The United States Census Bureau (USCB) is required by law to protect any personal information it collects and keep it confidential.</li>
@@ -80,18 +85,20 @@ function FaqAccordion (props) {
             <li>U.S. Census Bureau employees are sworn to protect confidentiality. Every person with access to data is sworn for life to protect personal information and understands that the penalties for violating this law are applicable for a lifetime.</li>
             <li>Violating confidentiality or sharing the information other than for statistical purposes is a serious federal crime. Anyone who violates this law will face severe penalties, including a <span>federal prison sentence of up to five years, a fine of up to $250,000, or both.</span>
             </ul>" />
-            <FAQ question="Will the 2020 Census include a question about Citizenship?"
+
+            <FAQ id="a5" question="Will the 2020 Census include a question about Citizenship?"
             response="
             The 2020 Census questionnaire will NOT include a question about an individual’s citizenship status. Everyone, regardless of their immigration status, has certain basic rights. For those who have concerns about opening your doors, there are other ways you can participate. You can participate from the comfort of your home online and over the phone, or at community run assistance center. Please complete your Census questionnaire. An incomplete questionnaire may increase your chances of nonresponse follow-up by the U.S. Census Bureau. Households will receive an invitation to respond online to the 2020 Census beginning March 12, 2020. Your participation is vital, and your information is protected.
             " />
-            <FAQ question="What is the Austin-Travis County Complete Count Committee doing to encourage participation?"
+            
+            <FAQ id="a6" question="What is the Austin-Travis County Complete Count Committee doing to encourage participation?"
             response="
             <ul>
             <li>The Austin-Travis County Complete Count Committee is supporting a coordinated outreach and communication effort focused on reaching the hard-to-count (HTC) population. This Committee is collaborating and leveraging support from local governments, regional and statewide community-based organizations, nonprofit, education, and other agencies to ensure the hardest to count communities are reached. Communication efforts will aim to help our residents understand that their information will remain private and dispel misinformation.</li>
             <li>Take a look at our Interactive Map for a list of upcoming events to get involved or to learn more, e-mail census@traviscountytx.gov.</li>
             </ul>" />
 
-        </>
+        </div>
     )
 }
 
