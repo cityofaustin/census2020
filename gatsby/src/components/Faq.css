@@ -44,18 +44,16 @@ button:not([disabled]):focus {
   padding: 18px;
 }
 
-/* Style some accordion content for emphasis with bold and underline*/
+/* Style some accordion content for emphasis with bold and/or underline*/
 .text-underline {
     font-weight: bold;
 }
 
-/* bold important data in accordion content */
 span {
     font-weight: bold;
 }
 
-/* Style mobile responsive accordion text */
-
+/* Style mobile responsive accordion title and text */
 @media (max-width: 411px ) {
 
     .faq-heading {
