@@ -1,102 +1,68 @@
-.usa-faq-header {
+/* Style accordion heading */
+.faq-heading {
     text-transform: uppercase;
-    font-size: 3rem;
+    font-size: 2.8rem;
     background-color: #eeefef;
     margin: 0;
     padding: 3rem 3rem 1rem 3rem;
 }
 
 /* Style the accordion section */
-.usa-accordion__section {
+.usa-accordion {
   display: flex;
   flex-direction: column;
   background-color: #eeefef;
   color: #030303;
 }
 
-/* Style the buttons that are used to open and close the accordion panel */
-.usa-accordion {
-  background-color: #eee;
-  color: #444;
-  cursor: pointer;
-  padding: 18px;
-  display: flex;
-  align-items: center;
-  border: none;
-  outline: none;
-  transition: background-color 0.6s ease;
-  width: 100%;
-  padding: 1rem 3rem;
-}
-
-/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-.usa-accordion:hover,
-.usa-active {
-  background-color: #ccc;
-  color: #030303;
-}
-
 /* Style the accordion content title */
-.usa-accordion__title {
+.accordion__title {
   font-family: "Open Sans", sans-serif;
   font-weight: 600;
   font-size: 1.35rem;
   text-align: left;
 }
 
+/* Style to bring accordion button focus outline to the top of element stack */
 button:not([disabled]):focus {
     z-index: 1;
 }
 
-/* Style the accordion chevron icon */
-.usa-accordion__icon {
-  margin-left: auto;
-  transition: transform 0.5s ease;
-}
-
-/* Rotate chevron icon when state is active */
-.usa-rotate {
-  transform: rotate(90deg);
-}
 
 /* Style the accordion content panel. Hidden by default*/
-.accordion__content {
-  background-color: white;
+.usa-accordion__content {
   overflow: hidden;
   transition: max-height 0.5s ease;
+  padding: 0;
 }
 
 /* Style the accordion content text */
-.usa-accordion__text {
+.accordion__text {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
-  font-size: 1rem;
   line-height: 1.6rem;
   padding: 18px;
 }
 
-/* Style some accordion content for emphasis with underline*/
-.usa-underline {
-    text-decoration: underline;
+/* Style some accordion content for emphasis with bold and underline*/
+.text-underline {
     font-weight: bold;
 }
 
 /* bold important data in accordion content */
-
 span {
     font-weight: bold;
 }
-
 
 /* Style mobile responsive accordion text */
 
 @media (max-width: 411px ) {
 
-    .usa-accordion {
-        padding: 1rem 2rem;
+    .faq-heading {
+        font-size: 2rem;
     }
 
-    .usa-accordion__title {
+    .accordion__title {
         font-size: 1rem;
     }
 }
