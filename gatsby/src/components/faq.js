@@ -20,7 +20,7 @@ const FAQ = (props) => {
                 onClick={toggleAccordion}>
                 <p className="accordion__title">{props.question}</p>
             </button>
-            <div ref={content} style={{maxHeight:`${height}`}} className="usa-accordion__content">
+            <div ref={content} style={{maxHeight:`${height}`}} className="accordion__content">
                 <p 
                 className="accordion__text"
                 dangerouslySetInnerHTML = {{ __html: props.response }}

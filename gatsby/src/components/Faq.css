@@ -30,7 +30,8 @@ button:not([disabled]):focus {
 
 
 /* Style the accordion content panel. Hidden by default*/
-.usa-accordion__content {
+.accordion__content {
+  background: white;
   overflow: hidden;
   transition: max-height 0.5s ease;
   padding: 0;
@@ -53,7 +54,7 @@ span {
     font-weight: bold;
 }
 
-/* Style mobile responsive accordion title and text */
+/* Style mobile responsive accordion title text */
 @media (max-width: 411px ) {
 
     .faq-heading {
