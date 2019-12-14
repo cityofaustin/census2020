@@ -25,7 +25,8 @@
 
 /* Style to bring accordion button focus outline to the top of element stack */
 button:not([disabled]):focus {
-    z-index: 1;
+  outline: 0.15rem solid #00bde3;
+  outline-offset: -.75rem;
 }
 
 
