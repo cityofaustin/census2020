@@ -32,7 +32,7 @@ const FAQ = (props) => {
 
 function FaqAccordion (props) {
     return (
-        <div className="usa-accordion">
+        <div className="usa-accordion faq">
             
             <h2 className="faq-heading">
                 Frequently Asked Questions

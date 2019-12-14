@@ -7,8 +7,8 @@
     padding: 3rem 3rem 1rem 3rem;
 }
 
-/* Style the accordion section */
-.usa-accordion {
+/* Style the faq accordion section */
+.usa-accordion .faq {
   display: flex;
   flex-direction: column;
   background-color: #eeefef;
