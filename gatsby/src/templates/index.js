@@ -1,6 +1,6 @@
-import React from 'react';
-import { graphql } from 'gatsby';
-import Index from '../components/index';
+import React from "react";
+import { graphql } from "gatsby";
+import Index from "../components/index";
 
 const IndexTemplate = ({ location, uri, data, ...rest }) => {
   const {
@@ -112,9 +112,11 @@ export const query = graphql`
         frontmatter {
           date
           description
-          title
           language
           link
+          source
+          title
+          type
         }
       }
     }
