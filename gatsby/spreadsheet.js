@@ -14,11 +14,10 @@ const getEvents = function () {
       doc.getRows(1, function (err, rows) {
         if (err) reject(err);
 
-        const approvedEvents = {};
-        for (row in rows) {
-          if (rows[row].approved === 'y') approvedEvents[row] = rows[row];
+        const approvedEvents = [];
+        for (event of rows) {
+          if (event.approved === 'y') approvedEvents.push(event);
         }
-
         resolve(approvedEvents);
       });
     });
