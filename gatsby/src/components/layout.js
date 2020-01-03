@@ -77,7 +77,14 @@ const Layout = ({ children, language, location }) => {
               }
             }
           }
-          openAustinLogo: file(base: { eq: "open-austin-logo.png" }) {
+          coaLogo: file(base: { eq: "austin-seal.png" }) {
+            childImageSharp {
+              fluid(maxHeight: 400) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          travisLogo: file(base: { eq: "travis-county.png" }) {
             childImageSharp {
               fluid(maxHeight: 400) {
                 ...GatsbyImageSharpFluid
@@ -111,7 +118,10 @@ const Layout = ({ children, language, location }) => {
               {...data.site.siteMetadata}
             />
             <main id={mainContent}>{children}</main>
-            <Footer logoImg={data.openAustinLogo.childImageSharp.fluid} />
+            <Footer
+              coaImg={data.coaLogo.childImageSharp.fluid}
+              travisImg={data.travisLogo.childImageSharp.fluid}
+            />
           </IntlProvider>
         );
       }}

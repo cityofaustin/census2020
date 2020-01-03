@@ -1,10 +1,10 @@
-import React from "react"
-import Img from 'gatsby-image';
+import React from "react";
+import Img from "gatsby-image";
 
-const Footer = ({ logoImg }) => {
+const Footer = ({ coaImg, travisImg }) => {
   return (
     <footer className="usa-footer">
-      <div className="grid-container usa-footer__return-to-top">
+      {/* <div className="grid-container usa-footer__return-to-top">
         <a href="#/">Return to top</a>
       </div>
       <div className="usa-footer__primary-section">
@@ -37,22 +37,36 @@ const Footer = ({ logoImg }) => {
             </li>
           </ul>
         </nav>
-      </div>
+      </div> */}
 
       <div className="usa-footer__secondary-section">
         <div className="grid-container">
           <div className="grid-row grid-gap">
             <div className="usa-footer__logo grid-row mobile-lg:grid-col-6 mobile-lg:grid-gap-2">
               <div className="mobile-lg:grid-col-auto">
-              <Img
-                fluid={logoImg}
-                className="usa-footer__logo-img"
-                fadeIn={false}
-                alt="Open Austin logo"
-              />
+                <div className="grid-row grid-gap-2">
+                  <div className="grid-col-auto">
+                    <Img
+                      fluid={coaImg}
+                      className="usa-footer__logo-img"
+                      fadeIn={false}
+                      alt="City of Austin Seal"
+                    />
+                  </div>
+                  <div className="grid-col-auto">
+                    <Img
+                      fluid={travisImg}
+                      className="usa-footer__logo-img"
+                      fadeIn={false}
+                      alt="Travis County Seal"
+                    />
+                  </div>
+                </div>
               </div>
               <div className="mobile-lg:grid-col-auto">
-                <h3 className="usa-footer__logo-heading">Name of Agency</h3>
+                <h3 className="usa-footer__logo-heading">
+                  Austin-Travis County Census 2020
+                </h3>
               </div>
             </div>
             <div className="usa-footer__contact-links mobile-lg:grid-col-6">
@@ -88,7 +102,7 @@ const Footer = ({ logoImg }) => {
                 </div>
               </div>
               <h3 className="usa-footer__contact-heading">
-                Agency Contact Center
+                Census Contact Center
               </h3>
               <address className="usa-footer__address">
                 <div className="usa-footer__contact-info grid-row grid-gap">
@@ -105,7 +119,7 @@ const Footer = ({ logoImg }) => {
         </div>
       </div>
     </footer>
-  )
-}
+  );
+};
 
 export default Footer;
