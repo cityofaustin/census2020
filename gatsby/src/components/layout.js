@@ -17,7 +17,7 @@ const languageListing = () => {
     navigation[lang.abbr] = [];
     return headerPages.map(page => {
       let item = {
-        text: page.text[lang.abbr],
+        text: page.text[lang.abbr].toUpperCase(),
         link: `/${lang.abbr}${page.link}`,
       };
       return navigation[lang.abbr].push(item);
@@ -29,8 +29,12 @@ const languageListing = () => {
 
 const headerPages = [
   {
+    text: { en: "How To Take The Census", es: "COMO", vt: "Tiếng Việt" },
+    link: "/how",
+  },
+  {
     text: {
-      en: "ABOUT THE 2020 CENSUS",
+      en: "About the Local Campaign",
       es: "SOBRE EL CENSO",
       vt: "GIỚI THIỆU VỀ ĐIỀU TRA DÂN SỐ",
     },
@@ -46,13 +50,12 @@ const headerPages = [
   },
   {
     text: {
-      en: "STAY CONNECTED",
+      en: "Get Involved",
       es: "PERMANEZCA CONECTADO",
       vt: "GIỮ KẾT NỐI",
     },
     link: "/connect",
   },
-  { text: { en: "HOW", es: "COMO", vt: "Tiếng Việt" }, link: "/how" },
 ];
 
 const langListing = languageListing();
