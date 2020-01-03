@@ -1,7 +1,7 @@
-import React from 'react';
-import { graphql } from 'gatsby';
+import React from "react";
+import { graphql } from "gatsby";
 
-import Layout from '../components/layout';
+import Layout from "../components/layout";
 
 const CommunityEN = ({ location, uri, data, ...rest }) => {
   // const {
@@ -12,7 +12,7 @@ const CommunityEN = ({ location, uri, data, ...rest }) => {
 
   return (
     <>
-      <Layout language={'en'} location={location}>
+      <Layout language={"en"} location={location}>
         <section className="grid-container usa-section">
           <h2>Connect (English)</h2>
         </section>
