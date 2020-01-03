@@ -4,11 +4,11 @@ import { Helmet } from "react-helmet";
 import circle from "uswds_images/circle-124.png";
 import Layout from "../components/layout";
 import Hero from "./index/Hero";
+import Hashtags from "./index/Hashtags";
 import Communities from "./index/Communities";
 import Timeline from "./index/Timeline";
 import NewsAndEvents from "./index/NewsAndEvents";
 import QuickLinks from "./index/QuickLinks";
-import SocialLinks from "./index/SocialLinks";
 import MainText from "./index/MainText";
 
 // useHelmetTags hook uses the uri and callout.title and uses them to
@@ -54,6 +54,8 @@ const Index = ({
       <Layout language={language} location={location}>
         <Hero img={heroImg} callout={callout} />
 
+        <Hashtags />
+
         <MainText tagline={tagline} section={section} />
 
         <Communities imgs={communityImgs} />
@@ -64,7 +66,7 @@ const Index = ({
 
         <QuickLinks media={media} circle={circle} />
 
-        <SocialLinks />
+        {/* <SocialLinks /> */}
       </Layout>
     </>
   );
