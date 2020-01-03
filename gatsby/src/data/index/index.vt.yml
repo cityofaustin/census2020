@@ -2,10 +2,11 @@ page: index
 language: vt
 callout:
   title: điều tra dân số
-  text: Support the callout with some short explanatory text. You don’t need more than a couple of sentences.
+  text:
+    - Support the callout with some short explanatory text. You don’t need more than a couple of sentences.
   cta:
     text: Call to action
-    link: '/'
+    link: "/"
 media:
   - title: Graphic headings can vary.
     text: Graphic headings can be used a few different ways, depending on what your landing page is for. Highlight your values, specific program areas, or results.
@@ -17,10 +18,10 @@ media:
     text: In addition to your goal, find out your users’ goals. What do they want to know or do that supports your mission? Use these headings to show those.
 section:
   title: Section heading
-  text: 'Everything up to this point should help people understand your agency or project: who you are, your goal or mission, and how you approach it. Use this section to encourage them to act. Describe why they should get in touch here, and use an active verb on the button below. “Get in touch,” “Learn more,” and so on.'
+  text: "Everything up to this point should help people understand your agency or project: who you are, your goal or mission, and how you approach it. Use this section to encourage them to act. Describe why they should get in touch here, and use an active verb on the button below. “Get in touch,” “Learn more,” and so on."
   cta:
     text: Call to action
-    link: '/'
+    link: "/"
 tagline:
   title: What is the Census
   content:
