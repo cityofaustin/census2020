@@ -15,8 +15,12 @@ export default function Hashtags() {
     <section className="padding-y-4 bg-primary-dark">
       <div className="grid-container">
         <div className="grid-row">
-          {hashtagsArray.map(tag => (
-            <div className="grid-col-auto margin-y-2 text-center">
+          {hashtagsArray.map((tag, i) => (
+            <div
+              className={`${
+                i === hashtagsArray.length - 1 ? "grid-col" : "grid-col-auto"
+              } margin-y-2 text-center`}
+            >
               <span className="font-sans-xl text-white padding-x-3">{tag}</span>
             </div>
           ))}
