@@ -57,12 +57,12 @@ const Index = ({
 
         <Hashtags />
 
-        <MainText tagline={tagline} section={section} />
+        <NewsAndEvents layout={layout} news={news} />
 
+        <MainText tagline={tagline} section={section} />
 
         <Timeline />
 
-        <NewsAndEvents layout={layout} news={news} />
         <Communities imgs={communityImgs} mapImg={mapImg} />
 
         <QuickLinks media={media} circle={circle} />
