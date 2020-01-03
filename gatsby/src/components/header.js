@@ -1,15 +1,14 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Link } from 'gatsby';
-import close from 'uswds_images/close.svg';
+import React from "react";
+import PropTypes from "prop-types";
+import { Link } from "gatsby";
+import close from "uswds_images/close.svg";
 import {
   Accordion,
   AccordionButton,
   AccordionContent,
   Navigation,
-  Search,
   Header as UswdsHeader,
-} from 'uswds-react';
+} from "uswds-react";
 
 const propTypes = {
   title: PropTypes.string.isRequired,
@@ -29,7 +28,7 @@ const Header = ({ title, navigation, header, language }) => (
                 <React.Fragment>
                   <AccordionButton
                     className={`usa-nav__link ${
-                      idx === 0 ? 'usa-current' : ''
+                      idx === 0 ? "usa-current" : ""
                     }`}
                     controls={`extended-nav-section-${idx}`}
                   >
@@ -63,7 +62,6 @@ const Header = ({ title, navigation, header, language }) => (
               </li>
             ))}
           </ul>
-          <Search small />
         </div>
       </div>
     </Navigation>

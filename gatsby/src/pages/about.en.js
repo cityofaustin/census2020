@@ -1,8 +1,8 @@
-import React from 'react';
-import { graphql } from 'gatsby';
-import FaqAccordion from '../components/faq.js';
+import React from "react";
+import { graphql } from "gatsby";
+import FaqAccordion from "../components/faq.js";
 
-import Layout from '../components/layout';
+import Layout from "../components/layout";
 
 const AboutEN = ({ location, uri, data, ...rest }) => {
   // const {
@@ -13,10 +13,10 @@ const AboutEN = ({ location, uri, data, ...rest }) => {
 
   return (
     <>
-      <Layout language={'en'} location={location}>
+      <Layout language={"en"} location={location}>
         <section className="grid-container usa-section">
           <h2>About (English)</h2>
-          <FaqAccordion/>
+          <FaqAccordion />
         </section>
       </Layout>
     </>
@@ -70,7 +70,6 @@ export const query = graphql`
         excerpt
         frontmatter {
           date
-          description
           title
           language
         }

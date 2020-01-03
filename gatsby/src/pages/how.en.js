@@ -1,7 +1,7 @@
-import React from 'react';
-import { graphql } from 'gatsby';
+import React from "react";
+import { graphql } from "gatsby";
 
-import Layout from '../components/layout';
+import Layout from "../components/layout";
 
 const HowEN = ({ location, uri, data, ...rest }) => {
   // const {
@@ -12,7 +12,7 @@ const HowEN = ({ location, uri, data, ...rest }) => {
 
   return (
     <>
-      <Layout language={'en'} location={location}>
+      <Layout language={"en"} location={location}>
         <section className="grid-container usa-section">
           <h2>How (English)</h2>
         </section>
@@ -68,7 +68,6 @@ export const query = graphql`
         excerpt
         frontmatter {
           date
-          description
           title
           language
         }
