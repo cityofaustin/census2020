@@ -111,7 +111,6 @@ export const query = graphql`
         excerpt
         frontmatter {
           date
-          description
           language
           link
           source

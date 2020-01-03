@@ -70,7 +70,6 @@ export const query = graphql`
         excerpt
         frontmatter {
           date
-          description
           title
           language
         }
