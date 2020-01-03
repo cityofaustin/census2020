@@ -25,6 +25,7 @@ const IndexTemplate = ({ location, uri, data, ...rest }) => {
         africanAmerican: data.africanAmerican.childImageSharp.fluid,
         student: data.student.childImageSharp.fluid,
       }}
+      mapImg={data.mapImg.childImageSharp}
       {...rest}
     />
   );
@@ -74,6 +75,13 @@ export const query = graphql`
         }
       }
     }
+    mapImg: file(base: { eq: "map_screenshot.png" }) {
+      childImageSharp {
+        fluid(maxHeight: 600) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
     indexYaml(language: { eq: $lang }) {
       callout {
         title
@@ -86,6 +94,8 @@ export const query = graphql`
       media {
         title
         text
+        link
+        icon
       }
       section {
         title

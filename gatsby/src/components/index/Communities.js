@@ -9,20 +9,20 @@ export default function Communities(props) {
 
   //   i18n TODO: these titles need to be translated
   const columns = [
-    { title: "Hispanic / Latino Community", link: "/", img: imgs.latinx },
+    { title: "Hispanic/Latino Community Group", link: "/", img: imgs.latinx },
     {
-      title: "Asian-American Community",
+      title: "Asian American Community Group",
       link: "/",
       img: imgs.asianAmerican,
     },
     {
-      title: "Black / African-American Community",
+      title: "Black African-American Community Group",
       link: "/",
       img: imgs.africanAmerican,
     },
-    { title: "Youth & Student Community", link: "/", img: imgs.student },
+    { title: "K-12 Students", link: "/", img: imgs.student },
     {
-      title: "Community Experiencing Homelessness",
+      title: "College Students",
       link: "/",
       img: imgs.student,
     },
@@ -33,8 +33,11 @@ export default function Communities(props) {
   return (
     <section className="bg-primary-dark padding-top-3 padding-bottom-3">
       <h2 className="text-white text-center font-ui-3xl">
-        Stand up and be counted with your community.
+        Organize In Your Neighborhood
       </h2>
+      <p className="text-white text-center font-serif-xl">
+        Stand up and be counted in the 2020 Census
+      </p>
       <div className="grid-row padding-y-2 padding-x-105">
         {columns.map((col, i) => (
           <div className="grid-col-12 tablet:grid-col" key={`ccc-${i}`}>
@@ -55,6 +58,41 @@ export default function Communities(props) {
             </Link>
           </div>
         ))}
+      </div>
+      <div className="grid-container margin-bottom-4">
+        <div className="grid-row usa-intro text-white">
+          <p>
+            This Spring, every Travis County resident holds the power to shape
+            the future of our neighborhoods, schools, and local government. It
+            will take every community - no matter how small or large - to help
+            get everyone counted.
+          </p>
+          <p className="text-italic">
+            Want to help get folks counted in your community? Help organize in
+            one of our local hard to count communities or your neighborhood.
+            Click here to find out more…
+          </p>
+        </div>
+        <div className="grid-row">
+          <div className="grid-col-8 grid-offset-2">
+            <a href="https://www.censushardtocountmaps2020.us/" target="_blank">
+              <Img
+                fluid={props.mapImg.fluid}
+                style={{ maxHeight: "600px", width: "100%" }}
+              />
+            </a>
+            <div className="text-center">
+              <a
+                href="https://www.censushardtocountmaps2020.us/"
+                target="_blank"
+              >
+                <button className="usa-button usa-button--outline usa-button--inverse usa-button--big">
+                  Explore the map
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

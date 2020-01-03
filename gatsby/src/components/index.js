@@ -39,6 +39,7 @@ const Index = ({
   content,
   images,
   communityImgs,
+  mapImg,
   ...rest
 }) => {
   const { callout, media, section, tagline, layout } = content;
@@ -58,11 +59,11 @@ const Index = ({
 
         <MainText tagline={tagline} section={section} />
 
-        <Communities imgs={communityImgs} />
 
         <Timeline />
 
         <NewsAndEvents layout={layout} news={news} />
+        <Communities imgs={communityImgs} mapImg={mapImg} />
 
         <QuickLinks media={media} circle={circle} />
 
