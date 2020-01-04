@@ -34,14 +34,6 @@ const headerPages = [
   },
   {
     text: {
-      en: "About the Local Campaign",
-      es: "SOBRE EL CENSO",
-      vt: "GIỚI THIỆU VỀ ĐIỀU TRA DÂN SỐ",
-    },
-    link: "/about",
-  },
-  {
-    text: {
       en: "WHY THE CENSUS MATTERS",
       es: "POR QUÉ ES IMPORTANTE EL CENSO",
       vt: "TẠI SAO ĐIỀU TRA DÂN SỐ LẠI QUAN TRỌNG",
@@ -55,6 +47,14 @@ const headerPages = [
       vt: "GIỮ KẾT NỐI",
     },
     link: "/connect",
+  },
+  {
+    text: {
+      en: "About the Local Campaign",
+      es: "SOBRE EL CENSO",
+      vt: "GIỚI THIỆU VỀ ĐIỀU TRA DÂN SỐ",
+    },
+    link: "/about",
   },
 ];
 
