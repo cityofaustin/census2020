@@ -6,7 +6,7 @@ import Layout from "../components/layout";
 import Hero from "./index/Hero";
 import Hashtags from "./index/Hashtags";
 import Communities from "./index/Communities";
-import Timeline from "./index/Timeline";
+import Timeline from "./shared/Timeline";
 import NewsAndEvents from "./index/NewsAndEvents";
 import QuickLinks from "./index/QuickLinks";
 import MainText from "./index/MainText";

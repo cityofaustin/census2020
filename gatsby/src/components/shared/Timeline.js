@@ -54,26 +54,30 @@ const events = [
 export default function Timeline() {
   return (
     <section className="bg-primary-lighter padding-top-3 padding-bottom-3">
-      <h2 className="text-center font-ui-3xl">When is the Census?</h2>
-      <p className="text-center font-serif-xl">
-        Don’t Delay! Be sure to fill out your census form before April 30th.
-      </p>
-      <VerticalTimeline>
-        {events.map((event, i) => {
-          return (
-            <VerticalTimelineElement
-              className="vertical-timeline-element--work"
-              date={event.date}
-              iconStyle={{ background: "#1A4480", color: "#fff" }}
-              icon={event.icon ? event.icon : <StarIcon />}
-              key={`event-${i}`}
-            >
-              <h3 className="vertical-timeline-element-title">{event.title}</h3>
-              <div>{event.body}</div>
-            </VerticalTimelineElement>
-          );
-        })}
-      </VerticalTimeline>
+      <div className="grid-container">
+        <h2 className="text-center font-ui-3xl">When is the Census?</h2>
+        <p className="text-center font-serif-xl">
+          Don’t Delay! Be sure to fill out your census form before April 30th.
+        </p>
+        <VerticalTimeline>
+          {events.map((event, i) => {
+            return (
+              <VerticalTimelineElement
+                className="vertical-timeline-element--work"
+                date={event.date}
+                iconStyle={{ background: "#1A4480", color: "#fff" }}
+                icon={event.icon ? event.icon : <StarIcon />}
+                key={`event-${i}`}
+              >
+                <h3 className="vertical-timeline-element-title">
+                  {event.title}
+                </h3>
+                <div>{event.body}</div>
+              </VerticalTimelineElement>
+            );
+          })}
+        </VerticalTimeline>
+      </div>
     </section>
   );
 }
