@@ -66,8 +66,6 @@ const Index = ({
         <Communities imgs={communityImgs} mapImg={mapImg} />
 
         <QuickLinks media={media} circle={circle} />
-
-        {/* <SocialLinks /> */}
       </Layout>
     </>
   );
