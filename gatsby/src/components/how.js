@@ -32,8 +32,8 @@ const How = ({ uri, location, data, ...rest }) => {
         <section className="grid-container usa-section usa-prose">
           <div className="margin-bottom-5 usa-prose">
             <h1>{title}</h1>
-            {body.map(p => (
-              <p>{p}</p>
+            {body.map((p, i) => (
+              <p key={`how-p-${i}`}>{p}</p>
             ))}
           </div>
           <div className="usa-graphic-list__row grid-row grid-gap">
@@ -49,7 +49,7 @@ const How = ({ uri, location, data, ...rest }) => {
                 ></Icon>
 
                 <div className="usa-media-block__body">
-                  <h3 className="usa-graphic-list__heading">{option.label}</h3>
+                  <h2 className="usa-graphic-list__heading">{option.label}</h2>
                   <p>{option.text}</p>
                 </div>
               </div>
