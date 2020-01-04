@@ -117,6 +117,7 @@ function FaqAccordion(props) {
             <ul>
             <li>The Austin-Travis County Complete Count Committee is supporting a coordinated outreach and communication effort focused on reaching the hard-to-count (HTC) population. This Committee is collaborating and leveraging support from local governments, regional and statewide community-based organizations, nonprofit, education, and other agencies to ensure the hardest to count communities are reached. Communication efforts will aim to help our residents understand that their information will remain private and dispel misinformation.</li>
             <li>Take a look at our Interactive Map for a list of upcoming events to get involved or to learn more, e-mail census@traviscountytx.gov.</li>
+            <li>Learn how to <a href='/get-involved'>Get Involved!</a></li>
             </ul>"
         />
       </div>
