@@ -46,7 +46,7 @@ const headerPages = [
       es: "PERMANEZCA CONECTADO",
       vt: "GIỮ KẾT NỐI",
     },
-    link: "/connect",
+    link: "/get-involved",
   },
   {
     text: {
