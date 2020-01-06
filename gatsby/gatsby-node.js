@@ -92,10 +92,32 @@ exports.createPages = async function({ actions, graphql }) {
           }
         }
       }
+      allWhyYaml {
+        nodes {
+          language
+          fields {
+            slug
+          }
+        }
+      }
+      allInfoYaml {
+        nodes {
+          language
+          fields {
+            slug
+          }
+        }
+      }
+      allAboutYaml {
+        nodes {
+          language
+          fields {
+            slug
+          }
+        }
+      }
     }
   `);
-
-  console.log(data);
 
   const {
     site: {
@@ -105,10 +127,16 @@ exports.createPages = async function({ actions, graphql }) {
     },
     allIndexYaml,
     allHowYaml,
+    allWhyYaml,
+    allInfoYaml,
+    allAboutYaml,
   } = data;
 
   const IndexTemplate = require.resolve(`./src/templates/index.js`);
   const HowTemplate = require.resolve(`./src/templates/how.js`);
+  const WhyTemplate = require.resolve(`./src/templates/why.js`);
+  const InfoTemplate = require.resolve(`./src/templates/info.js`);
+  const AboutTemplate = require.resolve(`./src/templates/about.js`);
 
   langs.forEach(lang => {
     const indexSlug = allIndexYaml.nodes.filter(node => {
@@ -123,8 +151,6 @@ exports.createPages = async function({ actions, graphql }) {
       },
     });
 
-    console.log(allHowYaml);
-
     const howSlug = allHowYaml.nodes.filter(node => {
       return node.language === lang;
     })[0].fields.slug;
@@ -132,6 +158,42 @@ exports.createPages = async function({ actions, graphql }) {
     actions.createPage({
       path: howSlug,
       component: HowTemplate,
+      context: {
+        lang,
+      },
+    });
+
+    const whySlug = allWhyYaml.nodes.filter(node => {
+      return node.language === lang;
+    })[0].fields.slug;
+
+    actions.createPage({
+      path: whySlug,
+      component: WhyTemplate,
+      context: {
+        lang,
+      },
+    });
+
+    const infoSlug = allInfoYaml.nodes.filter(node => {
+      return node.language === lang;
+    })[0].fields.slug;
+
+    actions.createPage({
+      path: infoSlug,
+      component: InfoTemplate,
+      context: {
+        lang,
+      },
+    });
+
+    const aboutSlug = allAboutYaml.nodes.filter(node => {
+      return node.language === lang;
+    })[0].fields.slug;
+
+    actions.createPage({
+      path: aboutSlug,
+      component: AboutTemplate,
       context: {
         lang,
       },

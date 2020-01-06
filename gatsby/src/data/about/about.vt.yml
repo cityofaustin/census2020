@@ -1,0 +1,10 @@
+page: about
+language: vt
+title: About the Local Campaign
+body:
+  - hey
+sections:
+  - component: Text
+    title: test
+    text:
+      - test
