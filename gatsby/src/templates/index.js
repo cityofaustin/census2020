@@ -33,7 +33,7 @@ const IndexTemplate = ({ location, uri, data, ...rest }) => {
 
 export const query = graphql`
   query IndexByLang($lang: String) {
-    image1: file(base: { eq: "census2.jpeg" }) {
+    image1: file(base: { eq: "Diversity-min.jpg" }) {
       childImageSharp {
         fluid(maxHeight: 600) {
           ...GatsbyImageSharpFluid

@@ -40,7 +40,9 @@ function FaqAccordion(props) {
   return (
     <div className="usa-accordion bg-base-lightest faq">
       <div className="grid-container">
-        <h2 className="faq-heading text-center">Frequently Asked Questions</h2>
+        <h2 className="faq-heading text-center">
+          Census 2020 Questions & Answers
+        </h2>
 
         <FAQ
           id="a1"

@@ -7,7 +7,7 @@ sections:
   - component: Text
     title: Stand up and be counted in the 2020 Census
     text:
-      - "*TODO*: PUT LINKS TO COMMUNITY PORTALS HERE"
+      # - "*TODO*: PUT LINKS TO COMMUNITY PORTALS HERE"
       - Austin and Travis County are coming together to ensure that everyone in our communities are counted in the 2020 Census! The Census uplifts the voices of our families, friends and neighbors across the State. The power to shape our future is in our hands. Shoutouts to partners here?
       - 'This spring, we have the power to shape the future of our state and our country by participating in the 2020 Census. This is our chance to uplift our communities and we must work together to ensure everyone is counted. Texas is stronger with a complete count.
       For more information, contact <a  href="mailto:census@traviscountytx.gov">census@traviscountytx.gov</a>.'
@@ -15,5 +15,5 @@ sections:
   - component: Text
     title: Organize In Your Neighborhood
     text:
-      - "*TODO*: INSERT FORM TO COLLECT EMAILS"
+      # - "*TODO*: INSERT FORM TO COLLECT EMAILS"
       - Collect e-mail addresses via tool on website along with what neighborhood they are in if they choose to share it with us. I would assume most would not want to provide us with their actual home address.

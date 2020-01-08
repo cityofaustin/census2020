@@ -43,8 +43,8 @@ const Info = ({ uri, location, data, yaml, ...rest }) => {
         <title>{title}</title>
       </Helmet>
       <Layout language={language} location={location}>
-        <section className="grid-container usa-section usa-prose">
-          <div className="margin-bottom-5 usa-prose">
+        <section className="grid-container usa-prose">
+          <div className="margin-y-5 usa-prose">
             <h1>{title}</h1>
             {body &&
               body.map((p, i) => (
@@ -59,7 +59,7 @@ const Info = ({ uri, location, data, yaml, ...rest }) => {
           switch (section.component) {
             case "Text":
               return (
-                <section className="grid-container usa-section usa-prose">
+                <section className="grid-container usa-prose margin-bottom-5">
                   <h2 id={section.title}>{section.title}</h2>
                   {section.text.map((p, i) => (
                     <p
