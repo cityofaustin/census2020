@@ -1,5 +1,6 @@
 import React from "react";
 import Img from "gatsby-image";
+import { Link } from "gatsby";
 
 const Footer = ({ coaImg, travisImg }) => {
   return (
@@ -67,6 +68,9 @@ const Footer = ({ coaImg, travisImg }) => {
                 <h3 className="usa-footer__logo-heading">
                   Austin-Travis County Census 2020
                 </h3>
+                <p>
+                  <Link to="/en/about">About the Local Campaign</Link>
+                </p>
               </div>
             </div>
             <div className="usa-footer__contact-links mobile-lg:grid-col-6">

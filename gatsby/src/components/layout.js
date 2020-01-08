@@ -29,10 +29,6 @@ const languageListing = () => {
 
 const headerPages = [
   {
-    text: { en: "How To Take The Census", es: "COMO", vt: "Tiếng Việt" },
-    link: "/how",
-  },
-  {
     text: {
       en: "WHY THE CENSUS MATTERS",
       es: "POR QUÉ ES IMPORTANTE EL CENSO",
@@ -41,20 +37,16 @@ const headerPages = [
     link: "/why",
   },
   {
+    text: { en: "How To Take The Census", es: "COMO", vt: "Tiếng Việt" },
+    link: "/how",
+  },
+  {
     text: {
       en: "Get Involved",
       es: "PERMANEZCA CONECTADO",
       vt: "GIỮ KẾT NỐI",
     },
     link: "/get-involved",
-  },
-  {
-    text: {
-      en: "About the Local Campaign",
-      es: "SOBRE EL CENSO",
-      vt: "GIỚI THIỆU VỀ ĐIỀU TRA DÂN SỐ",
-    },
-    link: "/about",
   },
 ];
 

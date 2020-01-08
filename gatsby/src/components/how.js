@@ -31,6 +31,17 @@ const How = ({ uri, location, data, ...rest }) => {
       <Layout language={language} location={location}>
         <section className="grid-container usa-section usa-prose">
           <div className="margin-bottom-5 usa-prose">
+            <div class="usa-alert usa-alert--warning">
+              <div class="usa-alert__body">
+                <h3 class="usa-alert__heading">
+                  Census counting has not started yet.
+                </h3>
+                <p class="usa-alert__text">
+                  Learn more about how to be counted once the Census application
+                  launches in March.
+                </p>
+              </div>
+            </div>
             <h1>{title}</h1>
             {body.map((p, i) => (
               <p key={`how-p-${i}`}>{p}</p>
