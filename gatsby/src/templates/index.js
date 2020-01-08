@@ -35,7 +35,7 @@ export const query = graphql`
   query IndexByLang($lang: String) {
     image1: file(base: { eq: "Diversity-min.jpg" }) {
       childImageSharp {
-        fluid(maxHeight: 600) {
+        fluid(maxHeight: 1000) {
           ...GatsbyImageSharpFluid
         }
       }
@@ -113,7 +113,10 @@ export const query = graphql`
         latestNews
       }
     }
-    allMarkdownRemark(filter: { frontmatter: { language: { eq: $lang } } }) {
+    allMarkdownRemark(
+      filter: { frontmatter: { language: { eq: $lang } } }
+      sort: { fields: frontmatter___date, order: ASC }
+    ) {
       totalCount
       nodes {
         id
