@@ -37,8 +37,9 @@ const renderMonth = (month, news) => {
   );
 };
 
-export default function NewsAndEvents({ layout, news }) {
-  const newsByMonth = _.groupBy(news, newsItem =>
+export default function NewsAndEvents({ layout, news, events }) {
+  const recentNews = _.takeRight(news, events.defaultVisible);
+  const newsByMonth = _.groupBy(recentNews, newsItem =>
     moment(newsItem.frontmatter.date).format("MMMM YYYY")
   );
 
