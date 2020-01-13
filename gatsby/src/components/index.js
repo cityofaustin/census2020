@@ -30,6 +30,7 @@ const propTypes = {
   news: PropTypes.array,
   content: PropTypes.object,
   heroImg: PropTypes.object,
+  events: PropTypes.object,
 };
 
 const Index = ({
@@ -40,6 +41,7 @@ const Index = ({
   images,
   communityImgs,
   mapImg,
+  events,
   ...rest
 }) => {
   const { callout, media, section, tagline, layout } = content;
@@ -65,7 +67,7 @@ const Index = ({
 
         <Communities imgs={communityImgs} mapImg={mapImg} />
 
-        <NewsAndEvents layout={layout} news={news} />
+        <NewsAndEvents layout={layout} news={news} events={events} />
       </Layout>
     </>
   );
