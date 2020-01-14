@@ -10,19 +10,7 @@ import Timeline from "./shared/Timeline";
 import NewsAndEvents from "./index/NewsAndEvents";
 import QuickLinks from "./index/QuickLinks";
 import MainText from "./index/MainText";
-
-// useHelmetTags hook uses the uri and callout.title and uses them to
-// provide accurate information to the <Helmet>'s <title> and <html> tags
-export const useHelmetTags = (uri, callout) => {
-  const [title, setTitle] = React.useState("Census for All");
-  const [language, setLanguage] = React.useState("en");
-  React.useEffect(() => {
-    if (callout) setTitle(callout.title);
-    if (uri !== "/") setLanguage(uri.substring(1).split("/")[0]);
-  }, [callout, uri]);
-
-  return { title, language };
-};
+import { useHelmetTags } from "./shared/helmet";
 
 const propTypes = {
   uri: PropTypes.string,
@@ -44,7 +32,7 @@ const Index = ({
   events,
   ...rest
 }) => {
-  const { callout, media, section, tagline, layout } = content;
+  const { callout, media, section, tagline } = content;
   const { title, language } = useHelmetTags(uri, callout);
   const heroImg = language === "en" ? images[0] : images[1];
 

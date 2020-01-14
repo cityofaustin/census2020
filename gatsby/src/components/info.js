@@ -8,6 +8,7 @@ import Timeline from "./shared/Timeline";
 import FaqAccordion from "../components/faq.js";
 import Communities from "./index/Communities";
 import NewsAndEvents from "./index/NewsAndEvents";
+import { useHelmetTags } from "./shared/helmet";
 
 const propTypes = {
   uri: PropTypes.string,
@@ -15,26 +16,16 @@ const propTypes = {
   data: PropTypes.object,
 };
 
-const generateTableOfContents = sectionsArray => {
-  return (
-    <section className="grid-container usa-section usa-prose">
-      <ul>
-        {sectionsArray.map(section => {
-          if (section.component === "TableOfContents") return false;
-          return (
-            <li>
-              <a href={`#${section.title}`}>{section.title}</a>
-            </li>
-          );
-        })}
-      </ul>
-    </section>
-  );
-};
+function URLify(string) {
+  return string
+    .toLowerCase()
+    .replace(/[^\w ]+/g, "")
+    .replace(/ +/g, "-");
+}
 
 const Info = ({ uri, location, data, yaml, ...rest }) => {
-  let title = data[yaml].title;
-  let language = data[yaml].language;
+  const { title, language } = useHelmetTags(uri, data[yaml]);
+
   let body = data[yaml].body;
   let sections = data[yaml].sections;
 
@@ -57,37 +48,63 @@ const Info = ({ uri, location, data, yaml, ...rest }) => {
               ))}
           </div>
         </section>
-        {sections.map(section => {
+        {sections.map((section, i) => {
           switch (section.component) {
             case "Text":
               return (
-                <section className="grid-container usa-prose margin-bottom-5">
-                  <h2 id={section.title}>{section.title}</h2>
+                <section
+                  className="grid-container usa-prose margin-y-5"
+                  key={`Info-sections-${i}`}
+                  id={URLify(section.title)}
+                >
+                  <h2 id={URLify(section.title)}>{section.title}</h2>
                   {section.text.map((p, i) => (
                     <p
-                      key={`Info-p-${i}`}
+                      key={`Info-Text-p-${i}`}
                       dangerouslySetInnerHTML={{ __html: p }}
                     ></p>
                   ))}
                 </section>
               );
             case "TableOfContents":
-              return generateTableOfContents(sections);
+              return (
+                <section
+                  className="grid-container margin-bottom-5 usa-prose"
+                  key={`Info-sections-${i}`}
+                >
+                  <ul>
+                    {sections.map((section, i) => {
+                      if (section.component === "TableOfContents") return false;
+                      return (
+                        <li key={`TableOfContents-${i}`}>
+                          <a href={`#${URLify(section.title)}`}>
+                            {section.title}
+                          </a>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </section>
+              );
             case "Timeline":
               return (
-                <span id={section.title}>
+                <span id={URLify(section.title)} key={`Info-sections-${i}`}>
                   <Timeline />
                 </span>
               );
             case "FAQ":
               return (
-                <span id={section.title}>
+                <span id={URLify(section.title)} key={`Info-sections-${i}`}>
                   <FaqAccordion />
                 </span>
               );
             case "MapCta":
               return (
-                <section className="usa-section bg-primary-darker text-white">
+                <section
+                  className="usa-section bg-primary-darker text-white"
+                  key={`Info-sections-${i}`}
+                  id={URLify(section.title)}
+                >
                   <div className="grid-container">
                     <div className="grid-row">
                       <div className="tablet:grid-col-7 padding-right-4">
@@ -104,6 +121,7 @@ const Info = ({ uri, location, data, yaml, ...rest }) => {
                           <Img
                             fluid={data.mapImg.childImageSharp.fluid}
                             style={{ width: "100%" }}
+                            alt="screen grab of Hard to Count Map"
                           />
                         </a>
                         <a
@@ -120,17 +138,25 @@ const Info = ({ uri, location, data, yaml, ...rest }) => {
                 </section>
               );
             case "Communities":
-              return <Communities />;
+              return (
+                <span id={URLify(section.title)} key={`Info-sections-${i}`}>
+                  <Communities />
+                </span>
+              );
             case "EmailCollection":
               // TODO: Make this actually submit somewhere
               return (
-                <section className="usa-section bg-primary text-center text-white display-flex flex-column flex-align-center">
+                <section
+                  className="usa-section bg-primary text-center text-white display-flex flex-column flex-align-center"
+                  id={URLify(section.title)}
+                  key={`Info-sections-${i}`}
+                >
                   <h3>
                     Sign-up for email updates from the Austin-Travis County
                     Census campaign.
                   </h3>
                   <form className="usa-form" style={{ width: "80%" }}>
-                    <label className="usa-label" for="input-type-text">
+                    <label className="usa-label" htmlFor="input-type-text">
                       E-mail address
                     </label>
                     <input
@@ -149,7 +175,11 @@ const Info = ({ uri, location, data, yaml, ...rest }) => {
               );
             case "NewsAndEvents":
               // TODO: don't hard code the language
-              return <NewsAndEvents language={"en"} />;
+              return (
+                <span id={URLify(section.title)} key={`Info-sections-${i}`}>
+                  <NewsAndEvents language={"en"} />
+                </span>
+              );
           }
         })}
       </Layout>

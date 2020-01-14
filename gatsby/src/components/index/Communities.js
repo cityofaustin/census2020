@@ -6,22 +6,35 @@ import "./communities.css";
 
 //   i18n TODO: these titles need to be translated
 const columns = [
-  { title: "Hispanic/Latino Community Group", link: "/", img: "latinx" },
+  {
+    title: "Hispanic/Latino Community Group",
+    link: "/",
+    img: "latinx",
+    alt: "Mexican folklore dancers",
+  },
   {
     title: "Asian American Community Group",
     link: "https://www.facebook.com/groups/402255943807939/",
     img: "asianAmerican",
+    alt: "children dancers at Lunar New Year Festival",
   },
   {
     title: "Black African-American Community Group",
     link: "https://www.facebook.com/CompleteCount/",
     img: "africanAmerican",
+    alt: "three young african-american women smiling",
   },
-  { title: "Student Community Groups", link: "/", img: "student" },
+  {
+    title: "Student Community Groups",
+    link: "/",
+    img: "student",
+    alt: "four young student of varying age, gender, race and ethnicity",
+  },
   {
     title: "Community Experiencing Homelessness",
     link: "/",
     img: "student",
+    alt: "TODO",
   },
 ];
 
@@ -37,12 +50,13 @@ const Communities = ({ data }) => {
           <div className="grid-row padding-y-2 padding-x-105 flex-justify-center">
             {columns.map((col, i) => (
               <div className="grid-col-6 tablet:grid-col-4" key={`ccc-${i}`}>
-                <a href={col.link} target="_blank">
+                <a href={col.link} target="_blank" aria-label={col.title}>
                   <div className="bg-base-darkest margin-1">
                     <Img
                       fluid={data[col.img].childImageSharp.fluid}
                       fadeIn={false}
                       className="Communities--imageStyles"
+                      alt={col.alt}
                     />
                   </div>
                   <h3 className="text-base-lightest margin-x-3 font-body-xs tablet:font-body-md Communities--textStyles">
@@ -80,6 +94,7 @@ const Communities = ({ data }) => {
                   maxHeight: "600px",
                   width: "100%",
                 }}
+                alt="Screenshot of CUNY Hard to Count Map"
               />
             </a>
             <div className="text-center">

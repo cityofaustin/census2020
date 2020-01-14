@@ -112,7 +112,9 @@ const Layout = ({ children, language, location }) => {
               language={langKey}
               {...data.site.siteMetadata}
             />
-            <main id={mainContent}>{children}</main>
+            <main id={mainContent} role="main">
+              {children}
+            </main>
             <Footer
               coaImg={data.coaLogo.childImageSharp.fluid}
               travisImg={data.travisLogo.childImageSharp.fluid}

@@ -4,6 +4,8 @@ title: Get Involved and Get out the Count!
 body:
   - Our goal is to achieve a full and complete count of all Texans. Please help spread the word and ensure you, your family, neighbors, and friends are all counted!
 sections:
+  - component: NewsAndEvents
+    title: Recent News and Events
   - component: Communities
     title: Stand up and be counted in the 2020 Census
     text:
@@ -13,3 +15,4 @@ sections:
       For more information, contact <a  href="mailto:census@traviscountytx.gov">census@traviscountytx.gov</a>.'
       - You can also visit the <a href="https://www.facebook.com/Austin-Travis-County-Complete-Count-Committee-289680787280/" target="_blank">Austin-Travis County Complete Count Committee Facebook page</a> for the latest information.
   - component: EmailCollection
+    title: Email Form

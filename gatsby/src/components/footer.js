@@ -4,42 +4,7 @@ import { Link } from "gatsby";
 
 const Footer = ({ coaImg, travisImg }) => {
   return (
-    <footer className="usa-footer">
-      {/* <div className="grid-container usa-footer__return-to-top">
-        <a href="#/">Return to top</a>
-      </div>
-      <div className="usa-footer__primary-section">
-        <nav className="usa-footer__nav">
-          <ul className="grid-row grid-gap">
-            <li className="mobile-lg:grid-col-4 desktop:grid-col-2 usa-footer__primary-content">
-              <a className="usa-footer__primary-link" href="/">
-                Primary link
-              </a>
-            </li>
-            <li className="mobile-lg:grid-col-4 desktop:grid-col-2 usa-footer__primary-content">
-              <a className="usa-footer__primary-link" href="/">
-                Primary link
-              </a>
-            </li>
-            <li className="mobile-lg:grid-col-4 desktop:grid-col-2 usa-footer__primary-content">
-              <a className="usa-footer__primary-link" href="/">
-                Primary link
-              </a>
-            </li>
-            <li className="mobile-lg:grid-col-4 desktop:grid-col-2 usa-footer__primary-content">
-              <a className="usa-footer__primary-link" href="/">
-                Primary link
-              </a>
-            </li>
-            <li className="mobile-lg:grid-col-4 desktop:grid-col-2 usa-footer__primary-content">
-              <a className="usa-footer__primary-link" href="/">
-                Primary link
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </div> */}
-
+    <footer className="usa-footer" role="contentinfo">
       <div className="usa-footer__secondary-section">
         <div className="grid-container">
           <div className="grid-row grid-gap">
