@@ -1,11 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Helmet } from "react-helmet";
-import Layout from "./layout";
-
-import Timeline from "./shared/Timeline";
-import Icon from "@mdi/react";
 import { mdiEmailOutline, mdiLaptopWindows, mdiPhone } from "@mdi/js";
+import Icon from "@mdi/react";
+
+import Layout from "./layout";
+import Timeline from "./shared/Timeline";
+import { useHelmetTags } from "./shared/helmet";
 
 const iconMap = {
   mdiStar: mdiEmailOutline,
@@ -20,7 +21,8 @@ const propTypes = {
 };
 
 const How = ({ uri, location, data, ...rest }) => {
-  const { title, language, body, options } = data.howYaml;
+  const { body, options } = data.howYaml;
+  const { title, language } = useHelmetTags(uri, data.howYaml);
 
   return (
     <>
@@ -31,12 +33,12 @@ const How = ({ uri, location, data, ...rest }) => {
       <Layout language={language} location={location}>
         <section className="grid-container usa-section usa-prose">
           <div className="margin-bottom-5 usa-prose">
-            <div class="usa-alert usa-alert--warning">
-              <div class="usa-alert__body">
-                <h3 class="usa-alert__heading">
+            <div className="usa-alert usa-alert--warning">
+              <div className="usa-alert__body">
+                <h3 className="usa-alert__heading">
                   Census counting has not started yet.
                 </h3>
-                <p class="usa-alert__text">
+                <p className="usa-alert__text">
                   Learn more about how to be counted once the Census application
                   launches in March.
                 </p>
@@ -61,7 +63,9 @@ const How = ({ uri, location, data, ...rest }) => {
 
                 <div className="usa-media-block__body">
                   <h2 className="usa-graphic-list__heading">{option.label}</h2>
-                  <p>{option.text}</p>
+                  {option.text.map((p, idx) => (
+                    <p key={idx} dangerouslySetInnerHTML={{ __html: p }}></p>
+                  ))}
                 </div>
               </div>
             ))}

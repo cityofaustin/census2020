@@ -7,37 +7,36 @@ sections:
   - component: Text
     title: About the 2020 Census
     text:
-      - The City of Austin and Travis County have launched a Census Outreach Campaign to ensure residents are educated and prepared for the 2020 Census. Every ten years the U.S. Census Bureau oversees a confidential survey of the whole country to determine population totals and breakdowns by sex, age, race and other demographic factors. Next year, between March and July, individuals will be able to respond online, by phone, or by mail.
-      - "The Census information guides the allocation of more than $800 billion in federal funding to programs across the U.S. that are crucial to the well-being of families and communities. If Texas residents are undercounted by even 1% Texas could lose at least $300 million per year in critical programs affecting everyone, especially vulnerable children and other at-risk populations. Some of the programs affected in Austin and Travis County include:"
+      - Every ten years the U.S. Census Bureau oversees a confidential survey of the whole country to determine population totals and breakdowns by sex, age, race and other demographic factors. This year between March and July, individuals will be able to respond online, by phone, or by mail.
+      - Your response to the 2020 Census will help guide more than $800 billion in federal funding to programs across the U.S. that are crucial to our families and our community.
+      - "If Texas residents are undercounted by even 1% Texas could lose at least $300 million per year in programs that affect all of us, especially vulnerable children and other at-risk populations. Census data determines funding allocations for programs that: "
       - "<ul>
-        <li>Medicare and Medicaid</li>
-        <li>Head Start program</li>
-        <li>National School Lunch Program</li>
-        <li>Special Education grants</li>
-        <li>Highway planning and construction</li>
-        <li>State Children’s Health Insurance (CHIP)</li>
+        <li>Improve health services and programs</li>
+        <li>Improve local schools and education opportunities</li>
+        <li>Enhance streets and roads</li>
+        <li>Increase jobs and business opportunities</li>
+        </ul>
         "
-      - Counting everyone can be logistically challenging. Very young children, immigrants, people who live in rural areas, people of color, people who move residences more frequently, and people who face language barriers, are often harder to count.
-      - The 2020 Census is an opportunity to get as many people as possible to participate in order to shape our future. Your Census responses are safe and secure. Information collected as part of the 2020 Census cannot be shared with or by other governmental agencies or used against you in any way, as dictated under Title 13 of the U.S. code. It is for statistical purposes only. All Census Bureau staff take a lifetime oath to protect your personal information, and any violation comes with a penalty of up to $250,000 and/or up to 5 years in prison.
       - Learn about <a href="/en/why">Why the Census Matters!</a>
       - Want to participate? Learn how to <a href="/en/get-involved">Get Involved!</a>
   - component: Timeline
     title: When is the Census?
-  - component: Text
-    title: Complete Count Committee and Census Action Team
-    text:
-      - TODO
-  - component: Text
-    title: Testimonials
-    text:
-      - TODO
+  # - component: Text
+  #   title: Complete Count Committee and Census Action Team
+  #   text:
+  #     - TODO
+  # - component: Text
+  #   title: Testimonials
+  #   text:
+  #     - TODO
   - component: Text
     title: How to Participate?
     text:
-      - See how you can <a href="/en/get-involved">Get Involved!</a>
-      - Our goal is to achieve a full and complete count of all Texans. Please help spread the word and ensure you, your family, neighbors, and friends are all counted!
-      - Austin and Travis County are coming together to ensure that everyone in our communities are counted in the 2020 Census! The Census uplifts the voices of our families, friends and neighbors across the State. The power to shape our future is in our hands.
+      - Austin and Travis County are coming together to ensure that everyone in our communities are counted in the 2020 Census!
       - This spring, we have the power to shape the future of our state and our country by participating in the 2020 Census. This is our chance to uplift our communities and we must work together to ensure everyone is counted. Texas is stronger with a complete count.
+      - See how you can <a href="/en/get-involved">Get Involved!</a>
+  - component: NewsAndEvents
+    title: Recent News and Events
   - component: FAQ
     title: FAQ
   - component: Text

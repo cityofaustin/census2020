@@ -78,15 +78,16 @@ function FaqAccordion(props) {
           id="a3"
           question="What should a Texan be aware of when filling out the Census?"
           response="
-            <ul>
             <p>It is critical to be cautious of any requests that seem suspicious.</p>
             <p>The U.S. Census Bureau will never ask for the following:</p>
+            <ul>
             <li>Payment to fill out the questionnaire</li>
             <li>Social Security number</li>
             <li> Financial information</li>
+            </ul>
             <p>U.S. Census Bureau field staff will always show a valid Census Bureau ID. You can confirm that they are a U.S. Census Bureau employee by entering their name into the Census Bureau Staff Search or by contacting the Texas Regional Office at 1-800-852-6159.</p>
             <p>It is a federal crime to impersonate a federal official, and anyone who violates this law is subject to imprisonment.</p>
-            </ul>"
+          "
         />
 
         <FAQ

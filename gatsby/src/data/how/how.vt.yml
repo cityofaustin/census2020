@@ -8,10 +8,13 @@ body:
 options:
   - icon: mdiStar
     label: By Mail
-    text: The paper Census form will be available in English and Spanish languages and can be mailed back to the U.S. Census Bureau.
+    text:
+      - The paper Census form will be available in English and Spanish languages and can be mailed back to the U.S. Census Bureau.
   - icon: mdiComputer
     label: Online
-    text: For the first time, the Census form will be available to complete online in 13 languages. Need access to a computer? Visit any Austin Public Library Branch for details or call 512-974-7400.
+    text:
+      - For the first time, the Census form will be available to complete online in 13 languages. Need access to a computer? Visit any Austin Public Library Branch for details or call 512-974-7400.
   - icon: mdiPhone
     label: By Phone
-    text: The Census can be completed by phone in 13 languages including Telecommunication Device for the Deaf.
+    text:
+      - The Census can be completed by phone in 13 languages including Telecommunication Device for the Deaf.
