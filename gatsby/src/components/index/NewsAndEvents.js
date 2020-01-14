@@ -5,6 +5,7 @@ import _ from "lodash";
 import Icon from "@mdi/react";
 import { mdiNewspaper } from "@mdi/js";
 import { mdiCalendarStar } from "@mdi/js";
+import { StaticQuery } from "gatsby";
 
 const renderMonth = (month, news) => {
   return (
@@ -37,11 +38,25 @@ const renderMonth = (month, news) => {
   );
 };
 
-export default function NewsAndEvents({ layout, news, events }) {
-  const recentNews = _.takeRight(news, events.defaultVisible);
+const NewsAndEvents = ({ data, language }) => {
+  const news = data.allMarkdownRemark.nodes;
+  const newsByLanguage = _.filter(
+    news,
+    item => item.frontmatter.language === language
+  );
+
+  const recentNews = _.takeRight(
+    newsByLanguage,
+    data.site.siteMetadata.events.defaultVisible
+  );
   const newsByMonth = _.groupBy(recentNews, newsItem =>
     moment(newsItem.frontmatter.date).format("MMMM YYYY")
   );
+
+  const newsTitle = _.find(
+    data.allIndexYaml.edges,
+    item => item.node.language === language
+  ).node.layout.latestNews;
 
   return (
     <div>
@@ -54,7 +69,7 @@ export default function NewsAndEvents({ layout, news, events }) {
                   <div>
                     <Icon path={mdiNewspaper} title="News Story" size={2.5} />
                   </div>
-                  {layout.latestNews}
+                  {newsTitle}
                 </h2>
               </div>
               {Object.keys(newsByMonth)
@@ -78,4 +93,47 @@ export default function NewsAndEvents({ layout, news, events }) {
       </section>
     </div>
   );
-}
+};
+
+export default props => (
+  <StaticQuery
+    query={graphql`
+      query {
+        site {
+          siteMetadata {
+            events {
+              defaultVisible
+            }
+          }
+        }
+        allMarkdownRemark(sort: { fields: frontmatter___date, order: ASC }) {
+          totalCount
+          nodes {
+            id
+            html
+            excerpt
+            frontmatter {
+              date
+              language
+              link
+              source
+              title
+              type
+            }
+          }
+        }
+        allIndexYaml {
+          edges {
+            node {
+              language
+              layout {
+                latestNews
+              }
+            }
+          }
+        }
+      }
+    `}
+    render={data => <NewsAndEvents data={data} {...props} />}
+  />
+);

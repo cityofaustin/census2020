@@ -61,7 +61,9 @@ const How = ({ uri, location, data, ...rest }) => {
 
                 <div className="usa-media-block__body">
                   <h2 className="usa-graphic-list__heading">{option.label}</h2>
-                  <p>{option.text}</p>
+                  {option.text.map((p, idx) => (
+                    <p key={idx} dangerouslySetInnerHTML={{ __html: p }}></p>
+                  ))}
                 </div>
               </div>
             ))}

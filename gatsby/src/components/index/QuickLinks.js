@@ -3,7 +3,6 @@ import chunk from "lodash/fp/chunk";
 import Icon from "@mdi/react";
 import {
   mdiHandPointingUp,
-  mdiClipboardCheckMultiple,
   mdiYoutubeTv,
   mdiShieldLock,
   mdiBriefcaseAccount,

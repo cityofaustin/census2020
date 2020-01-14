@@ -57,7 +57,12 @@ const Index = ({
       <Layout language={language} location={location}>
         <Hero img={heroImg} callout={callout} />
 
-        <Hashtags />
+        {/* 
+          TODO: 
+          Make this Hashtag component interactive, link to social media. 
+          For now, we'll skip it.
+        */}
+        {/* <Hashtags /> */}
 
         <MainText tagline={tagline} section={section} />
 
@@ -65,9 +70,7 @@ const Index = ({
 
         <Timeline />
 
-        <Communities imgs={communityImgs} mapImg={mapImg} />
-
-        <NewsAndEvents layout={layout} news={news} events={events} />
+        <Communities lang={language} />
       </Layout>
     </>
   );

@@ -9,23 +9,14 @@ const IndexTemplate = ({ location, uri, data, ...rest }) => {
   const {
     childImageSharp: { fluid: heroImg2 },
   } = data.image2;
-  const { nodes: news } = data.allMarkdownRemark;
   const content = data.indexYaml;
 
   return (
     <Index
       uri={uri}
       location={location}
-      news={news}
       content={content}
       images={[heroImg1, heroImg2]}
-      communityImgs={{
-        latinx: data.latinx.childImageSharp.fluid,
-        asianAmerican: data.asianAmerican.childImageSharp.fluid,
-        africanAmerican: data.africanAmerican.childImageSharp.fluid,
-        student: data.student.childImageSharp.fluid,
-      }}
-      mapImg={data.mapImg.childImageSharp}
       events={data.site.siteMetadata.events}
       {...rest}
     />
@@ -49,41 +40,6 @@ export const query = graphql`
       }
     }
     image2: file(base: { eq: "bassist.jpeg" }) {
-      childImageSharp {
-        fluid(maxHeight: 600) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    latinx: file(base: { eq: "bailadores.jpeg" }) {
-      childImageSharp {
-        fluid(maxHeight: 600) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    asianAmerican: file(base: { eq: "asian-american-festival.jpg" }) {
-      childImageSharp {
-        fluid(maxHeight: 600) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    africanAmerican: file(base: { eq: "census2.jpeg" }) {
-      childImageSharp {
-        fluid(maxHeight: 600) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    student: file(base: { eq: "aisd-students.jpg" }) {
-      childImageSharp {
-        fluid(maxHeight: 600) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    mapImg: file(base: { eq: "map_screenshot.png" }) {
       childImageSharp {
         fluid(maxHeight: 600) {
           ...GatsbyImageSharpFluid
@@ -119,25 +75,6 @@ export const query = graphql`
       }
       layout {
         latestNews
-      }
-    }
-    allMarkdownRemark(
-      filter: { frontmatter: { language: { eq: $lang } } }
-      sort: { fields: frontmatter___date, order: ASC }
-    ) {
-      totalCount
-      nodes {
-        id
-        html
-        excerpt
-        frontmatter {
-          date
-          language
-          link
-          source
-          title
-          type
-        }
       }
     }
   }

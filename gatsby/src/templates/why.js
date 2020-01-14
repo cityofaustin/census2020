@@ -1,10 +1,17 @@
 import React from "react";
 import { graphql } from "gatsby";
-import Why from "../components/why";
+import Info from "../components/info";
 
 const WhyTemplate = ({ location, uri, data, mapImg, ...rest }) => {
   return (
-    <Why uri={uri} location={location} data={data} mapImg={mapImg} {...rest} />
+    <Info
+      uri={uri}
+      location={location}
+      data={data}
+      mapImg={mapImg}
+      yaml="whyYaml"
+      {...rest}
+    />
   );
 };
 
@@ -13,9 +20,10 @@ export const query = graphql`
     whyYaml(language: { eq: $lang }) {
       title
       body
-      htc_section {
+      sections {
+        component
         title
-        body
+        text
       }
     }
     mapImg: file(base: { eq: "map_screenshot.png" }) {
