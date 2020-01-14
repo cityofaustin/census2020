@@ -5,7 +5,7 @@ import _ from "lodash";
 import Icon from "@mdi/react";
 import { mdiNewspaper } from "@mdi/js";
 import { mdiCalendarStar } from "@mdi/js";
-import { StaticQuery } from "gatsby";
+import { StaticQuery, graphql } from "gatsby";
 
 const renderMonth = (month, news) => {
   return (
