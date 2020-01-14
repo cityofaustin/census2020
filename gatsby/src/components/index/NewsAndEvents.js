@@ -38,6 +38,44 @@ const renderMonth = (month, news) => {
   );
 };
 
+const renderEventMonth = (month, event) => {
+  return (
+    <div key={`event-month-${month}`}>
+      <h2>{month}</h2>
+      <ul style={{ listStyleType: "none", margin: 0, padding: 0 }}>
+        {event.map((event, i) => {
+          console.log("renderEventMonth", event);
+          return (
+            <li key={`event-${month}-${i}`} className="margin-bottom-2">
+              <div className="grid-row">
+                <div className="grid-col-auto padding-right-2">
+                  <Icon path={mdiCalendarStar} title="event" size={1.25} />
+                </div>
+                <div className="grid-col">
+                  {event.node.rsvplinkurl ? (
+                    <a
+                      className="font-heading-l margin-top-0 text-sub"
+                      href={event.node.rsvplinkurl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      [{event.node.eventdate}] {event.node.eventtitle}
+                    </a>
+                  ) : (
+                    <span>
+                      [{event.node.eventdate}] {event.node.eventtitle}
+                    </span>
+                  )}
+                </div>
+              </div>
+            </li>
+          );
+        })}
+      </ul>
+    </div>
+  );
+};
+
 const NewsAndEvents = ({ data, language }) => {
   const news = data.allMarkdownRemark.nodes;
   const newsByLanguage = _.filter(
@@ -58,11 +96,16 @@ const NewsAndEvents = ({ data, language }) => {
     item => item.node.language === language
   ).node.layout.latestNews;
 
+  const eventByMonth = _.groupBy(
+    data.allGoogleSheetFormResponses1Row.edges,
+    eventItem => moment(eventItem.node.eventdate).format("MMMM YYYY")
+  );
+
   return (
     <div>
       <section className="grid-container usa-section">
         <div className="grid-row">
-          <div className="grid-col-12 tablet:grid-col-6">
+          <div className="grid-col-12 tablet:grid-col-6 tablet:padding-right-2">
             <div className="grid-row grid-gap">
               <div className="grid-col">
                 <h2 className="font-heading-xl margin-top-0 tablet:margin-bottom-0 text-center">
@@ -79,7 +122,7 @@ const NewsAndEvents = ({ data, language }) => {
                 })}
             </div>
           </div>
-          <div className="grid-col-12 tablet:grid-col-6 margin-top-5 tablet:margin-top-0">
+          <div className="grid-col-12 tablet:grid-col-6 margin-top-5 tablet:margin-top-0 tablet:padding-left-2">
             <div className="grid-col">
               <h2 className="font-heading-xl margin-top-0 tablet:margin-bottom-0 text-center">
                 <div>
@@ -88,6 +131,9 @@ const NewsAndEvents = ({ data, language }) => {
                 Events
               </h2>
             </div>
+            {Object.keys(eventByMonth).map(month =>
+              renderEventMonth(month, eventByMonth[month])
+            )}
           </div>
         </div>
       </section>
@@ -129,6 +175,20 @@ export default props => (
               layout {
                 latestNews
               }
+            }
+          }
+        }
+        allGoogleSheetFormResponses1Row(filter: { confirmed: { eq: true } }) {
+          edges {
+            node {
+              eventdate
+              eventtitle
+              eventdescription
+              locationaddress
+              locationname
+              starttime
+              confirmed
+              rsvplinkurl
             }
           }
         }
