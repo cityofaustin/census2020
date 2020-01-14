@@ -1,0 +1,50 @@
+/* Style accordion heading */
+.faq-heading {
+  text-transform: uppercase;
+  font-size: 2.8rem;
+  /* background-color: #eeefef; */
+  margin: 0;
+  padding: 3rem 3rem 1rem 3rem;
+}
+
+/* Style the faq accordion section */
+.usa-accordion .faq {
+  display: flex;
+  flex-direction: column;
+  /* background-color: #eeefef; */
+  color: #030303;
+}
+
+/* Style to bring accordion button focus outline to the top of element stack */
+button:not([disabled]):focus {
+  outline: 0.15rem solid #00bde3;
+  outline-offset: -0.75rem;
+}
+
+/* Style the accordion content panel. Hidden by default*/
+.accordion__content {
+  background: white;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+  padding: 0;
+}
+
+/* Style some accordion content for emphasis with bold and/or underline*/
+.text-underline {
+  font-weight: bold;
+}
+
+span {
+  font-weight: bold;
+}
+
+/* Style mobile responsive accordion title text */
+@media (max-width: 411px) {
+  .faq-heading {
+    font-size: 2rem;
+  }
+
+  .accordion__title {
+    font-size: 1rem;
+  }
+}

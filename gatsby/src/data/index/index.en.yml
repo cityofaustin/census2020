@@ -1,30 +1,41 @@
 page: index
 language: en
 callout:
-  title: Everybody Counts
-  text: Austin and Travis County are committed to making sure all residents in every neighborhood and of every background have the assistance and encouragement they need to stand up and be counted.
+  title: Everybody counts
+  text:
+    - The City of Austin and Travis County are committed to making sure everyone in our communities gets counted in the 2020 Census.
+    - If you don’t complete the Census, our schools, neighborhoods, and most vulnerable residents will lose funding.
   cta:
     text: Why the Census matters
-    link: '/en/why'
+    link: "/en/why"
 media:
-  - title: 'Quick link #1 goes here.'
-    text: Graphic headings can be used a few different ways, depending on what your landing page is for. Highlight your values, specific program areas, or results.
-  - title: Stick to 6 or fewer words.
-    text: Keep body text to about 30 words. They can be shorter, but try to be somewhat balanced across all four. It creates a clean appearance with good spacing.
-  - title: Never highlight anything without a goal.
-    text: For anything you want to highlight here, understand what your users know now, and what activity or impression you want from them after they see it.
-  - title: Could also have 2 or 6.
-    text: In addition to your goal, find out your users’ goals. What do they want to know or do that supports your mission? Use these headings to show those.
+  - title: Taking the Census is Easy
+    text: Responding to the U.S. Census’ American Community Survey online is easy. The survey offers you help screens and the ability to review your answers.
+    link: https://www.census.gov/programs-surveys/acs/respond/respond-online.html
+    icon: finger
+  - title: The Census is Safe and Confidential
+    text: The U.S. Census Bureau is bound by law to protect your answers and keep them strictly confidential. In fact, every employee takes an oath to protect your personal information for life.
+    link: https://2020census.gov/en/data-protection.html
+    icon: secure
+  - title: How The Census Works
+    text: Check out a short video to learn how participation in the U.S. Census and the gathering of accurate Census data affects our democracy and the well-being of families and communities.
+    link: https://www.youtube.com/watch?v=5v7ylJoLkCo
+    icon: watch
+  - title: 2020 Census Jobs
+    text: The U.S. Census Bureau is recruiting to fill hundreds of thousands of temporary positions across the country to assist with the 2020 Census count.
+    link: https://2020census.gov/en/jobs.html
+    icon: job
 section:
   title: Section heading
-  text: 'Everything up to this point should help people understand your agency or project: who you are, your goal or mission, and how you approach it. Use this section to encourage them to act. Describe why they should get in touch here, and use an active verb on the button below. “Get in touch,” “Learn more,” and so on.'
+  text: "Everything up to this point should help people understand your agency or project: who you are, your goal or mission, and how you approach it. Use this section to encourage them to act. Describe why they should get in touch here, and use an active verb on the button below. “Get in touch,” “Learn more,” and so on."
   cta:
-    text: Call to action
-    link: '/'
+    text: Why the Census matters
+    link: "/en/why"
 tagline:
   title: What is the Census?
   content:
-    - Every 10 years, people across the country and in Texas fill out the Census in order to have an accurate count of all people in the United States. The Census determines Texas’s federal funding for important community services that help support our families and fair share of representation in Texas and Washington D.C.
-    - The next Census is in Spring 2020. Let’s ensure all Texans are counted so we can put those resources to good use here at home!
+    - Every 10 years, every person living in the United States - regardless of origin or status - is required to fill out the Census. This is a requirement of the United States Constitution in order to provide an accurate count of all people in the country. Federal funding for our local schools, transportation dollars for roads and buses, and healthcare services are all funded based on the Census. The political lines that are drawn for Congress, State House seats, and even school board members, are based on Census data.
+    - If Austin and Travis County residents are undercounted in 2020, every Central Texan is negatively impacted.
+    - The next Census is in Spring 2020. This is our chance to come together and make sure every resident is counted, so every federal dollar we deserve is accounted for.
 layout:
   latestNews: Recent News

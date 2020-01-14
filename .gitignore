@@ -1,2 +1,5 @@
 .DS_Store
 node_modules
+gatsby/_site/
+gatsby/.cache/
+gatsby/node_modules/

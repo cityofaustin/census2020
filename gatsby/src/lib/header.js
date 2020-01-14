@@ -1,11 +1,11 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Link } from 'gatsby';
-import cx from 'classnames';
-import { navigation } from 'uswds_components';
-import UswdsComponent from './uswds_component';
+import React from "react";
+import PropTypes from "prop-types";
+import { Link } from "gatsby";
+import cx from "classnames";
+import { navigation } from "uswds_components";
+import UswdsComponent from "./uswds_component";
 
-const ROOT_CLASS = 'usa-header';
+const ROOT_CLASS = "usa-header";
 
 const propTypes = {
   className: PropTypes.string,
@@ -22,9 +22,9 @@ const defaultProps = {
 
 const propsToClasses = props => ({
   [ROOT_CLASS]: true,
-  'usa-header--basic': !props.extended,
-  'usa-header--basic-megamenu': props.mega && !props.extended,
-  'usa-header--extended': props.extended,
+  "usa-header--basic": !props.extended,
+  "usa-header--basic-megamenu": props.mega && !props.extended,
+  "usa-header--extended": props.extended,
 });
 
 const Header = ({ className, children, ...props }) => {

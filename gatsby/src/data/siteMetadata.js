@@ -10,6 +10,9 @@ module.exports = {
       { text: 'Tiếng Việt', link: '/vt' },
     ],
   },
+  events: {
+    defaultVisible: 5,
+  },
   //   siteUrl: 'https://angeloocana.com',
   //   author: {
   //     name: 'Ângelo Ocanã',

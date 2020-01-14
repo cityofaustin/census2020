@@ -17,7 +17,7 @@ const languageListing = () => {
     navigation[lang.abbr] = [];
     return headerPages.map(page => {
       let item = {
-        text: page.text[lang.abbr],
+        text: page.text[lang.abbr].toUpperCase(),
         link: `/${lang.abbr}${page.link}`,
       };
       return navigation[lang.abbr].push(item);
@@ -30,14 +30,6 @@ const languageListing = () => {
 const headerPages = [
   {
     text: {
-      en: "ABOUT THE 2020 CENSUS",
-      es: "SOBRE EL CENSO",
-      vt: "GIỚI THIỆU VỀ ĐIỀU TRA DÂN SỐ",
-    },
-    link: "/about",
-  },
-  {
-    text: {
       en: "WHY THE CENSUS MATTERS",
       es: "POR QUÉ ES IMPORTANTE EL CENSO",
       vt: "TẠI SAO ĐIỀU TRA DÂN SỐ LẠI QUAN TRỌNG",
@@ -45,14 +37,17 @@ const headerPages = [
     link: "/why",
   },
   {
+    text: { en: "How To Take The Census", es: "COMO", vt: "Tiếng Việt" },
+    link: "/how",
+  },
+  {
     text: {
-      en: "STAY CONNECTED",
+      en: "Get Involved",
       es: "PERMANEZCA CONECTADO",
       vt: "GIỮ KẾT NỐI",
     },
-    link: "/connect",
+    link: "/get-involved",
   },
-  { text: { en: "HOW", es: "COMO", vt: "Tiếng Việt" }, link: "/how" },
 ];
 
 const langListing = languageListing();
@@ -77,7 +72,14 @@ const Layout = ({ children, language, location }) => {
               }
             }
           }
-          openAustinLogo: file(base: { eq: "open-austin-logo.png" }) {
+          coaLogo: file(base: { eq: "austin-seal.png" }) {
+            childImageSharp {
+              fluid(maxHeight: 400) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          travisLogo: file(base: { eq: "travis-county.png" }) {
             childImageSharp {
               fluid(maxHeight: 400) {
                 ...GatsbyImageSharpFluid
@@ -110,8 +112,13 @@ const Layout = ({ children, language, location }) => {
               language={langKey}
               {...data.site.siteMetadata}
             />
-            <main id={mainContent}>{children}</main>
-            <Footer logoImg={data.openAustinLogo.childImageSharp.fluid} />
+            <main id={mainContent} role="main">
+              {children}
+            </main>
+            <Footer
+              coaImg={data.coaLogo.childImageSharp.fluid}
+              travisImg={data.travisLogo.childImageSharp.fluid}
+            />
           </IntlProvider>
         );
       }}
