@@ -1,16 +1,16 @@
-const path = require('path');
-const siteMetadata = require('./src/data/siteMetadata');
+const path = require("path");
+const siteMetadata = require("./src/data/siteMetadata");
 
 module.exports = {
   siteMetadata,
 
   // Note: it must *not* have a trailing slash.
-  pathPrefix: process.env.BASEURL || '/',
+  pathPrefix: process.env.BASEURL || "/",
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: 'data',
+        name: "data",
         path: path.join(__dirname, `src`, `data`),
       },
     },
@@ -32,12 +32,12 @@ module.exports = {
     `gatsby-transformer-yaml`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    'gatsby-plugin-react-axe',
+    "gatsby-plugin-react-axe",
     `gatsby-plugin-react-helmet`,
     {
-      resolve: 'gatsby-plugin-i18n',
+      resolve: "gatsby-plugin-i18n",
       options: {
-        langKeyDefault: 'en',
+        langKeyDefault: "en",
         useLangKeyLayout: false,
       },
     },
@@ -56,6 +56,14 @@ module.exports = {
         gfm: true,
         // Plugins configs
         plugins: [`gatsby-remark-responsive-iframe`],
+      },
+    },
+    {
+      resolve: "gatsby-source-google-sheets",
+      options: {
+        spreadsheetId: "1pqe_NZ_K3gZyd_TwkduToqgscvjt2O5mghrZiLuSJnE",
+        worksheetTitle: "Form Responses 1",
+        credentials: require("./census2020-8f45e16b8de8.json"),
       },
     },
     // {

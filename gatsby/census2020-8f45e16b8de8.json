@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "census2020",
+  "private_key_id": "8f45e16b8de8ff0b076b58a010b500368bce45cf",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQDLbFDpPbQEsnPB\nXXq7vDmOFOgcQaATFEsJyzwF+mZZndOBMPu+djwAjWpTfJuaFOBosCMnKo1/fkYR\nBSh0smz1NgbZ62Sg1344I7r2IUrU2uuXz0LE9OMZ2RHyG9X2sPBxfSf7j4PJ2JUC\nVcqmQZC2gvleTCEeJQCSalRJ5iKo6Fe33u/mYclCRjGQ87azjELAy1lCfSW2TBav\niQnb0lv84mwzFzS26sRbSgWJ0Z2JB6ebMpV/pcLhvnXFaJ3yrghP8eBkHDvH9KD7\n0+mTNx4eYMZQItkBsqhHAfHnI16fphh2j7MS+IT93IeSnBw64JVvYD3zVfryINRq\neLstWY/XAgMBAAECggEADiKmtK5u9eyYkpU2VBlOPotBXcVJpEnCtRmEQD4YIp4O\n9mk69Q8uODObcdW00k4lEeE7cBtK3dMed0xOdV14qMlqTHZI9cxDnw8MjNHfa08T\nE+d5EkqaBU/KKXK5uXyuGJTD1H0ygTIlmJXxkP/5WFVdkqnjmz6i/YmZ9dCiE+6B\nWiwNWo0yG/zF4x0Eu7sdHmV8WDO6u2rTWEH6URiU0CPbsHHeTNX8DPyH27CCjJ8q\ntwTPVflY0yKcJJZgWtxU/FC8QFNmsoDHuSdtM6FgIQSOA5drARxV0N2NvzdlV0w2\nwljvPKtXvSES66ww3M6PIPlqgBmZXLcbMC/J4pSYAQKBgQD8PF03m2A8vZPXeD3y\nh5y3o/2ZZH4HnF0+dUhsGplZEZ6IOMYBayhTOpSj/nGqJasOLqmFhU54g0w5+efZ\nuKQe3s5aL98Ivv74+XrZ36Ish960+C3Tolt+YeN19PmuKvCQDpO3nUSMTi+XWlPn\nnAm2sr5J9j3vZshS3ap/iMLKAQKBgQDOdXgT422rCE0PkA7uSkzPuLVPkYp6AOLi\nZczlFisTSwRD+Y4YRgJ59H3LNwha+9S126RADaPsA6K7G/kDHgFgPhyiXS7AQDEB\ngY1u3n9CLVlPgiZX+k3kdYNMWGieNBZxcG8FJqIShK6fOrFonmwRBMf7xf+Q3fRW\naswXwefp1wKBgQDoM/nssxEJWcy8U2lT2Bwhwso3aBfNkdkVIoslWedJ47p51SoT\nLD7XP9qOjjK9XCf4ymQtEueGcfi+dp1GBYCxGpQE2oUMXCgFtEWwRPva2sne94nY\nhmKMGjl34ano+Ia1V3YNVq5AK8oMH4+WbENU+X/MPvANcCWCg6Xt+ky4AQKBgQCp\nGMNRnsua8sCTB42DFC3XUFSIKA9AH+u0PGbWFxMOyTlkJ0h/jw/GLT6+q4NXab1t\neckMgV+KFew5zg5kxDWiSx0Oyr1YzvqUXjSl4uxeGmB044deNW+It8rjQ+Hj+YuM\nO+diU6MZAb04Q008/8xJIB5fk2rfjzrpcK1apAG7nwKBgQCLhOLN7PhPtv85wwaL\nCkQCq1qswsrousIuN36i7eZsF7U1/WP0o+3jQucu9BOmFi8AvW037iXEt86K7NHi\ncyVIygJmD/M5A83b7iY1g8mqFYq52jsdQ2ErXUIX9Xvx9Ieif93YghV/nS4B4WaV\nlKtesAVNwFpwcAikm9bEGIRYLA==\n-----END PRIVATE KEY-----\n",
+  "client_email": "atd-google-sheets-account@census2020.iam.gserviceaccount.com",
+  "client_id": "109546552339114698722",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/atd-google-sheets-account%40census2020.iam.gserviceaccount.com"
+}
