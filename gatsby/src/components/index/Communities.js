@@ -8,7 +8,7 @@ import "./communities.css";
 const columns = [
   {
     title: "Hispanic/Latino Community Group",
-    link: "/",
+    link: "https://hagasecontar.org/",
     img: "latinx",
     alt: "Mexican folklore dancers",
   },
@@ -25,10 +25,16 @@ const columns = [
     alt: "three young african-american women smiling",
   },
   {
-    title: "Student Community Groups",
-    link: "/",
+    title: "Children & Young Students",
+    link: "https://www.austinisd.org/census2020",
     img: "student",
     alt: "four young student of varying age, gender, race and ethnicity",
+  },
+  {
+    title: "College Student Community",
+    link: "/",
+    img: "student",
+    alt: "TODO",
   },
   {
     title: "Community Experiencing Homelessness",

@@ -34,7 +34,7 @@ const Footer = ({ coaImg, travisImg }) => {
                   Austin-Travis County Census 2020
                 </h3>
                 <p>
-                  <Link to="/en/about">About the Local Campaign</Link>
+                  <Link to="/en/about">About the local campaign</Link>
                 </p>
               </div>
             </div>
@@ -70,16 +70,16 @@ const Footer = ({ coaImg, travisImg }) => {
                   </a>
                 </div>
               </div>
-              <h3 className="usa-footer__contact-heading">
-                Census Contact Center
-              </h3>
+              <h3 className="usa-footer__contact-heading">Contact Us</h3>
               <address className="usa-footer__address">
                 <div className="usa-footer__contact-info grid-row grid-gap">
-                  <div className="grid-col-auto">
-                    <a href="tel:1-800-555-5555">(800) CALL-GOVT</a>
+                  <div className="grid-col-12 margin-y-2">
+                    <a href="tel:1-512-854-6185">(512) 854-6185</a>
                   </div>
-                  <div className="grid-col-auto">
-                    <a href="mailto:info@agency.gov">info@agency.gov</a>
+                  <div className="grid-col-12">
+                    <a href="mailto:census@traviscountytx.gov">
+                      census@traviscountytx.gov
+                    </a>
                   </div>
                 </div>
               </address>

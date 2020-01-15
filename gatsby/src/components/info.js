@@ -147,7 +147,7 @@ const Info = ({ uri, location, data, yaml, ...rest }) => {
               // TODO: Make this actually submit somewhere
               return (
                 <section
-                  className="usa-section bg-primary text-center text-white display-flex flex-column flex-align-center"
+                  className="padding-y-3 text-center display-flex flex-column flex-align-center"
                   id={URLify(section.title)}
                   key={`Info-sections-${i}`}
                 >
@@ -156,17 +156,35 @@ const Info = ({ uri, location, data, yaml, ...rest }) => {
                     Census campaign.
                   </h3>
                   <form className="usa-form" style={{ width: "80%" }}>
-                    <label className="usa-label" htmlFor="input-type-text">
+                    <label className="usa-label" htmlFor="input-type-email">
                       E-mail address
                     </label>
                     <input
                       className="usa-input"
-                      id="input-type-text"
-                      name="input-type-text"
+                      id="input-type-email"
+                      name="input-type-email"
+                      type="text"
+                    />
+                    <label className="usa-label" htmlFor="input-type-name">
+                      Your Name
+                    </label>
+                    <input
+                      className="usa-input"
+                      id="input-type-name"
+                      name="input-type-name"
+                      type="text"
+                    />
+                    <label className="usa-label" htmlFor="usa-textarea">
+                      Which communities could you help volunteer with?
+                    </label>
+                    <textarea
+                      className="usa-textarea"
+                      id="usa-textarea"
+                      name="usa-textarea"
                       type="text"
                     />
                     <input
-                      className="usa-button usa-button--outline usa-button--inverse"
+                      className="usa-button usa-button--outline"
                       type="submit"
                       value="Submit"
                     />

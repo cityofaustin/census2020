@@ -106,6 +106,19 @@ const NewsAndEvents = ({ data, language }) => {
       <section className="grid-container usa-section">
         <div className="grid-row">
           <div className="grid-col-12 tablet:grid-col-6 tablet:padding-right-2">
+            <div className="grid-col">
+              <h2 className="font-heading-xl margin-top-0 tablet:margin-bottom-0 text-center">
+                <div>
+                  <Icon path={mdiCalendarStar} title="Events" size={2.5} />
+                </div>
+                Events
+              </h2>
+            </div>
+            {Object.keys(eventByMonth).map(month =>
+              renderEventMonth(month, eventByMonth[month])
+            )}
+          </div>
+          <div className="grid-col-12 tablet:grid-col-6 margin-top-5 tablet:margin-top-0 tablet:padding-left-2">
             <div className="grid-row grid-gap">
               <div className="grid-col">
                 <h2 className="font-heading-xl margin-top-0 tablet:margin-bottom-0 text-center">
@@ -121,19 +134,6 @@ const NewsAndEvents = ({ data, language }) => {
                   return renderMonth(month, newsByMonth[month]);
                 })}
             </div>
-          </div>
-          <div className="grid-col-12 tablet:grid-col-6 margin-top-5 tablet:margin-top-0 tablet:padding-left-2">
-            <div className="grid-col">
-              <h2 className="font-heading-xl margin-top-0 tablet:margin-bottom-0 text-center">
-                <div>
-                  <Icon path={mdiCalendarStar} title="Events" size={2.5} />
-                </div>
-                Events
-              </h2>
-            </div>
-            {Object.keys(eventByMonth).map(month =>
-              renderEventMonth(month, eventByMonth[month])
-            )}
           </div>
         </div>
       </section>
