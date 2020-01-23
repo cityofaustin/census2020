@@ -85,7 +85,7 @@ const NewsAndEvents = ({ data, language }) => {
 
   const recentNews = _.takeRight(
     newsByLanguage,
-    data.site.siteMetadata.events.defaultVisible
+    data.site.siteMetadata.news.defaultVisible
   );
   const newsByMonth = _.groupBy(recentNews, newsItem =>
     moment(newsItem.frontmatter.date).format("MMMM YYYY")
@@ -96,9 +96,12 @@ const NewsAndEvents = ({ data, language }) => {
     item => item.node.language === language
   ).node.layout.latestNews;
 
-  const eventByMonth = _.groupBy(
+  const recentEvents = _.take(
     data.allGoogleSheetFormResponses1Row.edges,
-    eventItem => moment(eventItem.node.eventdate).format("MMMM YYYY")
+    data.site.siteMetadata.events.defaultVisible
+  );
+  const eventByMonth = _.groupBy(recentEvents, eventItem =>
+    moment(eventItem.node.eventdate).format("MMMM YYYY")
   );
 
   return (
@@ -147,6 +150,9 @@ export default props => (
       query {
         site {
           siteMetadata {
+            news {
+              defaultVisible
+            }
             events {
               defaultVisible
             }

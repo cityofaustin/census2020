@@ -1,16 +1,19 @@
-const languages = require('./languages.js');
+const languages = require("./languages.js");
 
 module.exports = {
   languages,
   title: `Austin-Travis County Census 2020`,
   header: {
     secondaryLinks: [
-      { text: 'English', link: '/en' },
-      { text: 'Español', link: '/es' },
-      { text: 'Tiếng Việt', link: '/vt' },
+      { text: "English", link: "/en" },
+      { text: "Español", link: "/es" },
+      { text: "Tiếng Việt", link: "/vt" },
     ],
   },
   events: {
+    defaultVisible: 8,
+  },
+  news: {
     defaultVisible: 5,
   },
   //   siteUrl: 'https://angeloocana.com',
