@@ -108,6 +108,7 @@ const NewsAndEvents = ({ data, language }) => {
           <div className="grid-col-12 tablet:grid-col-6 tablet:padding-right-2">
             <div className="grid-col">
               <h2 className="font-heading-xl margin-top-0 tablet:margin-bottom-0 text-center">
+                <span style={{visibility: 'hidden'}}>Events</span>
                 <div>
                   <Icon path={mdiCalendarStar} title="Events" size={2.5} />
                 </div>
@@ -122,6 +123,7 @@ const NewsAndEvents = ({ data, language }) => {
             <div className="grid-row grid-gap">
               <div className="grid-col">
                 <h2 className="font-heading-xl margin-top-0 tablet:margin-bottom-0 text-center">
+                  <span style={{visibility: 'hidden'}}>{newsTitle}</span>
                   <div>
                     <Icon path={mdiNewspaper} title="News Story" size={2.5} />
                   </div>
