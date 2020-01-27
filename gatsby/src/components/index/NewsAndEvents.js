@@ -76,7 +76,7 @@ const renderEventMonth = (month, event) => {
   );
 };
 
-const NewsAndEvents = ({ data, language }) => {
+const NewsAndEvents = ({ data, language, eventsVisible, newsVisible }) => {
   const news = data.allMarkdownRemark.nodes;
   const newsByLanguage = _.filter(
     news,
@@ -85,7 +85,7 @@ const NewsAndEvents = ({ data, language }) => {
 
   const recentNews = _.takeRight(
     newsByLanguage,
-    data.site.siteMetadata.news.defaultVisible
+    newsVisible || data.site.siteMetadata.news.defaultVisible
   );
   const newsByMonth = _.groupBy(recentNews, newsItem =>
     moment(newsItem.frontmatter.date).format("MMMM YYYY")
@@ -98,7 +98,7 @@ const NewsAndEvents = ({ data, language }) => {
 
   const recentEvents = _.take(
     data.allGoogleSheetFormResponses1Row.edges,
-    data.site.siteMetadata.events.defaultVisible
+    eventsVisible || data.site.siteMetadata.events.defaultVisible
   );
   const eventByMonth = _.groupBy(recentEvents, eventItem =>
     moment(eventItem.node.eventdate).format("MMMM YYYY")

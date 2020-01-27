@@ -1,7 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Helmet } from "react-helmet";
-import Layout from "../components/layout";
+import Layout from "./layout";
+import NewsAndEvents from "./index/NewsAndEvents";
 
 const propTypes = {
   uri: PropTypes.string,
@@ -13,7 +14,7 @@ const Events = ({ uri, location, language }) => {
     <>
       <Helmet></Helmet>
       <Layout language={language} location={location}>
-        HOWDY
+        <NewsAndEvents language="en" newsVisible={100} eventsVisible={100} />
       </Layout>
     </>
   );
