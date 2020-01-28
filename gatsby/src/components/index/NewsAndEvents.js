@@ -123,7 +123,7 @@ const NewsAndEvents = ({ data, language }) => {
               <div className="grid-col">
                 <h2 className="font-heading-xl margin-top-0 tablet:margin-bottom-0 text-center">
                   <div>
-                    <Icon path={mdiNewspaper} title="News Story" size={2.5} />
+                    <Icon path={mdiNewspaper} title={newsTitle} size={2.5} />
                   </div>
                   {newsTitle}
                 </h2>
