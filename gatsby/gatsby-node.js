@@ -193,7 +193,6 @@ exports.createPages = async function({ actions, graphql }) {
     const aboutSlug = allAboutYaml.nodes.filter(node => {
       return node.language === lang;
     })[0].fields.slug;
-    console.log(aboutSlug);
 
     actions.createPage({
       path: aboutSlug,
