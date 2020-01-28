@@ -14,7 +14,7 @@ const Events = ({ uri, location, language }) => {
     <>
       <Helmet></Helmet>
       <Layout language={language} location={location}>
-        <NewsAndEvents language="en" newsVisible={100} eventsVisible={100} />
+        <NewsAndEvents language="en" />
       </Layout>
     </>
   );
