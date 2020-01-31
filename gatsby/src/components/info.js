@@ -89,7 +89,7 @@ const Info = ({ uri, location, data, yaml, ...rest }) => {
             case "Timeline":
               return (
                 <span id={URLify(section.title)} key={`Info-sections-${i}`}>
-                  <Timeline />
+                  <Timeline lang={language} />
                 </span>
               );
             case "FAQ":

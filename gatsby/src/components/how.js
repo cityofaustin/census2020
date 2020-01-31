@@ -71,7 +71,7 @@ const How = ({ uri, location, data, ...rest }) => {
             ))}
           </div>
         </section>
-        <Timeline />
+        <Timeline lang={language} />
       </Layout>
     </>
   );
