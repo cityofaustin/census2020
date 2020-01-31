@@ -4,93 +4,55 @@ import { StaticQuery, graphql } from "gatsby";
 
 import "./communities.css";
 
-//   i18n TODO: these titles need to be translated
-const columns = [
-  {
-    title: "Hispanic/Latino Community Group",
-    link: "https://hagasecontar.org/",
-    img: "latinx",
-    alt: "Mexican folklore dancers",
-  },
-  {
-    title: "Asian American Community Group",
-    link: "https://www.facebook.com/groups/402255943807939/",
-    img: "asianAmerican",
-    alt: "children dancers at Lunar New Year Festival",
-  },
-  {
-    title: "Black African-American Community Group",
-    link: "https://www.facebook.com/CompleteCount/",
-    img: "africanAmerican",
-    alt: "three young african-american women smiling",
-  },
-  {
-    title: "Children & Young Students",
-    link: "https://www.austinisd.org/census2020",
-    img: "student",
-    alt: "four young student of varying age, gender, race and ethnicity",
-  },
-  {
-    title: "College Student Community",
-    link: "/",
-    img: "student",
-    alt: "TODO",
-  },
-  {
-    title: "Community Experiencing Homelessness",
-    link: "/",
-    img: "student",
-    alt: "TODO",
-  },
-];
-
-const Communities = ({ data }) => {
+const Communities = ({ data, lang }) => {
+  const communities = data.allMarkdownRemark.edges.filter(
+    item => item.node.frontmatter.language === lang
+  );
+  const text = data.text.edges.filter(
+    item => item.node.frontmatter.language === lang
+  )[0].node.frontmatter.components;
   return (
     <>
       <section className="bg-primary-dark padding-top-3 padding-bottom-3">
         <div className="grid-container margin-bottom-4">
           <h2 className="text-white text-center font-ui-xl tablet:font-ui-2xl">
-            Stand up and be counted in the 2020 Census
+            {text.communities.title}
           </h2>
 
           <div className="grid-row padding-y-2 padding-x-105 flex-justify-center">
-            {columns.map((col, i) => (
+            {communities.map((community, i) => (
               <div className="grid-col-6 tablet:grid-col-4" key={`ccc-${i}`}>
-                <a href={col.link} target="_blank" aria-label={col.title}>
+                <a
+                  href={community.node.frontmatter.link}
+                  target="_blank"
+                  aria-label={community.node.frontmatter.title}
+                >
                   <div className="bg-base-darkest margin-1">
                     <Img
-                      fluid={data[col.img].childImageSharp.fluid}
+                      fluid={
+                        data[community.node.frontmatter.img].childImageSharp
+                          .fluid
+                      }
                       fadeIn={false}
                       className="Communities--imageStyles"
-                      alt={col.alt}
+                      alt={community.node.frontmatter.alt}
                     />
                   </div>
                   <h3 className="text-base-lightest margin-x-3 font-body-xs tablet:font-body-md Communities--textStyles">
-                    {col.title}
+                    {community.node.frontmatter.title}
                   </h3>
                 </a>
               </div>
             ))}
           </div>
           <div className="grid-row usa-intro text-white">
-            <p className="font-body-lg">
-              This Spring, every Travis County resident holds the power to shape
-              the future of our neighborhoods, schools, and local government. It
-              will take every community - no matter how small or large - to help
-              get everyone counted.
-            </p>
+            <p className="font-body-lg">{text.communities.subtitle}</p>
           </div>
         </div>
       </section>
       <section className="usa-section grid-container padding-top-3 padding-bottom-3">
-        <h2 className="text-center font-ui-3xl">
-          Organize In Your Neighborhood
-        </h2>
-        <p className="text-italic usa-intro">
-          Want to help get folks counted in your community? Help organize in one
-          of our local hard to count communities or your neighborhood. Click
-          here to find out more…
-        </p>
+        <h2 className="text-center font-ui0-3xl">{text.map.title}</h2>
+        <p className="text-italic usa-intro">{text.map.subtitle}</p>
         <div className="grid-row">
           <div className="grid-col-8 grid-offset-2">
             <a href="https://www.censushardtocountmaps2020.us/" target="_blank">
@@ -109,7 +71,7 @@ const Communities = ({ data }) => {
                 target="_blank"
               >
                 <button className="usa-button usa-button--outline usa-button--big">
-                  Explore the map
+                  {text.map.cta}
                 </button>
               </a>
             </div>
@@ -124,6 +86,56 @@ export default props => (
   <StaticQuery
     query={graphql`
       query {
+        allMarkdownRemark(
+          filter: { fields: { sourceName: { eq: "communities" } } }
+        ) {
+          edges {
+            node {
+              id
+              frontmatter {
+                alt
+                img
+                link
+                source
+                title
+                type
+                language
+              }
+              fields {
+                sourceName
+              }
+              fileAbsolutePath
+            }
+          }
+        }
+        text: allMarkdownRemark(
+          filter: {
+            fields: { sourceName: { eq: "text" } }
+            frontmatter: { components: { communities: {} } }
+          }
+        ) {
+          edges {
+            node {
+              frontmatter {
+                components {
+                  communities {
+                    subtitle
+                    title
+                  }
+                  map {
+                    cta
+                    subtitle
+                    title
+                  }
+                }
+                language
+              }
+              fields {
+                sourceName
+              }
+            }
+          }
+        }
         latinx: file(base: { eq: "bailadores.jpeg" }) {
           childImageSharp {
             fluid(maxHeight: 600) {

@@ -28,6 +28,20 @@ module.exports = {
         path: path.join(__dirname, `content`, `news`),
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `communities`,
+        path: path.join(__dirname, `content`, `communities`),
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `text`,
+        path: path.join(__dirname, `content`, `text`),
+      },
+    },
     `gatsby-source-usa-spending-toptier-agencies`,
     `gatsby-transformer-yaml`,
     `gatsby-transformer-sharp`,
