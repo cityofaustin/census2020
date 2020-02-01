@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Link, StaticQuery } from "gatsby";
+import { Link, StaticQuery, graphql } from "gatsby";
 import close from "uswds_images/close.svg";
 import {
   Accordion,
