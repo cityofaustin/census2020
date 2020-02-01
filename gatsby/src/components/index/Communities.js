@@ -153,7 +153,7 @@ export default props => (
             }
           }
         }
-        africanAmerican: file(base: { eq: "census2.jpeg" }) {
+        africanAmerican: file(base: { eq: "juneteenth.jpg" }) {
           childImageSharp {
             fluid(maxHeight: 600) {
               ...GatsbyImageSharpFluid
@@ -161,6 +161,13 @@ export default props => (
           }
         }
         student: file(base: { eq: "aisd-students.jpg" }) {
+          childImageSharp {
+            fluid(maxHeight: 600) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        homelessness: file(base: { eq: "homelessness.jpg" }) {
           childImageSharp {
             fluid(maxHeight: 600) {
               ...GatsbyImageSharpFluid
