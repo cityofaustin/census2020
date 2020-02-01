@@ -1,47 +1,47 @@
 page: why
 language: es
-title: Why the Census Matters
+title: Por qué es importante el Censo
 body:
-  - A lot is at stake in the 2020 Census, and our communities can't afford an undercount. Essential neighborhood resources like street improvements, school lunches for children in need, and housing for seniors and families will all be gained or lost because of the 2020 Census.
+  - Muchas cosas dependen del Censo del 2020, y nuestras comunidades no pueden darse el lujo de tener un conteo incorrecto menor a la realidad. Los recursos comunitarios esenciales, tales como mejoras a las calles, los almuerzos escolares para niños necesitados y las viviendas para los adultos mayores y familias, se ganarán o perderán dependiendo del Censo del 2020.
 sections:
   - component: Text
-    title: Why it matters here at home
+    title: Por qué es importante aquí en casa
     text:
       # - INSERT GRAPHIC
-      - We only get one chance every 10 years to count all of our residents. With so many new folks moving in and others being forced to move to new parts of town, no Census has ever been more important for Austin and Travis County. This Census count will also help local elected officials inform important decisions and determine federal funding allocations for the next decade.
+      - Solo tenemos una oportunidad cada 10 años para contar a todos nuestros residentes. Con tantas personas mudándose a la ciudad y otras que se han visto obligadas a mudarse a otras partes de la ciudad, ningún Censo había sido tan importante anteriormente para Austin y el Condado de Travis. Este conteo del Censo también ayudará a los funcionarios electos locales a tomar decisiones importantes basadas en información correcta y determinar las asignaciones de fondos federales para la próxima década.
   - component: Text
-    title: Did you know?
+    title: ¿Sabía usted?
     text:
       - "<ul>
-        <li>In 2010, undercounts occurred across Texas in large metropolitan areas, college towns, rural counties, and communities along the border</li>
-        <li>The mail-in self-response rate for Travis County in the 2010 Census was 75.9%, which required a costly and difficult in-person follow-up for the remaining 24.1% of residents. </li>
-        <li>2.1% of children under the age of five in Travis County were undercounted in the 2010 Census.</li>
-        <li>Our most recent research estimates that reaching Travis County residents in hard-to-count neighborhoods at a basic level of $2 dollars per person (mailers, a couple public forms, and some level of direct outreach) would cost at least $742,000 dollars.</li>
-        <li>Most recent data shows that 11.6% of Travis County’s households had either no internet access or dial-up only.</li>
+        <li>En el 2010 hubo conteos menores que los números reales en todo Texas en las áreas metropolitanas grandes, pueblos universitarios, condados rurales y comunidades cercanas a la frontera.</li>
+        <li>La tasa de respuesta voluntaria por correo para el Condado de Travis en el Censo del 2010 fue de 75.9%, lo cual requirió de un seguimiento en persona costoso y difícil para el restante 24.1% de los residentes. </li>
+        <li>El 2.1% de los niños menores de cinco años en el Condado de Travis fue contado de menos en el Censo del 2010.</li>
+        <li>Nuestra investigación más reciente calcula que llegar a los residentes del Condado de Travis en los vecindarios donde es difícil contarlos a un nivel básico de $2 por persona (aviso por correo, un par de foros públicos y cierto nivel de comunicación directa) costaría al menos $742,000 dólares.</li>
+        <li>Los datos más recientes indican que el 11.6% de las familias en el Condado de Travis no tenía acceso al internet y no tenían celular.</li>
         "
   - component: Text
-    title: What's at risk?
+    title: ¿Qué está en riesgo?
     text:
       # - INSERT GRAPHIC
-      - "Many communities in Texas, including ours, have been underrepresented or undercounted in the past Census efforts. An undercount means Texas is not getting its fair share of funding and representation since not everyone living in our state was counted. Counting everyone can be logistically challenging. Those who are at risk of being undercounted in the 2020 Census are:"
+      - "Muchas comunidades en Texas, incluyendo la de nosotros, ha tenido poca representación o se ha contado de menos en los esfuerzos del Censo anterior. Ser contado de menos significa que Texas no está recibiendo su porción justa de fondos y representación porque no todos los que viven en nuestro estado fueron contados. La logística de contar a todo el mundo puede presentar un reto. Los grupos que corren el riesgo de ser contados de menos son:"
       - "<ul>
-        <li>Very young children</li>
-        <li>Immigrants</li>
-        <li>People who live in rural areas</li>
-        <li>People of color</li>
-        <li>People who move residences more frequently</li>
-        <li>People who face language barriers</li>
+        <li>Niños muy pequeños</li>
+        <li>Inmigrantes</li>
+        <li>Personas que viven en áreas rurales</li>
+        <li>Personas de color</li>
+        <li>Personas que se mudan de residencia con frecuencia</li>
+        <li>Personas que enfrentan la barrera del idioma</li>
         "
-      - The 2020 Census is an opportunity to get as many people as possible to participate in order to shape our future.
+      - El Censo del 2020 es una oportunidad para lograr que la mayor cantidad de personas posible participe para poder moldear nuestro futuro.
   - component: Text
-    title: Your responses are safe and confidential
+    title: Sus respuestas estarán seguras y son confidenciales.
     text:
       # - INSERT GRAPHIC
-      - Your Census responses are safe and confidential. Information collected as part of the 2020 Census cannot be shared with or by other governmental agencies or used against you in any way, as dictated under Title 13 of the U.S. code. It is for statistical purposes only. All Census Bureau staff take a lifetime oath to protect your personal information, and any violation comes with a penalty of up to $250,000 and/or up to 5 years in prison.
-      - Learn about the <a href="/en/about">local Census campaign</a>.
+      - Sus respuestas al Censo estarán seguras y son confidenciales. La información recopilada como parte del Censo del 2020 no puede ser compartida con otras agencias ni por otras agencias gubernamentales ni se puede usar en contra de usted de manera alguna, como lo dicta el Título 13 del código de los EE.UU. Es para propósitos de estadísticas solamente. Todo el personal de la Oficina del Censo toma un juramento de por vida para proteger su información personal, y cualquier violación conlleva una multa de hasta $250,000 y/o hasta 5 años en prisión.
+      - <a href="/es/about"> Aprenda sobre la campaña local del Censo.</a>.
   - component: MapCta
-    title: Historically Undercounted Communities in Austin and Travis County
+    title: Comunidades históricamente contadas de menos en Austin y el Condado de Travis
     text:
-      - Texas is at risk of an even larger undercount in 2020. Today, 25% of Texans, or over 6 million people, live in hard-to-count neighborhoods, where past self-response rates have been relatively low. Today in Travis County, 32% (over 370,000 people) of the population live in hard-to-count neighborhoods. An undercount means Texas is not getting its fair share of funding and representation since not everyone living in our state was counted. View the map below to see if your neighborhood is at risk of being undercounted.
+      - Texas está en riesgo de que el conteo de menos en el 2020 sea mayor. Hoy, el 25% de los texanos, o más de 6 millones de personas, viven en vecindarios difíciles de contar donde las respuestas voluntarias pasadas han sido relativamente bajas. Hoy, en el Condado de Travis, el 32% (más de 370,000 personas) de la población vive en vecindarios difíciles de contar. Ser contado de menos significa que Texas no está recibiendo su porción justa de fondos y representación porque no todos los que viven en nuestro estado fueron contados. Vea en el mapa abajo si su vecindario está en riesgo de ser contado de menos.
   - component: FAQ
     title: FAQ
