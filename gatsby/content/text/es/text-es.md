@@ -95,4 +95,10 @@ components:
   banner:
     title: El conteo del Censo no ha comenzado aún.
     text: Aprenda más sobre cómo hacerse contar una vez que se publique la solicitud del Censo en marzo.
+  emailCollection:
+    title: Inscríbase para recibir noticias por correo electrónico de la campaña de Austin-Condado de Travis para el Censo.
+    email: Dirección de correo electrónico
+    name: Su nombre
+    communities: ¿Hay alguna comunidad en específico donde quisiera ayudar?
+    submit: Enviar
 ---

@@ -8,6 +8,7 @@ import Timeline from "./shared/Timeline";
 import FaqAccordion from "../components/faq.js";
 import Communities from "./index/Communities";
 import NewsAndEvents from "./index/NewsAndEvents";
+import EmailCollection from "./emailCollection";
 import { useHelmetTags } from "./shared/helmet";
 
 const propTypes = {
@@ -25,21 +26,6 @@ function URLify(string) {
 
 const Info = ({ uri, location, data, yaml, ...rest }) => {
   const { title, language } = useHelmetTags(uri, data[yaml]);
-  const [
-    emailCollectionFormState,
-    setEmailCollectionFormState,
-  ] = React.useState({});
-  const [
-    emailCollectionFormMessage,
-    setEmailCollectionFormMessage,
-  ] = React.useState({});
-
-  const handleEmailCollectionInputChange = e => {
-    setEmailCollectionFormState({
-      ...emailCollectionFormState,
-      [e.target.name]: e.target.value,
-    });
-  };
 
   const encode = data => {
     return Object.keys(data)
@@ -49,43 +35,6 @@ const Info = ({ uri, location, data, yaml, ...rest }) => {
 
   let body = data[yaml].body;
   let sections = data[yaml].sections;
-
-  async function handleEmailCollectionSubmit(e) {
-    e.preventDefault();
-    const form = e.target;
-
-    if (
-      !emailCollectionFormState["input-type-email"] ||
-      !emailCollectionFormState["input-type-name"]
-    ) {
-      setEmailCollectionFormMessage({
-        color: "red",
-        content: "Please provide both your e-mail address and your name.",
-      });
-      return;
-    }
-
-    try {
-      await fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encode({
-          "form-name": form.getAttribute("name"),
-          ...emailCollectionFormState,
-        }),
-      });
-      setEmailCollectionFormMessage({
-        color: "green",
-        content: "Thanks for signing up!",
-      });
-    } catch (error) {
-      console.error(error);
-      setEmailCollectionFormStatus({
-        color: "red",
-        content: "An error occurred. Please try again later.",
-      });
-    }
-  }
 
   return (
     <>
@@ -203,73 +152,9 @@ const Info = ({ uri, location, data, yaml, ...rest }) => {
               );
             case "EmailCollection":
               return (
-                <section
-                  className="padding-y-3 text-center display-flex flex-column flex-align-center"
-                  id={URLify(section.title)}
-                  key={`Info-sections-${i}`}
-                >
-                  <h3>
-                    Sign-up for email updates from the Austin-Travis County
-                    Census campaign.
-                  </h3>
-                  <form
-                    name="email-collection-form"
-                    className="usa-form"
-                    style={{ width: "80%" }}
-                    data-netlify="true"
-                    onSubmit={handleEmailCollectionSubmit}
-                  >
-                    <input
-                      type="hidden"
-                      name="form-name"
-                      value="email-collection-form"
-                    />
-                    <label className="usa-label" htmlFor="input-type-email">
-                      E-mail address
-                    </label>
-                    <input
-                      className="usa-input"
-                      id="input-type-email"
-                      name="input-type-email"
-                      type="text"
-                      onChange={handleEmailCollectionInputChange}
-                    />
-                    <label className="usa-label" htmlFor="input-type-name">
-                      Your Name
-                    </label>
-                    <input
-                      className="usa-input"
-                      id="input-type-name"
-                      name="input-type-name"
-                      type="text"
-                      onChange={handleEmailCollectionInputChange}
-                    />
-                    <label className="usa-label" htmlFor="usa-textarea">
-                      Which communities could you help volunteer with?
-                    </label>
-                    <textarea
-                      className="usa-textarea"
-                      id="usa-textarea"
-                      name="usa-textarea"
-                      type="text"
-                      onChange={handleEmailCollectionInputChange}
-                    />
-                    <input
-                      className="usa-button usa-button--outline"
-                      type="submit"
-                      value="Submit"
-                    />
-                  </form>
-                  <span
-                    style={{
-                      paddingTop: 15,
-                      height: 15,
-                      color: emailCollectionFormMessage["color"],
-                    }}
-                  >
-                    {emailCollectionFormMessage["content"]}
-                  </span>
-                </section>
+                <span id={URLify(section.title)} key={`Info-sections-${i}`}>
+                  <EmailCollection lang={language} />
+                </span>
               );
             case "NewsAndEvents":
               // TODO: don't hard code the language

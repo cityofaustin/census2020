@@ -86,4 +86,10 @@ components:
   banner:
     title: Census counting has not started yet.
     text: Learn more about how to be counted once the Census application launches in March.
+  emailCollection:
+    title: Sign-up for email updates from the Austin-Travis County Census campaign.
+    email: E-mail address
+    name: Your Name
+    communities: Which communities could you help volunteer with?
+    submit: Submit
 ---
