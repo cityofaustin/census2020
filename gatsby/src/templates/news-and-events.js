@@ -4,7 +4,15 @@ import Events from "../components/news-and-events";
 
 const EventsTemplate = ({ location, uri, data, ...rest }) => {
   console.log(data, rest);
-  return <Events uri={uri} location={location} data={data} {...rest} />;
+  return (
+    <Events
+      uri={uri}
+      location={location}
+      data={data}
+      {...rest}
+      yaml={"infoYaml"}
+    />
+  );
 };
 
 export const query = graphql`

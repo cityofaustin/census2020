@@ -75,11 +75,11 @@ const renderEventMonth = (month, event) => {
   );
 };
 
-const NewsAndEvents = ({ data, language, shortened }) => {
+const NewsAndEvents = ({ data, lang, shortened }) => {
   const news = data.allMarkdownRemark.nodes;
   const newsByLanguage = _.filter(
     news,
-    item => item.frontmatter.language === language
+    item => item.frontmatter.language === lang
   );
 
   const showMoreButtonText = "See More";
@@ -91,10 +91,9 @@ const NewsAndEvents = ({ data, language, shortened }) => {
     moment(newsItem.frontmatter.date).format("MMMM YYYY")
   );
 
-  const newsTitle = _.find(
-    data.allIndexYaml.edges,
-    item => item.node.language === language
-  ).node.layout.latestNews;
+  const newsTitle = _.find(data.allIndexYaml.edges, item => {
+    return item.node.language === lang;
+  }).node.layout.latestNews;
 
   const recentEvents = shortened
     ? _.take(
