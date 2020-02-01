@@ -62,14 +62,9 @@ const EmailCollection = ({ data, lang }) => {
     }
   }
 
-  console.log(data);
-  console.log(lang);
-  const text = data.text.nodes.filter(item => {
-    console.log(item.frontmatter.language);
-    return item.frontmatter.language === lang;
-  })[0].frontmatter.components.emailCollection;
-
-  console.log(text);
+  const text = data.text.nodes.filter(
+    item => item.frontmatter.language === lang
+  )[0].frontmatter.components.emailCollection;
 
   return (
     <section className="padding-y-3 text-center display-flex flex-column flex-align-center">
