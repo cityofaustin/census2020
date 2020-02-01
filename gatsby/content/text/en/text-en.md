@@ -8,4 +8,9 @@ components:
     title: Organize In Your Neighborhood
     subtitle: Want to help get folks counted in your community? Help organize in one of our local hard to count communities or your neighborhood. Click here to find out more…
     cta: Explore the map
+  footer:
+    title: Austin-Travis County Census 2020
+    about_text: About the local campaign
+    about_link: /en/about
+    contact_us: Contact Us
 ---

@@ -8,4 +8,9 @@ components:
     title: Organice a su vecindario
     subtitle: ¿Quiere ayudar para que se cuente a todos en su comunidad? Ayude a organizar en una de nuestras comunidades difíciles de contar o en su propio vecindario. Haga clic aquí para conocer más...
     cta: Explore el mapa
+  footer:
+    title: Censo de Austin-Condado de Travis 2020
+    about_text: Información sobre la campaña local
+    about_link: /es/about
+    contact_us: Contáctenos
 ---

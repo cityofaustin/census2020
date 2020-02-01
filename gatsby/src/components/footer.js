@@ -1,8 +1,12 @@
 import React from "react";
 import Img from "gatsby-image";
-import { Link } from "gatsby";
+import { Link, StaticQuery, graphql } from "gatsby";
 
-const Footer = ({ coaImg, travisImg }) => {
+const Footer = ({ coaImg, travisImg, lang, data }) => {
+  const text = data.text.edges.filter(
+    item => item.node.frontmatter.language === lang
+  )[0].node.frontmatter.components.footer;
+
   return (
     <footer className="usa-footer" role="contentinfo">
       <div className="usa-footer__secondary-section">
@@ -30,11 +34,9 @@ const Footer = ({ coaImg, travisImg }) => {
                 </div>
               </div>
               <div className="mobile-lg:grid-col-auto">
-                <h3 className="usa-footer__logo-heading">
-                  Austin-Travis County Census 2020
-                </h3>
+                <h3 className="usa-footer__logo-heading">{text.title}</h3>
                 <p>
-                  <Link to="/en/about">About the local campaign</Link>
+                  <Link to={text.about_link}>{text.about_text}</Link>
                 </p>
               </div>
             </div>
@@ -70,7 +72,7 @@ const Footer = ({ coaImg, travisImg }) => {
                   </a>
                 </div>
               </div>
-              <h3 className="usa-footer__contact-heading">Contact Us</h3>
+              <h3 className="usa-footer__contact-heading">{text.contact_us}</h3>
               <address className="usa-footer__address">
                 <div className="usa-footer__contact-info grid-row grid-gap">
                   <div className="grid-col-12 margin-y-2">
@@ -91,4 +93,34 @@ const Footer = ({ coaImg, travisImg }) => {
   );
 };
 
-export default Footer;
+export default props => (
+  <StaticQuery
+    render={data => <Footer data={data} {...props} />}
+    query={graphql`
+      query {
+        text: allMarkdownRemark(
+          filter: { fields: { sourceName: { eq: "text" } } }
+        ) {
+          edges {
+            node {
+              frontmatter {
+                components {
+                  footer {
+                    title
+                    about_text
+                    about_link
+                    contact_us
+                  }
+                }
+                language
+              }
+              fields {
+                sourceName
+              }
+            }
+          }
+        }
+      }
+    `}
+  />
+);

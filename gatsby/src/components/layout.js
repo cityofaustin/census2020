@@ -116,6 +116,7 @@ const Layout = ({ children, language, location }) => {
               {children}
             </main>
             <Footer
+              lang={language}
               coaImg={data.coaLogo.childImageSharp.fluid}
               travisImg={data.travisLogo.childImageSharp.fluid}
             />
