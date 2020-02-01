@@ -245,7 +245,7 @@ const Info = ({ uri, location, data, yaml, ...rest }) => {
               // TODO: don't hard code the language
               return (
                 <span id={URLify(section.title)} key={`Info-sections-${i}`}>
-                  <NewsAndEvents language={"en"} />
+                  <NewsAndEvents language={"en"} shortened />
                 </span>
               );
           }

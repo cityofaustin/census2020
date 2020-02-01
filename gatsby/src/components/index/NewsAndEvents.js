@@ -5,7 +5,7 @@ import _ from "lodash";
 import Icon from "@mdi/react";
 import { mdiNewspaper } from "@mdi/js";
 import { mdiCalendarStar } from "@mdi/js";
-import { StaticQuery, graphql } from "gatsby";
+import { Link, StaticQuery, graphql } from "gatsby";
 
 const renderMonth = (month, news) => {
   return (
@@ -75,17 +75,18 @@ const renderEventMonth = (month, event) => {
   );
 };
 
-const NewsAndEvents = ({ data, language }) => {
+const NewsAndEvents = ({ data, language, shortened }) => {
   const news = data.allMarkdownRemark.nodes;
   const newsByLanguage = _.filter(
     news,
     item => item.frontmatter.language === language
   );
 
-  const recentNews = _.takeRight(
-    newsByLanguage,
-    data.site.siteMetadata.events.defaultVisible
-  );
+  const showMoreButtonText = "See More";
+
+  const recentNews = shortened
+    ? _.takeRight(newsByLanguage, data.site.siteMetadata.news.defaultVisible)
+    : newsByLanguage;
   const newsByMonth = _.groupBy(recentNews, newsItem =>
     moment(newsItem.frontmatter.date).format("MMMM YYYY")
   );
@@ -95,9 +96,14 @@ const NewsAndEvents = ({ data, language }) => {
     item => item.node.language === language
   ).node.layout.latestNews;
 
-  const eventByMonth = _.groupBy(
-    data.allGoogleSheetFormResponses1Row.edges,
-    eventItem => moment(eventItem.node.eventdate).format("MMMM YYYY")
+  const recentEvents = shortened
+    ? _.take(
+        data.allGoogleSheetFormResponses1Row.edges,
+        data.site.siteMetadata.events.defaultVisible
+      )
+    : data.allGoogleSheetFormResponses1Row.edges;
+  const eventByMonth = _.groupBy(recentEvents, eventItem =>
+    moment(eventItem.node.eventdate).format("MMMM YYYY")
   );
 
   return (
@@ -116,6 +122,11 @@ const NewsAndEvents = ({ data, language }) => {
             {Object.keys(eventByMonth).map(month =>
               renderEventMonth(month, eventByMonth[month])
             )}
+            {shortened ? (
+              <Link className="usa-button" to={"/en/news-and-events"}>
+                {showMoreButtonText}
+              </Link>
+            ) : null}
           </div>
           <div className="grid-col-12 tablet:grid-col-6 margin-top-5 tablet:margin-top-0 tablet:padding-left-2">
             <div className="grid-row grid-gap">
@@ -132,6 +143,11 @@ const NewsAndEvents = ({ data, language }) => {
                 .map(month => {
                   return renderMonth(month, newsByMonth[month]);
                 })}
+              {shortened ? (
+                <Link className="usa-button" to={"/en/news-and-events"}>
+                  {showMoreButtonText}
+                </Link>
+              ) : null}
             </div>
           </div>
         </div>
@@ -146,6 +162,9 @@ export default props => (
       query {
         site {
           siteMetadata {
+            news {
+              defaultVisible
+            }
             events {
               defaultVisible
             }

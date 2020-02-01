@@ -10,6 +10,9 @@ module.exports = {
     ],
   },
   events: {
+    defaultVisible: 8,
+  },
+  news: {
     defaultVisible: 5,
   },
 };

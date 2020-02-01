@@ -137,6 +137,9 @@ exports.createPages = async function({ actions, graphql }) {
   const WhyTemplate = require.resolve(`./src/templates/why.js`);
   const InfoTemplate = require.resolve(`./src/templates/info.js`);
   const AboutTemplate = require.resolve(`./src/templates/about.js`);
+  const NewsAndEventsTemplate = require.resolve(
+    "./src/templates/news-and-events.js"
+  );
 
   langs.forEach(lang => {
     const indexSlug = allIndexYaml.nodes.filter(node => {
@@ -194,6 +197,14 @@ exports.createPages = async function({ actions, graphql }) {
     actions.createPage({
       path: aboutSlug,
       component: AboutTemplate,
+      context: {
+        lang,
+      },
+    });
+
+    actions.createPage({
+      path: `/${lang}/news-and-events`,
+      component: NewsAndEventsTemplate,
       context: {
         lang,
       },
