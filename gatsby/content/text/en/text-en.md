@@ -1,5 +1,17 @@
 ---
 language: en
+layout:
+  title: Austin-Travis County Census 2020
+  nav:
+    - text: Why the Census Matters
+      link: /en/why
+      order: 1
+    - text: How To Take The Census
+      link: /en/how
+      order: 2
+    - text: Get Involved
+      link: /en/get-involved
+      order: 3
 components:
   communities:
     title: Stand up and be counted in the 2020 Census

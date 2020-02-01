@@ -152,7 +152,10 @@ export default props => (
             }
           }
         }
-        allMarkdownRemark(sort: { fields: frontmatter___date, order: ASC }) {
+        allMarkdownRemark(
+          sort: { fields: frontmatter___date, order: ASC }
+          filter: { frontmatter: { type: { eq: "news_story" } } }
+        ) {
           totalCount
           nodes {
             id

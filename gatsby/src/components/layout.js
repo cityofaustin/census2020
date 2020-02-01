@@ -10,23 +10,6 @@ const languages = require("../data/languages.js");
 
 const mainContent = "main-content";
 
-const languageListing = () => {
-  let navigation = {};
-
-  languages.languagesMap.map(lang => {
-    navigation[lang.abbr] = [];
-    return headerPages.map(page => {
-      let item = {
-        text: page.text[lang.abbr].toUpperCase(),
-        link: `/${lang.abbr}${page.link}`,
-      };
-      return navigation[lang.abbr].push(item);
-    });
-  });
-
-  return navigation;
-};
-
 const headerPages = [
   {
     text: {
@@ -50,9 +33,7 @@ const headerPages = [
   },
 ];
 
-const langListing = languageListing();
-
-const Layout = ({ children, language, location }) => {
+const Layout = ({ children, language, location, data }) => {
   return (
     <StaticQuery
       query={graphql`
@@ -63,7 +44,6 @@ const Layout = ({ children, language, location }) => {
                 defaultLangKey
                 langs
               }
-              title
               header {
                 secondaryLinks {
                   text
@@ -107,11 +87,7 @@ const Layout = ({ children, language, location }) => {
             <SkipNav skipsTo={mainContent} />
             <Banner />
             <div className="usa-overlay" />
-            <Header
-              navigation={langListing}
-              language={langKey}
-              {...data.site.siteMetadata}
-            />
+            <Header language={langKey} {...data.site.siteMetadata} />
             <main id={mainContent} role="main">
               {children}
             </main>

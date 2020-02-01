@@ -140,7 +140,7 @@ const Info = ({ uri, location, data, yaml, ...rest }) => {
             case "Communities":
               return (
                 <span id={URLify(section.title)} key={`Info-sections-${i}`}>
-                  <Communities />
+                  <Communities lang={language} />
                 </span>
               );
             case "EmailCollection":
