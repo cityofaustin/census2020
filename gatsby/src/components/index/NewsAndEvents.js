@@ -44,7 +44,6 @@ const renderEventMonth = (month, event) => {
       <h2>{month}</h2>
       <ul style={{ listStyleType: "none", margin: 0, padding: 0 }}>
         {event.map((event, i) => {
-          console.log("renderEventMonth", event);
           return (
             <li key={`event-${month}-${i}`} className="margin-bottom-2">
               <div className="grid-row">

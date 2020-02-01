@@ -115,7 +115,7 @@ const Info = ({ uri, location, data, yaml, ...rest }) => {
                       </div>
                       <div className="tablet:grid-col-5 text-center margin-top-3">
                         <a
-                          href="https://www.censushardtocountmaps2020.us/"
+                          href="https://austin.maps.arcgis.com/apps/webappviewer/index.html?id=66c1f6bdf2034bd898db56d964125573"
                           target="_blank"
                         >
                           <Img
@@ -125,10 +125,10 @@ const Info = ({ uri, location, data, yaml, ...rest }) => {
                           />
                         </a>
                         <a
-                          href="https://www.censushardtocountmaps2020.us/"
+                          href="https://austin.maps.arcgis.com/apps/webappviewer/index.html?id=66c1f6bdf2034bd898db56d964125573"
                           target="_blank"
                         >
-                          <button className="usa-button usa-button usa-button--big">
+                          <button className="margin-top-3 usa-button usa-button usa-button--big">
                             {section.cta}
                           </button>
                         </a>

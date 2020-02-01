@@ -55,19 +55,22 @@ const Communities = ({ data, lang }) => {
         <p className="text-italic usa-intro">{text.map.subtitle}</p>
         <div className="grid-row">
           <div className="grid-col-8 grid-offset-2">
-            <a href="https://www.censushardtocountmaps2020.us/" target="_blank">
+            <a
+              href="https://austin.maps.arcgis.com/apps/webappviewer/index.html?id=fd4bd4db7b6e4632a19b1a0a03f8094b"
+              target="_blank"
+            >
               <Img
                 fluid={data.mapImg.childImageSharp.fluid}
                 style={{
                   maxHeight: "600px",
                   width: "100%",
                 }}
-                alt="Screenshot of CUNY Hard to Count Map"
+                alt="Screenshot of Neighborhood map"
               />
             </a>
-            <div className="text-center">
+            <div className="text-center margin-top-3">
               <a
-                href="https://www.censushardtocountmaps2020.us/"
+                href="https://austin.maps.arcgis.com/apps/webappviewer/index.html?id=fd4bd4db7b6e4632a19b1a0a03f8094b"
                 target="_blank"
               >
                 <button className="usa-button usa-button--outline usa-button--big">
@@ -164,7 +167,7 @@ export default props => (
             }
           }
         }
-        mapImg: file(base: { eq: "map_screenshot.png" }) {
+        mapImg: file(base: { eq: "NeighborhoodMapScreenshot.jpg" }) {
           childImageSharp {
             fluid(maxHeight: 600) {
               ...GatsbyImageSharpFluid

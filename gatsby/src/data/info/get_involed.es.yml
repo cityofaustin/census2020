@@ -1,9 +1,13 @@
 page: get-involved
 language: es
-title: Get Involved and Get out the Count!
+title: ¡Participe y hágase contar!
 body:
-  - Our goal is to achieve a full and complete count of all Texans. Please help spread the word and ensure you, your family, neighbors, and friends are all counted!
+  - Nuestra meta es lograr un conteo total y completo de todas las personas que viven en Texas. Por favor riegue la voz, ¡y asegúrese de que usted, su familia, vecinos y amigos sean contados!
 sections:
+  - component: EmailCollection
+    title: Email Form
+  - component: NewsAndEvents
+    title: Recent News and Events
   - component: Communities
     title: Stand up and be counted in the 2020 Census
     text:

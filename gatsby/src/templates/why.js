@@ -27,7 +27,7 @@ export const query = graphql`
         cta
       }
     }
-    mapImg: file(base: { eq: "map_screenshot.png" }) {
+    mapImg: file(base: { eq: "StrategyMapScreenshot.jpg" }) {
       childImageSharp {
         fluid(maxHeight: 600) {
           ...GatsbyImageSharpFluid

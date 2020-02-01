@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Link } from "gatsby";
+import { Link, graphql } from "gatsby";
 import cx from "classnames";
 import { navigation } from "uswds_components";
 import UswdsComponent from "./uswds_component";

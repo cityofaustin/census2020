@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 import "./Faq.css";
-import { StaticQuery } from "gatsby";
+import { StaticQuery, graphql } from "gatsby";
 
 const FAQ = props => {
   const [active, setActive] = useState("false");
@@ -41,7 +41,7 @@ function FaqAccordion({ data, lang }) {
   const text = data.faqData.edges.filter(
     item => item.node.frontmatter.language === lang
   )[0].node.frontmatter.components.faq;
-  console.log(text);
+
   return (
     <div className="usa-accordion bg-base-lightest faq">
       <div className="grid-container">
