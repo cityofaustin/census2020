@@ -6,7 +6,7 @@ import Icon from "@mdi/react";
 
 import Layout from "./layout";
 import Timeline from "./shared/Timeline";
-import WarningBanner from "./WarningBanner";
+import WarningBanner from "./warningBanner";
 import { useHelmetTags } from "./shared/helmet";
 
 const iconMap = {
