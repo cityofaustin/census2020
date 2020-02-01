@@ -25,47 +25,67 @@ function URLify(string) {
 
 const Info = ({ uri, location, data, yaml, ...rest }) => {
   const { title, language } = useHelmetTags(uri, data[yaml]);
-  const [emailCollectionFormState, setEmailCollectionFormState] = React.useState({});
-  const [emailCollectionFormMessage, setEmailCollectionFormMessage] = React.useState({});
+  const [
+    emailCollectionFormState,
+    setEmailCollectionFormState,
+  ] = React.useState({});
+  const [
+    emailCollectionFormMessage,
+    setEmailCollectionFormMessage,
+  ] = React.useState({});
 
-  const handleEmailCollectionInputChange = (e) => {
-    setEmailCollectionFormState({ ...emailCollectionFormState, [e.target.name]: e.target.value })
+  const handleEmailCollectionInputChange = e => {
+    setEmailCollectionFormState({
+      ...emailCollectionFormState,
+      [e.target.name]: e.target.value,
+    });
   };
 
-  const encode = (data) => {
+  const encode = data => {
     return Object.keys(data)
-      .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-      .join('&')
-  }
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&");
+  };
 
   let body = data[yaml].body;
   let sections = data[yaml].sections;
 
   async function handleEmailCollectionSubmit(e) {
-    e.preventDefault()
-    const form = e.target
+    e.preventDefault();
+    const form = e.target;
 
-    if (!emailCollectionFormState['input-type-email'] || !emailCollectionFormState['input-type-name']) {
-      setEmailCollectionFormMessage({color: 'red', content: 'Please provide both your e-mail address and your name.'});
+    if (
+      !emailCollectionFormState["input-type-email"] ||
+      !emailCollectionFormState["input-type-name"]
+    ) {
+      setEmailCollectionFormMessage({
+        color: "red",
+        content: "Please provide both your e-mail address and your name.",
+      });
       return;
     }
 
     try {
-      await fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: encode({
-          'form-name': form.getAttribute('name'),
+          "form-name": form.getAttribute("name"),
           ...emailCollectionFormState,
         }),
       });
-      setEmailCollectionFormMessage({color: 'green', content: 'Thanks for signing up!'});
-    }
-    catch (error) {
+      setEmailCollectionFormMessage({
+        color: "green",
+        content: "Thanks for signing up!",
+      });
+    } catch (error) {
       console.error(error);
-      setEmailCollectionFormStatus({color: 'red', content: 'An error occurred. Please try again later.'});
+      setEmailCollectionFormStatus({
+        color: "red",
+        content: "An error occurred. Please try again later.",
+      });
     }
-  };
+  }
 
   return (
     <>
@@ -199,7 +219,11 @@ const Info = ({ uri, location, data, yaml, ...rest }) => {
                     data-netlify="true"
                     onSubmit={handleEmailCollectionSubmit}
                   >
-                    <input type="hidden" name="form-name" value="email-collection-form" />
+                    <input
+                      type="hidden"
+                      name="form-name"
+                      value="email-collection-form"
+                    />
                     <label className="usa-label" htmlFor="input-type-email">
                       E-mail address
                     </label>
@@ -236,8 +260,14 @@ const Info = ({ uri, location, data, yaml, ...rest }) => {
                       value="Submit"
                     />
                   </form>
-                  <span style={{paddingTop: 15, height: 15, color: emailCollectionFormMessage['color']}}>
-                    {emailCollectionFormMessage['content']}
+                  <span
+                    style={{
+                      paddingTop: 15,
+                      height: 15,
+                      color: emailCollectionFormMessage["color"],
+                    }}
+                  >
+                    {emailCollectionFormMessage["content"]}
                   </span>
                 </section>
               );
@@ -245,7 +275,7 @@ const Info = ({ uri, location, data, yaml, ...rest }) => {
               // TODO: don't hard code the language
               return (
                 <span id={URLify(section.title)} key={`Info-sections-${i}`}>
-                  <NewsAndEvents language={"en"} shortened />
+                  <NewsAndEvents lang={language} shortened />
                 </span>
               );
           }
