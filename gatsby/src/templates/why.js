@@ -24,6 +24,7 @@ export const query = graphql`
         component
         title
         text
+        cta
       }
     }
     mapImg: file(base: { eq: "map_screenshot.png" }) {

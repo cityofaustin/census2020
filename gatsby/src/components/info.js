@@ -95,7 +95,7 @@ const Info = ({ uri, location, data, yaml, ...rest }) => {
             case "FAQ":
               return (
                 <span id={URLify(section.title)} key={`Info-sections-${i}`}>
-                  <FaqAccordion />
+                  <FaqAccordion lang={language} />
                 </span>
               );
             case "MapCta":
@@ -129,7 +129,7 @@ const Info = ({ uri, location, data, yaml, ...rest }) => {
                           target="_blank"
                         >
                           <button className="usa-button usa-button usa-button--big">
-                            Explore the map
+                            {section.cta}
                           </button>
                         </a>
                       </div>

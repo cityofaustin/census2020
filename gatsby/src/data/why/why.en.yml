@@ -43,5 +43,6 @@ sections:
     title: Historically Undercounted Communities in Austin and Travis County
     text:
       - Texas is at risk of an even larger undercount in 2020. Today, 25% of Texans, or over 6 million people, live in hard-to-count neighborhoods, where past self-response rates have been relatively low. Today in Travis County, 32% (over 370,000 people) of the population live in hard-to-count neighborhoods. An undercount means Texas is not getting its fair share of funding and representation since not everyone living in our state was counted. View the map below to see if your neighborhood is at risk of being undercounted.
+    cta: Explore the map
   - component: FAQ
     title: FAQ

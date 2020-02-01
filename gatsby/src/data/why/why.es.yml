@@ -43,5 +43,6 @@ sections:
     title: Comunidades históricamente contadas de menos en Austin y el Condado de Travis
     text:
       - Texas está en riesgo de que el conteo de menos en el 2020 sea mayor. Hoy, el 25% de los texanos, o más de 6 millones de personas, viven en vecindarios difíciles de contar donde las respuestas voluntarias pasadas han sido relativamente bajas. Hoy, en el Condado de Travis, el 32% (más de 370,000 personas) de la población vive en vecindarios difíciles de contar. Ser contado de menos significa que Texas no está recibiendo su porción justa de fondos y representación porque no todos los que viven en nuestro estado fueron contados. Vea en el mapa abajo si su vecindario está en riesgo de ser contado de menos.
+    cta: Explore el mapa
   - component: FAQ
     title: FAQ
