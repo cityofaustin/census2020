@@ -83,4 +83,7 @@ components:
     about_text: About the local campaign
     about_link: /en/about
     contact_us: Contact Us
+  banner:
+    title: Census counting has not started yet.
+    text: Learn more about how to be counted once the Census application launches in March.
 ---

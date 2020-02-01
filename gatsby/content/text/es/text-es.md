@@ -92,4 +92,7 @@ components:
     about_text: Información sobre la campaña local
     about_link: /es/about
     contact_us: Contáctenos
+  banner:
+    title: El conteo del Censo no ha comenzado aún.
+    text: Aprenda más sobre cómo hacerse contar una vez que se publique la solicitud del Censo en marzo.
 ---
