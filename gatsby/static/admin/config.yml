@@ -6,71 +6,109 @@ media_folder: static/img
 public_folder: /img
 
 collections:
-  - label: 'News (English)'
-    name: 'news_en'
-    folder: 'gatsby/content/news/en'
-    create: true
-    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+  - label: "Communities (English)"
+    name: "communities_en"
+    folder: "gatsby/content/communities/en"
+    create: false
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     editor:
       preview: false
-    filter: { field: 'language', value: 'en' }
+    filter: { field: "language", value: "en" }
     fields:
       - {
-          label: 'Language',
-          name: 'language',
-          widget: 'select',
-          options: ['en', 'es'],
+          label: "Language",
+          name: "language",
+          widget: "select",
+          options: ["en", "es"],
         }
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Description', name: 'description', widget: 'string' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
-  - label: 'News (Español)'
-    name: 'news_es'
-    folder: 'gatsby/content/news/es'
-    create: true
-    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Link", name: "link", widget: "string" }
+      - { label: "Img", name: "img", widget: "string" }
+      - { label: "Img Alt", name: "alt", widget: "string" }
+  - label: "Communities (Spanish)"
+    name: "communities_es"
+    folder: "gatsby/content/communities/es"
+    create: false
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     editor:
       preview: false
-    filter: { field: 'language', value: 'es' }
+    filter: { field: "language", value: "es" }
     fields:
       - {
-          label: 'Lenguaje',
-          name: 'language',
-          widget: 'select',
-          options: ['en', 'es'],
+          label: "Language",
+          name: "language",
+          widget: "select",
+          options: ["es", "en"],
         }
-      - { label: 'Titulo', name: 'title', widget: 'string' }
-      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Description', name: 'description', widget: 'string' }
-      - { label: 'Contenido', name: 'body', widget: 'markdown' }
-  - label: 'Pages'
-    name: 'pages'
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Link", name: "link", widget: "string" }
+      - { label: "Img", name: "img", widget: "string" }
+      - { label: "Img Alt", name: "alt", widget: "string" }
+  - label: "News (English)"
+    name: "news_en"
+    folder: "gatsby/content/news/en"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    editor:
+      preview: false
+    filter: { field: "language", value: "en" }
+    fields:
+      - {
+          label: "Language",
+          name: "language",
+          widget: "select",
+          options: ["en", "es"],
+        }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
+  - label: "News (Español)"
+    name: "news_es"
+    folder: "gatsby/content/news/es"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    editor:
+      preview: false
+    filter: { field: "language", value: "es" }
+    fields:
+      - {
+          label: "Lenguaje",
+          name: "language",
+          widget: "select",
+          options: ["en", "es"],
+        }
+      - { label: "Titulo", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Contenido", name: "body", widget: "markdown" }
+  - label: "Pages"
+    name: "pages"
     files:
-      - label: 'About Page (English)'
-        name: 'about'
-        file: 'gatsby/content/pages/en/about.yml'
-        filter: { field: 'language', value: 'en' }
+      - label: "About Page (English)"
+        name: "about"
+        file: "gatsby/content/pages/en/about.yml"
+        filter: { field: "language", value: "en" }
         fields:
           - {
-              label: 'Language',
-              name: 'language',
-              widget: 'select',
-              options: ['en'],
+              label: "Language",
+              name: "language",
+              widget: "select",
+              options: ["en"],
             }
           - { label: Title, name: title, widget: string }
           - { label: Intro, name: intro, widget: markdown }
 
-      - label: 'About Page (Spanish)'
-        name: 'about'
-        file: 'gatsby/content/pages/es/about.yml'
-        filter: { field: 'language', value: 'es' }
+      - label: "About Page (Spanish)"
+        name: "about"
+        file: "gatsby/content/pages/es/about.yml"
+        filter: { field: "language", value: "es" }
         fields:
           - {
-              label: 'Lenguaje',
-              name: 'language',
-              widget: 'select',
-              options: ['es'],
+              label: "Lenguaje",
+              name: "language",
+              widget: "select",
+              options: ["es"],
             }
           - { label: Title, name: title, widget: string }
           - { label: Intro, name: intro, widget: markdown }

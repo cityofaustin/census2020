@@ -1,9 +1,8 @@
 module.exports = {
-  langs: ['en', 'es', 'vt'],
-  defaultLangKey: 'en',
+  langs: ["en", "es"],
+  defaultLangKey: "en",
   languagesMap: [
-    { text: 'English', abbr: 'en' },
-    { text: 'Español', abbr: 'es' },
-    { text: 'Tiếng Việt', abbr: 'vt' },
+    { text: "English", abbr: "en" },
+    { text: "Español", abbr: "es" },
   ],
 };

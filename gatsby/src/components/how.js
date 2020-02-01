@@ -6,6 +6,7 @@ import Icon from "@mdi/react";
 
 import Layout from "./layout";
 import Timeline from "./shared/Timeline";
+import WarningBanner from "./WarningBanner";
 import { useHelmetTags } from "./shared/helmet";
 
 const iconMap = {
@@ -33,17 +34,7 @@ const How = ({ uri, location, data, ...rest }) => {
       <Layout language={language} location={location}>
         <section className="grid-container usa-section usa-prose">
           <div className="margin-bottom-5 usa-prose">
-            <div className="usa-alert usa-alert--warning">
-              <div className="usa-alert__body">
-                <h3 className="usa-alert__heading">
-                  Census counting has not started yet.
-                </h3>
-                <p className="usa-alert__text">
-                  Learn more about how to be counted once the Census application
-                  launches in March.
-                </p>
-              </div>
-            </div>
+            <WarningBanner lang={language} />
             <h1>{title}</h1>
             {body.map((p, i) => (
               <p key={`how-p-${i}`}>{p}</p>
@@ -71,7 +62,7 @@ const How = ({ uri, location, data, ...rest }) => {
             ))}
           </div>
         </section>
-        <Timeline />
+        <Timeline lang={language} />
       </Layout>
     </>
   );

@@ -56,7 +56,7 @@ const Index = ({
 
         <QuickLinks media={media} circle={circle} />
 
-        <Timeline />
+        <Timeline lang={language} />
 
         <Communities lang={language} />
       </Layout>

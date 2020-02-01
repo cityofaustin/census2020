@@ -44,7 +44,6 @@ const renderEventMonth = (month, event) => {
       <h2>{month}</h2>
       <ul style={{ listStyleType: "none", margin: 0, padding: 0 }}>
         {event.map((event, i) => {
-          console.log("renderEventMonth", event);
           return (
             <li key={`event-${month}-${i}`} className="margin-bottom-2">
               <div className="grid-row">
@@ -134,7 +133,7 @@ const NewsAndEvents = ({ data, language, shortened }) => {
               <div className="grid-col">
                 <h2 className="font-heading-xl margin-top-0 tablet:margin-bottom-0 text-center">
                   <div>
-                    <Icon path={mdiNewspaper} title="News Story" size={2.5} />
+                    <Icon path={mdiNewspaper} title={newsTitle} size={2.5} />
                   </div>
                   {newsTitle}
                 </h2>
@@ -171,7 +170,10 @@ export default props => (
             }
           }
         }
-        allMarkdownRemark(sort: { fields: frontmatter___date, order: ASC }) {
+        allMarkdownRemark(
+          sort: { fields: frontmatter___date, order: ASC }
+          filter: { frontmatter: { type: { eq: "news_story" } } }
+        ) {
           totalCount
           nodes {
             id
