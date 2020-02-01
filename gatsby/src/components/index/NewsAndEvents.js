@@ -82,8 +82,6 @@ const NewsAndEvents = ({ data, lang, shortened }) => {
     item => item.frontmatter.language === lang
   );
 
-  const showMoreButtonText = "See More";
-
   const recentNews = shortened
     ? _.takeRight(newsByLanguage, data.site.siteMetadata.news.defaultVisible)
     : newsByLanguage;
@@ -91,9 +89,10 @@ const NewsAndEvents = ({ data, lang, shortened }) => {
     moment(newsItem.frontmatter.date).format("MMMM YYYY")
   );
 
-  const newsTitle = _.find(data.allIndexYaml.edges, item => {
-    return item.node.language === lang;
-  }).node.layout.latestNews;
+  const layoutText = _.find(
+    data.allIndexYaml.edges,
+    item => item.node.language === lang
+  ).node.layout;
 
   const recentEvents = shortened
     ? _.take(
@@ -113,40 +112,70 @@ const NewsAndEvents = ({ data, lang, shortened }) => {
             <div className="grid-col">
               <h2 className="font-heading-xl margin-top-0 tablet:margin-bottom-0 text-center">
                 <div>
-                  <Icon path={mdiCalendarStar} title="Events" size={2.5} />
+                  <Icon
+                    path={mdiCalendarStar}
+                    title={layoutText.events}
+                    size={2.5}
+                  />
                 </div>
-                Events
+                {layoutText.events}
               </h2>
+              {Object.keys(eventByMonth).map(month =>
+                renderEventMonth(month, eventByMonth[month])
+              )}
+              <div className="display-flex flex-justify-center margin-top-4">
+                <div className="">
+                  {shortened ? (
+                    <Link
+                      className="usa-button usa-button--outline"
+                      to={"/en/news-and-events"}
+                    >
+                      {layoutText.showMore} {layoutText.events}
+                    </Link>
+                  ) : null}
+                </div>
+                <div className="">
+                  <a
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSefdoZoZ-agx_0Kll26DD0KMl5WuoF-lPD4m0lM0YWsvFKv8A/viewform"
+                    target="_blank"
+                  >
+                    <button className="usa-button ">
+                      {layoutText.newEvent}
+                    </button>
+                  </a>
+                </div>
+              </div>
             </div>
-            {Object.keys(eventByMonth).map(month =>
-              renderEventMonth(month, eventByMonth[month])
-            )}
-            {shortened ? (
-              <Link className="usa-button" to={"/en/news-and-events"}>
-                {showMoreButtonText}
-              </Link>
-            ) : null}
           </div>
           <div className="grid-col-12 tablet:grid-col-6 margin-top-5 tablet:margin-top-0 tablet:padding-left-2">
             <div className="grid-row grid-gap">
               <div className="grid-col">
                 <h2 className="font-heading-xl margin-top-0 tablet:margin-bottom-0 text-center">
                   <div>
-                    <Icon path={mdiNewspaper} title={newsTitle} size={2.5} />
+                    <Icon
+                      path={mdiNewspaper}
+                      title={layoutText.latestNews}
+                      size={2.5}
+                    />
                   </div>
-                  {newsTitle}
+                  {layoutText.latestNews}
                 </h2>
+                {Object.keys(newsByMonth)
+                  .reverse()
+                  .map(month => {
+                    return renderMonth(month, newsByMonth[month]);
+                  })}
+                <div className="display-flex flex-justify-center margin-top-4">
+                  {shortened ? (
+                    <Link
+                      className="usa-button usa-button--outline"
+                      to={"/en/news-and-events"}
+                    >
+                      {layoutText.showMore} {layoutText.latestNews}
+                    </Link>
+                  ) : null}
+                </div>
               </div>
-              {Object.keys(newsByMonth)
-                .reverse()
-                .map(month => {
-                  return renderMonth(month, newsByMonth[month]);
-                })}
-              {shortened ? (
-                <Link className="usa-button" to={"/en/news-and-events"}>
-                  {showMoreButtonText}
-                </Link>
-              ) : null}
             </div>
           </div>
         </div>
@@ -194,6 +223,9 @@ export default props => (
               language
               layout {
                 latestNews
+                events
+                showMore
+                newEvent
               }
             }
           }
