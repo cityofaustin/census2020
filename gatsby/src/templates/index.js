@@ -17,7 +17,6 @@ const IndexTemplate = ({ location, uri, data, ...rest }) => {
       location={location}
       content={content}
       images={[heroImg1, heroImg2]}
-      events={data.site.siteMetadata.events}
       {...rest}
     />
   );
