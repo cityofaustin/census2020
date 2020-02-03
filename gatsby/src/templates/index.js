@@ -34,14 +34,14 @@ export const query = graphql`
     }
     image1: file(base: { eq: "Diversity-min.jpg" }) {
       childImageSharp {
-        fluid(maxHeight: 1000) {
+        fluid(maxHeight: 1600) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    image2: file(base: { eq: "bassist.jpeg" }) {
+    image2: file(base: { eq: "Diversity-min.jpg" }) {
       childImageSharp {
-        fluid(maxHeight: 600) {
+        fluid(maxHeight: 1600) {
           ...GatsbyImageSharpFluid
         }
       }
