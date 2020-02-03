@@ -55,6 +55,14 @@ const Communities = ({ data, lang }) => {
         <p className="text-italic usa-intro">{text.map.subtitle}</p>
         <div className="grid-row">
           <div className="grid-col-8 grid-offset-2">
+            <p className="usa-sr-only">
+              For assistance with this map please call{" "}
+              <a href="tel:1-512-854-6185">(512) 854-6185</a> or email{" "}
+              <a href="mailto:census@traviscounty.org">
+                census@traviscounty.org
+              </a>
+              .
+            </p>
             <a
               href="https://austin.maps.arcgis.com/apps/webappviewer/index.html?id=fd4bd4db7b6e4632a19b1a0a03f8094b"
               target="_blank"

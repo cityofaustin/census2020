@@ -121,6 +121,15 @@ const Info = ({ uri, location, data, yaml, ...rest }) => {
                         </p>
                       </div>
                       <div className="tablet:grid-col-5 text-center margin-top-3">
+                        <p className="usa-sr-only">
+                          For assistance with this map please call{" "}
+                          <a href="tel:1-512-854-6185">(512) 854-6185</a> or
+                          email{" "}
+                          <a href="mailto:census@traviscounty.org">
+                            census@traviscounty.org
+                          </a>
+                          .
+                        </p>
                         <a
                           href="https://austin.maps.arcgis.com/apps/webappviewer/index.html?id=66c1f6bdf2034bd898db56d964125573"
                           target="_blank"
