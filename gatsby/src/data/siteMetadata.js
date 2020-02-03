@@ -9,10 +9,4 @@ module.exports = {
       // { text: "Tiếng Việt", link: "/vt" },
     ],
   },
-  events: {
-    defaultVisible: 8,
-  },
-  news: {
-    defaultVisible: 5,
-  },
 };

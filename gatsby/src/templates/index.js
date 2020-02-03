@@ -17,7 +17,6 @@ const IndexTemplate = ({ location, uri, data, ...rest }) => {
       location={location}
       content={content}
       images={[heroImg1, heroImg2]}
-      events={data.site.siteMetadata.events}
       {...rest}
     />
   );
@@ -25,13 +24,6 @@ const IndexTemplate = ({ location, uri, data, ...rest }) => {
 
 export const query = graphql`
   query IndexByLang($lang: String) {
-    site {
-      siteMetadata {
-        events {
-          defaultVisible
-        }
-      }
-    }
     image1: file(base: { eq: "Diversity-min.jpg" }) {
       childImageSharp {
         fluid(maxHeight: 1600) {
