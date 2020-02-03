@@ -1,6 +1,6 @@
 ---
 title: "Comunidad sin hogar"
-link: "/"
+link: "https://www.austinecho.org/"
 img: "homelessness"
 alt: "Person experiencing homelessness gets help filling out paperwork"
 language: "es"

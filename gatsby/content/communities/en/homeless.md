@@ -1,6 +1,6 @@
 ---
 title: "Community Experiencing Homelessness"
-link: "/"
+link: "https://www.austinecho.org/"
 img: "homelessness"
 alt: "Person experiencing homelessness gets help filling out paperwork"
 language: "en"
