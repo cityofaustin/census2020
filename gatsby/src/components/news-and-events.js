@@ -3,15 +3,15 @@ import PropTypes from "prop-types";
 import { Helmet } from "react-helmet";
 import Layout from "./layout";
 import NewsAndEvents from "./index/NewsAndEvents";
-import { useHelmetTags } from "./shared/helmet";
 
 const propTypes = {
   uri: PropTypes.string,
   location: PropTypes.object,
 };
 
-const Events = ({ uri, location, data, yaml }) => {
-  const { title, language } = useHelmetTags(uri, data[yaml]);
+const Events = ({ location }) => {
+  const title = "Census 2020 News and Events";
+  const language = "en";
 
   return (
     <>

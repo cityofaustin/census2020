@@ -7,7 +7,7 @@ import { mdiNewspaper } from "@mdi/js";
 import { mdiCalendarStar } from "@mdi/js";
 import { Link, StaticQuery, graphql } from "gatsby";
 
-const renderMonth = (month, news) => {
+const renderNewsByMonth = (month, news) => {
   return (
     <div key={`month-${month}`}>
       <h2>{month}</h2>
@@ -38,7 +38,7 @@ const renderMonth = (month, news) => {
   );
 };
 
-const renderEventMonth = (month, event) => {
+const renderEventByMonth = (month, event) => {
   return (
     <div key={`event-month-${month}`}>
       <h2>{month}</h2>
@@ -58,11 +58,13 @@ const renderEventMonth = (month, event) => {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      [{event.node.eventdate}] {event.node.eventtitle}
+                      [{moment(event.node.eventdate).format("ddd M/D")}]{" "}
+                      {event.node.eventtitle}
                     </a>
                   ) : (
-                    <span>
-                      [{event.node.eventdate}] {event.node.eventtitle}
+                    <span className="font-heading-l">
+                      [{moment(event.node.eventdate).format("ddd M/D")}]{" "}
+                      {event.node.eventtitle}
                     </span>
                   )}
                 </div>
@@ -76,6 +78,9 @@ const renderEventMonth = (month, event) => {
 };
 
 const NewsAndEvents = ({ data, lang, shortened }) => {
+  const EVENTS_VISIBLE = 8;
+  const NEWS_VISIBLE = 5;
+
   const news = data.allMarkdownRemark.nodes;
   const newsByLanguage = _.filter(
     news,
@@ -83,7 +88,7 @@ const NewsAndEvents = ({ data, lang, shortened }) => {
   );
 
   const recentNews = shortened
-    ? _.takeRight(newsByLanguage, data.site.siteMetadata.news.defaultVisible)
+    ? _.takeRight(newsByLanguage, NEWS_VISIBLE)
     : newsByLanguage;
   const newsByMonth = _.groupBy(recentNews, newsItem =>
     moment(newsItem.frontmatter.date).format("MMMM YYYY")
@@ -94,11 +99,15 @@ const NewsAndEvents = ({ data, lang, shortened }) => {
     item => item.node.language === lang
   ).node.layout;
 
+  const thisMonth = moment().format("M");
+
+  const upcomingEvents = data.allGoogleSheetFormResponses1Row.edges.filter(
+    // Filter events from current month going forward
+    event => moment(event.node.eventdate).format("M") >= thisMonth
+  );
+
   const recentEvents = shortened
-    ? _.take(
-        data.allGoogleSheetFormResponses1Row.edges,
-        data.site.siteMetadata.events.defaultVisible
-      )
+    ? _.take(upcomingEvents, EVENTS_VISIBLE)
     : data.allGoogleSheetFormResponses1Row.edges;
   const eventByMonth = _.groupBy(recentEvents, eventItem =>
     moment(eventItem.node.eventdate).format("MMMM YYYY")
@@ -110,18 +119,18 @@ const NewsAndEvents = ({ data, lang, shortened }) => {
         <div className="grid-row">
           <div className="grid-col-12 tablet:grid-col-6 tablet:padding-right-2">
             <div className="grid-col">
-              <h2 className="font-heading-xl margin-top-0 tablet:margin-bottom-0 text-center">
-                <div>
-                  <Icon
-                    path={mdiCalendarStar}
-                    title={layoutText.events}
-                    size={2.5}
-                  />
-                </div>
-                {layoutText.events}
-              </h2>
+              <div className="tablet:margin-bottom-0 text-center">
+                <Icon
+                  path={mdiCalendarStar}
+                  title={layoutText.events}
+                  size={2.5}
+                />
+                <h2 className="font-heading-xl margin-top-0 ">
+                  {layoutText.events}
+                </h2>
+              </div>
               {Object.keys(eventByMonth).map(month =>
-                renderEventMonth(month, eventByMonth[month])
+                renderEventByMonth(month, eventByMonth[month])
               )}
               <div className="display-flex flex-justify-center margin-top-4">
                 <div className="">
@@ -150,20 +159,20 @@ const NewsAndEvents = ({ data, lang, shortened }) => {
           <div className="grid-col-12 tablet:grid-col-6 margin-top-5 tablet:margin-top-0 tablet:padding-left-2">
             <div className="grid-row grid-gap">
               <div className="grid-col">
-                <h2 className="font-heading-xl margin-top-0 tablet:margin-bottom-0 text-center">
-                  <div>
-                    <Icon
-                      path={mdiNewspaper}
-                      title={layoutText.latestNews}
-                      size={2.5}
-                    />
-                  </div>
-                  {layoutText.latestNews}
-                </h2>
+                <div className="tablet:margin-bottom-0 text-center">
+                  <Icon
+                    path={mdiNewspaper}
+                    title={layoutText.latestNews}
+                    size={2.5}
+                  />
+                  <h2 className="font-heading-xl margin-top-0">
+                    {layoutText.latestNews}
+                  </h2>
+                </div>
                 {Object.keys(newsByMonth)
                   .reverse()
                   .map(month => {
-                    return renderMonth(month, newsByMonth[month]);
+                    return renderNewsByMonth(month, newsByMonth[month]);
                   })}
                 <div className="display-flex flex-justify-center margin-top-4">
                   {shortened ? (
@@ -188,16 +197,6 @@ export default props => (
   <StaticQuery
     query={graphql`
       query {
-        site {
-          siteMetadata {
-            news {
-              defaultVisible
-            }
-            events {
-              defaultVisible
-            }
-          }
-        }
         allMarkdownRemark(
           sort: { fields: frontmatter___date, order: ASC }
           filter: { frontmatter: { type: { eq: "news_story" } } }
