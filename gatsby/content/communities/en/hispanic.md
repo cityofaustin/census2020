@@ -1,6 +1,6 @@
 ---
 title: "Hispanic/Latino Community Group"
-link: "https://hagasecontar.org/"
+link: "https://www.facebook.com/LatinoCCCATX"
 img: "latinx"
 alt: "Mexican folklore dancers"
 language: "en"
