@@ -76,7 +76,7 @@ const Footer = ({ coaImg, travisImg, lang, data }) => {
               <address className="usa-footer__address">
                 <div className="usa-footer__contact-info grid-row grid-gap">
                   <div className="grid-col-12 margin-y-2">
-                    <a href="tel:1-512-854-6185">(512) 854-6185</a>
+                    <a href="tel:1-512-854-6185">512-854-6185</a>
                   </div>
                   <div className="grid-col-12">
                     <a href="mailto:census@traviscountytx.gov">

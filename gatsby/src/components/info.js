@@ -123,8 +123,7 @@ const Info = ({ uri, location, data, yaml, ...rest }) => {
                       <div className="tablet:grid-col-5 text-center margin-top-3">
                         <p className="usa-sr-only">
                           For assistance with this map please call{" "}
-                          <a href="tel:1-512-854-6185">(512) 854-6185</a> or
-                          email{" "}
+                          <a href="tel:1-512-854-6185">512-854-6185</a> or email{" "}
                           <a href="mailto:census@traviscounty.org">
                             census@traviscounty.org
                           </a>

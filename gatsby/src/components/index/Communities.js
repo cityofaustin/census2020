@@ -57,7 +57,7 @@ const Communities = ({ data, lang }) => {
           <div className="grid-col-8 grid-offset-2">
             <p className="usa-sr-only">
               For assistance with this map please call{" "}
-              <a href="tel:1-512-854-6185">(512) 854-6185</a> or email{" "}
+              <a href="tel:1-512-854-6185">512-854-6185</a> or email{" "}
               <a href="mailto:census@traviscounty.org">
                 census@traviscounty.org
               </a>
