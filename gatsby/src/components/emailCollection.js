@@ -80,7 +80,7 @@ const EmailCollection = ({ data, lang }) => {
         className="usa-form"
         method="post"
         style={{ width: "80%" }}
-        // onSubmit={handleEmailCollectionSubmit}
+        onSubmit={handleEmailCollectionSubmit}
         data-netlify-honeypot="bot-field"
         data-netlify="true"
         method="post"
