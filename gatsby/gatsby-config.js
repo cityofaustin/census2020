@@ -79,6 +79,12 @@ module.exports = {
         credentials: require("./census2020-8f45e16b8de8.json"),
       },
     },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-27761834-14",
+      },
+    },
     // {
     //   resolve: `@igorko/gatsby-plugin-i18next`,
     //   options: {
