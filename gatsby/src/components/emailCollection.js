@@ -9,6 +9,12 @@ function URLify(string) {
 }
 
 const EmailCollection = ({ data, lang }) => {
+  const encode = data => {
+    return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&");
+  };
+
   const [
     emailCollectionFormState,
     setEmailCollectionFormState,
@@ -55,7 +61,7 @@ const EmailCollection = ({ data, lang }) => {
       });
     } catch (error) {
       console.error(error);
-      setEmailCollectionFormStatus({
+      setEmailCollectionFormMessage({
         color: "red",
         content: "An error occurred. Please try again later.",
       });
@@ -72,11 +78,18 @@ const EmailCollection = ({ data, lang }) => {
       <form
         name="email-collection-form"
         className="usa-form"
+        method="post"
         style={{ width: "80%" }}
+        // onSubmit={handleEmailCollectionSubmit}
+        data-netlify-honeypot="bot-field"
         data-netlify="true"
-        onSubmit={handleEmailCollectionSubmit}
+        method="post"
       >
-        <input type="hidden" name="form-name" value="email-collection-form" />
+        <input
+          type="hidden"
+          name="email-collection-form"
+          value="email-collection-form"
+        />
         <label className="usa-label" htmlFor="input-type-email">
           {text.email}
         </label>
