@@ -102,14 +102,15 @@ const NewsAndEvents = ({ data, lang, shortened }) => {
   const thisMonth = moment().format("M");
 
   const upcomingEvents = data.allGoogleSheetFormResponses1Row.edges.filter(
-    // Filter events from current month going forward
-    event => moment(event.node.eventdate).format("M") >= thisMonth
+    // Filter events from current date going forward
+    event => moment(event.node.eventdate).format() >= moment().format()
   );
 
-  const recentEvents = shortened
+  const events = shortened
     ? _.take(upcomingEvents, EVENTS_VISIBLE)
     : data.allGoogleSheetFormResponses1Row.edges;
-  const eventByMonth = _.groupBy(recentEvents, eventItem =>
+
+  const eventByMonth = _.groupBy(events, eventItem =>
     moment(eventItem.node.eventdate).format("MMMM YYYY")
   );
 
