@@ -1,6 +1,8 @@
 import React from "react";
 import Img from "gatsby-image";
 import { Link, StaticQuery, graphql } from "gatsby";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 const Footer = ({ coaImg, travisImg, lang, data }) => {
   const text = data.text.edges.filter(
@@ -45,12 +47,32 @@ const Footer = ({ coaImg, travisImg, lang, data }) => {
                 <div className="grid-col-auto">
                   <a
                     className="usa-social-link usa-social-link--facebook"
-                    href="/"
+                    href="https://www.facebook.com/Austin-Travis-County-Complete-Count-Committee-289680787280/"
+                    target="_blank"
                   >
                     <span>Facebook</span>
                   </a>
                 </div>
                 <div className="grid-col-auto">
+                  <a
+                    className="usa-social-link fa-at"
+                    href="mailto:census@traviscountytx.gov"
+                    target="_blank"
+                  >
+                    <FontAwesomeIcon
+                      icon={faEnvelope}
+                      size="lg"
+                      style={{
+                        height: "100%",
+                        width: "100%",
+                        padding: ".75rem",
+                      }}
+                    />
+                    <span>Email</span>
+                  </a>
+                </div>
+
+                {/* <div className="grid-col-auto">
                   <a
                     className="usa-social-link usa-social-link--twitter"
                     href="/"
@@ -70,7 +92,7 @@ const Footer = ({ coaImg, travisImg, lang, data }) => {
                   <a className="usa-social-link usa-social-link--rss" href="/">
                     <span>RSS</span>
                   </a>
-                </div>
+                </div> */}
               </div>
               <h3 className="usa-footer__contact-heading">{text.contact_us}</h3>
               <address className="usa-footer__address">
