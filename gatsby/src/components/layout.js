@@ -10,29 +10,6 @@ const languages = require("../data/languages.js");
 
 const mainContent = "main-content";
 
-const headerPages = [
-  {
-    text: {
-      en: "WHY THE CENSUS MATTERS",
-      es: "POR QUÉ ES IMPORTANTE EL CENSO",
-      vt: "TẠI SAO ĐIỀU TRA DÂN SỐ LẠI QUAN TRỌNG",
-    },
-    link: "/why",
-  },
-  {
-    text: { en: "How To Take The Census", es: "COMO", vt: "Tiếng Việt" },
-    link: "/how",
-  },
-  {
-    text: {
-      en: "Get Involved",
-      es: "PERMANEZCA CONECTADO",
-      vt: "GIỮ KẾT NỐI",
-    },
-    link: "/get-involved",
-  },
-];
-
 const Layout = ({ children, language, location, data }) => {
   return (
     <StaticQuery
