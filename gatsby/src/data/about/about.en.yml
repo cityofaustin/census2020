@@ -39,39 +39,37 @@ sections:
   - component: Timeline
     title: When is the Census?
   - component: Text
-    text:
-      - >-
-        Austin and Travis County are coming together to ensure that everyone in
-        our communities are counted in the 2020 Census!
-      - >-
-        This spring, we have the power to shape the future of our state and our
-        country by participating in the 2020 Census. This is our chance to
-        uplift our communities and we must work together to ensure everyone is
-        counted. Texas is stronger with a complete count.
-      - See how you can <a href="/en/get-involved">Get Involved!</a>
+    text: >-
+      Austin and Travis County are coming together to ensure that everyone in
+      our communities are counted in the 2020 Census!
+
+
+      This spring, we have the power to shape the future of our state and our
+      country by participating in the 2020 Census. This is our chance to uplift
+      our communities and we must work together to ensure everyone is counted.
+      Texas is stronger with a complete count.
+
+
+      See how you can [Get Involved!](/en/get-involved)
     title: How to Participate?
   - component: NewsAndEvents
     title: Recent News and Events
   - component: FAQ
     title: FAQ
   - component: Text
-    text:
-      - <h3>Videos</h3>
-      - >-
-        April 1, 2019 - <a
-        href="http://austintx.swagit.com/play/04012019-565/2/"
-        target="_blank">Austin-Travis County Census 2020 News Conference</a>
-      - >-
-        April 1, 2019 - <a
-        href="https://www.youtube.com/watch?v=8ioyQvWMOxE&feature=em-share_video_user"
-        target="_blank">Austin-Travis County Complete Count Committee Kick-Off
-        Meeting</a>
-      - >-
-        June 14, 2019 - <a href="https://www.youtube.com/watch?v=J-CzJGaz7Qw"
-        target="_blank">Imagine Austin Speaker Series: Ryan Robinson - City of
-        Austin Demographer</a>
-      - >-
-        June 26, 2019 - <a href="https://youtu.be/nOSUZUheU10"
-        target="_blank">Austin-Travis County Census 2020 Complete Count
-        Committee Meeting</a>
+    text: >-
+      <h3>Videos</h3>
+
+
+      * April 1, 2019 - [Austin-Travis County Census 2020 News
+      Conference](http://austintx.swagit.com/play/04012019-565/2/)
+
+      * April 1, 2019 - [Austin-Travis County Complete Count Committee Kick-Off
+      Meeting](https://www.youtube.com/watch?v=8ioyQvWMOxE&feature=em-share_video_user)
+
+      * June 14, 2019 - [Imagine Austin Speaker Series: Ryan Robinson - City of
+      Austin Demographer](https://www.youtube.com/watch?v=J-CzJGaz7Qw)
+
+      * June 26, 2019 - [Austin-Travis County Census 2020 Complete Count
+      Committee Meeting](https://youtu.be/nOSUZUheU10)
     title: Resources
