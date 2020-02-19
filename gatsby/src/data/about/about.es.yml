@@ -1,10 +1,5 @@
-page: about_es
+page: sobre
 language: es
 title: About the Local Campaign
-intro:
-  - hey
-sections:
-  - component: Text
-    title: test
-    text: >-
-      test
+intro: ''
+sections: []
