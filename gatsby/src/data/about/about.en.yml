@@ -4,6 +4,7 @@ title: About the Local Campaign
 intro:
 sections:
   - component: TableOfContents
+    title: Table of Contents
   - component: Text
     title: About the 2020 Census
     text:
