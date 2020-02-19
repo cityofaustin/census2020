@@ -5,7 +5,7 @@ intro:
 table_of_contents: true
 about:
   - title: About the 2020 Census
-    text:
+  - text:
       - Every ten years the U.S. Census Bureau oversees a confidential survey of the whole country to determine population totals and breakdowns by sex, age, race and other demographic factors. This year between March and July, individuals will be able to respond online, by phone, or by mail.
       - Your response to the 2020 Census will help guide more than $800 billion in federal funding to programs across the U.S. that are crucial to our families and our community.
       - "If Texas residents are undercounted by even 1% Texas could lose at least $300 million per year in programs that affect all of us, especially vulnerable children and other at-risk populations. Census data determines funding allocations for programs that: "
@@ -18,7 +18,7 @@ about:
         "
       - Learn about <a href="/en/why">Why the Census Matters!</a>
       - Want to participate? Learn how to <a href="/en/get-involved">Get Involved!</a>
-    component: Text
+  - component: Text
 timeline:
   - component: Timeline
     title: When is the Census?
