@@ -4,13 +4,13 @@ layout:
   title: Censo de Austin-Condado de Travis 2020
   nav:
     - text: Por qué es importante el Censo
-      link: /es/why
+      link: /es/porque
       order: 1
     - text: Cómo llenar el Censo
-      link: /es/how
+      link: /es/como
       order: 2
     - text: Participe
-      link: /es/get-involved
+      link: /es/participe
       order: 3
 components:
   communities:
