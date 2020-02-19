@@ -86,5 +86,6 @@ sections:
       counted. View the map below to see if your neighborhood is at risk of
       being undercounted.
     title: Historically Undercounted Communities in Austin and Travis County
+    cta: Explore the map
   - component: FAQ
     title: FAQ
