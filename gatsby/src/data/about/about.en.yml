@@ -58,7 +58,7 @@ sections:
     title: FAQ
   - component: Text
     text: >-
-      <h3>Videos</h3>
+      ### Videos
 
 
       * April 1, 2019 - [Austin-Travis County Census 2020 News
