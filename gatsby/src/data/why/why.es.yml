@@ -1,7 +1,7 @@
-page: why
+page: why_es
 language: es
 title: Por qué es importante el Censo
-body:
+intro:
   - Muchas cosas dependen del Censo del 2020, y nuestras comunidades no pueden darse el lujo de tener un conteo incorrecto menor a la realidad. Los recursos comunitarios esenciales, tales como mejoras a las calles, los almuerzos escolares para niños necesitados y las viviendas para los adultos mayores y familias, se ganarán o perderán dependiendo del Censo del 2020.
 sections:
   - component: Text

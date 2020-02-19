@@ -1,7 +1,7 @@
 page: why
 language: en
 title: Why the Census Matters
-body:
+intro:
   - A lot is at stake in the 2020 Census, and our communities can't afford an undercount. Essential neighborhood resources like street improvements, school lunches for children in need, and housing for seniors and families will all be gained or lost because of the 2020 Census.
 sections:
   - component: Text

@@ -1,7 +1,7 @@
-page: about
+page: about_es
 language: es
 title: About the Local Campaign
-body:
+intro:
   - hey
 sections:
   - component: Text
