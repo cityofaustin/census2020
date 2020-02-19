@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Helmet } from "react-helmet";
 import Img from "gatsby-image";
+import ReactMarkdown from "react-markdown";
 
 import Layout from "./layout";
 import Timeline from "./shared/Timeline";
@@ -10,7 +11,6 @@ import Communities from "./index/Communities";
 import NewsAndEvents from "./index/NewsAndEvents";
 import EmailCollection from "./emailCollection";
 import { useHelmetTags } from "./shared/helmet";
-import ReactMarkdown from "react-markdown";
 
 const propTypes = {
   uri: PropTypes.string,

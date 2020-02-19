@@ -49,14 +49,14 @@ collections:
                 widget: markdown
                 required: false
       - label: "About Page (Spanish)"
-        name: "about_es"
+        name: "sobre"
         file: "gatsby/src/data/about/about.es.yml"
         filter: { field: "language", value: "es" }
         fields:
           - label: "Page"
             name: "page"
             widget: "select"
-            options: ["about"]
+            options: ["sobre"]
           - {
               label: "Language",
               name: "language",
@@ -172,6 +172,68 @@ collections:
               - label: Call To Action
                 name: cta
                 widget: string
+                required: false
+      - label: "How To Complete the Census (English)"
+        name: "how"
+        file: "gatsby/src/data/how/how.en.yml"
+        filter: { field: "language", value: "en" }
+        fields:
+          - label: "Page"
+            name: "page"
+            widget: "select"
+            options: ["how"]
+          - {
+              label: "Language",
+              name: "language",
+              widget: "select",
+              options: ["en"],
+            }
+          - { label: Title, name: title, widget: string }
+          - { label: Body, name: body, widget: markdown, required: false }
+          - label: Options
+            name: options
+            widget: "list"
+            fields:
+              - label: Label
+                name: label
+                widget: string
+              - label: Icon
+                name: icon
+                widget: string
+              - label: Text
+                name: text
+                widget: markdown
+                required: false
+      - label: "How To Complete the Census (Spanish)"
+        name: "como"
+        file: "gatsby/src/data/how/how.es.yml"
+        filter: { field: "language", value: "es" }
+        fields:
+          - label: "Page"
+            name: "page"
+            widget: "select"
+            options: ["como"]
+          - {
+              label: "Language",
+              name: "language",
+              widget: "select",
+              options: ["es"],
+            }
+          - { label: Title, name: title, widget: string }
+          - { label: Body, name: body, widget: markdown, required: false }
+          - label: Options
+            name: options
+            widget: "list"
+            fields:
+              - label: Label
+                name: label
+                widget: string
+              - label: Icon
+                name: icon
+                widget: string
+              - label: Text
+                name: text
+                widget: markdown
                 required: false
 
   - label: "Communities (English)"
