@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  branch: master
+  branch: moar_cms_config
 
 media_folder: static/img
 public_folder: /img
@@ -87,9 +87,13 @@ collections:
     files:
       - label: "About Page (English)"
         name: "about"
-        file: "gatsby/content/pages/en/about.yml"
+        file: "gatsby/src/data/about/about.en.yml"
         filter: { field: "language", value: "en" }
         fields:
+          - label: "Page"
+            name: "page"
+            widget: "select"
+            options: ["about"]
           - {
               label: "Language",
               name: "language",
@@ -97,7 +101,29 @@ collections:
               options: ["en"],
             }
           - { label: Title, name: title, widget: string }
-          - { label: Intro, name: intro, widget: markdown }
+          - { label: Intro, name: intro, widget: markdown, required: false }
+          - label: "Sections"
+            name: sections
+            widget: "list"
+            fields:
+              - label: Title
+                name: title
+                widget: string
+              - label: Component
+                name: component
+                widget: "select"
+                options:
+                  [
+                    "TableOfContents",
+                    "Text",
+                    "Timeline",
+                    "NewsAndEvents",
+                    "FAQ",
+                  ]
+              - label: Text
+                name: text
+                widget: markdown
+                required: false
 
       - label: "About Page (Spanish)"
         name: "about"

@@ -6,5 +6,5 @@ body:
 sections:
   - component: Text
     title: test
-    text:
-      - test
+    text: >-
+      test
