@@ -1,20 +1,22 @@
 page: como
 language: es
 title: Como hacer el Censo
-body:
-  - Se requiere que cada persona en el país llene un formulario del Censo del 2020. Puede llenarla de tres maneras.
-  - También habrá disponibles guías en video e impresas en 60 idiomas y habrá un video en lenguaje de señas americano para acompañar una guía impresa en braille."
+body: >-
+  Se requiere que cada persona en el país llene un formulario del Censo del 2020. Puede llenarla de tres maneras.
+
+  También habrá disponibles guías en video e impresas en 60 idiomas y habrá un video en lenguaje de señas americano para acompañar una guía impresa en braille."
 options:
   - icon: mdiStar
     label: Por correo
-    text:
-      - El formulario del Censo en papel se enviará desde la Oficina del Censo de los EE.UU. Estará disponible en inglés y español y se puede enviar lleno de regreso a la Oficina del Censo de EE.UU.
+    text: >-
+      El formulario del Censo en papel se enviará desde la Oficina del Censo de los EE.UU. Estará disponible en inglés y español y se puede enviar lleno de regreso a la Oficina del Censo de EE.UU.
   - icon: mdiComputer
     label: En línea
-    text:
-      - Por primera vez, el formulario del Censo estará disponible para llenarlo por Internet en 13 idiomas.
-      - ¿Necesita acceso a una computadora? Visite cualquier sucursal de la Biblioteca Pública de Austin para detalles o llame al 512-974-7400.
+    text: >-
+      Por primera vez, el formulario del Censo estará disponible para llenarlo por Internet en 13 idiomas.
+
+      ¿Necesita acceso a una computadora? Visite cualquier sucursal de la Biblioteca Pública de Austin para detalles o llame al 512-974-7400.
   - icon: mdiPhone
     label: Por teléfono
-    text:
-      - Se puede completar el Censo por teléfono en 13 idiomas incluyendo el dispositivo de telecomunicaciones para sordos.
+    text: >-
+      Se puede completar el Censo por teléfono en 13 idiomas incluyendo el dispositivo de telecomunicaciones para sordos.
