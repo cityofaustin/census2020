@@ -51,6 +51,7 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-helmet": "^6.0.0-beta",
+    "react-markdown": "^4.3.1",
     "react-vertical-timeline-component": "^2.5.0",
     "uswds": "^2.0.3"
   },

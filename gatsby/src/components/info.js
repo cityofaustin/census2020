@@ -10,6 +10,7 @@ import Communities from "./index/Communities";
 import NewsAndEvents from "./index/NewsAndEvents";
 import EmailCollection from "./emailCollection";
 import { useHelmetTags } from "./shared/helmet";
+import ReactMarkdown from "react-markdown";
 
 const propTypes = {
   uri: PropTypes.string,
@@ -65,12 +66,16 @@ const Info = ({ uri, location, data, yaml, ...rest }) => {
                   id={URLify(section.title)}
                 >
                   <h2 id={URLify(section.title)}>{section.title}</h2>
-                  {section.text.map((p, i) => (
-                    <p
-                      key={`Info-Text-p-${i}`}
-                      dangerouslySetInnerHTML={{ __html: p }}
-                    ></p>
-                  ))}
+                  {typeof section.text === "string" ? (
+                    <ReactMarkdown source={section.text} />
+                  ) : (
+                    section.text.map((p, i) => (
+                      <p
+                        key={`Info-Text-p-${i}`}
+                        dangerouslySetInnerHTML={{ __html: p }}
+                      ></p>
+                    ))
+                  )}
                 </section>
               );
             case "TableOfContents":
