@@ -47,13 +47,7 @@ const Info = ({ uri, location, data, yaml, ...rest }) => {
         <section className="grid-container usa-prose">
           <div className="margin-y-5 usa-prose">
             <h1>{title}</h1>
-            {body &&
-              body.map((p, i) => (
-                <p
-                  key={`Info-p-${i}`}
-                  dangerouslySetInnerHTML={{ __html: p }}
-                ></p>
-              ))}
+            <ReactMarkdown source={body} />
           </div>
         </section>
         {sections.map((section, i) => {

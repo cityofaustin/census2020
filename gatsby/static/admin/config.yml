@@ -235,6 +235,96 @@ collections:
                 name: text
                 widget: markdown
                 required: false
+      - label: "Get Involved (English)"
+        name: "get-involved"
+        file: "gatsby/src/data/info/get_involved.en.yml"
+        filter: { field: "language", value: "en" }
+        fields:
+          - label: "Page"
+            name: "page"
+            widget: "select"
+            options: ["get-involved"]
+          - {
+              label: "Language",
+              name: "language",
+              widget: "select",
+              options: ["en"],
+            }
+          - { label: Title, name: title, widget: string }
+          - { label: Body, name: body, widget: markdown, required: false }
+          - label: "Sections"
+            name: sections
+            widget: "list"
+            fields:
+              - label: Title
+                name: title
+                widget: string
+              - label: Component
+                name: component
+                widget: "select"
+                options:
+                  [
+                    "TableOfContents",
+                    "Text",
+                    "Timeline",
+                    "NewsAndEvents",
+                    "FAQ",
+                    "EmailCollection",
+                    "Communities",
+                  ]
+              - label: Text
+                name: text
+                widget: markdown
+                required: false
+              - label: Call To Action
+                name: cta
+                widget: string
+                required: false
+      - label: "Get Involved (Spanish)"
+        name: "participe"
+        file: "gatsby/src/data/info/get_involved.es.yml"
+        filter: { field: "language", value: "es" }
+        fields:
+          - label: "Page"
+            name: "page"
+            widget: "select"
+            options: ["participe"]
+          - {
+              label: "Language",
+              name: "language",
+              widget: "select",
+              options: ["es"],
+            }
+          - { label: Title, name: title, widget: string }
+          - { label: Body, name: body, widget: markdown, required: false }
+          - label: "Sections"
+            name: sections
+            widget: "list"
+            fields:
+              - label: Title
+                name: title
+                widget: string
+              - label: Component
+                name: component
+                widget: "select"
+                options:
+                  [
+                    "TableOfContents",
+                    "Text",
+                    "Timeline",
+                    "NewsAndEvents",
+                    "FAQ",
+                    "EmailCollection",
+                    "Communities",
+                  ]
+              - label: Text
+                name: text
+                widget: markdown
+                required: false
+              - label: Call To Action
+                name: cta
+                widget: string
+                required: false
 
   - label: "Communities (English)"
     name: "communities_en"
