@@ -9,7 +9,7 @@ collections:
   - label: "Pages"
     name: "pages"
     files:
-      - label: "Homepage (English)"
+      - label: "Homepage & Shared Components (English)"
         name: "index"
         file: "gatsby/content/text/en/text-en.md"
         filter: { field: "language", value: "en" }
@@ -124,7 +124,7 @@ collections:
                   - label: Submit
                     name: submit
                     widget: string
-      - label: "Homepage (Spanish)"
+      - label: "Homepage & Shared Components (Spanish)"
         name: "index_es"
         file: "gatsby/content/text/es/text-es.md"
         filter: { field: "language", value: "es" }
