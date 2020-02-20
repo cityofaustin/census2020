@@ -617,8 +617,6 @@ collections:
         widget: string
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Description", name: "description", widget: "string" }
-      - { label: "Body", name: "body", widget: "markdown" }
       - label: Type
         name: type
         widget: "select"
@@ -646,8 +644,7 @@ collections:
         widget: string
       - { label: "Titulo", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Description", name: "description", widget: "string" }
-      - { label: "Contenido", name: "body", widget: "markdown" }
+
       - label: Type
         name: type
         widget: "select"
