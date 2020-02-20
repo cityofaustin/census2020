@@ -1,6 +1,7 @@
 import React, { useState, useRef } from "react";
 import "./Faq.css";
 import { StaticQuery, graphql } from "gatsby";
+import ReactMarkdown from "react-markdown";
 
 const FAQ = props => {
   const [active, setActive] = useState("false");
@@ -28,10 +29,9 @@ const FAQ = props => {
         style={{ maxHeight: `${height}` }}
         className="accordion__content"
       >
-        <p
-          className="font-ui-md padding-y-1 padding-x-5"
-          dangerouslySetInnerHTML={{ __html: props.response }}
-        />
+        <div className="font-ui-md padding-y-1 padding-x-5">
+          <ReactMarkdown source={props.response} />
+        </div>
       </div>
     </>
   );

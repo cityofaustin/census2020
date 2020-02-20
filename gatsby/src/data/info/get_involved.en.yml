@@ -1,0 +1,32 @@
+page: get-involved
+language: en
+title: Get Involved and Get out the Count!
+body: >-
+  Our goal is to achieve a full and complete count of all Texans. Please help
+  spread the word and ensure you, your family, neighbors, and friends are all
+  counted!
+sections:
+  - component: EmailCollection
+    title: Email Form
+  - component: NewsAndEvents
+    title: Recent News and Events
+  - component: Communities
+    text: >-
+      Austin and Travis County are coming together to ensure that everyone in
+      our communities are counted in the 2020 Census! The Census uplifts the
+      voices of our families, friends and neighbors across the State. The power
+      to shape our future is in our hands. Shoutouts to partners here?
+
+
+      This spring, we have the power to shape the future of our state and our
+      country by participating in the 2020 Census. This is our chance to uplift
+      our communities and we must work together to ensure everyone is counted.
+      Texas is stronger with a complete count. For more information, contact
+      <mailto:census@traviscountytx.gov>.
+
+
+      You can also visit the [Austin-Travis County Complete Count Committee
+      Facebook
+      page](https://www.facebook.com/Austin-Travis-County-Complete-Count-Committee-289680787280/)
+      for the latest information.
+    title: Stand up and be counted in the 2020 Census

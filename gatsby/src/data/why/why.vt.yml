@@ -1,47 +1,23 @@
-page: why
+page: why_vt
 language: vt
 title: Why the Census Matters
-body:
-  - A lot is at stake in the 2020 Census, and our communities can't afford an undercount. Essential neighborhood resources like street improvements, school lunches for children in need, and housing for seniors and families will all be gained or lost because of the 2020 Census.
+intro: >-
+  A lot is at stake in the 2020 Census, and our communities can't afford an undercount. Essential neighborhood resources like street improvements, school lunches for children in need, and housing for seniors and families will all be gained or lost because of the 2020 Census.
 sections:
   - component: Text
     title: Why it matters here at home
-    text:
-      # - INSERT GRAPHIC
-      - We only get one chance every 10 years to count all of our residents. With so many new folks moving in and others being forced to move to new parts of town, no Census has ever been more important for Austin and Travis County. This Census count will also help local elected officials inform important decisions and determine federal funding allocations for the next decade.
+    text: ""
   - component: Text
     title: Did you know?
-    text:
-      - "<ul>
-        <li>In 2010, undercounts occurred across Texas in large metropolitan areas, college towns, rural counties, and communities along the border</li>
-        <li>The mail-in self-response rate for Travis County in the 2010 Census was 75.9%, which required a costly and difficult in-person follow-up for the remaining 24.1% of residents. </li>
-        <li>2.1% of children under the age of five in Travis County were undercounted in the 2010 Census.</li>
-        <li>Our most recent research estimates that reaching Travis County residents in hard-to-count neighborhoods at a basic level of $2 dollars per person (mailers, a couple public forms, and some level of direct outreach) would cost at least $742,000 dollars.</li>
-        <li>Most recent data shows that 11.6% of Travis County’s households had either no internet access or dial-up only.</li>
-        "
+    text: ""
   - component: Text
     title: What's at risk?
-    text:
-      # - INSERT GRAPHIC
-      - "Many communities in Texas, including ours, have been underrepresented or undercounted in the past Census efforts. An undercount means Texas is not getting its fair share of funding and representation since not everyone living in our state was counted. Counting everyone can be logistically challenging. Those who are at risk of being undercounted in the 2020 Census are:"
-      - "<ul>
-        <li>Very young children</li>
-        <li>Immigrants</li>
-        <li>People who live in rural areas</li>
-        <li>People of color</li>
-        <li>People who move residences more frequently</li>
-        <li>People who face language barriers</li>
-        "
-      - The 2020 Census is an opportunity to get as many people as possible to participate in order to shape our future.
+    text: ""
   - component: Text
     title: Your responses are safe and confidential
-    text:
-      # - INSERT GRAPHIC
-      - Your Census responses are safe and confidential. Information collected as part of the 2020 Census cannot be shared with or by other governmental agencies or used against you in any way, as dictated under Title 13 of the U.S. code. It is for statistical purposes only. All Census Bureau staff take a lifetime oath to protect your personal information, and any violation comes with a penalty of up to $250,000 and/or up to 5 years in prison.
-      - Learn about the <a href="/en/about">local Census campaign</a>.
+    text: ""
   - component: MapCta
     title: Historically Undercounted Communities in Austin and Travis County
-    text:
-      - Texas is at risk of an even larger undercount in 2020. Today, 25% of Texans, or over 6 million people, live in hard-to-count neighborhoods, where past self-response rates have been relatively low. Today in Travis County, 32% (over 370,000 people) of the population live in hard-to-count neighborhoods. An undercount means Texas is not getting its fair share of funding and representation since not everyone living in our state was counted. View the map below to see if your neighborhood is at risk of being undercounted.
+    text: ""
   - component: FAQ
     title: FAQ

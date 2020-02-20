@@ -154,7 +154,6 @@ export default props => (
                 emailCollection {
                   title
                   email
-                  name
                   communities
                   submit
                 }

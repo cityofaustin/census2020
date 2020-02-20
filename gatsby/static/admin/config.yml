@@ -1,11 +1,561 @@
 backend:
   name: git-gateway
-  branch: master
+  branch: moar_cms_config
 
 media_folder: static/img
 public_folder: /img
 
 collections:
+  - label: "Pages"
+    name: "pages"
+    files:
+      - label: "Homepage (English)"
+        name: "index"
+        file: "gatsby/content/text/en/text-en.md"
+        filter: { field: "language", value: "en" }
+        fields:
+          - label: "Language"
+            name: "language"
+            widget: "select"
+            options: ["en"]
+          - label: Layout
+            name: layout
+            widget: object
+            fields:
+              - label: Title
+                name: title
+                widget: string
+              - label: Navigation
+                name: nav
+                widget: list
+                fields:
+                  - label: Text
+                    name: text
+                    widget: string
+                  - label: Link
+                    name: link
+                    widget: string
+                  - label: Order
+                    name: order
+                    widget: number
+          - label: "Components"
+            name: "components"
+            widget: object
+            fields:
+              - label: Communities
+                name: communities
+                widget: object
+                fields:
+                  - label: Title
+                    name: title
+                    widget: string
+                  - label: Subtitle
+                    name: subtitle
+                    widget: string
+              - label: Map
+                name: map
+                widget: object
+                fields:
+                  - label: Title
+                    name: title
+                    widget: string
+                  - label: Subtitle
+                    name: subtitle
+                    widget: string
+                  - label: Call To Action
+                    name: cta
+                    widget: string
+              - label: FAQ
+                name: faq
+                widget: object
+                fields:
+                  - label: Title
+                    name: title
+                    widget: string
+                  - label: Faqs
+                    name: faqs
+                    widget: list
+                    fields:
+                      - label: Question
+                        name: question
+                        widget: markdown
+                      - label: Response
+                        name: response
+                        widget: markdown
+              - label: Footer
+                name: footer
+                widget: object
+                fields:
+                  - label: Title
+                    name: title
+                    widget: string
+                  - label: About Text
+                    name: about_text
+                    widget: string
+                  - label: About Link
+                    name: about_link
+                    widget: string
+                  - label: Contact us
+                    name: contact_us
+                    widget: string
+              - label: Banner
+                name: banner
+                widget: object
+                fields:
+                  - label: Title
+                    name: title
+                    widget: string
+                  - label: Text
+                    name: text
+                    widget: string
+              - label: Email Collection
+                name: emailCollection
+                widget: object
+                fields:
+                  - label: Title
+                    name: title
+                    widget: string
+                  - label: Email
+                    name: email
+                    widget: string
+                  - label: Communities
+                    name: communities
+                    widget: string
+                  - label: Submit
+                    name: submit
+                    widget: string
+      - label: "Homepage (Spanish)"
+        name: "index_es"
+        file: "gatsby/content/text/es/text-es.md"
+        filter: { field: "language", value: "es" }
+        fields:
+          - label: "Language"
+            name: "language"
+            widget: "select"
+            options: ["es"]
+          - label: Layout
+            name: layout
+            widget: object
+            fields:
+              - label: Title
+                name: title
+                widget: string
+              - label: Navigation
+                name: nav
+                widget: list
+                fields:
+                  - label: Text
+                    name: text
+                    widget: string
+                  - label: Link
+                    name: link
+                    widget: string
+                  - label: Order
+                    name: order
+                    widget: number
+          - label: "Components"
+            name: "components"
+            widget: object
+            fields:
+              - label: Communities
+                name: communities
+                widget: object
+                fields:
+                  - label: Title
+                    name: title
+                    widget: string
+                  - label: Subtitle
+                    name: subtitle
+                    widget: string
+              - label: Map
+                name: map
+                widget: object
+                fields:
+                  - label: Title
+                    name: title
+                    widget: string
+                  - label: Subtitle
+                    name: subtitle
+                    widget: string
+                  - label: Call To Action
+                    name: cta
+                    widget: string
+              - label: FAQ
+                name: faq
+                widget: object
+                fields:
+                  - label: Title
+                    name: title
+                    widget: string
+                  - label: Faqs
+                    name: faqs
+                    widget: list
+                    fields:
+                      - label: Question
+                        name: question
+                        widget: markdown
+                      - label: Response
+                        name: response
+                        widget: markdown
+              - label: Footer
+                name: footer
+                widget: object
+                fields:
+                  - label: Title
+                    name: title
+                    widget: string
+                  - label: About Text
+                    name: about_text
+                    widget: string
+                  - label: About Link
+                    name: about_link
+                    widget: string
+                  - label: Contact us
+                    name: contact_us
+                    widget: string
+              - label: Banner
+                name: banner
+                widget: object
+                fields:
+                  - label: Title
+                    name: title
+                    widget: string
+                  - label: Text
+                    name: text
+                    widget: string
+              - label: Email Collection
+                name: emailCollection
+                widget: object
+                fields:
+                  - label: Title
+                    name: title
+                    widget: string
+                  - label: Email
+                    name: email
+                    widget: string
+                  - label: Communities
+                    name: communities
+                    widget: string
+                  - label: Submit
+                    name: submit
+                    widget: string
+      - label: "About Page (English)"
+        name: "about"
+        file: "gatsby/src/data/about/about.en.yml"
+        filter: { field: "language", value: "en" }
+        fields:
+          - label: "Page"
+            name: "page"
+            widget: "select"
+            options: ["about"]
+          - {
+              label: "Language",
+              name: "language",
+              widget: "select",
+              options: ["en"],
+            }
+          - { label: Title, name: title, widget: string }
+          - { label: Intro, name: intro, widget: markdown, required: false }
+          - label: "Sections"
+            name: sections
+            widget: "list"
+            fields:
+              - label: Title
+                name: title
+                widget: string
+              - label: Component
+                name: component
+                widget: "select"
+                options:
+                  [
+                    "TableOfContents",
+                    "Text",
+                    "Timeline",
+                    "NewsAndEvents",
+                    "FAQ",
+                  ]
+              - label: Text
+                name: text
+                widget: markdown
+                required: false
+      - label: "About Page (Spanish)"
+        name: "sobre"
+        file: "gatsby/src/data/about/about.es.yml"
+        filter: { field: "language", value: "es" }
+        fields:
+          - label: "Page"
+            name: "page"
+            widget: "select"
+            options: ["sobre"]
+          - {
+              label: "Language",
+              name: "language",
+              widget: "select",
+              options: ["es"],
+            }
+          - { label: Title, name: title, widget: string }
+          - { label: Intro, name: intro, widget: markdown, required: false }
+          - label: "Sections"
+            name: sections
+            widget: "list"
+            fields:
+              - label: Title
+                name: title
+                widget: string
+              - label: Component
+                name: component
+                widget: "select"
+                options:
+                  [
+                    "TableOfContents",
+                    "Text",
+                    "Timeline",
+                    "NewsAndEvents",
+                    "FAQ",
+                  ]
+              - label: Text
+                name: text
+                widget: markdown
+                required: false
+      - label: "Why the Census Matters (English)"
+        name: "why_en"
+        file: "gatsby/src/data/why/why.en.yml"
+        filter: { field: "language", value: "en" }
+        fields:
+          - label: "Page"
+            name: "page"
+            widget: "select"
+            options: ["why"]
+          - {
+              label: "Language",
+              name: "language",
+              widget: "select",
+              options: ["en"],
+            }
+          - { label: Title, name: title, widget: string }
+          - { label: Intro, name: intro, widget: markdown, required: false }
+          - label: "Sections"
+            name: sections
+            widget: "list"
+            fields:
+              - label: Title
+                name: title
+                widget: string
+              - label: Component
+                name: component
+                widget: "select"
+                options:
+                  [
+                    "TableOfContents",
+                    "Text",
+                    "Timeline",
+                    "NewsAndEvents",
+                    "FAQ",
+                  ]
+              - label: Text
+                name: text
+                widget: markdown
+                required: false
+              - label: Call To Action
+                name: cta
+                widget: string
+                required: false
+      - label: "Why the Census Matters (Spanish)"
+        name: "porque"
+        file: "gatsby/src/data/why/why.es.yml"
+        filter: { field: "language", value: "es" }
+        fields:
+          - label: "Page"
+            name: "page"
+            widget: "select"
+            options: ["porque"]
+          - {
+              label: "Language",
+              name: "language",
+              widget: "select",
+              options: ["es"],
+            }
+          - { label: Title, name: title, widget: string }
+          - { label: Intro, name: intro, widget: markdown, required: false }
+          - label: "Sections"
+            name: sections
+            widget: "list"
+            fields:
+              - label: Title
+                name: title
+                widget: string
+              - label: Component
+                name: component
+                widget: "select"
+                options:
+                  [
+                    "TableOfContents",
+                    "Text",
+                    "Timeline",
+                    "NewsAndEvents",
+                    "FAQ",
+                  ]
+              - label: Text
+                name: text
+                widget: markdown
+                required: false
+              - label: Call To Action
+                name: cta
+                widget: string
+                required: false
+      - label: "How To Complete the Census (English)"
+        name: "how"
+        file: "gatsby/src/data/how/how.en.yml"
+        filter: { field: "language", value: "en" }
+        fields:
+          - label: "Page"
+            name: "page"
+            widget: "select"
+            options: ["how"]
+          - {
+              label: "Language",
+              name: "language",
+              widget: "select",
+              options: ["en"],
+            }
+          - { label: Title, name: title, widget: string }
+          - { label: Body, name: body, widget: markdown, required: false }
+          - label: Options
+            name: options
+            widget: "list"
+            fields:
+              - label: Label
+                name: label
+                widget: string
+              - label: Icon
+                name: icon
+                widget: string
+              - label: Text
+                name: text
+                widget: markdown
+                required: false
+      - label: "How To Complete the Census (Spanish)"
+        name: "como"
+        file: "gatsby/src/data/how/how.es.yml"
+        filter: { field: "language", value: "es" }
+        fields:
+          - label: "Page"
+            name: "page"
+            widget: "select"
+            options: ["como"]
+          - {
+              label: "Language",
+              name: "language",
+              widget: "select",
+              options: ["es"],
+            }
+          - { label: Title, name: title, widget: string }
+          - { label: Body, name: body, widget: markdown, required: false }
+          - label: Options
+            name: options
+            widget: "list"
+            fields:
+              - label: Label
+                name: label
+                widget: string
+              - label: Icon
+                name: icon
+                widget: string
+              - label: Text
+                name: text
+                widget: markdown
+                required: false
+      - label: "Get Involved (English)"
+        name: "get-involved"
+        file: "gatsby/src/data/info/get_involved.en.yml"
+        filter: { field: "language", value: "en" }
+        fields:
+          - label: "Page"
+            name: "page"
+            widget: "select"
+            options: ["get-involved"]
+          - {
+              label: "Language",
+              name: "language",
+              widget: "select",
+              options: ["en"],
+            }
+          - { label: Title, name: title, widget: string }
+          - { label: Body, name: body, widget: markdown, required: false }
+          - label: "Sections"
+            name: sections
+            widget: "list"
+            fields:
+              - label: Title
+                name: title
+                widget: string
+              - label: Component
+                name: component
+                widget: "select"
+                options:
+                  [
+                    "TableOfContents",
+                    "Text",
+                    "Timeline",
+                    "NewsAndEvents",
+                    "FAQ",
+                    "EmailCollection",
+                    "Communities",
+                  ]
+              - label: Text
+                name: text
+                widget: markdown
+                required: false
+              - label: Call To Action
+                name: cta
+                widget: string
+                required: false
+      - label: "Get Involved (Spanish)"
+        name: "participe"
+        file: "gatsby/src/data/info/get_involved.es.yml"
+        filter: { field: "language", value: "es" }
+        fields:
+          - label: "Page"
+            name: "page"
+            widget: "select"
+            options: ["participe"]
+          - {
+              label: "Language",
+              name: "language",
+              widget: "select",
+              options: ["es"],
+            }
+          - { label: Title, name: title, widget: string }
+          - { label: Body, name: body, widget: markdown, required: false }
+          - label: "Sections"
+            name: sections
+            widget: "list"
+            fields:
+              - label: Title
+                name: title
+                widget: string
+              - label: Component
+                name: component
+                widget: "select"
+                options:
+                  [
+                    "TableOfContents",
+                    "Text",
+                    "Timeline",
+                    "NewsAndEvents",
+                    "FAQ",
+                    "EmailCollection",
+                    "Communities",
+                  ]
+              - label: Text
+                name: text
+                widget: markdown
+                required: false
+              - label: Call To Action
+                name: cta
+                widget: string
+                required: false
+
   - label: "Communities (English)"
     name: "communities_en"
     folder: "gatsby/content/communities/en"
@@ -82,118 +632,3 @@ collections:
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Contenido", name: "body", widget: "markdown" }
-  - label: "Pages"
-    name: "pages"
-    files:
-      - label: "About Page (English)"
-        name: "about"
-        file: "gatsby/content/pages/en/about.yml"
-        filter: { field: "language", value: "en" }
-        fields:
-          - {
-              label: "Language",
-              name: "language",
-              widget: "select",
-              options: ["en"],
-            }
-          - { label: Title, name: title, widget: string }
-          - { label: Intro, name: intro, widget: markdown }
-
-      - label: "About Page (Spanish)"
-        name: "about"
-        file: "gatsby/content/pages/es/about.yml"
-        filter: { field: "language", value: "es" }
-        fields:
-          - {
-              label: "Lenguaje",
-              name: "language",
-              widget: "select",
-              options: ["es"],
-            }
-          - { label: Title, name: title, widget: string }
-          - { label: Intro, name: intro, widget: markdown }
-      # - file: 'src/pages/landing.md'
-      #   label: 'Landing Page'
-      #   name: 'landing'
-      #   fields:
-      #     - {
-      #         label: 'Template Key',
-      #         name: 'templateKey',
-      #         widget: 'hidden',
-      #         default: 'index-page',
-      #       }
-      #     - { label: Title, name: title, widget: string }
-      #     - { label: Image, name: image, widget: image }
-      #     - { label: Heading, name: heading, widget: string }
-      #     - { label: Subheading, name: subheading, widget: string }
-      #     - {
-      #         label: Mainpitch,
-      #         name: mainpitch,
-      #         widget: object,
-      #         fields:
-      #           [
-      #             { label: Title, name: title, widget: string },
-      #             { label: Description, name: description, widget: text },
-      #           ],
-      #       }
-      #     - { label: Description, name: description, widget: string }
-      #     - {
-      #         label: Intro,
-      #         name: intro,
-      #         widget: object,
-      #         fields:
-      #           [
-      #             { label: Heading, name: heading, widget: string },
-      #             { label: Description, name: description, widget: text },
-      #             {
-      #               label: Blurbs,
-      #               name: blurbs,
-      #               widget: list,
-      #               fields:
-      #                 [
-      #                   { label: Image, name: image, widget: image },
-      #                   { label: Text, name: text, widget: text },
-      #                 ],
-      #             },
-      #           ],
-      #       }
-      #     - {
-      #         label: Main,
-      #         name: main,
-      #         widget: object,
-      #         fields:
-      #           [
-      #             { label: Heading, name: heading, widget: string },
-      #             { label: Description, name: description, widget: text },
-      #             {
-      #               label: Image1,
-      #               name: image1,
-      #               widget: object,
-      #               fields:
-      #                 [
-      #                   { label: Image, name: image, widget: image },
-      #                   { label: Alt, name: alt, widget: string },
-      #                 ],
-      #             },
-      #             {
-      #               label: Image2,
-      #               name: image2,
-      #               widget: object,
-      #               fields:
-      #                 [
-      #                   { label: Image, name: image, widget: image },
-      #                   { label: Alt, name: alt, widget: string },
-      #                 ],
-      #             },
-      #             {
-      #               label: Image3,
-      #               name: image3,
-      #               widget: object,
-      #               fields:
-      #                 [
-      #                   { label: Image, name: image, widget: image },
-      #                   { label: Alt, name: alt, widget: string },
-      #                 ],
-      #             },
-      #           ],
-      #       }

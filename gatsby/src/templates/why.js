@@ -19,7 +19,7 @@ export const query = graphql`
   query WhyByLang($lang: String) {
     whyYaml(language: { eq: $lang }) {
       title
-      body
+      intro
       sections {
         component
         title

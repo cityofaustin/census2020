@@ -1,20 +1,32 @@
 page: how
 language: en
 title: How To Complete the Census
-body:
-  - Every person in the country is required to fill out the 2020 Census form. You can fill it out in three ways.
-  - Video and printed guides will also be available in 60 languages and there will be a video in American Sign Language to accompany a printed guide in braille.
+body: >-
+  Every person in the country is required to fill out the 2020 Census form. You
+  can fill it out in three ways.
+
+
+  Video and printed guides will also be available in 60 languages and there will
+  be a video in American Sign Language to accompany a printed guide in braille.
 options:
   - icon: mdiStar
     label: By Mail
-    text:
-      - The paper Census form will be mailed from the U.S. Census Bureau. It will be available in English and Spanish and can be mailed back to the U.S. Census Bureau.
+    text: >-
+      The paper Census form will be mailed from the U.S. Census Bureau. It will
+      be available in English and Spanish and can be mailed back to the U.S.
+      Census Bureau.
   - icon: mdiPhone
     label: By Phone
-    text:
-      - The Census can be completed by phone in 13 languages including Telecommunication Device for the Deaf.
+    text: >-
+      The Census can be completed by phone in 13 languages including
+      Telecommunication Device for the Deaf.
   - icon: mdiLaptopWindows
     label: Online
-    text:
-      - For the first time, the Census form will be available to complete online in 13 languages.
-      - Need access to a computer? Visit any <a href="https://library.austintexas.gov/locations" target="_blank">Austin Public Library Branch</a> for details or call <a href ="tel:1-512-974-7400">512-974-7400</a>.
+    text: >-
+      For the first time, the Census form will be available to complete online
+      in 13 languages.
+
+
+      Need access to a computer? Visit any [Austin Public Library
+      Branch](https://library.austintexas.gov/locations) for details or call
+      [512-974-7400](tel:1-512-974-7400).

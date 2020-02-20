@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { Helmet } from "react-helmet";
 import { mdiEmailOutline, mdiLaptopWindows, mdiPhone } from "@mdi/js";
 import Icon from "@mdi/react";
+import ReactMarkdown from "react-markdown";
 
 import Layout from "./layout";
 import Timeline from "./shared/Timeline";
@@ -36,9 +37,7 @@ const How = ({ uri, location, data, ...rest }) => {
           <div className="margin-bottom-5 usa-prose">
             <WarningBanner lang={language} />
             <h1>{title}</h1>
-            {body.map((p, i) => (
-              <p key={`how-p-${i}`}>{p}</p>
-            ))}
+            <ReactMarkdown source={body} />
           </div>
           <div className="usa-graphic-list__row grid-row grid-gap">
             {options.map(option => (
@@ -54,9 +53,7 @@ const How = ({ uri, location, data, ...rest }) => {
 
                 <div className="usa-media-block__body">
                   <h2 className="usa-graphic-list__heading">{option.label}</h2>
-                  {option.text.map((p, idx) => (
-                    <p key={idx} dangerouslySetInnerHTML={{ __html: p }}></p>
-                  ))}
+                  <ReactMarkdown source={option.text} />
                 </div>
               </div>
             ))}

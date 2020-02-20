@@ -1,20 +1,14 @@
 page: how
 language: vt
 title: How to take the Census (Vietnamese)
-body:
-  - Every person in the country is required to fill out the 2020 Census form. Luckily, you have three ways to respond.
-  - Video and printed guides will also be available in 59 non-English languages and there will be a video in American Sign Language to accompany a printed guide in braille.
-  - Whichever you choose, just make sure you fill out the form!
+body: ""
 options:
   - icon: mdiStar
     label: By Mail
-    text:
-      - The paper Census form will be available in English and Spanish languages and can be mailed back to the U.S. Census Bureau.
+    text: ""
   - icon: mdiComputer
     label: Online
-    text:
-      - For the first time, the Census form will be available to complete online in 13 languages. Need access to a computer? Visit any Austin Public Library Branch for details or call 512-974-7400.
+    text: ""
   - icon: mdiPhone
     label: By Phone
-    text:
-      - The Census can be completed by phone in 13 languages including Telecommunication Device for the Deaf.
+    text: ""
