@@ -33,7 +33,6 @@ components:
       Inscríbase para recibir noticias por correo electrónico de la campaña de
       Austin-Condado de Travis para el Censo.
   faq:
-    cta: a
     faqs:
       - question: ¿Por qué es importante que todos sean contados en el Censo?
         response: >-
@@ -151,7 +150,7 @@ components:
           incluyendo una sentencia a prisión federal de hasta cinco años, una
           multa de hasta $250,000, o ambas.
       - question: ¿Se hará una pregunta sobre ciudadanía en el Censo del 2020?
-        response: ' El cuestionario del Censo del 2020 NO incluirá una pregunta sobre el estado migratorio de los individuos. Toda persona, independientemente de su estado migratorio, tiene ciertos derechos básicos. A las personas que les preocupe abrir su puerta, hay otras maneras de participar. Puede participar desde la comodidad de su casa por Internet y por teléfono, o puede ir a un centro de asistencia administrado por la comunidad. Por favor complete su cuestionario del Censo. Un cuestionario incompleto puede aumentar las probabilidades de que la Oficina del Censo de los EE.UU. le haga seguimiento por no responder. Las familias recibirán una invitación para responder en línea al Censo del 2020 a partir del 12 de marzo del 2020. Su participación es vital y su información está protegida. '
+        response: " El cuestionario del Censo del 2020 NO incluirá una pregunta sobre el estado migratorio de los individuos. Toda persona, independientemente de su estado migratorio, tiene ciertos derechos básicos. A las personas que les preocupe abrir su puerta, hay otras maneras de participar. Puede participar desde la comodidad de su casa por Internet y por teléfono, o puede ir a un centro de asistencia administrado por la comunidad. Por favor complete su cuestionario del Censo. Un cuestionario incompleto puede aumentar las probabilidades de que la Oficina del Censo de los EE.UU. le haga seguimiento por no responder. Las familias recibirán una invitación para responder en línea al Censo del 2020 a partir del 12 de marzo del 2020. Su participación es vital y su información está protegida. "
       - question: >-
           ¿Qué está haciendo el Comité de Conteo Completo de Austin-Condado de
           Travis para animar a las personas para que participen?
@@ -185,4 +184,3 @@ components:
       propio vecindario. Haga clic aquí para conocer más...
     title: Organice a su vecindario
 ---
-

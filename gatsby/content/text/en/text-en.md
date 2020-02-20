@@ -31,7 +31,6 @@ components:
     submit: Submit
     title: Sign-up for email updates from the Austin-Travis County Census campaign.
   faq:
-    cta: a
     faqs:
       - question: Why is it important for everyone to be counted in the Census?
         response: >-
@@ -144,7 +143,7 @@ components:
           this law will face severe penalties, including a federal prison
           sentence of up to five years, a fine of up to $250,000, or both.
       - question: Will the 2020 Census include a question about Citizenship?
-        response: ' The 2020 Census questionnaire will NOT include a question about an individual’s citizenship status. Everyone, regardless of their immigration status, has certain basic rights. For those who have concerns about opening your doors, there are other ways you can participate. You can participate from the comfort of your home online and over the phone, or at community run assistance center. Please complete your Census questionnaire. An incomplete questionnaire may increase your chances of nonresponse follow-up by the U.S. Census Bureau. Households will receive an invitation to respond online to the 2020 Census beginning March 12, 2020. Your participation is vital, and your information is protected. '
+        response: " The 2020 Census questionnaire will NOT include a question about an individual’s citizenship status. Everyone, regardless of their immigration status, has certain basic rights. For those who have concerns about opening your doors, there are other ways you can participate. You can participate from the comfort of your home online and over the phone, or at community run assistance center. Please complete your Census questionnaire. An incomplete questionnaire may increase your chances of nonresponse follow-up by the U.S. Census Bureau. Households will receive an invitation to respond online to the 2020 Census beginning March 12, 2020. Your participation is vital, and your information is protected. "
       - question: >-
           What is the Austin-Travis County Complete Count Committee doing to
           encourage participation?
@@ -176,4 +175,3 @@ components:
       find out more…
     title: Organize In Your Neighborhood
 ---
-

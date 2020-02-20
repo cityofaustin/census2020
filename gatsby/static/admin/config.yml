@@ -9,6 +9,236 @@ collections:
   - label: "Pages"
     name: "pages"
     files:
+      - label: "Homepage (English)"
+        name: "index"
+        file: "gatsby/content/text/en/text-en.md"
+        filter: { field: "language", value: "en" }
+        fields:
+          - label: "Language"
+            name: "language"
+            widget: "select"
+            options: ["en"]
+          - label: Layout
+            name: layout
+            widget: object
+            fields:
+              - label: Title
+                name: title
+                widget: string
+              - label: Navigation
+                name: nav
+                widget: list
+                fields:
+                  - label: Text
+                    name: text
+                    widget: string
+                  - label: Link
+                    name: link
+                    widget: string
+                  - label: Order
+                    name: order
+                    widget: number
+          - label: "Components"
+            name: "components"
+            widget: object
+            fields:
+              - label: Communities
+                name: communities
+                widget: object
+                fields:
+                  - label: Title
+                    name: title
+                    widget: string
+                  - label: Subtitle
+                    name: subtitle
+                    widget: string
+              - label: Map
+                name: map
+                widget: object
+                fields:
+                  - label: Title
+                    name: title
+                    widget: string
+                  - label: Subtitle
+                    name: subtitle
+                    widget: string
+                  - label: Call To Action
+                    name: cta
+                    widget: string
+              - label: FAQ
+                name: faq
+                widget: object
+                fields:
+                  - label: Title
+                    name: title
+                    widget: string
+                  - label: Faqs
+                    name: faqs
+                    widget: list
+                    fields:
+                      - label: Question
+                        name: question
+                        widget: markdown
+                      - label: Response
+                        name: response
+                        widget: markdown
+              - label: Footer
+                name: footer
+                widget: object
+                fields:
+                  - label: Title
+                    name: title
+                    widget: string
+                  - label: About Text
+                    name: about_text
+                    widget: string
+                  - label: About Link
+                    name: about_link
+                    widget: string
+                  - label: Contact us
+                    name: contact_us
+                    widget: string
+              - label: Banner
+                name: banner
+                widget: object
+                fields:
+                  - label: Title
+                    name: title
+                    widget: string
+                  - label: Text
+                    name: text
+                    widget: string
+              - label: Email Collection
+                name: emailCollection
+                widget: object
+                fields:
+                  - label: Title
+                    name: title
+                    widget: string
+                  - label: Email
+                    name: email
+                    widget: string
+                  - label: Communities
+                    name: communities
+                    widget: string
+                  - label: Submit
+                    name: submit
+                    widget: string
+      - label: "Homepage (Spanish)"
+        name: "index_es"
+        file: "gatsby/content/text/es/text-es.md"
+        filter: { field: "language", value: "es" }
+        fields:
+          - label: "Language"
+            name: "language"
+            widget: "select"
+            options: ["es"]
+          - label: Layout
+            name: layout
+            widget: object
+            fields:
+              - label: Title
+                name: title
+                widget: string
+              - label: Navigation
+                name: nav
+                widget: list
+                fields:
+                  - label: Text
+                    name: text
+                    widget: string
+                  - label: Link
+                    name: link
+                    widget: string
+                  - label: Order
+                    name: order
+                    widget: number
+          - label: "Components"
+            name: "components"
+            widget: object
+            fields:
+              - label: Communities
+                name: communities
+                widget: object
+                fields:
+                  - label: Title
+                    name: title
+                    widget: string
+                  - label: Subtitle
+                    name: subtitle
+                    widget: string
+              - label: Map
+                name: map
+                widget: object
+                fields:
+                  - label: Title
+                    name: title
+                    widget: string
+                  - label: Subtitle
+                    name: subtitle
+                    widget: string
+                  - label: Call To Action
+                    name: cta
+                    widget: string
+              - label: FAQ
+                name: faq
+                widget: object
+                fields:
+                  - label: Title
+                    name: title
+                    widget: string
+                  - label: Faqs
+                    name: faqs
+                    widget: list
+                    fields:
+                      - label: Question
+                        name: question
+                        widget: markdown
+                      - label: Response
+                        name: response
+                        widget: markdown
+              - label: Footer
+                name: footer
+                widget: object
+                fields:
+                  - label: Title
+                    name: title
+                    widget: string
+                  - label: About Text
+                    name: about_text
+                    widget: string
+                  - label: About Link
+                    name: about_link
+                    widget: string
+                  - label: Contact us
+                    name: contact_us
+                    widget: string
+              - label: Banner
+                name: banner
+                widget: object
+                fields:
+                  - label: Title
+                    name: title
+                    widget: string
+                  - label: Text
+                    name: text
+                    widget: string
+              - label: Email Collection
+                name: emailCollection
+                widget: object
+                fields:
+                  - label: Title
+                    name: title
+                    widget: string
+                  - label: Email
+                    name: email
+                    widget: string
+                  - label: Communities
+                    name: communities
+                    widget: string
+                  - label: Submit
+                    name: submit
+                    widget: string
       - label: "About Page (English)"
         name: "about"
         file: "gatsby/src/data/about/about.en.yml"
