@@ -115,11 +115,14 @@ collections:
                   - label: Title
                     name: title
                     widget: string
+                  - label: Communities
+                    name: communities
+                    widget: string
                   - label: Email
                     name: email
                     widget: string
-                  - label: Communities
-                    name: communities
+                  - label: Name
+                    name: Your Name
                     widget: string
                   - label: Submit
                     name: submit
@@ -230,11 +233,14 @@ collections:
                   - label: Title
                     name: title
                     widget: string
+                  - label: Communities
+                    name: communities
+                    widget: string
                   - label: Email
                     name: email
                     widget: string
-                  - label: Communities
-                    name: communities
+                  - label: Name
+                    name: Your Name
                     widget: string
                   - label: Submit
                     name: submit

@@ -28,6 +28,7 @@ components:
   emailCollection:
     communities: ¿Hay alguna comunidad en específico donde quisiera ayudar?
     email: Dirección de correo electrónico
+    name: Su nombre
     submit: Enviar
     title: >-
       Inscríbase para recibir noticias por correo electrónico de la campaña de

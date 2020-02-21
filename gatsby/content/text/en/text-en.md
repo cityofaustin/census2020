@@ -28,6 +28,7 @@ components:
   emailCollection:
     communities: Which communities could you help volunteer with?
     email: E-mail address
+    name: Your Name
     submit: Submit
     title: Sign-up for email updates from the Austin-Travis County Census campaign.
   faq:
