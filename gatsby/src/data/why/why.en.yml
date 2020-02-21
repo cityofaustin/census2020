@@ -76,6 +76,7 @@ sections:
       Learn about the [local Census campaign](/en/about)
     title: Your responses are safe and confidential
   - component: MapCta
+    cta: Explore the map
     text: >-
       Texas is at risk of an even larger undercount in 2020. Today, 25% of
       Texans, or over 6 million people, live in hard-to-count neighborhoods,
@@ -86,6 +87,5 @@ sections:
       counted. View the map below to see if your neighborhood is at risk of
       being undercounted.
     title: Historically Undercounted Communities in Austin and Travis County
-    cta: Explore the map
   - component: FAQ
     title: FAQ
