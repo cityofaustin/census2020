@@ -10,7 +10,7 @@ export const query = graphql`
   query HowByLang($lang: String) {
     howYaml(language: { eq: $lang }) {
       title
-      body
+      intro
       options {
         icon
         text

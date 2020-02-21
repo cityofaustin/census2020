@@ -28,13 +28,7 @@ function URLify(string) {
 const Info = ({ uri, location, data, yaml, ...rest }) => {
   const { title, language } = useHelmetTags(uri, data[yaml]);
 
-  const encode = data => {
-    return Object.keys(data)
-      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-      .join("&");
-  };
-
-  let body = data[yaml].body;
+  let intro = data[yaml].intro;
   let sections = data[yaml].sections;
 
   return (
@@ -47,7 +41,7 @@ const Info = ({ uri, location, data, yaml, ...rest }) => {
         <section className="grid-container usa-prose">
           <div className="margin-y-5 usa-prose">
             <h1>{title}</h1>
-            <ReactMarkdown source={body} />
+            <ReactMarkdown source={intro} />
           </div>
         </section>
         {sections.map((section, i) => {

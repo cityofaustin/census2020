@@ -23,7 +23,7 @@ const propTypes = {
 };
 
 const How = ({ uri, location, data, ...rest }) => {
-  const { body, options } = data.howYaml;
+  const { intro, options } = data.howYaml;
   const { title, language } = useHelmetTags(uri, data.howYaml);
 
   return (
@@ -37,7 +37,7 @@ const How = ({ uri, location, data, ...rest }) => {
           <div className="margin-bottom-5 usa-prose">
             <WarningBanner lang={language} />
             <h1>{title}</h1>
-            <ReactMarkdown source={body} />
+            <ReactMarkdown source={intro} />
           </div>
           <div className="usa-graphic-list__row grid-row grid-gap">
             {options.map(option => (
