@@ -18,7 +18,7 @@ export const query = graphql`
   query InfoByLang($lang: String) {
     infoYaml(language: { eq: $lang }) {
       title
-      body
+      intro
       sections {
         component
         title

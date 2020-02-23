@@ -115,11 +115,14 @@ collections:
                   - label: Title
                     name: title
                     widget: string
+                  - label: Communities
+                    name: communities
+                    widget: string
                   - label: Email
                     name: email
                     widget: string
-                  - label: Communities
-                    name: communities
+                  - label: Name
+                    name: Your Name
                     widget: string
                   - label: Submit
                     name: submit
@@ -230,11 +233,14 @@ collections:
                   - label: Title
                     name: title
                     widget: string
+                  - label: Communities
+                    name: communities
+                    widget: string
                   - label: Email
                     name: email
                     widget: string
-                  - label: Communities
-                    name: communities
+                  - label: Name
+                    name: Your Name
                     widget: string
                   - label: Submit
                     name: submit
@@ -419,7 +425,7 @@ collections:
               options: ["en"],
             }
           - { label: Title, name: title, widget: string }
-          - { label: Body, name: body, widget: markdown, required: false }
+          - { label: Intro, name: intro, widget: markdown, required: false }
           - label: Options
             name: options
             widget: "list"
@@ -450,7 +456,7 @@ collections:
               options: ["es"],
             }
           - { label: Title, name: title, widget: string }
-          - { label: Body, name: body, widget: markdown, required: false }
+          - { label: Intro, name: intro, widget: markdown, required: false }
           - label: Options
             name: options
             widget: "list"
@@ -481,7 +487,7 @@ collections:
               options: ["en"],
             }
           - { label: Title, name: title, widget: string }
-          - { label: Body, name: body, widget: markdown, required: false }
+          - { label: Intro, name: intro, widget: markdown, required: false }
           - label: "Sections"
             name: sections
             widget: "list"
@@ -526,7 +532,7 @@ collections:
               options: ["es"],
             }
           - { label: Title, name: title, widget: string }
-          - { label: Body, name: body, widget: markdown, required: false }
+          - { label: Intro, name: intro, widget: markdown, required: false }
           - label: "Sections"
             name: sections
             widget: "list"
@@ -617,8 +623,6 @@ collections:
         widget: string
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Description", name: "description", widget: "string" }
-      - { label: "Body", name: "body", widget: "markdown" }
       - label: Type
         name: type
         widget: "select"
@@ -646,8 +650,7 @@ collections:
         widget: string
       - { label: "Titulo", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Description", name: "description", widget: "string" }
-      - { label: "Contenido", name: "body", widget: "markdown" }
+
       - label: Type
         name: type
         widget: "select"

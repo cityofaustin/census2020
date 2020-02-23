@@ -1,10 +1,8 @@
 page: participe
 language: es
 title: ¡Participe y hágase contar!
-body: >-
-  Nuestra meta es lograr un conteo total y completo de todas las personas que
-  viven en Texas. Por favor riegue la voz, ¡y asegúrese de que usted, su
-  familia, vecinos y amigos sean contados!
+intro: >-
+  Nuestra meta es lograr un conteo total y completo de todas las personas que viven en Texas. Por favor riegue la voz, ¡y asegúrese de que usted, su familia, vecinos y amigos sean contados!
 sections:
   - component: EmailCollection
     title: Email Form
