@@ -17,7 +17,6 @@ const iconMap = {
 };
 
 const QuickLinks = ({ media, content }) => {
-  console.log(content);
   const { quickLinks } = content.node.frontmatter.components;
   return (
     <section className="usa-graphic-list usa-section usa-section--dark">
