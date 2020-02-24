@@ -64,7 +64,7 @@ const Layout = ({ children, language, location, data }) => {
             <SkipNav skipsTo={mainContent} />
             <Banner />
             <div className="usa-overlay" />
-            <Header language={langKey} {...data.site.siteMetadata} />
+            <Header lang={langKey} {...data.site.siteMetadata} />
             <main id={mainContent} role="main">
               {children}
             </main>

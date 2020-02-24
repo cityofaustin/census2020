@@ -77,7 +77,7 @@ const renderEventByMonth = (month, event) => {
   );
 };
 
-const NewsAndEvents = ({ data, lang, shortened }) => {
+const NewsAndEvents = ({ data, lang, shortened, content }) => {
   const EVENTS_VISIBLE = 8;
   const NEWS_VISIBLE = 5;
 
@@ -94,12 +94,7 @@ const NewsAndEvents = ({ data, lang, shortened }) => {
     moment(newsItem.frontmatter.date).format("MMMM YYYY")
   );
 
-  const layoutText = _.find(
-    data.allIndexYaml.edges,
-    item => item.node.language === lang
-  ).node.layout;
-
-  const thisMonth = moment().format("M");
+  const layoutText = content.node.frontmatter.components.newsAndEvents;
 
   const upcomingEvents = data.allGoogleSheetFormResponses1Row.edges.filter(
     // Filter events from current date going forward
@@ -217,15 +212,21 @@ export default props => (
             }
           }
         }
-        allIndexYaml {
+        newsAndEventsContent: allMarkdownRemark(
+          filter: { frontmatter: { page: { eq: "homepage" } } }
+        ) {
           edges {
             node {
-              language
-              layout {
-                latestNews
-                events
-                showMore
-                newEvent
+              frontmatter {
+                language
+                components {
+                  newsAndEvents {
+                    latestNews
+                    events
+                    showMore
+                    newEvent
+                  }
+                }
               }
             }
           }
@@ -246,6 +247,14 @@ export default props => (
         }
       }
     `}
-    render={data => <NewsAndEvents data={data} {...props} />}
+    render={data => (
+      <NewsAndEvents
+        content={data.newsAndEventsContent.edges.find(
+          edge => edge.node.frontmatter.language === props.lang
+        )}
+        data={data}
+        {...props}
+      />
+    )}
   />
 );

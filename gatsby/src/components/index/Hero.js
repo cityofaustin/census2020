@@ -1,10 +1,9 @@
 import React from "react";
 import Img from "gatsby-image";
-import { Link } from "gatsby";
+import { Link, StaticQuery, graphql } from "gatsby";
 
-export default function Hero(props) {
-  const { img, callout } = props;
-
+const Hero = ({ img, content }) => {
+  const { cta, text, title } = content.node.frontmatter.hero;
   return (
     <section className="usa-hero">
       <Img
@@ -15,15 +14,51 @@ export default function Hero(props) {
       />
       <div className="grid-container">
         <div className="usa-hero__callout">
-          <h1 className="usa-hero__heading">{callout.title}</h1>
-          {callout.text.map((p, idx) => (
+          <h1 className="usa-hero__heading">{title}</h1>
+          {text.map((p, idx) => (
             <p key={idx}>{p}</p>
           ))}
-          <Link className="usa-button" to={callout.cta.link}>
-            {callout.cta.text}
+          <Link className="usa-button" to={cta.link}>
+            {cta.text}
           </Link>
         </div>
       </div>
     </section>
   );
-}
+};
+
+export default props => (
+  <StaticQuery
+    query={graphql`
+      query HeroQuery {
+        homepageData: allMarkdownRemark(
+          filter: { frontmatter: { page: { eq: "homepage" } } }
+        ) {
+          edges {
+            node {
+              frontmatter {
+                language
+                hero {
+                  cta {
+                    link
+                    text
+                  }
+                  text
+                  title
+                }
+              }
+            }
+          }
+        }
+      }
+    `}
+    render={data => (
+      <Hero
+        content={data.homepageData.edges.find(
+          edge => edge.node.frontmatter.language === props.lang
+        )}
+        {...props}
+      />
+    )}
+  ></StaticQuery>
+);

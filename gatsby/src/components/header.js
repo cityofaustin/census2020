@@ -14,10 +14,8 @@ const propTypes = {
   title: PropTypes.string.isRequired,
 };
 
-const Header = ({ header, language, data }) => {
-  const layoutText = data.navigationData.edges.filter(
-    item => item.node.frontmatter.language === language
-  )[0].node.frontmatter.layout;
+const Header = ({ header, lang, data, content }) => {
+  const layoutText = content.node.frontmatter.layout;
 
   return (
     <UswdsHeader title={layoutText.title} extended>
@@ -78,11 +76,19 @@ Header.propTypes = propTypes;
 
 export default props => (
   <StaticQuery
-    render={data => <Header data={data} {...props} />}
+    render={data => (
+      <Header
+        content={data.navigationData.edges.find(
+          edge => edge.node.frontmatter.language === props.lang
+        )}
+        data={data}
+        {...props}
+      />
+    )}
     query={graphql`
       query {
         navigationData: allMarkdownRemark(
-          filter: { fields: { sourceName: { eq: "text" } } }
+          filter: { frontmatter: { page: { eq: "homepage" } } }
         ) {
           edges {
             node {

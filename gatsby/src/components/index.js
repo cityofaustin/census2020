@@ -4,10 +4,8 @@ import { Helmet } from "react-helmet";
 import circle from "uswds_images/circle-124.png";
 import Layout from "../components/layout";
 import Hero from "./index/Hero";
-import Hashtags from "./index/Hashtags";
 import Communities from "./index/Communities";
 import Timeline from "./shared/Timeline";
-import NewsAndEvents from "./index/NewsAndEvents";
 import QuickLinks from "./index/QuickLinks";
 import MainText from "./index/MainText";
 import { useHelmetTags } from "./shared/helmet";
@@ -43,18 +41,11 @@ const Index = ({
         <title>{title}</title>
       </Helmet>
       <Layout language={language} location={location}>
-        <Hero img={heroImg} callout={callout} />
+        <Hero img={heroImg} callout={callout} lang={language} />
 
-        {/* 
-          TODO: 
-          Make this Hashtag component interactive, link to social media. 
-          For now, we'll skip it.
-        */}
-        {/* <Hashtags /> */}
+        <MainText tagline={tagline} section={section} lang={language} />
 
-        <MainText tagline={tagline} section={section} />
-
-        <QuickLinks media={media} circle={circle} />
+        <QuickLinks media={media} circle={circle} lang={language} />
 
         <Timeline lang={language} />
 
