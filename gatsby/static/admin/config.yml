@@ -575,7 +575,7 @@ collections:
           label: "Language",
           name: "language",
           widget: "select",
-          options: ["en", "es"],
+          options: ["en"],
         }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Link", name: "link", widget: "string" }
@@ -594,7 +594,7 @@ collections:
           label: "Language",
           name: "language",
           widget: "select",
-          options: ["es", "en"],
+          options: ["es"],
         }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Link", name: "link", widget: "string" }
