@@ -4,13 +4,44 @@ import { StaticQuery, graphql } from "gatsby";
 
 import "./communities.css";
 
-const Communities = ({ data, lang }) => {
+const Communities = ({ data, lang, imgs }) => {
   const communities = data.allMarkdownRemark.edges.filter(
     item => item.node.frontmatter.language === lang
   );
   const text = data.text.edges.filter(
     item => item.node.frontmatter.language === lang
   )[0].node.frontmatter.components;
+
+  const renderCommunityImg = community => {
+    const imgPathName = community.node.frontmatter.img;
+    if (imgPathName.split("/").length > 1) {
+      let leImg = imgs.nodes.find(img => {
+        return (
+          img.fluid.src.split("/").pop() ===
+          community.node.frontmatter.img.split("/").pop()
+        );
+      });
+
+      return (
+        <Img
+          fluid={leImg.fluid}
+          fadeIn={false}
+          className="Communities--imageStyles"
+          alt={community.node.frontmatter.alt}
+        />
+      );
+    } else {
+      return (
+        <Img
+          fluid={data[community.node.frontmatter.img].childImageSharp.fluid}
+          fadeIn={false}
+          className="Communities--imageStyles"
+          alt={community.node.frontmatter.alt}
+        />
+      );
+    }
+  };
+
   return (
     <>
       <section className="bg-primary-dark padding-top-3 padding-bottom-3">
@@ -28,15 +59,7 @@ const Communities = ({ data, lang }) => {
                   aria-label={community.node.frontmatter.title}
                 >
                   <div className="bg-base-darkest margin-1">
-                    <Img
-                      fluid={
-                        data[community.node.frontmatter.img].childImageSharp
-                          .fluid
-                      }
-                      fadeIn={false}
-                      className="Communities--imageStyles"
-                      alt={community.node.frontmatter.alt}
-                    />
+                    {renderCommunityImg(community)}
                   </div>
                   <h3 className="text-base-lightest margin-x-3 font-body-xs tablet:font-body-md Communities--textStyles">
                     {community.node.frontmatter.title}
@@ -147,6 +170,13 @@ export default props => (
             }
           }
         }
+        communityImages: allImageSharp {
+          nodes {
+            fluid(maxHeight: 600) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
         latinx: file(base: { eq: "bailadores.jpeg" }) {
           childImageSharp {
             fluid(maxHeight: 600) {
@@ -191,6 +221,8 @@ export default props => (
         }
       }
     `}
-    render={data => <Communities data={data} {...props} />}
+    render={data => (
+      <Communities data={data} imgs={data.communityImages} {...props} />
+    )}
   />
 );
