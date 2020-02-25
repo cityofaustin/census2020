@@ -1,9 +1,9 @@
 backend:
   name: git-gateway
-  branch: master
+  branch: cms_config_followup
 
-media_folder: static/img
-public_folder: /img
+media_folder: gatsby/src/images
+public_folder: gatsby/static/img
 
 collections:
   - label: "Pages"
@@ -565,7 +565,7 @@ collections:
   - label: "Communities (English)"
     name: "communities_en"
     folder: "gatsby/content/communities/en"
-    create: false
+    create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     editor:
       preview: false
@@ -575,16 +575,16 @@ collections:
           label: "Language",
           name: "language",
           widget: "select",
-          options: ["en", "es"],
+          options: ["en"],
         }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Link", name: "link", widget: "string" }
-      - { label: "Img", name: "img", widget: "string" }
+      - { label: "Img", name: "img", widget: "image" }
       - { label: "Img Alt", name: "alt", widget: "string" }
   - label: "Communities (Spanish)"
     name: "communities_es"
     folder: "gatsby/content/communities/es"
-    create: false
+    create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     editor:
       preview: false
@@ -594,11 +594,11 @@ collections:
           label: "Language",
           name: "language",
           widget: "select",
-          options: ["es", "en"],
+          options: ["es"],
         }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Link", name: "link", widget: "string" }
-      - { label: "Img", name: "img", widget: "string" }
+      - { label: "Img", name: "img", widget: "image" }
       - { label: "Img Alt", name: "alt", widget: "string" }
   - label: "News (English)"
     name: "news_en"

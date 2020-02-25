@@ -1,5 +1,6 @@
 import React from "react";
 import chunk from "lodash/fp/chunk";
+import { StaticQuery, graphql } from "gatsby";
 import Icon from "@mdi/react";
 import {
   mdiHandPointingUp,
@@ -15,11 +16,12 @@ const iconMap = {
   secure: mdiShieldLock,
 };
 
-export default function QuickLinks({ media }) {
+const QuickLinks = ({ media, content }) => {
+  const { quickLinks } = content.node.frontmatter.components;
   return (
     <section className="usa-graphic-list usa-section usa-section--dark">
       <div className="grid-container">
-        {chunk(2, media).map((pairs, idx) => (
+        {chunk(2, quickLinks).map((pairs, idx) => (
           <div key={idx} className="usa-graphic-list__row grid-row grid-gap">
             {pairs.map(({ title, text, link, icon }, idx) => (
               <div key={idx} className="usa-media-block tablet:grid-col">
@@ -44,4 +46,40 @@ export default function QuickLinks({ media }) {
       </div>
     </section>
   );
-}
+};
+
+export default props => (
+  <StaticQuery
+    query={graphql`
+      query QuickLinksQuery {
+        homepageData: allMarkdownRemark(
+          filter: { frontmatter: { page: { eq: "homepage" } } }
+        ) {
+          edges {
+            node {
+              frontmatter {
+                language
+                components {
+                  quickLinks {
+                    title
+                    text
+                    link
+                    icon
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    `}
+    render={data => (
+      <QuickLinks
+        content={data.homepageData.edges.find(
+          edge => edge.node.frontmatter.language === props.lang
+        )}
+        {...props}
+      />
+    )}
+  />
+);

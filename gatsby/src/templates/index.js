@@ -9,7 +9,7 @@ const IndexTemplate = ({ location, uri, data, ...rest }) => {
   const {
     childImageSharp: { fluid: heroImg2 },
   } = data.image2;
-  const content = data.indexYaml;
+  const content = data.homepageData;
 
   return (
     <Index
@@ -38,35 +38,44 @@ export const query = graphql`
         }
       }
     }
-    indexYaml(language: { eq: $lang }) {
-      callout {
-        title
-        text
-        cta {
-          text
-          link
+    homepageData: allMarkdownRemark(
+      filter: {
+        frontmatter: { page: { eq: "homepage" }, language: { eq: $lang } }
+      }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            body {
+              content
+              title
+            }
+            hero {
+              cta {
+                link
+                text
+              }
+              text
+              title
+            }
+            components {
+              quickLinks {
+                icon
+                link
+                text
+                title
+              }
+            }
+            layout {
+              title
+              nav {
+                link
+                order
+                text
+              }
+            }
+          }
         }
-      }
-      media {
-        title
-        text
-        link
-        icon
-      }
-      section {
-        title
-        text
-        cta {
-          text
-          link
-        }
-      }
-      tagline {
-        title
-        content
-      }
-      layout {
-        latestNews
       }
     }
   }
