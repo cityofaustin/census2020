@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  branch: cms_config_followup
+  branch: master
 
 media_folder: gatsby/src/images
 public_folder: gatsby/static/img
