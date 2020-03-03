@@ -101,9 +101,17 @@ const NewsAndEvents = ({ data, lang, shortened, content }) => {
     event => moment(event.node.eventdate).format() >= moment().format()
   );
 
+  const allEvents = _.sortBy(data.allGoogleSheetFormResponses1Row.edges, o =>
+    moment(o.node.eventdate)
+  );
+
+  const upcomingEventsSorted = _.sortBy(upcomingEvents, [
+    o => moment(o.node.eventdate),
+  ]);
+
   const events = shortened
-    ? _.take(upcomingEvents, EVENTS_VISIBLE)
-    : data.allGoogleSheetFormResponses1Row.edges;
+    ? _.take(upcomingEventsSorted, EVENTS_VISIBLE)
+    : allEvents;
 
   const eventByMonth = _.groupBy(events, eventItem =>
     moment(eventItem.node.eventdate).format("MMMM YYYY")
@@ -231,7 +239,10 @@ export default props => (
             }
           }
         }
-        allGoogleSheetFormResponses1Row(filter: { confirmed: { eq: true } }) {
+        allGoogleSheetFormResponses1Row(
+          filter: { confirmed: { eq: true } }
+          sort: { fields: eventdate, order: ASC }
+        ) {
           edges {
             node {
               eventdate
