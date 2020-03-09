@@ -154,7 +154,15 @@ const Info = ({ uri, location, data, yaml, ...rest }) => {
             case "EmailCollection":
               return (
                 <span id={URLify(section.title)} key={`Info-sections-${i}`}>
-                  <EmailCollection lang={language} />
+                  <div className="text-center margin-bottom-8">
+                    <a
+                      href="https://docs.google.com/forms/d/e/1FAIpQLSfPL2i9v87W7tYXjl6mJtDuvL0bmuAVQFQfN-SCeamb3KxZhQ/viewform"
+                      target="_blank"
+                      className="usa-button usa-button usa-button--big"
+                    >
+                      Volunteer for Census Outreach
+                    </a>
+                  </div>
                 </span>
               );
             case "NewsAndEvents":
