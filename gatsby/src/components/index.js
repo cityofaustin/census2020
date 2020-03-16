@@ -5,6 +5,7 @@ import circle from "uswds_images/circle-124.png";
 import Layout from "../components/layout";
 import Hero from "./index/Hero";
 import Communities from "./index/Communities";
+import OrganizeMap from "./index/OrganizeMap";
 import Timeline from "./shared/Timeline";
 import QuickLinks from "./index/QuickLinks";
 import MainText from "./index/MainText";
