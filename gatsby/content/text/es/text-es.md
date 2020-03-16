@@ -1,35 +1,17 @@
 ---
 language: es
-page: homepage
 layout:
   nav:
-    - link: /es/porque
-      order: 1
-      text: Por qué es importante el Censo
     - link: /es/como
       order: 2
       text: Cómo llenar el Censo
+    - link: /es/porque
+      order: 1
+      text: Por qué es importante el Censo
     - link: /es/participe
       order: 3
       text: Participe
   title: Censo de Austin-Condado de Travis 2020
-hero:
-  title: ¡Ya puede responder el Censo 2020!
-  text:
-    - Hay tres maneras de responder el Censo 2020. Una vez reciba la invitación, puede responder en línea, por teléfono o por correo.
-    - ¿Necesita ayuda para llenar el Censo? Visite cualquier Biblioteca Pública de Austin para detalles o llame al 2-1-1.
-  cta:
-    text: Como hacer el Censo
-    link: "/es/como"
-body:
-  title: ¿Qué es el Censo?
-  content:
-    - Cada 10 años se requiere que toda persona que vive en los Estados Unidos, independientemente de su origen o estado migratorio, llene el Censo. Este es un requisito de la Constitución de los Estados Unidos para poder proveer un conteo correcto de todas las personas que viven en el país. El financiamiento federal para nuestras escuelas locales, los fondos de transporte para carreteras y autobuses y servicios de salud se basan en el Censo. Los límites geográficos que se establecen para los puestos en el Congreso y la Cámara de Representantes estatal, y hasta los miembros de la junta escolar, se basan en los datos del Censo.
-    - Si el conteo de residentes de Austin y el Condado de Travis en el 2020 es menor que la cantidad real de personas que viven aquí, todas las personas que viven en el centro de Texas se afectarán negativamente.
-    - El próximo Censo es en la primavera del 2020. Esta es nuestra oportunidad de unirnos y asegurarnos de que todos los residentes sean contados, para que cada dólar federal que merecemos cuente.
-  cta:
-    text: Por qué es importante el Censo
-    link: "/es/porque"
 components:
   banner:
     text: >-
@@ -44,9 +26,9 @@ components:
       pequeñas o grandes sean, para ayudar a que cada persona sea contada.
     title: Diga presente y hágase contar en el Censo del 2020
   emailCollection:
+    Your Name: ' Nombre'
     communities: ¿Hay alguna comunidad en específico donde quisiera ayudar?
     email: Dirección de correo electrónico
-    name: Su nombre
     submit: Enviar
     title: >-
       Inscríbase para recibir noticias por correo electrónico de la campaña de
@@ -169,7 +151,7 @@ components:
           incluyendo una sentencia a prisión federal de hasta cinco años, una
           multa de hasta $250,000, o ambas.
       - question: ¿Se hará una pregunta sobre ciudadanía en el Censo del 2020?
-        response: " El cuestionario del Censo del 2020 NO incluirá una pregunta sobre el estado migratorio de los individuos. Toda persona, independientemente de su estado migratorio, tiene ciertos derechos básicos. A las personas que les preocupe abrir su puerta, hay otras maneras de participar. Puede participar desde la comodidad de su casa por Internet y por teléfono, o puede ir a un centro de asistencia administrado por la comunidad. Por favor complete su cuestionario del Censo. Un cuestionario incompleto puede aumentar las probabilidades de que la Oficina del Censo de los EE.UU. le haga seguimiento por no responder. Las familias recibirán una invitación para responder en línea al Censo del 2020 a partir del 12 de marzo del 2020. Su participación es vital y su información está protegida. "
+        response: ' El cuestionario del Censo del 2020 NO incluirá una pregunta sobre el estado migratorio de los individuos. Toda persona, independientemente de su estado migratorio, tiene ciertos derechos básicos. A las personas que les preocupe abrir su puerta, hay otras maneras de participar. Puede participar desde la comodidad de su casa por Internet y por teléfono, o puede ir a un centro de asistencia administrado por la comunidad. Por favor complete su cuestionario del Censo. Un cuestionario incompleto puede aumentar las probabilidades de que la Oficina del Censo de los EE.UU. le haga seguimiento por no responder. Las familias recibirán una invitación para responder en línea al Censo del 2020 a partir del 12 de marzo del 2020. Su participación es vital y su información está protegida. '
       - question: >-
           ¿Qué está haciendo el Comité de Conteo Completo de Austin-Condado de
           Travis para animar a las personas para que participen?
@@ -202,26 +184,5 @@ components:
       organizar en una de nuestras comunidades difíciles de contar o en su
       propio vecindario. Haga clic aquí para conocer más...
     title: Organice a su vecindario
-  quickLinks:
-    - title: Llenar el Censo es fácil
-      text: Responder en línea la Encuesta sobre la Comunidad Estadounidense del Censo de EE.UU es fácil. El cuestionario le ofrece pantallas de ayuda y la opción de revisar sus respuestas.
-      link: https://2020census.gov/es/ways-to-respond.html
-      icon: finger
-    - title: El Censo es seguro y confidencial
-      text: La Oficina del Censo de los EE.UU. tiene la obligación legal de proteger sus respuestas y mantenerlas en estricta confidencialidad. De hecho, cada empleado toma un juramento para proteger su información personal de por vida.
-      link: https://2020census.gov/es/data-protection.html
-      icon: secure
-    - title: Cómo funciona el Censo
-      text: Vea un corto video para aprender cómo la participación y la recopilación de datos correctos en el Censo de EE.UU. afectan nuestra democracia y el bienestar de las familias y las comunidades.
-      link: https://www.youtube.com/watch?v=5v7ylJoLkCo
-      icon: watch
-    - title: Empleos disponibles con el Censo del 2020
-      text: La Oficina del Censo está reclutando para cubrir cientos de miles de puestos temporales en todo el país para asistir con el conteno del Censo del 2020.
-      link: https://2020census.gov/es/jobs.html
-      icon: job
-  newsAndEvents:
-    latestNews: Últimas Noticias
-    events: Eventos
-    showMore: Ver mas
-    newEvent: Enviar un Nuevo Evento
 ---
+
