@@ -14,13 +14,13 @@ layout:
       text: Participe
   title: Censo de Austin-Condado de Travis 2020
 hero:
-  title: Todos cuentan
+  title: ¡Ya puede responder el Censo 2020!
   text:
-    - La Ciudad de Austin y el Condado de Travis están comprometidos con asegurarse de que todas las personas en nuestras comunidades sean contadas en el Censo del 2020.
-    - Si usted no llena el Censo, nuestras escuelas, vecindarios y residentes más vulnerables perderán fondos..
+    - Hay tres maneras de responder el Censo 2020. Una vez reciba la invitación, puede responder en línea, por teléfono o por correo.
+    - ¿Necesita ayuda para llenar el Censo? Visite cualquier Biblioteca Pública de Austin para detalles o llame al 2-1-1.
   cta:
-    text: Por qué es importante el Censo
-    link: "/es/porque"
+    text: Como hacer el Censo
+    link: "/es/como"
 body:
   title: ¿Qué es el Censo?
   content:
