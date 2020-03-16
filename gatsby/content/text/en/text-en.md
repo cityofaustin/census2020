@@ -14,13 +14,13 @@ layout:
       text: Get Involved
   title: Austin-Travis County Census 2020
 hero:
-  title: Everybody counts
+  title: You can now respond to the 2020 Census!
   text:
-    - The City of Austin and Travis County are committed to making sure everyone in our communities gets counted in the federal 2020 Census.
-    - If you don’t complete the Census, our schools, neighborhoods, and most vulnerable residents will lose funding.
+    - There are three ways to respond to the 2020 Census. Once you receive your invitation, you can respond online, by phone, or by mail.
+    - Need Help Filling Out the Census? Visit any Austin Public Library for details or call 2-1-1.
   cta:
-    text: Why the Census matters
-    link: "/en/why"
+    text: How To Respond To The Census
+    link: "/en/how"
 body:
   title: What is the Census?
   content:

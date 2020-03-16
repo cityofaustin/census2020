@@ -10,7 +10,7 @@ options:
     label: Por correo
     text: >-
       El formulario del Censo en papel se enviará desde la Oficina del Censo de los EE.UU. Estará disponible en inglés y español y se puede enviar lleno de regreso a la Oficina del Censo de EE.UU.
-  - icon: mdiComputer
+  - icon: mdiLaptopWindows
     label: En línea
     text: >-
       Por primera vez, el formulario del Censo estará disponible para llenarlo por Internet en 13 idiomas.
