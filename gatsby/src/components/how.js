@@ -35,7 +35,7 @@ const How = ({ uri, location, data, ...rest }) => {
       <Layout language={language} location={location}>
         <section className="grid-container usa-section usa-prose">
           <div className="margin-bottom-5 usa-prose">
-            <WarningBanner lang={language} />
+            {/* <WarningBanner lang={language} /> */}
             <h1>{title}</h1>
             <ReactMarkdown source={intro} />
           </div>
