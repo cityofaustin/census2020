@@ -5,6 +5,8 @@ import cx from "classnames";
 import { navigation } from "uswds_components";
 import UswdsComponent from "./uswds_component";
 
+import logo from "../images/census20-logo.png";
+
 const ROOT_CLASS = "usa-header";
 
 const propTypes = {
@@ -35,10 +37,22 @@ const Header = ({ className, children, ...props }) => {
       ref={ref}
     >
       <div className="usa-navbar">
-        <div className="usa-logo" id="extended-logo">
+        <div
+          className="usa-logo"
+          id="extended-logo"
+          style={{ margin: "1rem 0rem 0.5rem" }}
+        >
           <em className="usa-logo__text">
             <Link to="/" title="Home" aria-label="Home">
-              {props.title}
+              <img
+                src={logo}
+                alt="ATX Census 2020 - Together, We Count."
+                style={{ maxWidth: "200px" }}
+                className="display-none desktop:display-block"
+              />
+              <span className="margin-left-3 desktop:display-none">
+                {props.title}
+              </span>
             </Link>
           </em>
         </div>

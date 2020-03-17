@@ -1,11 +1,20 @@
 import React from "react";
 import Img from "gatsby-image";
 import { Link, StaticQuery, graphql } from "gatsby";
+import logo from "../../images/census20-logo.png";
 
 const Hero = ({ img, content }) => {
   const { cta, text, title } = content.node.frontmatter.hero;
   return (
-    <section className="usa-hero">
+    <section className="usa-hero padding-top-2 desktop:padding-y-6">
+      <div className="grid-col-12 text-center padding-bottom-10">
+        <img
+          src={logo}
+          alt="ATX Census 2020 - Together, We Count."
+          style={{ maxWidth: "200px", backgroundColor: "#f0f0f0b8" }}
+          className="desktop:display-none"
+        />
+      </div>
       <Img
         fluid={img}
         className="usa-hero__image"
