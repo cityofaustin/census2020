@@ -1,5 +1,6 @@
 ---
 language: es
+page: homepage
 layout:
   nav:
     - link: /es/como
@@ -43,7 +44,7 @@ components:
       pequeñas o grandes sean, para ayudar a que cada persona sea contada.
     title: Diga presente y hágase contar en el Censo del 2020
   emailCollection:
-    Your Name: " Nombre"
+    name: "Nombre"
     communities: ¿Hay alguna comunidad en específico donde quisiera ayudar?
     email: Dirección de correo electrónico
     submit: Enviar
@@ -201,4 +202,26 @@ components:
       organizar en una de nuestras comunidades difíciles de contar o en su
       propio vecindario. Haga clic aquí para conocer más...
     title: Organice a su vecindario
+  quickLinks:
+    - title: Llenar el Censo es fácil
+      text: Responder en línea la Encuesta sobre la Comunidad Estadounidense del Censo de EE.UU es fácil. El cuestionario le ofrece pantallas de ayuda y la opción de revisar sus respuestas.
+      link: https://2020census.gov/es/ways-to-respond.html
+      icon: finger
+    - title: El Censo es seguro y confidencial
+      text: La Oficina del Censo de los EE.UU. tiene la obligación legal de proteger sus respuestas y mantenerlas en estricta confidencialidad. De hecho, cada empleado toma un juramento para proteger su información personal de por vida.
+      link: https://2020census.gov/es/data-protection.html
+      icon: secure
+    - title: Cómo funciona el Censo
+      text: Vea un corto video para aprender cómo la participación y la recopilación de datos correctos en el Censo de EE.UU. afectan nuestra democracia y el bienestar de las familias y las comunidades.
+      link: https://www.youtube.com/watch?v=5v7ylJoLkCo
+      icon: watch
+    - title: Empleos disponibles con el Censo del 2020
+      text: La Oficina del Censo está reclutando para cubrir cientos de miles de puestos temporales en todo el país para asistir con el conteno del Censo del 2020.
+      link: https://2020census.gov/es/jobs.html
+      icon: job
+  newsAndEvents:
+    latestNews: Últimas Noticias
+    events: Eventos
+    showMore: Ver mas
+    newEvent: Enviar un Nuevo Evento
 ---
