@@ -240,7 +240,7 @@ collections:
                     name: email
                     widget: string
                   - label: Name
-                    name: Your Name
+                    name: name
                     widget: string
                   - label: Submit
                     name: submit
