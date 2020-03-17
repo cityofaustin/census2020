@@ -18,9 +18,9 @@ const Hero = ({ img, content }) => {
           {text.map((p, idx) => (
             <p key={idx}>{p}</p>
           ))}
-          <Link className="usa-button" to={cta.link}>
+          <a className="usa-button" target="_blank" href={cta.link}>
             {cta.text}
-          </Link>
+          </a>
         </div>
       </div>
     </section>

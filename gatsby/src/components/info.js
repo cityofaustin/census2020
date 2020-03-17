@@ -10,6 +10,7 @@ import FaqAccordion from "../components/faq.js";
 import Communities from "./index/Communities";
 import NewsAndEvents from "./index/NewsAndEvents";
 import EmailCollection from "./emailCollection";
+import OrganizeMap from "./index/OrganizeMap";
 import { useHelmetTags } from "./shared/helmet";
 
 const propTypes = {
@@ -172,6 +173,8 @@ const Info = ({ uri, location, data, yaml, ...rest }) => {
                   <NewsAndEvents lang={language} shortened />
                 </span>
               );
+            case "OrganizeMap":
+              return <OrganizeMap lang={language} />;
           }
         })}
       </Layout>

@@ -43,76 +43,35 @@ const Communities = ({ data, lang, imgs }) => {
   };
 
   return (
-    <>
-      <section className="bg-primary-dark padding-top-3 padding-bottom-3">
-        <div className="grid-container margin-bottom-4">
-          <h2 className="text-white text-center font-ui-xl tablet:font-ui-2xl">
-            {text.communities.title}
-          </h2>
+    <section className="bg-primary-dark padding-top-3 padding-bottom-3">
+      <div className="grid-container margin-bottom-4">
+        <h2 className="text-white text-center font-ui-xl tablet:font-ui-2xl">
+          {text.communities.title}
+        </h2>
 
-          <div className="grid-row padding-y-2 padding-x-105 flex-justify-center">
-            {communities.map((community, i) => (
-              <div className="grid-col-6 tablet:grid-col-4" key={`ccc-${i}`}>
-                <a
-                  href={community.node.frontmatter.link}
-                  target="_blank"
-                  aria-label={community.node.frontmatter.title}
-                >
-                  <div className="bg-base-darkest margin-1">
-                    {renderCommunityImg(community)}
-                  </div>
-                  <h3 className="text-base-lightest margin-x-3 font-body-xs tablet:font-body-md Communities--textStyles">
-                    {community.node.frontmatter.title}
-                  </h3>
-                </a>
-              </div>
-            ))}
-          </div>
-          <div className="grid-row usa-intro text-white">
-            <p className="font-body-lg">{text.communities.subtitle}</p>
-          </div>
-        </div>
-      </section>
-      <section className="usa-section grid-container padding-top-3 padding-bottom-3">
-        <h2 className="text-center font-ui0-3xl">{text.map.title}</h2>
-        <p className="text-italic usa-intro">{text.map.subtitle}</p>
-        <div className="grid-row">
-          <div className="grid-col-8 grid-offset-2">
-            <p className="usa-sr-only">
-              For assistance with this map please call{" "}
-              <a href="tel:1-512-854-6185">512-854-6185</a> or email{" "}
-              <a href="mailto:census@traviscounty.org">
-                census@traviscounty.org
-              </a>
-              .
-            </p>
-            <a
-              href="https://austin.maps.arcgis.com/apps/webappviewer/index.html?id=fd4bd4db7b6e4632a19b1a0a03f8094b"
-              target="_blank"
-            >
-              <Img
-                fluid={data.mapImg.childImageSharp.fluid}
-                style={{
-                  maxHeight: "600px",
-                  width: "100%",
-                }}
-                alt="Screenshot of Neighborhood map"
-              />
-            </a>
-            <div className="text-center margin-top-3">
+        <div className="grid-row padding-y-2 padding-x-105 flex-justify-center">
+          {communities.map((community, i) => (
+            <div className="grid-col-6 tablet:grid-col-4" key={`ccc-${i}`}>
               <a
-                href="https://austin.maps.arcgis.com/apps/webappviewer/index.html?id=fd4bd4db7b6e4632a19b1a0a03f8094b"
+                href={community.node.frontmatter.link}
                 target="_blank"
+                aria-label={community.node.frontmatter.title}
               >
-                <button className="usa-button usa-button--outline usa-button--big">
-                  {text.map.cta}
-                </button>
+                <div className="bg-base-darkest margin-1">
+                  {renderCommunityImg(community)}
+                </div>
+                <h3 className="text-base-lightest margin-x-3 font-body-xs tablet:font-body-md Communities--textStyles">
+                  {community.node.frontmatter.title}
+                </h3>
               </a>
             </div>
-          </div>
+          ))}
         </div>
-      </section>
-    </>
+        <div className="grid-row usa-intro text-white">
+          <p className="font-body-lg">{text.communities.subtitle}</p>
+        </div>
+      </div>
+    </section>
   );
 };
 
@@ -153,11 +112,6 @@ export default props => (
               frontmatter {
                 components {
                   communities {
-                    subtitle
-                    title
-                  }
-                  map {
-                    cta
                     subtitle
                     title
                   }
@@ -206,13 +160,6 @@ export default props => (
           }
         }
         homelessness: file(base: { eq: "homelessness.jpg" }) {
-          childImageSharp {
-            fluid(maxHeight: 600) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-        mapImg: file(base: { eq: "NeighborhoodMapScreenshot.jpg" }) {
           childImageSharp {
             fluid(maxHeight: 600) {
               ...GatsbyImageSharpFluid
