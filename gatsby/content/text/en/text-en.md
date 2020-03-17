@@ -1,14 +1,13 @@
 ---
 language: en
-page: homepage
 layout:
   nav:
-    - link: /en/why
-      order: 1
-      text: Why the Census Matters
     - link: /en/how
       order: 2
       text: How To Take The Census
+    - link: /en/why
+      order: 1
+      text: Why the Census Matters
     - link: /en/get-involved
       order: 3
       text: Get Involved
@@ -44,9 +43,9 @@ components:
       counted.
     title: Stand up and be counted in the 2020 Census
   emailCollection:
+    Your Name: Name
     communities: Which communities could you help volunteer with?
     email: E-mail address
-    name: Your Name
     submit: Submit
     title: Sign-up for email updates from the Austin-Travis County Census campaign.
   faq:
@@ -193,26 +192,4 @@ components:
       our local hard to count communities or your neighborhood. Click here to
       find out more…
     title: Organize In Your Neighborhood
-  quickLinks:
-    - title: Taking the Census is Easy
-      text: Responding to the U.S. Census’ American Community Survey online is easy. The survey offers you help screens and the ability to review your answers.
-      link: https://www.census.gov/programs-surveys/acs/respond/respond-online.html
-      icon: finger
-    - title: The Census is Safe and Confidential
-      text: The U.S. Census Bureau is bound by law to protect your answers and keep them strictly confidential. In fact, every employee takes an oath to protect your personal information for life.
-      link: https://2020census.gov/en/data-protection.html
-      icon: secure
-    - title: How The Census Works
-      text: Check out a short video to learn how participation in the U.S. Census and the gathering of accurate Census data affects our democracy and the well-being of families and communities.
-      link: https://www.youtube.com/watch?v=5v7ylJoLkCo
-      icon: watch
-    - title: Jobs for 2020 Census
-      text: The U.S. Census Bureau is recruiting to fill hundreds of thousands of temporary positions across the country to assist with the 2020 Census count.
-      link: https://2020census.gov/en/jobs.html
-      icon: job
-  newsAndEvents:
-    latestNews: Recent News
-    events: Events
-    showMore: Show More
-    newEvent: Submit a new Event
 ---
