@@ -169,12 +169,11 @@ components:
     contact_us: Contact Us
     title: Austin-Travis County Census 2020
   map:
-    cta: Take the Census NOW!
+    cta: Explore the map
     subtitle: >-
-      9 Questions in 9 Minutes. You will answer a simple questionnaire about
-      yourself and everyone who is or will be living with you on April 1, 2020.
-      Your home can fill out the Census in three ways: Online, By Phone, and By
-      Mail. 
-    title: 'The 2020 Census is easy. '
+      Want to help get folks counted in your community? Help organize in one of
+      our local hard to count communities or your neighborhood. Click here to
+      find out more…
+    title: Organize In Your Neighborhood
 ---
 
