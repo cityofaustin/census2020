@@ -1,12 +1,7 @@
 page: como
 language: es
 title: Como hacer el Censo
-intro: |-
-  ¡Ya puede responder el Censo 2020! 9 preguntas en 9 minutos.
-
-  Para el 12 de marzo, su hogar puede llenar el Censo de tres maneras:
-
-  Preguntas? Llame al 2-1-1.
+intro: "¡Ya puede responder el Censo 2020! 9 preguntas en 9 minutos.\n\nPara el 12 de marzo, su hogar puede llenar el Censo de tres maneras:\n\n¿Necesita ayuda para llenar el Censo?\r Visite cualquier Biblioteca Pública de Austin para detalles o llame al 2-1-1."
 options:
   - icon: mdiLaptopWindows
     label: En línea
