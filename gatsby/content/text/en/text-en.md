@@ -1,6 +1,5 @@
 ---
 language: en
-page: homepage
 layout:
   nav:
     - link: /en/how
@@ -13,23 +12,6 @@ layout:
       order: 3
       text: Get Involved
   title: Austin-Travis County Census 2020
-hero:
-  title: You can now respond to the 2020 Census!
-  text:
-    - There are three ways to respond to the 2020 Census. Once you receive your invitation, you can respond online, by phone, or by mail.
-    - Need Help Filling Out the Census? Visit any Austin Public Library for details or call 2-1-1.
-  cta:
-    text: Take The Census NOW!
-    link: "http://www.2020census.gov"
-body:
-  title: What is the Census?
-  content:
-    - Every 10 years, every person living in the United States - regardless of origin or status - is required to fill out the Census. This is a requirement of the United States Constitution in order to provide an accurate count of all people in the country. Federal funding for our local schools, transportation dollars for roads and buses, and healthcare services are all funded based on the Census. The political lines that are drawn for Congress, State House seats, and even school board members, are based on Census data.
-    - If Austin and Travis County residents are undercounted in 2020, every Central Texan is negatively impacted.
-    - The next Census is in Spring 2020. This is our chance to come together and make sure every resident is counted, so every federal dollar we deserve is accounted for.
-  cta:
-    text: Why the Census matters
-    link: "/en/why"
 components:
   banner:
     text: >-
@@ -44,7 +26,7 @@ components:
       counted.
     title: Stand up and be counted in the 2020 Census
   emailCollection:
-    name: Name
+    Your Name: Name
     communities: Which communities could you help volunteer with?
     email: E-mail address
     submit: Submit
@@ -162,7 +144,7 @@ components:
           this law will face severe penalties, including a federal prison
           sentence of up to five years, a fine of up to $250,000, or both.
       - question: Will the 2020 Census include a question about Citizenship?
-        response: " The 2020 Census questionnaire will NOT include a question about an individual’s citizenship status. Everyone, regardless of their immigration status, has certain basic rights. For those who have concerns about opening your doors, there are other ways you can participate. You can participate from the comfort of your home online and over the phone, or at community run assistance center. Please complete your Census questionnaire. An incomplete questionnaire may increase your chances of nonresponse follow-up by the U.S. Census Bureau. Households will receive an invitation to respond online to the 2020 Census beginning March 12, 2020. Your participation is vital, and your information is protected. "
+        response: ' The 2020 Census questionnaire will NOT include a question about an individual’s citizenship status. Everyone, regardless of their immigration status, has certain basic rights. For those who have concerns about opening your doors, there are other ways you can participate. You can participate from the comfort of your home online and over the phone, or at community run assistance center. Please complete your Census questionnaire. An incomplete questionnaire may increase your chances of nonresponse follow-up by the U.S. Census Bureau. Households will receive an invitation to respond online to the 2020 Census beginning March 12, 2020. Your participation is vital, and your information is protected. '
       - question: >-
           What is the Austin-Travis County Complete Count Committee doing to
           encourage participation?
@@ -187,32 +169,12 @@ components:
     contact_us: Contact Us
     title: Austin-Travis County Census 2020
   map:
-    cta: Explore the map
+    cta: Take the Census NOW!
     subtitle: >-
-      Want to help get folks counted in your community? Help organize in one of
-      our local hard to count communities or your neighborhood. Click here to
-      find out more…
-    title: Organize In Your Neighborhood
-  quickLinks:
-    - title: Taking the Census is Easy
-      text: Responding to the U.S. Census’ American Community Survey online is easy. The survey offers you help screens and the ability to review your answers.
-      link: https://www.census.gov/programs-surveys/acs/respond/respond-online.html
-      icon: finger
-    - title: The Census is Safe and Confidential
-      text: The U.S. Census Bureau is bound by law to protect your answers and keep them strictly confidential. In fact, every employee takes an oath to protect your personal information for life.
-      link: https://2020census.gov/en/data-protection.html
-      icon: secure
-    - title: How The Census Works
-      text: Check out a short video to learn how participation in the U.S. Census and the gathering of accurate Census data affects our democracy and the well-being of families and communities.
-      link: https://www.youtube.com/watch?v=5v7ylJoLkCo
-      icon: watch
-    - title: Jobs for 2020 Census
-      text: The U.S. Census Bureau is recruiting to fill hundreds of thousands of temporary positions across the country to assist with the 2020 Census count.
-      link: https://2020census.gov/en/jobs.html
-      icon: job
-  newsAndEvents:
-    latestNews: Recent News
-    events: Events
-    showMore: Show More
-    newEvent: Submit a new Event
+      9 Questions in 9 Minutes. You will answer a simple questionnaire about
+      yourself and everyone who is or will be living with you on April 1, 2020.
+      Your home can fill out the Census in three ways: Online, By Phone, and By
+      Mail. 
+    title: 'The 2020 Census is easy. '
 ---
+
