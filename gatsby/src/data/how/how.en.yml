@@ -1,25 +1,8 @@
 page: how
 language: en
 title: How To Complete the Census
-intro: >-
-  Every person in the country is required to fill out the 2020 Census form. You
-  can fill it out in three ways.
-
-
-  Video and printed guides will also be available in 60 languages and there will
-  be a video in American Sign Language to accompany a printed guide in braille.
+intro: "You can now respond to the Census! 9 Questions in 9 Minutes\r.\n\nAs of March 12th, your home can fill out the Census in three ways:\r\n\nQuestions? Call 2-1-1."
 options:
-  - icon: mdiStar
-    label: By Mail
-    text: >-
-      The paper Census form will be mailed from the U.S. Census Bureau. It will
-      be available in English and Spanish and can be mailed back to the U.S.
-      Census Bureau.
-  - icon: mdiPhone
-    label: By Phone
-    text: >-
-      The Census can be completed by phone in 13 languages including
-      Telecommunication Device for the Deaf.
   - icon: mdiLaptopWindows
     label: Online
     text: >-
@@ -27,6 +10,24 @@ options:
       in 13 languages.
 
 
-      Need access to a computer? Visit any [Austin Public Library
-      Branch](https://library.austintexas.gov/locations) for details or call
-      [512-974-7400](tel:1-512-974-7400).
+      Visit [www.My2020Census.gov](www.my2020census.gov). 
+
+
+      Questions? Call 2-1-1.
+  - icon: mdiPhone
+    label: By Phone
+    text: >-
+      Call 844-330-2020. 
+
+
+      The Census can be completed by phone in 13 languages including
+      Telecommunication Device for the Deaf.
+
+
+      Questions? Call 2-1-1.
+  - icon: mdiStar
+    label: By Mail
+    text: >-
+      The paper Census form will be mailed from the U.S. Census Bureau. It will
+      be available in English and Spanish and can be mailed back to the U.S.
+      Census Bureau.
