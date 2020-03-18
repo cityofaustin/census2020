@@ -18,124 +18,10 @@ collections:
             name: "language"
             widget: "select"
             options: ["en"]
-          - label: Layout
-            name: layout
-            widget: object
-            fields:
-              - label: Title
-                name: title
-                widget: string
-              - label: Navigation
-                name: nav
-                widget: list
-                fields:
-                  - label: Text
-                    name: text
-                    widget: string
-                  - label: Link
-                    name: link
-                    widget: string
-                  - label: Order
-                    name: order
-                    widget: number
-          - label: "Components"
-            name: "components"
-            widget: object
-            fields:
-              - label: Communities
-                name: communities
-                widget: object
-                fields:
-                  - label: Title
-                    name: title
-                    widget: string
-                  - label: Subtitle
-                    name: subtitle
-                    widget: string
-              - label: Map
-                name: map
-                widget: object
-                fields:
-                  - label: Title
-                    name: title
-                    widget: string
-                  - label: Subtitle
-                    name: subtitle
-                    widget: string
-                  - label: Call To Action
-                    name: cta
-                    widget: string
-              - label: FAQ
-                name: faq
-                widget: object
-                fields:
-                  - label: Title
-                    name: title
-                    widget: string
-                  - label: Faqs
-                    name: faqs
-                    widget: list
-                    fields:
-                      - label: Question
-                        name: question
-                        widget: markdown
-                      - label: Response
-                        name: response
-                        widget: markdown
-              - label: Footer
-                name: footer
-                widget: object
-                fields:
-                  - label: Title
-                    name: title
-                    widget: string
-                  - label: About Text
-                    name: about_text
-                    widget: string
-                  - label: About Link
-                    name: about_link
-                    widget: string
-                  - label: Contact us
-                    name: contact_us
-                    widget: string
-              - label: Banner
-                name: banner
-                widget: object
-                fields:
-                  - label: Title
-                    name: title
-                    widget: string
-                  - label: Text
-                    name: text
-                    widget: string
-              - label: Email Collection
-                name: emailCollection
-                widget: object
-                fields:
-                  - label: Title
-                    name: title
-                    widget: string
-                  - label: Communities
-                    name: communities
-                    widget: string
-                  - label: Email
-                    name: email
-                    widget: string
-                  - label: Name
-                    name: Your Name
-                    widget: string
-                  - label: Submit
-                    name: submit
-                    widget: string
-      - label: "Homepage & Shared Components (Spanish)"
-        name: "index_es"
-        file: "gatsby/content/text/es/text-es.md"
-        filter: { field: "language", value: "es" }
-        fields:
-          - label: "Language"
-            name: "language"
+          - label: Page
+            name: page
             widget: "select"
-            options: ["es"]
+            options: ["homepage"]
           - label: Layout
             name: layout
             widget: object
@@ -244,6 +130,192 @@ collections:
                     widget: string
                   - label: Submit
                     name: submit
+                    widget: string
+              - label: News And Events
+                name: newsAndEvents
+                widget: object
+                fields:
+                  - label: Latest News Text
+                    name: latestNews
+                    widget: string
+                  - label: Events Text
+                    name: events
+                    widget: string
+                  - label: Show More Text
+                    name: showMore
+                    widget: string
+                  - label: New Event Text
+                    name: newEvent
+                    widget: string
+              - label: Quick Links
+                name: quickLinks
+                widget: list
+                fields:
+                  - label: Title
+                    name: title
+                    widget: string
+                  - label: Text
+                    name: text
+                    widget: string
+                  - label: Link
+                    name: link
+                    widget: string
+                  - label: Icon
+                    name: icon
+                    widget: string
+      - label: "Homepage & Shared Components (Spanish)"
+        name: "index_es"
+        file: "gatsby/content/text/es/text-es.md"
+        filter: { field: "language", value: "es" }
+        fields:
+          - label: "Language"
+            name: "language"
+            widget: "select"
+            options: ["es"]
+          - label: Page
+            name: page
+            widget: "select"
+            options: ["homepage"]
+          - label: Layout
+            name: layout
+            widget: object
+            fields:
+              - label: Title
+                name: title
+                widget: string
+              - label: Navigation
+                name: nav
+                widget: list
+                fields:
+                  - label: Text
+                    name: text
+                    widget: string
+                  - label: Link
+                    name: link
+                    widget: string
+                  - label: Order
+                    name: order
+                    widget: number
+          - label: "Components"
+            name: "components"
+            widget: object
+            fields:
+              - label: Communities
+                name: communities
+                widget: object
+                fields:
+                  - label: Title
+                    name: title
+                    widget: string
+                  - label: Subtitle
+                    name: subtitle
+                    widget: string
+              - label: Map
+                name: map
+                widget: object
+                fields:
+                  - label: Title
+                    name: title
+                    widget: string
+                  - label: Subtitle
+                    name: subtitle
+                    widget: string
+                  - label: Call To Action
+                    name: cta
+                    widget: string
+              - label: FAQ
+                name: faq
+                widget: object
+                fields:
+                  - label: Title
+                    name: title
+                    widget: string
+                  - label: Faqs
+                    name: faqs
+                    widget: list
+                    fields:
+                      - label: Question
+                        name: question
+                        widget: markdown
+                      - label: Response
+                        name: response
+                        widget: markdown
+              - label: Footer
+                name: footer
+                widget: object
+                fields:
+                  - label: Title
+                    name: title
+                    widget: string
+                  - label: About Text
+                    name: about_text
+                    widget: string
+                  - label: About Link
+                    name: about_link
+                    widget: string
+                  - label: Contact us
+                    name: contact_us
+                    widget: string
+              - label: Banner
+                name: banner
+                widget: object
+                fields:
+                  - label: Title
+                    name: title
+                    widget: string
+                  - label: Text
+                    name: text
+                    widget: string
+              - label: Email Collection
+                name: emailCollection
+                widget: object
+                fields:
+                  - label: Title
+                    name: title
+                    widget: string
+                  - label: Communities
+                    name: communities
+                    widget: string
+                  - label: Email
+                    name: email
+                    widget: string
+                  - label: Name
+                    name: name
+                    widget: string
+                  - label: Submit
+                    name: submit
+                    widget: string
+              - label: News And Events
+                name: newsAndEvents
+                widget: object
+                fields:
+                  - label: Latest News Text
+                    name: latestNews
+                    widget: string
+                  - label: Events Text
+                    name: events
+                    widget: string
+                  - label: Show More Text
+                    name: showMore
+                    widget: string
+                  - label: New Event Text
+                    name: newEvent
+                    widget: string
+              - label: Quick Links
+                name: quickLinks
+                widget: list
+                fields:
+                  - label: Title
+                    name: title
+                    widget: string
+                  - label: Text
+                    name: text
+                    widget: string
+                  - label: Link
+                    name: link
+                    widget: string
+                  - label: Icon
+                    name: icon
                     widget: string
       - label: "About Page (English)"
         name: "about"
