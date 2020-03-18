@@ -1,7 +1,7 @@
 page: how
 language: en
 title: How To Complete the Census
-intro: "You can now respond to the Census! 9 Questions in 9 Minutes.\n\nAs of March 12th, your home can fill out the Census in three ways:\n\nNeed Help Filling Out the Census?\r Visit any Austin Public Library for details or call 2-1-1."
+intro: "You can now respond to the Census! 9 Questions in 9 Minutes.\n\nAs of March 12th, your home can fill out the Census in three ways. \n\nNeed Help Filling Out the Census?\r Visit any Austin Public Library for details or call 2-1-1."
 options:
   - icon: mdiLaptopWindows
     label: Online
