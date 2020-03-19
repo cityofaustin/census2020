@@ -23,6 +23,8 @@ export const query = graphql`
         component
         title
         text
+        cta
+        cta_link
       }
     }
   }
