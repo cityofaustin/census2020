@@ -18,7 +18,7 @@ const Header = ({ header, lang, data, content }) => {
   const layoutText = content.node.frontmatter.layout;
 
   return (
-    <UswdsHeader title={layoutText.title} extended>
+    <UswdsHeader title={layoutText.title} extended lang={lang}>
       <Navigation>
         <div className="usa-nav__inner">
           <button className="usa-nav__close">
