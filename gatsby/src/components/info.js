@@ -11,6 +11,7 @@ import Communities from "./index/Communities";
 import NewsAndEvents from "./index/NewsAndEvents";
 import EmailCollection from "./emailCollection";
 import OrganizeMap from "./index/OrganizeMap";
+import BasicTitleText from "./shared/BasicTitleText";
 import { useHelmetTags } from "./shared/helmet";
 
 const propTypes = {
@@ -175,6 +176,8 @@ const Info = ({ uri, location, data, yaml, ...rest }) => {
               );
             case "OrganizeMap":
               return <OrganizeMap lang={language} />;
+            case "BasicTitleText":
+              return <BasicTitleText lang={language} data={section} />;
           }
         })}
       </Layout>

@@ -8,6 +8,16 @@ intro: >-
 sections:
   - component: EmailCollection
     title: Email Form
+  - component: BasicTitleText
+    title: "Resources"
+    text: >-
+      stuff goes here
+
+      and here
+
+      too
+    cta: "Outreach Materials"
+    cta_link: "https://drive.google.com/drive/folders/15AcVVC7E_KG_bOkzujc_Uj4W2oAPZOFP?usp=sharing"
   - component: NewsAndEvents
     title: Recent News and Events
   - component: Communities
@@ -31,4 +41,4 @@ sections:
       for the latest information.
     title: Stand up and be counted in the 2020 Census
   - component: OrganizeMap
-    text: >-
+    text: ""
