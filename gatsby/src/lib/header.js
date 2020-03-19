@@ -6,6 +6,7 @@ import { navigation } from "uswds_components";
 import UswdsComponent from "./uswds_component";
 
 import logo from "../images/census20-logo.png";
+import logoEs from "../images/census20-logo-es.png";
 
 const ROOT_CLASS = "usa-header";
 
@@ -29,7 +30,7 @@ const propsToClasses = props => ({
   "usa-header--extended": props.extended,
 });
 
-const Header = ({ className, children, ...props }) => {
+const Header = ({ className, children, lang, ...props }) => {
   const render = ref => (
     <header
       className={cx(propsToClasses(props), className)}
@@ -45,7 +46,7 @@ const Header = ({ className, children, ...props }) => {
           <em className="usa-logo__text">
             <Link to="/" title="Home" aria-label="Home">
               <img
-                src={logo}
+                src={lang === "es" ? logoEs : logo}
                 alt="ATX Census 2020 - Together, We Count."
                 style={{ maxWidth: "200px" }}
                 className="display-none desktop:display-block"
