@@ -9,15 +9,14 @@ sections:
   - component: EmailCollection
     title: Email Form
   - component: BasicTitleText
-    title: "Resources"
-    text: >-
-      stuff goes here
+    cta: Outreach Materials
+    cta_link: >-
+      https://drive.google.com/drive/folders/15AcVVC7E_KG_bOkzujc_Uj4W2oAPZOFP?usp=sharing
+    text: |-
+      ![](/gatsby/static/img/postcard-en.png)
 
-      and here
-
-      too
-    cta: "Outreach Materials"
-    cta_link: "https://drive.google.com/drive/folders/15AcVVC7E_KG_bOkzujc_Uj4W2oAPZOFP?usp=sharing"
+      ![](/gatsby/static/img/postcard-es.png)
+    title: Resources
   - component: NewsAndEvents
     title: Recent News and Events
   - component: Communities
@@ -40,5 +39,3 @@ sections:
       page](https://www.facebook.com/Austin-Travis-County-Complete-Count-Committee-289680787280/)
       for the latest information.
     title: Stand up and be counted in the 2020 Census
-  - component: OrganizeMap
-    text: ""
