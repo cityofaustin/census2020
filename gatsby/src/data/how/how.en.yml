@@ -1,7 +1,7 @@
 page: how
 language: en
 title: How To Complete the Census
-intro: "You can now respond to the Census! 9 Questions in 9 Minutes.\n\nAs of March 12th, your home can fill out the Census in three ways. \n\nNeed Help Filling Out the Census?\r Visit any Austin Public Library for details or call 2-1-1."
+intro: "You can now respond to the Census! 9 Questions in 9 Minutes.\n\nAs of March 12th, your home can fill out the Census in three ways. \n\nNeed Help Filling Out the Census?\r Visit any Austin Public Library for details or call [2-1-1](tel:211)."
 options:
   - icon: mdiLaptopWindows
     label: Online
@@ -13,21 +13,22 @@ options:
       Visit [www.My2020Census.gov](www.my2020census.gov). 
 
 
-      Questions? Call 2-1-1.
+      Questions? Call [211](tel:2-1-1).
+    link: https://my2020census.gov/
   - icon: mdiPhone
     label: By Phone
     text: >-
-      Call 844-330-2020. 
-
+      Call [844-330-2020](tel:844-330-2020). 
 
       The Census can be completed by phone in 13 languages including
       Telecommunication Device for the Deaf.
 
-
-      Questions? Call 2-1-1.
+      Questions? Call [211](tel:2-1-1).
+    link: "tel:844-330-2020"
   - icon: mdiStar
     label: By Mail
     text: >-
       The paper Census form will be mailed from the U.S. Census Bureau. It will
       be available in English and Spanish and can be mailed back to the U.S.
       Census Bureau.
+    link: https://2020census.gov/en/ways-to-respond/responding-by-mail.html

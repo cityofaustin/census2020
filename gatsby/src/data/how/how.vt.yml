@@ -6,9 +6,12 @@ options:
   - icon: mdiStar
     label: By Mail
     text: ""
+    link: ""
   - icon: mdiComputer
     label: Online
     text: ""
+    link: ""
   - icon: mdiPhone
     label: By Phone
     text: ""
+    link: ""

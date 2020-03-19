@@ -45,11 +45,13 @@ const How = ({ uri, location, data, ...rest }) => {
                 key={option.label}
                 className="usa-media-block tablet:grid-col"
               >
-                <Icon
-                  path={iconMap[option.icon]}
-                  title={option.icon}
-                  size={3}
-                ></Icon>
+                <a href={option.link} target="_blank">
+                  <Icon
+                    path={iconMap[option.icon]}
+                    title={option.icon}
+                    size={3}
+                  ></Icon>
+                </a>
 
                 <div className="usa-media-block__body">
                   <h2 className="usa-graphic-list__heading">{option.label}</h2>
