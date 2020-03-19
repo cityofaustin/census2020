@@ -3,7 +3,7 @@ backend:
   branch: master
 
 media_folder: gatsby/src/images
-public_folder: gatsby/static/img
+public_folder: img
 
 collections:
   - label: "Pages"
@@ -587,6 +587,7 @@ collections:
                     "FAQ",
                     "EmailCollection",
                     "Communities",
+                    "BasicTitleText",
                   ]
               - label: Text
                 name: text
@@ -594,6 +595,10 @@ collections:
                 required: false
               - label: Call To Action
                 name: cta
+                widget: string
+                required: false
+              - label: Call To Action Link (URL)
+                name: cta_link
                 widget: string
                 required: false
       - label: "Get Involved (Spanish)"
@@ -632,6 +637,7 @@ collections:
                     "FAQ",
                     "EmailCollection",
                     "Communities",
+                    "BasicTitleText",
                   ]
               - label: Text
                 name: text
@@ -639,6 +645,10 @@ collections:
                 required: false
               - label: Call To Action
                 name: cta
+                widget: string
+                required: false
+              - label: Call To Action Link (URL)
+                name: cta_link
                 widget: string
                 required: false
 
