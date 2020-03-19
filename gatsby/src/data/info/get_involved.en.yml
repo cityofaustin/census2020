@@ -13,9 +13,9 @@ sections:
     cta_link: >-
       https://drive.google.com/drive/folders/15AcVVC7E_KG_bOkzujc_Uj4W2oAPZOFP?usp=sharing
     text: |-
-      ![](/gatsby/static/img/postcard-en.png)
+      ![](/img/postcard-en.png)
 
-      ![](/gatsby/static/img/postcard-es.png)
+      ![](/img/postcard-es.png)
     title: Resources
   - component: NewsAndEvents
     title: Recent News and Events
