@@ -15,6 +15,7 @@ export const query = graphql`
         icon
         text
         label
+        link
       }
     }
   }

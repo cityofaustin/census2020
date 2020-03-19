@@ -9,7 +9,7 @@ intro: >-
 
 
   ¿Necesita ayuda para llenar el Censo? Visite cualquier Biblioteca Pública de
-  Austin para detalles o llame al 2-1-1.
+  Austin para detalles o llame al [2-1-1](tel:211).
 options:
   - icon: mdiLaptopWindows
     label: En línea
@@ -21,21 +21,24 @@ options:
       Visite [www.My2020Census.gov](www.My2020Census.gov). 
 
 
-      Preguntas? Call 2-1-1.
+      Preguntas? Call [2-1-1](tel:211).
+    link: https://2020census.gov/es/ways-to-respond/responding-by-mail.html
   - icon: mdiPhone
     label: Por teléfono
     text: >-
-      Llame al 844-468-2020.
+      Llame al [844-468-2020](tel:844-468-2020).
 
 
       Se puede completar el Censo por teléfono en 13 idiomas incluyendo el
       dispositivo de telecomunicaciones para sordos.
 
 
-      Preguntas? Llame al 2-1-1.
+      Preguntas? Llame al [2-1-1](tel:211).
+    link: "tel:844-468-2020"
   - icon: mdiStar
     label: Por correo
     text: >-
       El formulario del Censo en papel se enviará desde la Oficina del Censo de
       los EE.UU. Estará disponible en inglés y español y se puede enviar lleno
       de regreso a la Oficina del Censo de EE.UU.
+    link: https://2020census.gov/es/ways-to-respond/responding-by-mail.html

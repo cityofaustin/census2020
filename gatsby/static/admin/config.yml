@@ -512,6 +512,10 @@ collections:
                 name: text
                 widget: markdown
                 required: false
+              - label: Link
+                name: link
+                widget: string
+                required: false
       - label: "How To Complete the Census (Spanish)"
         name: "como"
         file: "gatsby/src/data/how/how.es.yml"
@@ -542,6 +546,10 @@ collections:
               - label: Text
                 name: text
                 widget: markdown
+                required: false
+              - label: Link
+                name: link
+                widget: string
                 required: false
       - label: "Get Involved (English)"
         name: "get-involved"
