@@ -10,16 +10,34 @@ sections:
     title: Email Form
   - component: BasicTitleText
     cta: Outreach Materials
-    cta_link: >-
-      https://drive.google.com/drive/folders/15AcVVC7E_KG_bOkzujc_Uj4W2oAPZOFP?usp=sharing
-    text: |-
-      <a class="grid-col-6 padding-right-2" href="https://drive.google.com/open?id=124aL9tJsHJ2rcCQ8SDXoGYpQE6GOiqRf" target="_blank">
+    text: >-
+      <a class="grid-col-6 padding-right-2"
+      href="https://drive.google.com/open?id=124aL9tJsHJ2rcCQ8SDXoGYpQE6GOiqRf"
+      target="_blank">
         <img src="/img/postcard-en.png" />
       </a>
-      <a class="grid-col-6 padding-left-2" href="https://drive.google.com/open?id=124aL9tJsHJ2rcCQ8SDXoGYpQE6GOiqRf" target="_blank">
+
+      <a class="grid-col-6 padding-left-2"
+      href="https://drive.google.com/open?id=124aL9tJsHJ2rcCQ8SDXoGYpQE6GOiqRf"
+      target="_blank">
         <img src="/img/postcard-es.png" />
       </a>
     title: Volunteer Resources
+  - component: Text
+    text: >-
+      <a class="grid-col-6 padding-left-2"
+      href="https://www.youtube.com/watch?v=3TGbIiXwj7g" target="_blank">
+
+      </a>\
+
+      <a class="grid-col-6 padding-left-2"
+      href="https://www.youtube.com/watch?v=IhVhfxna_JY" target="_blank">\
+
+      </a>\
+
+      <a class="grid-col-6 padding-left-2"
+      href="https://www.youtube.com/watch?v=uvEHinA97Ic" target="_blank">
+    title: Community Group PSAs
   - component: NewsAndEvents
     title: Recent News and Events
   - component: Communities
