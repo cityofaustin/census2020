@@ -10,8 +10,7 @@ sections:
     title: Email Form
   - component: BasicTitleText
     cta: Outreach Materials
-    cta_link: >-
-      https://drive.google.com/drive/u/0/mobile/folders/1I8RkgfqKa4c2HrnOC0_a9l0dBTvjmiOx/15AcVVC7E_KG_bOkzujc_Uj4W2oAPZOFP?sort=13&direction=a
+    cta_link: 'https://drive.google.com/drive/folders/15AcVVC7E_KG_bOkzujc_Uj4W2oAPZOFP'
     text: >-
       <a class="grid-col-6 padding-right-2"
       href="https://drive.google.com/open?id=124aL9tJsHJ2rcCQ8SDXoGYpQE6GOiqRf"
