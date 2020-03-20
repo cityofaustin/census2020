@@ -25,18 +25,12 @@ sections:
     title: Volunteer Resources
   - component: Text
     text: >-
-      <a class="grid-col-6 padding-left-2"
-      href="https://www.youtube.com/watch?v=3TGbIiXwj7g" target="_blank">
+      <iframe width="560" height="315"
+      src="https://www.youtube.com/embed/uvEHinA97Ic" frameborder="0"
+      allow="accelerometer; autoplay; encrypted-media; gyroscope;
+      picture-in-picture" allowfullscreen></iframe>
 
-      </a>\
-
-      <a class="grid-col-6 padding-left-2"
-      href="https://www.youtube.com/watch?v=IhVhfxna_JY" target="_blank">\
-
-      </a>\
-
-      <a class="grid-col-6 padding-left-2"
-      href="https://www.youtube.com/watch?v=uvEHinA97Ic" target="_blank">
+      </a>
     title: Community Group PSAs
   - component: NewsAndEvents
     title: Recent News and Events
