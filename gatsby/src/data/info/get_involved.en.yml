@@ -23,15 +23,6 @@ sections:
         <img src="/img/postcard-es.png" />
       </a>
     title: Volunteer Resources
-  - component: Text
-    text: >-
-      <iframe width="560" height="315"
-      src="https://www.youtube.com/embed/uvEHinA97Ic" frameborder="0"
-      allow="accelerometer; autoplay; encrypted-media; gyroscope;
-      picture-in-picture" allowfullscreen></iframe>
-
-      </a>
-    title: Community Group PSAs
   - component: NewsAndEvents
     title: Recent News and Events
   - component: Communities
