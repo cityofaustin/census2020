@@ -1,7 +1,8 @@
 ---
-title: "Hispanic/Latino Community Group"
-link: "https://www.facebook.com/LatinoCCCATX"
-img: "latinx"
-alt: "Mexican folklore dancers"
-language: "en"
+language: en
+title: Hispanic/Latino Community Group
+link: 'https://www.facebook.com/ContamosATX'
+img: latinx
+alt: Mexican folklore dancers
 ---
+
