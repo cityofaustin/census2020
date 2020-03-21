@@ -48,16 +48,23 @@ sections:
     title: Stand up and be counted in the 2020 Census
   - component: BasicTitleText
     text: >-
+      **Black African American Community Group**
+
+
       <iframe width="560" height="315"
       src="https://www.youtube.com/embed/videoseries?list=3TGbIiXwj7g"
       frameborder="0" allow="accelerometer; autoplay; encrypted-media;
-      gyroscope; picture-in-picture" allowfullscreen></iframe>\
-
-      </a>
+      gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
       <iframe width="560" height="315"
       src="https://www.youtube.com/embed/IhVhfxna_JY" frameborder="0"
+      allow="accelerometer; autoplay; encrypted-media; gyroscope;
+      picture-in-picture" allowfullscreen></iframe>
+
+
+      <iframe width="560" height="315"
+      src="https://www.youtube.com/embed/uvEHinA97Ic" frameborder="0"
       allow="accelerometer; autoplay; encrypted-media; gyroscope;
       picture-in-picture" allowfullscreen></iframe>
     title: Community Group PSAs
