@@ -46,3 +46,10 @@ sections:
       page](https://www.facebook.com/Austin-Travis-County-Complete-Count-Committee-289680787280/)
       for the latest information.
     title: Stand up and be counted in the 2020 Census
+  - component: Text
+    text: >-
+      <iframe width="560" height="315"
+      src="https://www.youtube.com/embed/videoseries?list=3TGbIiXwj7g"
+      frameborder="0" allow="accelerometer; autoplay; encrypted-media;
+      gyroscope; picture-in-picture" allowfullscreen></iframe>
+    title: Community Group PSAs
