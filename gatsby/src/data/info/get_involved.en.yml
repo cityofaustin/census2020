@@ -26,8 +26,9 @@ sections:
     title: Volunteer Resources
   - component: BasicTitleText
     text: >-
-      ****[**Black African American Community
-      Group**](https://aaul.org/make-black-count)****\
+      **<a href="https://aaul.org/make-black-count">Black African American
+      Community Group</a>**
+
 
       <iframe width="560" height="315"
       src="https://www.youtube.com/embed/3TGbIiXwj7g" frameborder="0"
@@ -36,7 +37,8 @@ sections:
 
 
       ****[**Hispanic Latino Community
-      Group**](https://www.facebook.com/ContamosATX)****\
+      Group**](https://www.facebook.com/ContamosATX)****
+
 
       <iframe width="560" height="315"
       src="https://www.youtube.com/embed/IhVhfxna_JY" frameborder="0"
@@ -44,7 +46,8 @@ sections:
       picture-in-picture" allowfullscreen></iframe>
 
 
-      ****[**Asian American Community Group**](https://www.aaccc-atx.org/)****\
+      **Asian American Community Group**
+
 
       <iframe width="560" height="315"
       src="https://www.youtube.com/embed/uvEHinA97Ic" frameborder="0"
