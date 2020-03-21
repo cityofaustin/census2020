@@ -25,7 +25,7 @@ sections:
         <img src="/img/postcard-es.png" />
       </a>
     title: Recursos
-  - component: OrganizeMap
+  - component: BasicTitleText
     text: >-
       **<a href="https://aaul.org/make-black-count">Grupo comunitario negro y
       afroamericano</a>**
