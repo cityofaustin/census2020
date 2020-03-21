@@ -24,6 +24,33 @@ sections:
         <img src="/img/postcard-es.png" />
       </a>
     title: Volunteer Resources
+  - component: BasicTitleText
+    text: >-
+      ****[**Black African American Community
+      Group**](https://aaul.org/make-black-count)****\
+
+      <iframe width="560" height="315"
+      src="https://www.youtube.com/embed/3TGbIiXwj7g" frameborder="0"
+      allow="accelerometer; autoplay; encrypted-media; gyroscope;
+      picture-in-picture" allowfullscreen></iframe>
+
+
+      ****[**Hispanic Latino Community
+      Group**](https://www.facebook.com/ContamosATX)****\
+
+      <iframe width="560" height="315"
+      src="https://www.youtube.com/embed/IhVhfxna_JY" frameborder="0"
+      allow="accelerometer; autoplay; encrypted-media; gyroscope;
+      picture-in-picture" allowfullscreen></iframe>
+
+
+      ****[**Asian American Community Group**](https://www.aaccc-atx.org/)****\
+
+      <iframe width="560" height="315"
+      src="https://www.youtube.com/embed/uvEHinA97Ic" frameborder="0"
+      allow="accelerometer; autoplay; encrypted-media; gyroscope;
+      picture-in-picture" allowfullscreen></iframe>
+    title: Community Group PSAs
   - component: NewsAndEvents
     title: Recent News and Events
   - component: Communities
@@ -46,25 +73,3 @@ sections:
       page](https://www.facebook.com/Austin-Travis-County-Complete-Count-Committee-289680787280/)
       for the latest information.
     title: Stand up and be counted in the 2020 Census
-  - component: BasicTitleText
-    text: >-
-      **Black African American Community Group**
-
-
-      <iframe width="560" height="315"
-      src="https://www.youtube.com/embed/videoseries?list=3TGbIiXwj7g"
-      frameborder="0" allow="accelerometer; autoplay; encrypted-media;
-      gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-
-      <iframe width="560" height="315"
-      src="https://www.youtube.com/embed/IhVhfxna_JY" frameborder="0"
-      allow="accelerometer; autoplay; encrypted-media; gyroscope;
-      picture-in-picture" allowfullscreen></iframe>
-
-
-      <iframe width="560" height="315"
-      src="https://www.youtube.com/embed/uvEHinA97Ic" frameborder="0"
-      allow="accelerometer; autoplay; encrypted-media; gyroscope;
-      picture-in-picture" allowfullscreen></iframe>
-    title: Community Group PSAs
