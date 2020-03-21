@@ -25,6 +25,37 @@ sections:
         <img src="/img/postcard-es.png" />
       </a>
     title: Recursos
+  - component: OrganizeMap
+    text: >-
+      **<a href="https://aaul.org/make-black-count">Grupo comunitario negro y
+      afroamericano</a>**
+
+
+      <iframe width="560" height="315"
+      src="https://www.youtube.com/embed/3TGbIiXwj7g" frameborder="0"
+      allow="accelerometer; autoplay; encrypted-media; gyroscope;
+      picture-in-picture" allowfullscreen></iframe>
+
+
+      **<a href="https://www.facebook.com/ContamosATX">Grupo comunitario
+      hispano/latino</a>**
+
+
+      <iframe width="560" height="315"
+      src="https://www.youtube.com/embed/IhVhfxna_JY" frameborder="0"
+      allow="accelerometer; autoplay; encrypted-media; gyroscope;
+      picture-in-picture" allowfullscreen></iframe>
+
+
+      **<a href="https://www.aaccc-atx.org/">Grupo comunitario
+      asiático-americano</a>**
+
+
+      <iframe width="560" height="315"
+      src="https://www.youtube.com/embed/uvEHinA97Ic" frameborder="0"
+      allow="accelerometer; autoplay; encrypted-media; gyroscope;
+      picture-in-picture" allowfullscreen></iframe>
+    title: Grupo Comunitario PSAs
   - component: NewsAndEvents
     title: Recent News and Events
   - component: Communities
@@ -39,34 +70,3 @@ sections:
       our communities and we must work together to ensure everyone is counted.
       Texas is stronger with a complete count.
     title: Stand up and be counted in the 2020 Census
-  - component: OrganizeMap
-    text: >-
-      **<a href="https://aaul.org/make-black-count">Black African American
-      Community Group</a>**
-
-
-      <iframe width="560" height="315"
-      src="https://www.youtube.com/embed/3TGbIiXwj7g" frameborder="0"
-      allow="accelerometer; autoplay; encrypted-media; gyroscope;
-      picture-in-picture" allowfullscreen></iframe>
-
-
-      **<a href="https://www.facebook.com/ContamosATX">Hispanic Latino Community
-      Group</a>**
-
-
-      <iframe width="560" height="315"
-      src="https://www.youtube.com/embed/IhVhfxna_JY" frameborder="0"
-      allow="accelerometer; autoplay; encrypted-media; gyroscope;
-      picture-in-picture" allowfullscreen></iframe>
-
-
-      **<a href="https://www.aaccc-atx.org/">Asian American Community
-      Group</a>**
-
-
-      <iframe width="560" height="315"
-      src="https://www.youtube.com/embed/uvEHinA97Ic" frameborder="0"
-      allow="accelerometer; autoplay; encrypted-media; gyroscope;
-      picture-in-picture" allowfullscreen></iframe>
-    title: Grupo Comunitario PSAs
