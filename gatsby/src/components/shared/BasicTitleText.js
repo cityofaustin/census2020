@@ -2,8 +2,6 @@ import React from "react";
 import ReactMarkdown from "react-markdown/with-html";
 
 const BasicTitleText = ({ data, lang }) => {
-  console.log(lang, data);
-
   return (
     <section className="usa-section grid-container padding-top-3 padding-bottom-3">
       <h2 className="text-center font-heading-xl">{data.title}</h2>
