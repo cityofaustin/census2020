@@ -2,7 +2,9 @@ page: participe
 language: es
 title: ¡Participe y hágase contar!
 intro: >-
-  Nuestra meta es lograr un conteo total y completo de todas las personas que viven en Texas. Por favor riegue la voz, ¡y asegúrese de que usted, su familia, vecinos y amigos sean contados!
+  Nuestra meta es lograr un conteo total y completo de todas las personas que
+  viven en Texas. Por favor riegue la voz, ¡y asegúrese de que usted, su
+  familia, vecinos y amigos sean contados!
 sections:
   - component: EmailCollection
     title: Email Form
@@ -10,14 +12,50 @@ sections:
     cta: Materiales de Promoción
     cta_link: >-
       https://drive.google.com/drive/folders/15AcVVC7E_KG_bOkzujc_Uj4W2oAPZOFP?usp=sharing
-    text: |-
-      <a class="grid-col-6 padding-right-2" href="https://drive.google.com/open?id=124aL9tJsHJ2rcCQ8SDXoGYpQE6GOiqRf" target="_blank">
+    text: >-
+      <a class="grid-col-6 padding-right-2"
+      href="https://drive.google.com/open?id=1-I6h5ex8xD-snmjwIIiQW4kMguwpxXYF"
+      target="_blank">
         <img src="/img/postcard-en.png" />
       </a>
-      <a class="grid-col-6 padding-left-2" href="https://drive.google.com/open?id=124aL9tJsHJ2rcCQ8SDXoGYpQE6GOiqRf" target="_blank">
+
+      <a class="grid-col-6 padding-left-2"
+      href="https://drive.google.com/open?id=1-I6h5ex8xD-snmjwIIiQW4kMguwpxXYF"
+      target="_blank">
         <img src="/img/postcard-es.png" />
       </a>
     title: Recursos
+  - component: BasicTitleText
+    text: >-
+      **<a href="https://aaul.org/make-black-count">Grupo comunitario negro y
+      afroamericano</a>**
+
+
+      <iframe width="560" height="315"
+      src="https://www.youtube.com/embed/3TGbIiXwj7g" frameborder="0"
+      allow="accelerometer; autoplay; encrypted-media; gyroscope;
+      picture-in-picture" allowfullscreen></iframe>
+
+
+      **<a href="https://www.facebook.com/ContamosATX">Grupo comunitario
+      hispano/latino</a>**
+
+
+      <iframe width="560" height="315"
+      src="https://www.youtube.com/embed/IhVhfxna_JY" frameborder="0"
+      allow="accelerometer; autoplay; encrypted-media; gyroscope;
+      picture-in-picture" allowfullscreen></iframe>
+
+
+      **<a href="https://www.aaccc-atx.org/">Grupo comunitario
+      asiático-americano</a>**
+
+
+      <iframe width="560" height="315"
+      src="https://www.youtube.com/embed/uvEHinA97Ic" frameborder="0"
+      allow="accelerometer; autoplay; encrypted-media; gyroscope;
+      picture-in-picture" allowfullscreen></iframe>
+    title: Grupo Comunitario PSAs
   - component: NewsAndEvents
     title: Recent News and Events
   - component: Communities
@@ -32,5 +70,3 @@ sections:
       our communities and we must work together to ensure everyone is counted.
       Texas is stronger with a complete count.
     title: Stand up and be counted in the 2020 Census
-  - component: OrganizeMap
-    text: >-

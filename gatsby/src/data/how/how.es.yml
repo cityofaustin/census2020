@@ -1,15 +1,12 @@
 page: como
 language: es
 title: Como hacer el Censo
-intro: >-
+intro: |-
   ¡Ya puede responder el Censo 2020! 9 preguntas en 9 minutos.
-
 
   Para el 12 de marzo, su hogar puede llenar el Censo de tres maneras. 
 
-
-  ¿Necesita ayuda para llenar el Censo? Visite cualquier Biblioteca Pública de
-  Austin para detalles o llame al [2-1-1](tel:211).
+  ¿Preguntas? Llame al [2-1-1](tel:211).
 options:
   - icon: mdiLaptopWindows
     label: En línea
@@ -22,7 +19,6 @@ options:
 
 
       Preguntas? Call [2-1-1](tel:211).
-    link: https://2020census.gov/es/ways-to-respond/responding-by-mail.html
   - icon: mdiPhone
     label: Por teléfono
     text: >-
@@ -34,11 +30,9 @@ options:
 
 
       Preguntas? Llame al [2-1-1](tel:211).
-    link: "tel:844-468-2020"
   - icon: mdiStar
     label: Por correo
     text: >-
       El formulario del Censo en papel se enviará desde la Oficina del Censo de
       los EE.UU. Estará disponible en inglés y español y se puede enviar lleno
       de regreso a la Oficina del Censo de EE.UU.
-    link: https://2020census.gov/es/ways-to-respond/responding-by-mail.html
