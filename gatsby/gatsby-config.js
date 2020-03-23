@@ -42,6 +42,13 @@ module.exports = {
         path: path.join(__dirname, `content`, `text`),
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `components`,
+        path: path.join(__dirname, `content`, `components`),
+      },
+    },
     `gatsby-transformer-yaml`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,

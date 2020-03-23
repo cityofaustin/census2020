@@ -671,6 +671,7 @@ collections:
       - { label: "Link", name: "link", widget: "string" }
       - { label: "Img", name: "img", widget: "image" }
       - { label: "Img Alt", name: "alt", widget: "string" }
+      - { label: "Email", name: "email", widget: "string" }
   - label: "Communities (Spanish)"
     name: "communities_es"
     folder: "gatsby/content/communities/es"
@@ -690,6 +691,7 @@ collections:
       - { label: "Link", name: "link", widget: "string" }
       - { label: "Img", name: "img", widget: "image" }
       - { label: "Img Alt", name: "alt", widget: "string" }
+      - { label: "Email", name: "email", widget: "string" }
   - label: "News (English)"
     name: "news_en"
     folder: "gatsby/content/news/en"
