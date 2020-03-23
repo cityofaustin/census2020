@@ -9,6 +9,7 @@ import BasicTitleText from "./shared/BasicTitleText";
 import Timeline from "./shared/Timeline";
 import QuickLinks from "./index/QuickLinks";
 import MainText from "./index/MainText";
+import VideoPSAs from "./shared/VideoPSAs";
 import { useHelmetTags } from "./shared/helmet";
 
 const propTypes = {
@@ -68,6 +69,8 @@ const Index = ({
         <Timeline lang={language} />
 
         <Communities lang={language} />
+
+        <VideoPSAs lang={language} />
 
         <BasicTitleText lang={language} data={textData[language]} />
       </Layout>
