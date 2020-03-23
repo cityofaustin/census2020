@@ -4,4 +4,5 @@ link: "https://www.facebook.com/LatinoCCCATX"
 img: "latinx"
 alt: "Mexican folklore dancers"
 language: "es"
+email: Latinocccatx@gmail.com
 ---
