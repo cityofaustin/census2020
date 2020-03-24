@@ -17,7 +17,7 @@ hero:
   title: ¡Ya puede responder el Censo 2020!
   text:
     - Hay tres maneras de responder el Censo 2020. Una vez reciba la invitación, puede responder en línea, por teléfono o por correo.
-    - ¿Necesita ayuda para llenar el Censo? Visite cualquier Biblioteca Pública de Austin para detalles o llame al 2-1-1.
+    - ¿Necesita ayuda para llenar el Censo?  Llame al 2-1-1 para detalles.
   cta:
     text: Llena el Censo
     link: "https://www.2020census.gov/es.html"
