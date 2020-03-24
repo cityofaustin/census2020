@@ -17,7 +17,7 @@ hero:
   title: You can now respond to the 2020 Census!
   text:
     - There are three ways to respond to the 2020 Census. Once you receive your invitation, you can respond online, by phone, or by mail.
-    - Need Help Filling Out the Census? Visit any Austin Public Library for details or call 2-1-1.
+    - Need Help Filling Out the Census? Call 2-1-1 for details.
   cta:
     text: Take The Census NOW!
     link: "http://www.2020census.gov"
