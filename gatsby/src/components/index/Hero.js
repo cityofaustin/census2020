@@ -8,6 +8,16 @@ const Hero = ({ img, content }) => {
   return (
     <section className="usa-hero padding-top-2 desktop:padding-y-6">
       <div className="grid-col-12 text-center padding-bottom-10">
+        <div className="desktop:display-none margin-bottom-2">
+          <a
+            href={cta.link}
+            target="_blank"
+            className="usa-button usa-button--big grid-col-auto"
+            style={{ margin: "auto" }}
+          >
+            {cta.text}
+          </a>
+        </div>
         <img
           src={logo}
           alt="ATX Census 2020 - Together, We Count."

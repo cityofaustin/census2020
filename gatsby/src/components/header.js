@@ -16,6 +16,7 @@ const propTypes = {
 
 const Header = ({ header, lang, data, content }) => {
   const layoutText = content.node.frontmatter.layout;
+  const { text: ctaText, link: ctaLink } = content.node.frontmatter.hero.cta;
 
   return (
     <UswdsHeader title={layoutText.title} extended lang={lang}>
@@ -58,6 +59,15 @@ const Header = ({ header, lang, data, content }) => {
             ))}
           </Accordion>
           <div className="usa-nav__secondary">
+            <div className="display-flex flex-align-end flex-column margin-bottom-2">
+              <a
+                href={ctaLink}
+                target="_blank"
+                className="usa-button usa-button--big margin-right-0"
+              >
+                {ctaText}
+              </a>
+            </div>
             <ul className="usa-nav__secondary-links">
               {header.secondaryLinks.map((secondaryLink, idx) => (
                 <li key={idx} className="usa-nav__secondary-item">
@@ -100,6 +110,12 @@ export default props => (
                     text
                     link
                     order
+                  }
+                }
+                hero {
+                  cta {
+                    text
+                    link
                   }
                 }
               }
