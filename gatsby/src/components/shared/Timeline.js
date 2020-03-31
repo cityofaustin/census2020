@@ -109,15 +109,16 @@ const text = {
 };
 
 export default function Timeline({ lang }) {
+  const { title, subtitle } = text[lang].header;
+  const { events } = text[lang];
+
   return (
     <section className="bg-primary-lighter padding-top-3 padding-bottom-3">
       <div className="grid-container">
-        <h2 className="text-center font-ui-3xl">{text[lang].header.title}</h2>
-        <p className="text-center font-serif-xl">
-          {text[lang].header.subtitle}
-        </p>
+        <h2 className="text-center font-ui-3xl">{title}</h2>
+        <p className="text-center font-serif-xl">{subtitle}</p>
         <VerticalTimeline>
-          {text[lang].events.map((event, i) => {
+          {events.map((event, i) => {
             return (
               <VerticalTimelineElement
                 className="vertical-timeline-element--work"
