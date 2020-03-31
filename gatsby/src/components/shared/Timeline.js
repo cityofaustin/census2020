@@ -8,7 +8,9 @@ import "react-vertical-timeline-component/style.min.css";
 
 import MailIcon from "@material-ui/icons/Mail";
 import StarIcon from "@material-ui/icons/Star";
+import TodayIcon from "@material-ui/icons/Today";
 import FeaturedPlayListIcon from "@material-ui/icons/FeaturedPlayList";
+import GroupAddIcon from "@material-ui/icons/GroupAdd";
 
 // TODO: i18n
 const text = {
@@ -39,22 +41,28 @@ const text = {
         icon: <FeaturedPlayListIcon />,
       },
       {
+        date: "Now through August 14th",
+        title: "Self-Response Timeline",
+        body: "Responding by May 1st means no in-person follow up!",
+        icon: <TodayIcon />,
+      },
+      {
         date: "APRIL 1",
         title: "Census Day",
         body: "Census Day!",
         icon: <StarIcon />,
       },
       {
-        date: "APRIL 8-16",
-        title: "Hard Copy Census Mailed",
-        body: "Another reminder and hard copy questionnaire will be mailed.",
-        icon: <MailIcon />,
-      },
-      {
         date: "APRIL 20-27",
         title: "Final Postcards Mailed",
         body: "Final postcards will be mailed before an in-person follow-up.",
         icon: <FeaturedPlayListIcon />,
+      },
+      {
+        date: "MAY 1",
+        // title: "Census counts people experiencing homelessness",
+        body: "Census counts people experiencing homelessness",
+        icon: <GroupAddIcon />,
       },
     ],
   },
@@ -85,17 +93,17 @@ const text = {
         icon: <FeaturedPlayListIcon />,
       },
       {
+        date: "hasta el 14 de agosto",
+        title: "Plazo de auto respuesta",
+        body:
+          "La gente que conteste antes del 1 de mayo no tendrá seguimiento en persona.",
+        icon: <TodayIcon />,
+      },
+      {
         date: "1 de abril",
         title: "Día del Censo",
         body: "¡Día del Censo!",
         icon: <StarIcon />,
-      },
-      {
-        date: "8 al 16 de abril",
-        title: "Envío por correo del formulario del Censo en papel",
-        body:
-          "Se enviará por correo otro recordatorio y la copia en papel del cuestionario.",
-        icon: <MailIcon />,
       },
       {
         date: "20 al 27 de abril",
@@ -104,24 +112,30 @@ const text = {
           "Se enviarán las postales finales antes de dar seguimiento en persona.",
         icon: <FeaturedPlayListIcon />,
       },
+      {
+        date: "1 de mayo",
+        // title: "El Censo cuenta a las personas sin hogar",
+        body: "Census counts people experiencing homelessness",
+        icon: <GroupAddIcon />,
+      },
     ],
   },
 };
 
 export default function Timeline({ lang }) {
+  const { title, subtitle } = text[lang].header;
+  const { events } = text[lang].header;
   return (
     <section className="bg-primary-lighter padding-top-3 padding-bottom-3">
       <div className="grid-container">
-        <h2 className="text-center font-ui-3xl">{text[lang].header.title}</h2>
-        <p className="text-center font-serif-xl">
-          {text[lang].header.subtitle}
-        </p>
+        <h2 className="text-center font-ui-3xl">{title}</h2>
+        <p className="text-center font-serif-xl">{subtitle}</p>
         <VerticalTimeline>
           {text[lang].events.map((event, i) => {
             return (
               <VerticalTimelineElement
                 className="vertical-timeline-element--work"
-                date={event.date}
+                date={event.date.toUpperCase()}
                 iconStyle={{ background: "#1A4480", color: "#fff" }}
                 icon={event.icon ? event.icon : <StarIcon />}
                 key={`event-${i}`}
