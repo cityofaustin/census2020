@@ -669,6 +669,7 @@ collections:
             options: ["en"]
           - label: "Header"
             name: "header"
+            widget: object
             fields:
               - label: "Title"
                 name: "title"
@@ -677,8 +678,8 @@ collections:
                 name: "subtitle"
                 widget: "string"
           - label: "Events"
-            name: "event"
-            widget: object
+            name: "events"
+            widget: list
             fields:
               - label: "Date"
                 name: "date"
@@ -689,6 +690,7 @@ collections:
               - label: "Body"
                 name: "body"
                 widget: "string"
+                required: false
               - label: "Icon"
                 name: "icon"
                 widget: "select"
@@ -711,6 +713,7 @@ collections:
             options: ["es"]
           - label: "Header"
             name: "header"
+            widget: object
             fields:
               - label: "Title"
                 name: "title"
@@ -720,7 +723,7 @@ collections:
                 widget: "string"
           - label: "Events"
             name: "event"
-            widget: object
+            widget: list
             fields:
               - label: "Date"
                 name: "date"
