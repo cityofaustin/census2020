@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  branch: master
+  branch: mc_config_cleanup
 
 media_folder: gatsby/src/images
 public_folder: img
@@ -695,6 +695,53 @@ collections:
                 name: "icon"
                 widget: "select"
                 options: ["mail", "people", "postcard", "star", "calendar"]
+      - label: "News (English)"
+        name: "news_en"
+        folder: "gatsby/content/news/en"
+        create: true
+        slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+        editor:
+          preview: false
+        filter: { field: "language", value: "en" }
+        fields:
+          - {
+              label: "Language",
+              name: "language",
+              widget: "select",
+              options: ["en", "es"],
+            }
+          - label: "Source (ex: NYTimes)"
+            name: source
+            widget: string
+          - label: Article Link
+            name: link
+            widget: string
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Publish Date", name: "date", widget: "datetime" }
+          - label: Type
+            name: type
+            widget: "select"
+            options: ["news_story"]
+      - label: "Communities (English)"
+        name: "communities_en"
+        folder: "gatsby/content/communities/en"
+        create: true
+        slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+        editor:
+          preview: false
+        filter: { field: "language", value: "en" }
+        fields:
+          - {
+              label: "Language",
+              name: "language",
+              widget: "select",
+              options: ["en"],
+            }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Link", name: "link", widget: "string" }
+          - { label: "Img", name: "img", widget: "image" }
+          - { label: "Img Alt", name: "alt", widget: "string" }
+          - { label: "Email", name: "email", widget: "string" }
   - label: "Components (Spanish)"
     name: "components_es"
     files:
@@ -738,98 +785,51 @@ collections:
                 name: "icon"
                 widget: "select"
                 options: ["mail", "people", "postcard", "star", "calendar"]
-  - label: "Communities (English)"
-    name: "communities_en"
-    folder: "gatsby/content/communities/en"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    editor:
-      preview: false
-    filter: { field: "language", value: "en" }
-    fields:
-      - {
-          label: "Language",
-          name: "language",
-          widget: "select",
-          options: ["en"],
-        }
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Link", name: "link", widget: "string" }
-      - { label: "Img", name: "img", widget: "image" }
-      - { label: "Img Alt", name: "alt", widget: "string" }
-      - { label: "Email", name: "email", widget: "string" }
-  - label: "Communities (Spanish)"
-    name: "communities_es"
-    folder: "gatsby/content/communities/es"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    editor:
-      preview: false
-    filter: { field: "language", value: "es" }
-    fields:
-      - {
-          label: "Language",
-          name: "language",
-          widget: "select",
-          options: ["es"],
-        }
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Link", name: "link", widget: "string" }
-      - { label: "Img", name: "img", widget: "image" }
-      - { label: "Img Alt", name: "alt", widget: "string" }
-      - { label: "Email", name: "email", widget: "string" }
-  - label: "News (English)"
-    name: "news_en"
-    folder: "gatsby/content/news/en"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    editor:
-      preview: false
-    filter: { field: "language", value: "en" }
-    fields:
-      - {
-          label: "Language",
-          name: "language",
-          widget: "select",
-          options: ["en", "es"],
-        }
-      - label: "Source (ex: NYTimes)"
-        name: source
-        widget: string
-      - label: Article Link
-        name: link
-        widget: string
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - label: Type
-        name: type
-        widget: "select"
-        options: ["news_story"]
-  - label: "News (Español)"
-    name: "news_es"
-    folder: "gatsby/content/news/es"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    editor:
-      preview: false
-    filter: { field: "language", value: "es" }
-    fields:
-      - {
-          label: "Lenguaje",
-          name: "language",
-          widget: "select",
-          options: ["en", "es"],
-        }
-      - label: "Source (ex: NYTimes)"
-        name: source
-        widget: string
-      - label: Article Link
-        name: link
-        widget: string
-      - { label: "Titulo", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - label: "News (Español)"
+        name: "news_es"
+        folder: "gatsby/content/news/es"
+        create: true
+        slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+        editor:
+          preview: false
+        filter: { field: "language", value: "es" }
+        fields:
+          - {
+              label: "Lenguaje",
+              name: "language",
+              widget: "select",
+              options: ["en", "es"],
+            }
+          - label: "Source (ex: NYTimes)"
+            name: source
+            widget: string
+          - label: Article Link
+            name: link
+            widget: string
+          - { label: "Titulo", name: "title", widget: "string" }
+          - { label: "Publish Date", name: "date", widget: "datetime" }
 
-      - label: Type
-        name: type
-        widget: "select"
-        options: ["news_story"]
+          - label: Type
+            name: type
+            widget: "select"
+            options: ["news_story"]
+      - label: "Communities (Spanish)"
+        name: "communities_es"
+        folder: "gatsby/content/communities/es"
+        create: true
+        slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+        editor:
+          preview: false
+        filter: { field: "language", value: "es" }
+        fields:
+          - {
+              label: "Language",
+              name: "language",
+              widget: "select",
+              options: ["es"],
+            }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Link", name: "link", widget: "string" }
+          - { label: "Img", name: "img", widget: "image" }
+          - { label: "Img Alt", name: "alt", widget: "string" }
+          - { label: "Email", name: "email", widget: "string" }
