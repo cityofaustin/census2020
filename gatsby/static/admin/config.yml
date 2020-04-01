@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  branch: master
+  branch: 139_2_timeline_edits
 
 media_folder: gatsby/src/images
 public_folder: img
@@ -651,7 +651,90 @@ collections:
                 name: cta_link
                 widget: string
                 required: false
-
+  - label: "Components (English)"
+    name: "components_en"
+    files:
+      - label: Timeline (English)
+        name: timeline
+        file: "gatsby/content/components/Timeline/Timeline.en.md"
+        filter: { field: "language", value: "en" }
+        fields:
+          - label: "Component"
+            name: "component"
+            widget: "select"
+            options: ["timeline"]
+          - label: "Language"
+            name: "language"
+            widget: "select"
+            options: ["en"]
+          - label: "Header"
+            name: "header"
+            fields:
+              - label: "Title"
+                name: "title"
+                widget: "string"
+              - label: "Subtitle"
+                name: "subtitle"
+                widget: "string"
+          - label: "Events"
+            name: "event"
+            widget: object
+            fields:
+              - label: "Date"
+                name: "date"
+                widget: "string"
+              - label: "Title"
+                name: "title"
+                widget: "string"
+              - label: "Body"
+                name: "body"
+                widget: "string"
+              - label: "Icon"
+                name: "icon"
+                widget: "select"
+                options: ["mail", "people", "postcard", "star", "calendar"]
+  - label: "Components (Spanish)"
+    name: "components_es"
+    files:
+      - label: Timeline (Spanish)
+        name: timeline
+        file: "gatsby/content/components/Timeline/Timeline.es.md"
+        filter: { field: "language", value: "es" }
+        fields:
+          - label: "Component"
+            name: "component"
+            widget: "select"
+            options: ["timeline"]
+          - label: "Language"
+            name: "language"
+            widget: "select"
+            options: ["es"]
+          - label: "Header"
+            name: "header"
+            fields:
+              - label: "Title"
+                name: "title"
+                widget: "string"
+              - label: "Subtitle"
+                name: "subtitle"
+                widget: "string"
+          - label: "Events"
+            name: "event"
+            widget: object
+            fields:
+              - label: "Date"
+                name: "date"
+                widget: "string"
+              - label: "Title"
+                name: "title"
+                widget: "string"
+              - label: "Body"
+                name: "body"
+                widget: "string"
+              - label: "Icon"
+                name: "icon"
+                widget: "select"
+                options: ["mail", "people", "postcard", "star", "calendar"]
   - label: "Communities (English)"
     name: "communities_en"
     folder: "gatsby/content/communities/en"
