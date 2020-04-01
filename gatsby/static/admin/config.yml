@@ -722,7 +722,7 @@ collections:
                 name: "subtitle"
                 widget: "string"
           - label: "Events"
-            name: "event"
+            name: "events"
             widget: list
             fields:
               - label: "Date"
