@@ -2,35 +2,39 @@
 component: timeline
 language: en
 header:
-  title: "When is the Census?"
-  subtitle: "Don’t Delay! Be sure to fill out your census form before April 30th."
+  subtitle: Don’t Delay! Be sure to fill out your census form before April 30th.
+  title: When is the Census?
 events:
-  - date: "MARCH 12-20"
-    title: "Invitations Mailed"
-    body: "Invitations to complete the 2020 census questionnaire online will be mailed."
+  - body: >-
+      Households received Census Bureau information on how to respond to the
+      2020 Census online, by phone, or by mail.
+    date: MARCH 12-20
     icon: mail
-  - date: "MARCH 16-24"
-    title: "Reminder Letters"
-    body: "Reminder letters will be mailed."
+    title: Households Received Information on How To Respond
+  - body: Reminder letters will be mailed.
+    date: MARCH 16-24
     icon: mail
-  - date: "MARCH 26 - APRIL 3"
-    title: "Reminder Postcard"
-    body: "Reminder postcard will be mailed."
+    title: Reminder Letters
+  - body: Reminder postcard will be mailed.
+    date: MARCH 26 - APRIL 3
     icon: postcard
-  - date: "APRIL 1"
-    title: "Census Day"
-    body: "Census Day!"
+    title: Reminder Postcard
+  - body: >-
+      This is Census Day, a key reference date for the 2020 Census—not a
+      deadline.  By this date, all households will have received an invitation
+      to participate in the 2020 Census.
+    date: APRIL 1
     icon: star
-  - date: "Now through August 14th"
-    title: "Self-Response Timeline"
-    body: "Responding by May 1st means no in-person follow up!"
+    title: Census Day!
+  - body: Responding by May means no in-person follow up!
+    date: Now through August 14th
     icon: calendar
-  - date: "APRIL 20-27"
-    title: "Final Postcards Mailed"
-    body: "Final postcards will be mailed before an in-person follow-up."
-    icon: postcard
-  - date: "MAY 1"
-    title: "Census counts people experiencing homelessness"
-    # body: "Census counts people experiencing homelessness"
+    title: Self-Response Timeline
+  - body: >-
+      Census counts people experiencing homelessness, colleges, senior centers,
+      prions, and other facilities that house large groups of people.
+    date: April – June
     icon: people
+    title: Make Sure Everyone is Counted
 ---
+
