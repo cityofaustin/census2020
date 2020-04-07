@@ -29,8 +29,8 @@ events:
     icon: star
     title: ¡Día del Censo!
   - body: >-
-      La gente que conteste hasta el mes de mayo no tendrá seguimiento en
-      persona.
+      Si contesta antes de mayo, no habrá más requisitos por parte de la Oficina
+      del Censo.
     date: hasta el 14 de agosto
     icon: calendar
     title: Plazo de auto respuesta
