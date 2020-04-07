@@ -26,7 +26,7 @@ events:
     date: APRIL 1
     icon: star
     title: Census Day!
-  - body: Responding by May means no in-person follow up!
+  - body: Responding by May means no follow-up from the Census Bureau.
     date: Now through August 14th
     icon: calendar
     title: Self-Response Timeline
