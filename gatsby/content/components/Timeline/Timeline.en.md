@@ -11,11 +11,11 @@ events:
     date: MARCH 12-20
     icon: mail
     title: Households Received Information on How To Respond
-  - body: Reminder letters will be mailed.
+  - body: Reminder letters have been mailed.
     date: MARCH 16-24
     icon: mail
     title: Reminder Letters
-  - body: Reminder postcard will be mailed.
+  - body: Reminder postcards have been mailed.
     date: MARCH 26 - APRIL 3
     icon: postcard
     title: Reminder Postcard
