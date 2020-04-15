@@ -33,7 +33,7 @@ events:
   - body: >-
       Census counts people experiencing homelessness, colleges, senior centers,
       prions, and other facilities that house large groups of people.
-    date: April – June
+    date: June
     icon: people
     title: Make Sure Everyone is Counted
 ---
