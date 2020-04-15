@@ -38,7 +38,7 @@ events:
       El Censo cuenta a las personas sin hogar, universidades, hogares de
       ancianos, prisiones y otros centros que albergan a grandes grupos de
       personas.
-    date: ' Abril a Junio'
+    date: Junio
     icon: people
     title: Asegurarse de que todos sean contados
 ---
