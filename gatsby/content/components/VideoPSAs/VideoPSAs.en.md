@@ -9,4 +9,6 @@ videos:
     group: Hispanic Latino Community Group
   - youtubeId: uvEHinA97Ic
     group: Asian American Community Group
+  - youtubeId: tv3SJd_tREY
+    group: LGBTQ+ Community Group
 ---

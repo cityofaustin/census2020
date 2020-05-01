@@ -9,4 +9,6 @@ videos:
     group: Grupo comunitario hispano/latino
   - youtubeId: uvEHinA97Ic
     group: Grupo comunitario asiático-americano
+  - youtubeId: tv3SJd_tREY
+    group: Grupo comunitario LGBTQ+
 ---

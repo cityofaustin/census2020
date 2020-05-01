@@ -6,7 +6,7 @@ const BasicTitleText = ({ data, lang }) => {
     <section className="usa-section grid-container padding-top-3 padding-bottom-3">
       <h2 className="text-center font-heading-xl">{data.title}</h2>
       <div className="usa-intro grid-row padding-y-4">
-        <div className="grid-col-10 grid-offset-1 grid-row">
+        <div className="grid-col-10 grid-offset-1">
           <ReactMarkdown source={data.text} escapeHtml={false} />
         </div>
       </div>
