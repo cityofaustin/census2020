@@ -13,17 +13,20 @@ sections:
     cta_link: >-
       https://drive.google.com/drive/folders/15AcVVC7E_KG_bOkzujc_Uj4W2oAPZOFP?usp=sharing
     text: >-
+      <div class="grid-row">
+
       <a class="grid-col-6 padding-right-2"
-      href="https://drive.google.com/open?id=1-I6h5ex8xD-snmjwIIiQW4kMguwpxXYF"
+      href="https://drive.google.com/file/d/1AkAKewTqOSDLylYUSawcN9xoUhW1K-OZ/view"
       target="_blank">
         <img src="/img/postcard-en.png" />
       </a>
 
       <a class="grid-col-6 padding-left-2"
-      href="https://drive.google.com/open?id=1-I6h5ex8xD-snmjwIIiQW4kMguwpxXYF"
+      href="https://drive.google.com/file/d/1AkAKewTqOSDLylYUSawcN9xoUhW1K-OZ/view"
       target="_blank">
         <img src="/img/postcard-es.png" />
       </a>
+      </div>
     title: Recursos
   - component: BasicTitleText
     text: >-
