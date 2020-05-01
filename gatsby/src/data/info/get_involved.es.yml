@@ -58,6 +58,14 @@ sections:
       src="https://www.youtube.com/embed/uvEHinA97Ic" frameborder="0"
       allow="accelerometer; autoplay; encrypted-media; gyroscope;
       picture-in-picture" allowfullscreen></iframe>
+
+      **<a href="https://queerthecensusatx.org/">Grupo comunitario LGBTQ+</a>**
+
+      <iframe width="560" height="315"
+      src="https://www.youtube.com/embed/tv3SJd_tREY" frameborder="0"
+      allow="accelerometer; autoplay; encrypted-media; gyroscope;
+      picture-in-picture" allowfullscreen></iframe>
+
     title: Grupo Comunitario PSAs
   - component: BasicTitleText
     title: Recuros de los Grupos Comunitarios

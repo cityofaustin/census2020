@@ -21,7 +21,7 @@ const VideoPSAs = ({ data, lang, imgs }) => {
 
         <div className="grid-row grid-gap-2">
           {videos.map(video => (
-            <div className="grid-col-12 desktop:grid-col-4 padding-bottom-2">
+            <div className="grid-col-12 desktop:grid-col-6 padding-bottom-2">
               <Youtube videoId={video.youtubeId} opts={{ width: "100%" }} />
             </div>
           ))}
