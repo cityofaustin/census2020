@@ -25,9 +25,10 @@ sections:
       href="https://drive.google.com/file/d/1AkAKewTqOSDLylYUSawcN9xoUhW1K-OZ/view"
       target="_blank">
         <img src="/img/postcard-es.png" />
-      </a>
-      </div>
+      </a> </div>
     title: Recursos
+  - component: NewsAndEvents
+    title: Recent News and Events
   - component: BasicTitleText
     text: >-
       **<a href="https://aaul.org/make-black-count">Grupo comunitario negro y
@@ -65,23 +66,10 @@ sections:
       src="https://www.youtube.com/embed/tv3SJd_tREY" frameborder="0"
       allow="accelerometer; autoplay; encrypted-media; gyroscope;
       picture-in-picture" allowfullscreen></iframe>
-
     title: Grupo Comunitario PSAs
   - component: BasicTitleText
+    text: "### Podcasts\n[\U0001F508 Eschucha: Austin/Travis County Census 2020 Podcast Ep. 1](http://atxpodcasts.com/2020/04/15/ep-1-introducing-the-austin-travis-co-2020-census-black-hispanic-complete-count-committees/)\n### Video\nFB Live - ¿Tienes preguntas sobre el Censo? Expertos hablan sobre este tema y aclaran dudas.\n<iframe src=\"https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Funivision62%2Fvideos%2F1882590852039927%2F&show_text=0&width=560\" width=\"560\" height=\"315\" style=\"border:none;overflow:hidden\" scrolling=\"no\" frameborder=\"0\" allowTransparency=\"true\" allowFullScreen=\"true\"></iframe>"
     title: Recuros de los Grupos Comunitarios
-    text: >-
-      ### Podcasts
-
-      [🔈 Eschucha: Austin/Travis County Census 2020 Podcast Ep. 1](http://atxpodcasts.com/2020/04/15/ep-1-introducing-the-austin-travis-co-2020-census-black-hispanic-complete-count-committees/)
-
-      ### Video
-
-      FB Live - ¿Tienes preguntas sobre el Censo? Expertos hablan sobre este tema y aclaran dudas.
-
-      <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Funivision62%2Fvideos%2F1882590852039927%2F&show_text=0&width=560" width="560" height="315" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
-
-  - component: NewsAndEvents
-    title: Recent News and Events
   - component: Communities
     text: >-
       Austin and Travis County are coming together to ensure that everyone in
