@@ -10,10 +10,9 @@ sections:
     title: Email Form
   - component: BasicTitleText
     cta: Outreach Materials
-    cta_link: "https://drive.google.com/drive/folders/15AcVVC7E_KG_bOkzujc_Uj4W2oAPZOFP"
+    cta_link: 'https://drive.google.com/drive/folders/15AcVVC7E_KG_bOkzujc_Uj4W2oAPZOFP'
     text: >-
-      <div class="grid-row">
-      <a class="grid-col-6 padding-right-2"
+      <div class="grid-row"> <a class="grid-col-6 padding-right-2"
       href="https://drive.google.com/file/d/1AkAKewTqOSDLylYUSawcN9xoUhW1K-OZ/view"
       target="_blank">
         <img src="/img/postcard-en.png" />
@@ -23,9 +22,10 @@ sections:
       href="https://drive.google.com/file/d/1AkAKewTqOSDLylYUSawcN9xoUhW1K-OZ/view"
       target="_blank">
         <img src="/img/postcard-es.png" />
-      </a>
-      </div>
+      </a> </div>
     title: Volunteer Resources
+  - component: NewsAndEvents
+    title: Recent News and Events
   - component: BasicTitleText
     text: >-
       **<a href="https://aaul.org/make-black-count">Black African American
@@ -65,24 +65,10 @@ sections:
       src="https://www.youtube.com/embed/tv3SJd_tREY" frameborder="0"
       allow="accelerometer; autoplay; encrypted-media; gyroscope;
       picture-in-picture" allowfullscreen></iframe>
-
     title: Community Group PSAs
   - component: BasicTitleText
+    text: "## Podcasts\n[\U0001F508 Listen: Austin/Travis Councy Census 2020 Podcast Ep. 1](http://atxpodcasts.com/2020/04/15/ep-1-introducing-the-austin-travis-co-2020-census-black-hispanic-complete-count-committees/)\n<br/>\n## Video\nUnivision Facebook Live Town Hall <iframe src=\"https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Funivision62%2Fvideos%2F1882590852039927%2F&show_text=0&width=560\" width=\"560\" height=\"315\" style=\"border:none;overflow:hidden\" scrolling=\"no\" frameborder=\"0\" allowTransparency=\"true\" allowFullScreen=\"true\"></iframe>"
     title: Community Group Resources
-    text: >-
-      ## Podcasts
-
-      [🔈 Listen: Austin/Travis Councy Census 2020 Podcast Ep. 1](http://atxpodcasts.com/2020/04/15/ep-1-introducing-the-austin-travis-co-2020-census-black-hispanic-complete-count-committees/)
-
-      <br/>
-
-      ## Video
-
-      Univision Facebook Live Town Hall
-      <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Funivision62%2Fvideos%2F1882590852039927%2F&show_text=0&width=560" width="560" height="315" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
-
-  - component: NewsAndEvents
-    title: Recent News and Events
   - component: Communities
     text: >-
       Austin and Travis County are coming together to ensure that everyone in
