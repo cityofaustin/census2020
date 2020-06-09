@@ -2,7 +2,7 @@
 component: timeline
 language: en
 header:
-  subtitle: Don’t Delay! Be sure to fill out your census form before April 30th.
+  subtitle: Don’t Delay! Be sure to fill out your Census form today.
   title: When is the Census?
 events:
   - body: >-
