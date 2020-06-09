@@ -27,12 +27,6 @@ events:
     icon: star
     title: ¡Día del Censo!
   - body: >-
-      Si contesta antes de mayo, no habrá más requisitos por parte de la Oficina
-      del Censo.
-    date: hasta el 14 de agosto
-    icon: calendar
-    title: Plazo de auto respuesta
-  - body: >-
       El Censo cuenta a las personas sin hogar, universidades, hogares de
       ancianos, prisiones y otros centros que albergan a grandes grupos de
       personas.
