@@ -39,5 +39,11 @@ events:
     date: Junio
     icon: people
     title: Asegurarse de que todos sean contados
+  - body: >-
+      En línea: http://My2020Census.gov, por teléfono: 2-1-1, o por correo
+      postal 
+    date: Hoy hasta el 31 de octubre
+    icon: calendar
+    title: Llena el Censo
 ---
 
