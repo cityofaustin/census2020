@@ -2,9 +2,7 @@
 component: timeline
 language: es
 header:
-  subtitle: >-
-    ¡Hágalo a tiempo! Asegúrese de llenar su formulario del censo antes del 30
-    de abril.
+  subtitle: ¡Hágalo a tiempo! Asegúrese de llenar su formulario del Censo hoy.
   title: ¿Cuándo es el Censo?
 events:
   - body: >-
