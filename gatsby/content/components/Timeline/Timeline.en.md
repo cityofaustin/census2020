@@ -26,15 +26,15 @@ events:
     date: APRIL 1
     icon: star
     title: Census Day!
-  - body: Responding by May means no follow-up from the Census Bureau.
-    date: Now through August 14th
-    icon: calendar
-    title: Self-Response Timeline
   - body: >-
       Census counts people experiencing homelessness, colleges, senior centers,
       prions, and other facilities that house large groups of people.
     date: June
     icon: people
     title: Make Sure Everyone is Counted
+  - body: 'Online - http://My2020Census.gov, by phone – 2-1-1, or by mail'
+    date: Today through October 31
+    icon: calendar
+    title: Take the Census
 ---
 
