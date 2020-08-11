@@ -33,7 +33,7 @@ events:
     icon: people
     title: Make Sure Everyone is Counted
   - body: 'Online - http://My2020Census.gov, by phone – 2-1-1, or by mail'
-    date: Today through October 31
+    date: Today through September 30
     icon: calendar
     title: Take the Census
 ---
