@@ -11,6 +11,7 @@ import QuickLinks from "./index/QuickLinks";
 import MainText from "./index/MainText";
 import VideoPSAs from "./shared/VideoPSAs";
 import { useHelmetTags } from "./shared/helmet";
+import MapCTA from "./shared/MapCTA";
 
 const propTypes = {
   uri: PropTypes.string,
@@ -67,6 +68,8 @@ const Index = ({
         <QuickLinks media={media} circle={circle} lang={language} />
 
         <Timeline lang={language} />
+
+        <MapCTA lang={language} />
 
         <Communities lang={language} />
 
