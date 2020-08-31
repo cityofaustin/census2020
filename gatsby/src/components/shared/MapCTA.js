@@ -2,17 +2,10 @@ import React from "react";
 import Img from "gatsby-image";
 import { StaticQuery, graphql } from "gatsby";
 
-const MapCTA = ({ data, lang }) => {
-  return (
-    <section className="usa-section bg-primary-darker text-white">
-      <div className="grid-container">
-        <div className="grid-row">
-          <div className="tablet:grid-col-7 padding-right-4">
-            <h2 className="font-ui-xl">
-              Historically Undercounted Communities in Austin and Travis County
-            </h2>
-            <p className="font-body-md line-height-sans-5">
-              Texas is at risk of an even larger undercount in 2020. Today, 25%
+const text = {
+  en: {
+    title: "Historically Undercounted Communities in Austin and Travis County",
+    text: `Texas is at risk of an even larger undercount in 2020. Today, 25%
               of Texans, or over 6 million people, live in hard-to-count
               neighborhoods, where past self-response rates have been relatively
               low. Today in Travis County, 32% (over 370,000 people) of the
@@ -20,8 +13,32 @@ const MapCTA = ({ data, lang }) => {
               means Texas is not getting its fair share of funding and
               representation since not everyone living in our state was counted.
               View the map below to see if your neighborhood is at risk of being
-              undercounted.
-            </p>
+              undercounted.`,
+    cta: "Explore the map",
+  },
+  es: {
+    title: `Comunidades históricamente contadas de menos en Austin y el Condado de
+      Travis`,
+    text: `Texas está en riesgo de que el conteo de menos en el 2020 sea mayor. Hoy,
+      el 25% de los texanos, o más de 6 millones de personas, viven en
+      vecindarios difíciles de contar donde las respuestas voluntarias pasadas
+      han sido relativamente bajas. Hoy, en el Condado de Travis, el 32% (más de
+      370,000 personas) de la población vive en vecindarios difíciles de contar.
+      Ser contado de menos significa que Texas no está recibiendo su porción
+      justa de fondos y representación porque no todos los que viven en nuestro
+      estado fueron contados. Vea en el mapa abajo si su vecindario está en
+      riesgo de ser contado de menos.`,
+    cta: "Explore el mapa",
+  },
+};
+const MapCTA = ({ data, lang }) => {
+  return (
+    <section className="usa-section bg-primary-darker text-white">
+      <div className="grid-container">
+        <div className="grid-row">
+          <div className="tablet:grid-col-7 padding-right-4">
+            <h2 className="font-ui-xl">{text[lang].title}</h2>
+            <p className="font-body-md line-height-sans-5">{text[lang].text}</p>
           </div>
           <div className="tablet:grid-col-5 text-center margin-top-3">
             <p className="usa-sr-only">
@@ -47,7 +64,7 @@ const MapCTA = ({ data, lang }) => {
               target="_blank"
             >
               <button className="margin-top-3 usa-button usa-button usa-button--big">
-                Explore the map
+                {text[lang].cta}
               </button>
             </a>
           </div>
@@ -70,6 +87,6 @@ export default props => (
         }
       }
     `}
-    render={data => <MapCTA data={data} />}
+    render={data => <MapCTA data={data} {...props} />}
   />
 );
