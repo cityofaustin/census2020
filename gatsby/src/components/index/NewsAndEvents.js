@@ -141,7 +141,7 @@ const NewsAndEvents = ({ data, lang, shortened, content }) => {
                   {shortened ? (
                     <Link
                       className="usa-button usa-button--outline"
-                      to={"/en/news-and-events"}
+                      to={`/${lang}/news-and-events`}
                     >
                       {layoutText.showMore} {layoutText.events}
                     </Link>
@@ -182,7 +182,7 @@ const NewsAndEvents = ({ data, lang, shortened, content }) => {
                   {shortened ? (
                     <Link
                       className="usa-button usa-button--outline"
-                      to={"/en/news-and-events"}
+                      to={`/${lang}/news-and-events`}
                     >
                       {layoutText.showMore} {layoutText.latestNews}
                     </Link>
