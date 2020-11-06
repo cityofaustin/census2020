@@ -75,7 +75,7 @@ const Index = ({
 
         <VideoPSAs lang={language} />
 
-        <BasicTitleText lang={language} data={textData[language]} />
+        {/* <BasicTitleText lang={language} data={textData[language]} /> */}
       </Layout>
     </>
   );

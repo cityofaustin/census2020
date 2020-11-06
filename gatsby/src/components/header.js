@@ -59,7 +59,7 @@ const Header = ({ header, lang, data, content }) => {
             ))}
           </Accordion>
           <div className="usa-nav__secondary">
-            <div className="display-flex flex-align-end flex-column margin-bottom-2">
+            {/* <div className="display-flex flex-align-end flex-column margin-bottom-2">
               <a
                 href={ctaLink}
                 target="_blank"
@@ -67,7 +67,7 @@ const Header = ({ header, lang, data, content }) => {
               >
                 {ctaText}
               </a>
-            </div>
+            </div> */}
             <ul className="usa-nav__secondary-links">
               {header.secondaryLinks.map((secondaryLink, idx) => (
                 <li key={idx} className="usa-nav__secondary-item">

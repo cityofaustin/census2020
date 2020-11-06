@@ -14,10 +14,9 @@ layout:
       text: Get Involved
   title: Austin-Travis County Census 2020
 hero:
-  title: You can now respond to the 2020 Census!
+  title: Thank you
   text:
-    - There are three ways to respond to the 2020 Census. Once you receive your invitation, you can respond online, by phone, or by mail.
-    - Need Help Filling Out the Census? Call 2-1-1 for details.
+    - The 2020 Census has finished collecting responses.
   cta:
     text: Take The Census NOW!
     link: "http://www.2020census.gov"
