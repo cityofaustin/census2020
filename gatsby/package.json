@@ -42,7 +42,7 @@
     "gatsby-remark-responsive-iframe": "^2.2.30",
     "gatsby-source-filesystem": "^2.1.6",
     "gatsby-source-google-sheets": "^1.1.1",
-    "gatsby-transformer-remark": "^2.6.37",
+    "gatsby-transformer-remark": "^5.25.1",
     "gatsby-transformer-sharp": "^2.2.5",
     "gatsby-transformer-yaml": "^2.2.4",
     "lodash": "^4.17.15",
